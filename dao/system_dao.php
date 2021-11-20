@@ -1,6 +1,6 @@
 <?php
 function get_connect(){
-    $connect = new PDO("mysql:host=localhost;dbname=duan1-nhom4;charset=utf8", "root", "");
+    $connect = new PDO("mysql:host=localhost;dbname=nhom4_duan1;charset=utf8", "root", "");
     return $connect;
 }
 

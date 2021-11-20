@@ -36,11 +36,11 @@
             </div>
         </header>
     </div>
-    <!--  -->
-    <?php
-        include_once $view;
-    ?>
-
+    <main>
+        <?php
+            include_once $view;
+        ?>
+    </main>
     <div class="line"></div>
     <div class="containner">
         <!--FOOTER START-->
