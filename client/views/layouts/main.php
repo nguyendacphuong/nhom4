@@ -5,26 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <script src="./css/index.js"></script> 
     <title>Document</title>
 </head>
 <body>
-    <div class="containner">
         <div class="header-top">
             <img src="./images/imgheader/iconphone.png" alt="">
             <span>Hỗ Trợ Khách Hàng: 1900 8079</span>
         </div>
-    </div>
     <div class="line"></div>
-    <div class="containner">
         <!--HEADER START-->
         <header>
             <div class="header-main">
                 <a href=""><img src="./images/imgbanner/logo.png" alt="" class="logo"></a>
                 <ul class="menuheader">
-                    <li><a href="">áo</a></li>
-                    <li><a href="">quần</a></li>
-                    <li><a href="">phụ kiện</a></li>
-                    <li><a href="">giá tốt</a></li>
+                    <li><a href="">Áo</a></li>
+                    <li><a href="">Quần</a></li>
+                    <li><a href="">Phụ Kiện</a></li>
+                    <li><a href="">Giá Tốt</a></li>
                 </ul>
                 <form class="search">
                     <input  name="" placeholder="Bạn tìm gì....">
@@ -35,23 +33,16 @@
                 </div>
             </div>
         </header>
-    </div>
     <main>
         <?php
             include_once $view;
         ?>
     </main>
     <div class="line"></div>
-    <div class="containner">
-        <!--FOOTER START-->
-        <!-- 
-            
-
-         -->
         <footer>
             <div class="footerlogo">
                 <div>
-                    <a href=""><img src="./images/imgbanner/image-qt/logo.png" alt=""></a>
+                    <a href=""><img src="./images/imgbanner/logo.png" alt=""></a>
                 </div>
                 <div>
                     <span>Hotline: 106461054016</span><br>
@@ -95,6 +86,5 @@
             </div>
         </footer>
         <!--FOOTER END-->
-    </div>
 </body>
 </html>
