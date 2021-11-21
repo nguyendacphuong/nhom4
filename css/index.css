@@ -5,14 +5,13 @@
 /*========HEADER==========*/
 .header-top{
     display: flex;
-    align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-bottom: 1px solid #cfd3cb;
 }
 .header-top img{
     width: 30px;
-    margin: 0px 10px 0px 0px;
+    margin-left: 15px;
 }
+
 .header-main{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 196px;
