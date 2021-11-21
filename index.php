@@ -35,7 +35,22 @@ switch ($url) {
         require_once './admin/business/category.php';
         cate_save_add();
         break;
-
+    case 'chitietsp':
+        require_once './client/business/homepage.php';
+        chitiet();
+        break;
+    case 'dangnhap':
+        require_once './client/business/homepage.php';
+        dangnhap();
+        break;
+    case 'dangky':
+        require_once './client/business/homepage.php';
+        dangky();
+        break;
+    case 'lienhe':
+        require_once './client/business/homepage.php';
+        lienhe();
+        break;
     default:
         # code...
         break;

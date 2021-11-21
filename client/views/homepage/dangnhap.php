@@ -2,17 +2,16 @@
         <div class="left">
             <h2>ĐĂNG NHẬP</h2>
             <span>Nếu bạn đã có tài khoản, hãy đăng nhập để tích lũy điểm thành viên và nhận được những ưu<br> đãi tốt hơn!</span>
-            <form>
+            <form method="POST" action="<?php BASE_URL . 'dangnhap' ?>">
                 <div>
                     <label for="">Email*</label><br>
                     <input type="email" name="email">
-                    <strong><?php echo isset($errot['email']) ? $errot['email'] : ' '; ?></strong>
+                    <span><?php echo (isset($err['email']) ? $err['email'] : '') ?></span>
                 </div>
                 <div>
                     <label for="">Mật khẩu*</label><br>
                     <input type="password" name="pass">
-                    <strong> <?php echo isset($errot1['pass']) ? $errot1['pass'] : ''; ?></strong>
-                   
+                    <span><?php echo (isset($err['pass']) ? $err['pass'] : '') ?></span>
                 </div>
                 <div class="forgotpass">
                     <a href="">Quên mật khẩu?</a>
@@ -21,7 +20,7 @@
                     <button class="login" name="dangnhap">ĐĂNG NHẬP</button><br>
                 </div>
             </form>
-            <a class="create" href="/duan1-n4/frontend/dangky.html?"><button class="createaccount">TẠO TÀI KHOẢN</button></a>
+            <a class="create" href=""><button class="createaccount">TẠO TÀI KHOẢN</button></a>
         </div>
         <div class="right">
             <img src="./imgbanner/bannerlogin.jpg" alt="">
