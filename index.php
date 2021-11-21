@@ -43,8 +43,8 @@ switch ($url) {
         require_once './client/business/homepage.php';
         dangnhap();
         break;
-    case 'dangky':
-        require_once './client/business/homepage.php';
+    case 'dang-ky':
+        require_once './client/business/taikhoan.php';
         dangky();
         break;
     case 'lienhe':
