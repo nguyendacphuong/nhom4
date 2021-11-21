@@ -10,7 +10,7 @@
 <body>
     <div class="containner">
         <div class="header-top">
-            <img src="imgheader/iconphone.png" alt="">
+            <img src="./images/imgheader/iconphone.png" alt="">
             <span>Hỗ Trợ Khách Hàng: 1900 8079</span>
         </div>
     </div>
@@ -19,7 +19,7 @@
         <!--HEADER START-->
         <header>
             <div class="header-main">
-                <a href="/duan1-n4/frontend/index.html"><img src="./../quantriweb/image-qt/logo.png" alt="" class="logo"></a>
+                <a href=""><img src="./images/imgbanner/logo.png" alt="" class="logo"></a>
                 <ul class="menuheader">
                     <li><a href="">áo</a></li>
                     <li><a href="">quần</a></li>
@@ -30,8 +30,8 @@
                     <input  name="" placeholder="Bạn tìm gì....">
                 </form>
                 <div class="iconoperation">
-                    <a href=""><img src="imgheader/iconperson.png" alt=""></a>
-                    <a href=""><img src="imgheader/iconcart.png" alt=""></a>
+                    <a href=""><img src="./images/imgheader/iconperson.png" alt=""></a>
+                    <a href=""><img src="./images/imgheader/iconcart.png" alt=""></a>
                 </div>
             </div>
         </header>
@@ -51,7 +51,7 @@
         <footer>
             <div class="footerlogo">
                 <div>
-                    <a href="/duan1-n4/frontend/index.html"><img src="./../quantriweb/image-qt/logo.png" alt=""></a>
+                    <a href=""><img src="./images/imgbanner/image-qt/logo.png" alt=""></a>
                 </div>
                 <div>
                     <span>Hotline: 106461054016</span><br>
@@ -81,16 +81,16 @@
             <div class="connect">
                 <h3>KẾT NỐI</h3>
                 <div class="icon">
-                    <a href=""><img src="imgicon/facebool.png" alt=""></a>
-                    <a href=""><img src="imgicon/insta.png" alt=""></a>
-                    <a href=""><img src="imgicon/youtube.png" alt=""></a>
+                    <a href=""><img src="./images/imgicon/facebool.png" alt=""></a>
+                    <a href=""><img src="./images/imgicon/insta.png" alt=""></a>
+                    <a href=""><img src="./images/imgicon/youtube.png" alt=""></a>
                 </div>
                 <h3>PHƯƠNG THỨC THANH TOÁN</h3>
                 <div class="icon">
-                    <a href=""><img src="imgicon/icon jcb.jpg" alt=""></a>
-                    <a href=""><img src="imgicon/icon vnpay.png" alt=""></a>
-                    <a href=""><img src="imgicon/icon-visa.png" alt=""></a>
-                    <a href=""><img src="imgicon/icon mastercard.jpg" alt=""></a>
+                    <a href=""><img src="./images/imgicon/icon jcb.jpg" alt=""></a>
+                    <a href=""><img src="./images/imgicon/icon vnpay.png" alt=""></a>
+                    <a href=""><img src="./images/imgicon/icon-visa.png" alt=""></a>
+                    <a href=""><img src="./images/imgicon/icon mastercard.jpg" alt=""></a>
                 </div>
             </div>
         </footer>

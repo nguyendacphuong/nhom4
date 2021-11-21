@@ -1,13 +1,13 @@
 <div class="slideshow">
     <div class="slides">
         <div class="slide">
-            <img src="imgbanner/banner1.jpg" alt="">
+            <img src="./images/imgbanner/banner1.jpg" alt="">
         </div>
         <div class="slide">
-            <img src="imgbanner/banner2.jpg" alt="">
+            <img src="./images/imgbanner/banner2.jpg" alt="">
         </div>
         <div class="slide">
-            <img src="imgbanner/banner3.jpg" alt="">
+            <img src="./images/imgbanner/banner3.jpg" alt="">
         </div>
     </div>
     <div class="slide-controls">
@@ -21,17 +21,17 @@
 <div class="categori">
     <div class="categori_item">
         <a href="#">
-            <img src="imgcate/cate1.jpg" alt="">
+            <img src="./images/imgcate/cate1.jpg" alt="">
         </a>
     </div>
     <div class="categori_item">
         <a href="#">
-            <img src="imgcate/cate2.jpg" alt="">
+            <img src="./images/imgcate/cate2.jpg" alt="">
         </a>
     </div>
     <div class="categori_item">
         <a href="#">
-            <img src="imgcate/cate3.jpg" alt="">
+            <img src="./images/imgcate/cate3.jpg" alt="">
         </a>
     </div>
 
@@ -84,7 +84,7 @@
     </div>
 </div>
 <div class="banner">
-    <img src="imgbanner/banner4.jpg" alt="">
+    <img src="./images/imgbanner/banner4.jpg" alt="">
 </div>
 <div class="register">
     <div class="image">
