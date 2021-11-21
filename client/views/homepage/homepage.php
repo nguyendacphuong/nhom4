@@ -40,46 +40,46 @@
     <h1 class="homeproducttitle">Sản phẩm mới</h1>
     <div class="product">
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
     </div>
     <h1 class="homeproducttitle">sản phẩm hot</h1>
     <div class="product">
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
     </div>
     <h1 class="homeproducttitle">dón hè sang</h1>
     <div class="product">
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
         <div class="product-item">
-            <img src="imgproduct/sp1.jpg" alt="">
+            <img src="./images/imgproduct/sp1.jpg" alt="">
         </div>
     </div>
 </div>
@@ -88,7 +88,7 @@
 </div>
 <div class="register">
     <div class="image">
-        <img src="./imgbanner/banner 7.jpg" alt="">
+        <img src="./images/imgbanner/banner 7.jpg" alt="">
     </div>
     <div class="form_operation">
         <form class="form_register">

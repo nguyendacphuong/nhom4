@@ -23,6 +23,6 @@
             <a class="create" href=""><button class="createaccount">TẠO TÀI KHOẢN</button></a>
         </div>
         <div class="right">
-            <img src="./imgbanner/bannerlogin.jpg" alt="">
+            <img src="./images/imgbanner/bannerlogin.jpg" alt="">
         </div>
     </div>

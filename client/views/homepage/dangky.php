@@ -35,6 +35,6 @@
             </form>
         </div>
         <div class="right">
-            <img src="./imgbanner/bannerlogin.jpg" alt="">
+            <img src="./images/imgbanner/bannerlogin.jpg" alt="">
         </div>
     </div>

@@ -28,7 +28,7 @@
             <h2>Văn phòng</h2>
             <div class="dienthoai">
                 <div class="anh">
-                    <img src="./imgproduct/dienthoai.jpg" width="40px" height="40px"alt="">
+                    <img src="./images/imgproduct/dienthoai.jpg" width="40px" height="40px"alt="">
                 </div>
                 <div class="text">
                     <h3>Hotline : 0987976943</h3>
@@ -36,7 +36,7 @@
             </div>
             <div class="dongho">
                 <div class="anh">
-                    <img src="./imgproduct/dongho.jpg" width="40px" height="40px"alt="">
+                    <img src="./images/imgproduct/dongho.jpg" width="40px" height="40px"alt="">
                 </div>
                 <div class="text">
                     <p><h3>Thời gian mở cửa : Từ 8h00 đến 22h00</h3> 
@@ -44,7 +44,7 @@
             </div>
             <div class="diachi1">
                 <div class="anh">
-                    <img src="./imgproduct/vitri.jpg" width="42px" height="39px"alt="">
+                    <img src="./images/imgproduct/vitri.jpg" width="42px" height="39px"alt="">
                 </div>
                 <div class="text">
                     <div class="pb">
@@ -57,7 +57,7 @@
             </div>
             <div class="diachi2">
                 <div class="anh">
-                    <img src="./imgproduct/vitri.jpg" width="42px" height="39px"alt="">
+                    <img src="./images/imgproduct/vitri.jpg" width="42px" height="39px"alt="">
                 </div>
                 <div class="text">
                     <div class="pb">

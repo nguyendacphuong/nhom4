@@ -8,12 +8,12 @@
         <div class="product-content">
             <div class="product-content-left">
                 <div class="product-content-left-big-img">
-                    <img src="imgproduct/1.jpg"  alt="" srcset="">
+                    <img src="./images/imgproduct/1.jpg"  alt="" srcset="">
                 </div>
                 <div class="product-content-left-small-img">
-                    <img src="imgproduct/2.jpg"  alt="">
-                    <img src="imgproduct/2.jpg"  alt="">
-                    <img src="imgproduct/2.jpg"  alt="">
+                    <img src="./images/imgproduct/2.jpg"  alt="">
+                    <img src="./images/imgproduct/2.jpg"  alt="">
+                    <img src="./images/imgproduct/2.jpg"  alt="">
                 </div>
             </div>
             <div class="product-content-right">
@@ -27,10 +27,10 @@
                 <p><span><strong>Màu sắc</strong></span> : Hồng / Xanh</p> <span style="color: rgb(223, 144, 212)">*</span>
                 <div class="product-content-right-product-color">
                     <div class="product-content-right-product-color-img">
-                        <img src="imgproduct/hong.jpg" width="7%" alt="">
+                        <img src="./images/imgproduct/hong.jpg" width="7%" alt="">
                     </div>
                     <div class="product-content-right-product-color-img">
-                        <img src="imgproduct/xanh.jpg" width="7%" alt="">
+                        <img src="./images/imgproduct/xanh.jpg" width="7%" alt="">
                     </div>
                 </div>
                 <div class="product-content-right-product-size">
@@ -95,16 +95,16 @@
     <h1 class="homeproducttitle">sản phẩm liên quan</h1>
         <div class="sanpham1">
             <div class="sanpham-item">
-                <img src="imgproduct/2.jpg" alt="">
+                <img src="./images/imgproduct/2.jpg" alt="">
             </div>
             <div class="sanpham-item">
-                <img src="imgproduct/2.jpg" alt="">
+                <img src="./images/imgproduct/2.jpg" alt="">
             </div>
             <div class="sanpham-item">
-                <img src="imgproduct/2.jpg" alt="">
+                <img src="./images/imgproduct/2.jpg" alt="">
             </div>
             <div class="sanpham-item">
-                <img src="imgproduct/2.jpg" alt="">
+                <img src="./images/imgproduct/2.jpg" alt="">
             </div>
         </div>
 </section>
