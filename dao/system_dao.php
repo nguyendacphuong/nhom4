@@ -3,8 +3,6 @@ function get_connect(){
     $connect = new PDO("mysql:host=localhost;dbname=nhom4_duan1;charset=utf8", "root", "");
     return $connect;
 }
-
-
 function executeQuery($sql, $getAll = false){
 
     $connect = get_connect();
