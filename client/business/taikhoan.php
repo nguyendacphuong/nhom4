@@ -16,7 +16,7 @@
             if(empty($err)){
                 $sql = "insert into user (username, email, tell, pass) values ('$username', '$email', '$tell', '$pass')";
                 executeQuery($sql);
-                header ('Location:'.BASE_URL.'/');
+                header ('Location:'.BASE_URL.'dangnhap');
             }
         }
         
