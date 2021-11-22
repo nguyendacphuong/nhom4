@@ -9,11 +9,7 @@
         client_render('homepage/dangky.php');
     }
     function dangnhap(){
-        if (isset($_POST['dangnhap'])) {
-            $_SESSION['email'] = $_POST['email'];
-            $_SESSION['pass'] = $_POST['pass'];
-        }
-        if (isset($_POST['dangnhap'])) {
+        if(isset($_POST) && isset($_POST['dangnhap'])){
             $email = $_POST['email'];
             $pass = $_POST['pass'];
             $err = [];
@@ -24,7 +20,7 @@
                 $err['pass'] ='bạn chưa nhập pass';
             }
             if ($email && $pass != '') {
-                $sql = "SELECT * FROM user WHERE email = '$email'";
+                $sql = "SELECT * FROM user WHERE email = '$email' and pass = '$pass'";
                 $connect = get_connect();
                 $stmt = $connect->prepare($sql);
                 $stmt->execute();
