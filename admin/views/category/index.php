@@ -29,7 +29,7 @@
                                 <td><?= $item['name'] ?></td>
                                 <td><?= $item['show_menu'] == 1 ? "Có" : "Không" ?></td>
                                 <td>
-                                    <a href="<?= ADMIN_URL . 'danh-muc/cap-nhat?id='. $item['id'] ?>" class="btn btn-sm btn-info">
+                                    <a href="<?= ADMIN_URL . 'danh-muc/capnhat?id='. $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                     <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'danh-muc/xoa?id='. $item['id'] ?>', '<?= $item['name']?>')" class="btn btn-sm btn-danger">

@@ -1,4 +1,5 @@
 <?php
+
     function home(){
         client_render('homepage/homepage.php');
     }
