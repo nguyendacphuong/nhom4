@@ -5,10 +5,6 @@ require_once './commons/utils.php';
 require_once './dao/system_dao.php';
 require_once 'globol.php';
 switch ($url) {
-    case '/':
-        require_once './client/business/homepage.php';
-        home();
-        break;
     case 'danh-muc':
         require_once './client/business/category.php';
         list_product();
@@ -34,7 +30,7 @@ switch ($url) {
         cate_save_add();
         break;
         // -----------------------------------------
-    case 'trangchu':
+    case '/':
         require_once './client/business/dashboard.php';
         dashboard_index();
         break;
