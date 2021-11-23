@@ -1,40 +1,44 @@
-<div class="content">
-        <div class="left">
-            <h2>TẠO TÀI KHOẢN</h2>
-            <span>Hãy đăng ký ngay để tích lũy điểm thành viên và nhận được những ưu đãi tốt hơn!</span>
-            <form action="<?= BASE_URL . 'dang-ky'?>" method="POST">
-                <div>
-                    <label for="">Họ và Tên*</label><br>
-                    <input type="text" name="username" required>
+
+    <div class="my-account-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="<?= BASE_URL . 'dang-ky'?>" method="POST">
+                        <div class="form-fields">
+                            <h2>Đăng ký</h2>
+                            <p>
+                                <label>Họ và tên <span class="required">*</span></label>
+                                <input type="text" name="fullname" />
+                            </p>
+                            <p>
+                                <label>Email <span class="required">*</span></label>
+                                <input type="email" name="email" />
+                            </p>
+                            <p>
+                                <label>Password <span class="required">*</span></label>
+                                <input type="password" name="password" />
+                            </p>
+                            <p>
+                                <label>Repassword <span class="required">*</span></label>
+                                <input type="password" name="repassword" />
+                            </p>
+                            <p>
+                                <label>Số điện thoại <span class="required">*</span></label>
+                                <input type="text" name="phone_number" />
+                            </p>
+                            <p>
+                                <label>Địa chỉ <span class="required">*</span></label>
+                                <input type="text" name="address" />
+                            </p>
+                        </div>
+                        <div class="form-action">
+                            <input type="submit" value="Đăng ký" name="btn_dangky" />
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <label for="">Email*</label><br>
-                    <input type="email" name="email" required>
-                    <span><?php ?></span>
+                <div class="col-md-6">
+                    <img class="cl" src="./public/client-asset/img/banner/home-4/r.png">
                 </div>
-                <div>
-                    <label for="">Số Điện Thoại*</label><br>
-                    <input type="text" name="tell" required>
-                    <span><?php ?></span>
-                </div>
-                <div>
-                    <label for="">Mật khẩu*</label><br>
-                    <input type="password" name="pass" required>
-                    <span><?php ?></span>
-                </div>
-                <div>
-                    <label for="">Nhập lại mật khẩu*</label><br>
-                    <input type="password" name="repass" required>
-                </div>
-                <div>
-                    <button type ="submit" class="login" name="btn_dangky">TẠO TÀI KHOẢN</button><br>
-                </div>
-               <div style="margin: 25px 0px;">
-                    <span>Bằng việc chọn tiếp tục, bạn đã đồng ý với Điều khoản & Điều kiện cùng Chính sách bảo mật<br> và chia sẻ thông tin của OWEN</span>
-               </div>
-            </form>
-        </div>
-        <div class="right">
-            <img src="./imgbanner/bannerlogin.jpg" alt="">
+            </div>
         </div>
     </div>
