@@ -74,6 +74,9 @@ switch ($url) {
         require_once './admin/business/product.php';
         cate_save_add();
         break;
+
+        // end sản phẩm
+
     case 'cp-admin/taikhoan':
         require_once './admin/business/user.php';
         user_index();

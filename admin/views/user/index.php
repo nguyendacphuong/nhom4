@@ -23,7 +23,7 @@
                         <th>Địa chỉ</th>
                         <th>Role</th>
                         <th>
-                            <a href="<?= ADMIN_URL . 'user/tao-moi'?>" class="btn btn-sm btn-success">Tạo tài khoản mới</a>
+                            <a href="<?= ADMIN_URL . 'taikhoan/tao-moi'?>" class="btn btn-sm btn-success">Tạo tài khoản mới</a>
                         </th>
                     </thead>
                     <tbody>
