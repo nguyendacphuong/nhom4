@@ -5,6 +5,7 @@ const PUBLIC_URL = BASE_URL . 'public/';
 const ADMIN_URL = BASE_URL . 'cp-admin/';
 const ADMIN_ASSET = BASE_URL . 'public/admin-assets/';
 const CLIENT_ASSET = BASE_URL . 'public/client-asset/';
+const IMAGE_URL = CLIENT_ASSET . 'img/';
 
 
 function dd(){
