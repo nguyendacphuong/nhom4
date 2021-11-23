@@ -78,8 +78,11 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_index();
         break;
-
-
+    case 'cp-admin/taikhoan/tao-moi':
+        require_once './admin/business/user.php';
+        user_add();
+        break;
+    
 
     default:
         # code...
