@@ -12,7 +12,7 @@ function product_index()
 }
 function cate_add_form()
 {
-    $sql = "select * from category  ";
+    $sql = "select * from category";
     $cates = pdo_query($sql, true);
     admin_render('product/add-form.php', compact('cates'), 'admin-assets/custom/product_add.js');
 }
