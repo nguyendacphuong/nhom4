@@ -21,7 +21,19 @@ function executeQuery($sql, $getAll = false){
  * @return array mảng chứa bản ghi
  * @throws PDOException lỗi thực thi câu lệnh
  */
-
-
-
-?>
+function pdo_query($sql){
+    $sql_args = array_slice(func_get_args(), 1);
+    try{
+        $conn = get_connect();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $rows = $stmt->fetchAll();
+        return $rows;
+    }
+    catch(PDOException $e){
+        throw $e;
+    }
+    finally{
+        unset($conn);
+    }
+}
