@@ -25,6 +25,10 @@
                             
                         </div>
                         <div class="form-group">
+                            <label for="">Hình chi tiết</label>
+                            <input type="file" name="image" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
+                        </div>
+                        <div class="form-group">
                             <label for="">Mô tả</label>
                             <textarea name="description" class="form-control" placeholder="" aria-describedby="helpId"id="" cols="30" rows="10"></textarea>
                         </div>
