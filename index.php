@@ -5,6 +5,10 @@ require_once './commons/utils.php';
 require_once './dao/system_dao.php';
 require_once 'globol.php';
 switch ($url) {
+    case '/':
+        require_once './client/business/dashboard.php';
+        dashboard_index();
+        break;
     case 'danh-muc':
         require_once './client/business/category.php';
         list_product();
@@ -29,12 +33,7 @@ switch ($url) {
         require_once './admin/business/category.php';
         cate_save_add();
         break;
-        // -----------------------------------------
-    case '/':
-        require_once './client/business/dashboard.php';
-        dashboard_index();
-        break;
-        // -----------------------------------------------
+       
     case 'chitietsp':
         require_once './client/business/homepage.php';
         chitiet();
@@ -77,6 +76,14 @@ switch ($url) {
 
         // end sản phẩm
 
+    case 'cp-admin/sanpham/capnhat':
+        require_once './admin/business/product.php';
+        edit_form();
+        break;
+    case 'cp-admin/sanpham/update':
+        require_once './admin/business/product.php';
+        update_form();
+        break;
     case 'cp-admin/taikhoan':
         require_once './admin/business/user.php';
         user_index();
