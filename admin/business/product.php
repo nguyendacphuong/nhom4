@@ -32,7 +32,6 @@ function cate_save_add()
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
-<<<<<<< Updated upstream
         $img = PUBLIC_URL. $filename;
     }
 
@@ -40,16 +39,6 @@ function cate_save_add()
      ('$title','$price','$discount','$img','$description','$category_id',' $created_at','$updated_at')";
     executeQuery($sql, true);
 
-=======
-        $img = $filename;
-    }
-
-    $sql = " INSERT INTO sanpham (title,price,discount,thumbnail,description,iddm) values ('$title','$price','$discount','$img','$description','$iddm')";
-    $sq = "select * from danhmuc where name ";
-    $cates = executeQuery($sql, true);
-    compact('cates');
-    executeQuery($sql);
->>>>>>> Stashed changes
     header("location: " . ADMIN_URL . 'sanpham');
 }
 function edit_form()
