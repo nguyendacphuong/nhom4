@@ -92,6 +92,11 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_add();
         break;
+    case 'cp-admin/taikhoan/luu-tao-moi':
+        require_once './admin/business/user.php';
+        user_save_add();
+        break;
+    
     
 
     default:
