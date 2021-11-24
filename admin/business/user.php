@@ -6,4 +6,7 @@
 
 	admin_render('user/index.php', compact('cates', 'keyword'), 'admin-assets/custom/product_index.js');
 	}
+	function user_add(){
+    	admin_render('user/user_add.php', [], 'admin-assets/custom/product_add.js');
+	}
  ?>

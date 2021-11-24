@@ -74,6 +74,8 @@ switch ($url) {
         cate_save_add();
         break;
 
+        // end sản phẩm
+
     case 'cp-admin/sanpham/capnhat':
         require_once './admin/business/product.php';
         edit_form();
