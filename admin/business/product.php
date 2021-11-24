@@ -12,7 +12,7 @@ function product_index()
 }
 function cate_add_form()
 {
-    $sql = "select * from category  ";
+    $sql = "select * from category";
     $cates = pdo_query($sql, true);
     admin_render('product/add-form.php', compact('cates'), 'admin-assets/custom/product_add.js');
 }
@@ -37,7 +37,7 @@ function cate_save_add()
 
     $sql = " INSERT INTO product (title,price,discount,thumbnail,description,category_id,created_at,updated_at) values
      ('$title','$price','$discount','$img','$description','$category_id',' $created_at','$updated_at')";
-
+     executeQuery($sql);
     header("location: " . ADMIN_URL . 'sanpham');
 }
 function edit_form()

@@ -68,9 +68,10 @@
 												</div>
 											</div>
 										</div>
+										
 										<!-- single-product end -->
 										<!-- single-product start -->
-										<div class="col-12">
+										<!-- <div class="col-12">
 											<div class="single-product">
 												<span class="sale-text">Sale</span>
 												<div class="product-img">
@@ -113,10 +114,10 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> -->
 										<!-- single-product end -->
 										<!-- single-product start -->
-										<div class="col-12">
+										<!-- <div class="col-12">
 											<div class="single-product">
 												<div class="product-img">
 													<a href="#">
@@ -157,10 +158,10 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> -->
 										<!-- single-product end -->
 										<!-- single-product start -->
-										<div class="col-12">
+										<!--<div class="col-12">
 											<div class="single-product">
 												<span class="sale-text">Sale</span>
 												<div class="product-img">
@@ -203,10 +204,10 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> -->
 										<!-- single-product end -->
 										<!-- single-product start -->
-										<div class="col-12">
+										<!-- <div class="col-12">
 											<div class="single-product">
 												<span class="sale-text">Sale</span>
 												<div class="product-img">
@@ -249,10 +250,10 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> -->
 										<!-- single-product end -->
 										<!-- single-product start -->
-										<div class="col-12">
+										<!-- <div class="col-12">
 											<div class="single-product">
 												<span class="sale-text">Sale</span>
 												<div class="product-img">
@@ -295,7 +296,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> -->
 										<!-- single-product end -->
 									</div>
 								</div>
