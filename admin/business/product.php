@@ -4,7 +4,7 @@ function product_index()
 {
     $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
     // lấy danh sách sản phẩm
-    $sql = "select * from product where title like '%$keyword%'";
+    $sql = "SELECT product.*,category.name AS 'name_cate' FROM product JOIN category ON product.category_id = category.id where title like '%$keyword%'";
     $cates = executeQuery($sql, true);
 
     // hiển thị view
@@ -26,7 +26,7 @@ function cate_save_add()
     $description = $_POST['description'];
     $category_id = $_POST['category_id'];
     $created_at = $updated_at = date('Y-m-d H:s:i');
-    $file = $_FILES['thumbnail'];
+    $file = $_FILES['thumbnail']; 
     $filename = "";
     if ($file['size'] > 0) {
         $filename = uniqid() . '-' . $file['name'];
@@ -37,7 +37,6 @@ function cate_save_add()
 
     $sql = " INSERT INTO product (title,price,discount,thumbnail,description,category_id,created_at,updated_at) values
      ('$title','$price','$discount','$img','$description','$category_id',' $created_at','$updated_at')";
-    executeQuery($sql, true);
 
     header("location: " . ADMIN_URL . 'sanpham');
 }
