@@ -25,6 +25,7 @@ function cate_save_add()
     $discount = $_POST['discount'];
     $description = $_POST['description'];
     $category_id = $_POST['category_id'];
+    $created_at = $updated_at = date('Y-m-d H:s:i');
     $file = $_FILES['thumbnail'];
     $filename = "";
     if ($file['size'] > 0) {
@@ -35,8 +36,8 @@ function cate_save_add()
         $img = PUBLIC_URL. $filename;
     }
 
-    $sql = " INSERT INTO product (title,price,discount,thumbnail,description,category_id) values
-     ('$title','$price','$discount','$img','$description','$category_id')";
+    $sql = " INSERT INTO product (title,price,discount,thumbnail,description,category_id,created_at,updated_at) values
+     ('$title','$price','$discount','$img','$description','$category_id',' $created_at','$updated_at')";
     executeQuery($sql, true);
 
 =======
