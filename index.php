@@ -33,7 +33,7 @@ switch ($url) {
         require_once './admin/business/category.php';
         cate_save_add();
         break;
-        // ===============================================
+       
     case 'chitietsp':
         require_once './client/business/homepage.php';
         chitiet();
@@ -82,6 +82,16 @@ switch ($url) {
         require_once './admin/business/product.php';
         update_form();
         break;
+    case 'cp-admin/taikhoan':
+        require_once './admin/business/user.php';
+        user_index();
+        break;
+    case 'cp-admin/taikhoan/tao-moi':
+        require_once './admin/business/user.php';
+        user_add();
+        break;
+    
+
     default:
         # code...
         break;

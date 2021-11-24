@@ -2,19 +2,20 @@
     function dangky(){
         $err=[];
         if(isset($_POST) && isset($_POST['btn_dangky'])){
-            $username= $_POST['username'];
+            $fullname= $_POST['fullname'];
             $email= $_POST['email'];
-            $tell= $_POST['tell'];
-            $pass= $_POST['pass'];
-            $repass= $_POST['repass'];
-            if(empty($username && $email && $tell && $pass && $repass)){
-                $err['a'] = 'Vui lòng điền đầy đủ thông tin!';
+            $phone_number= $_POST['phone_number'];
+            $password= $_POST['password'];
+            $repassword= $_POST['repassword'];
+            $address= $_POST['address'];
+            if(empty($fullname && $email && $address && $password && $repassword && $phone_number)){
+                $err[] = '<script> alert("Vui lòng điền đầy đủ thông tin!") </script>';
             }
-            if($pass != $repass){
-                $err['a'] = 'Mật khẩu không khớp!';
+            if($password != $repassword){
+                $err[] = '<script> alert("Mật khẩu không khớp!") </script>';
             }
             if(empty($err)){
-                $sql = "insert into user (username, email, tell, pass) values ('$username', '$email', '$tell', '$pass')";
+                $sql = "insert into user (fullname, email, phone_number, address, password) values ('$fullname', '$email', '$phone_number', '$address', '$password')";
                 executeQuery($sql);
                 header ('Location:'.BASE_URL.'dangnhap');
             }
