@@ -74,6 +74,8 @@ switch ($url) {
         cate_save_add();
         break;
 
+        // end sản phẩm
+
     case 'cp-admin/sanpham/capnhat':
         require_once './admin/business/product.php';
         edit_form();
@@ -90,6 +92,11 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_add();
         break;
+    case 'cp-admin/taikhoan/luu-tao-moi':
+        require_once './admin/business/user.php';
+        user_save_add();
+        break;
+    
     
 
     default:
