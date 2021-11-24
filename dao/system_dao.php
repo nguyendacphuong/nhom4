@@ -3,7 +3,6 @@ function get_connect(){
     $connect = new PDO("mysql:host=localhost;dbname=nhom4_duan1;charset=utf8", "root", "");
     return $connect;
 }
-
 function executeQuery($sql, $getAll = false){
 
     $connect = get_connect();
@@ -15,32 +14,11 @@ function executeQuery($sql, $getAll = false){
 
     return $stmt->fetch();
 }
-
-// /**
-//  * Thực thi câu lệnh sql thao tác dữ liệu (INSERT, UPDATE, DELETE)
-//  * @param string $sql câu lệnh sql
-//  * @param array $args mảng giá trị cung cấp cho các tham số của $sql
-//  * @throws PDOException lỗi thực thi câu lệnh 
-//  */
-// function pdo_execute($sql){
-//     $sql_args = array_slice(func_get_args(), 1);
-//     try{
-//         $conn = get_connect();
-//         $stmt = $conn->prepare($sql);
-//         $stmt->execute($sql_args);
-//     }
-//     catch(PDOException $e){
-//         throw $e;
-//     }
-//     finally{
-//         unset($conn);
-//     }
-// }
 /**
- * Thực thi câu lệnh sql truy vấn dữ liệu (SELECT)
+ * Thực thi câu lệnh sql truy vấn một bản ghi
  * @param string $sql câu lệnh sql
  * @param array $args mảng giá trị cung cấp cho các tham số của $sql
- * @return array mảng các bản ghi
+ * @return array mảng chứa bản ghi
  * @throws PDOException lỗi thực thi câu lệnh
  */
 function pdo_query($sql){
@@ -48,7 +26,7 @@ function pdo_query($sql){
     try{
         $conn = get_connect();
         $stmt = $conn->prepare($sql);
-        $stmt->execute($sql_args);
+        $stmt->execute();
         $rows = $stmt->fetchAll();
         return $rows;
     }
@@ -59,6 +37,22 @@ function pdo_query($sql){
         unset($conn);
     }
 }
+function pdo_execute_return_lastInsertId($sql){
+    $sql_args = array_slice(func_get_args(), 1);
+    try{
+        $conn = get_connect();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute($sql_args);
+        return $conn->lastInsertId();
+    }
+    catch(PDOException $e){
+        throw $e;
+    }
+    finally{
+        unset($conn);
+    }
+}
+
 /**
  * Thực thi câu lệnh sql truy vấn một bản ghi
  * @param string $sql câu lệnh sql
@@ -72,7 +66,7 @@ function pdo_query_one($sql){
         $conn = get_connect();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
-        $row = $stmt->fetch();
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
         return $row;
     }
     catch(PDOException $e){
@@ -105,6 +99,3 @@ function pdo_query_value($sql){
         unset($conn);
     }
 }
-
-
-?>

@@ -60,6 +60,7 @@ switch ($url) {
         update_form();
         break;
         // and danh mục
+
     case 'cp-admin/sanpham':
         require_once './admin/business/product.php';
         product_index();
