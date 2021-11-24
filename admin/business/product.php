@@ -26,18 +26,18 @@ function cate_save_add()
     $description = $_POST['description'];
     $category_id = $_POST['category_id'];
     $created_at = $updated_at = date('Y-m-d H:s:i');
-    $file = $_FILES['thumbnail']; 
+    $file = $_FILES['thumbnail'];
     $filename = "";
     if ($file['size'] > 0) {
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
-        $img = PUBLIC_URL. $filename;
+        $img = PUBLIC_URL . $filename;
     }
 
     $sql = " INSERT INTO product (title,price,discount,thumbnail,description,category_id,created_at,updated_at) values
      ('$title','$price','$discount','$img','$description','$category_id',' $created_at','$updated_at')";
-
+    executeQuery($sql);
     header("location: " . ADMIN_URL . 'sanpham');
 }
 function edit_form()
