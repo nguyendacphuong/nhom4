@@ -82,7 +82,6 @@ switch ($url) {
         require_once './admin/business/product.php';
         update_form();
         break;
-
     case 'cp-admin/taikhoan':
         require_once './admin/business/user.php';
         user_index();
