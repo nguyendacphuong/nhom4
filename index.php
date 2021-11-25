@@ -95,6 +95,14 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_save_add();
         break;
+    case 'cp-admin/taikhoan/edit-user':
+        require_once './admin/business/user.php';
+        edit_user();
+        break;
+    case 'cp-admin/taikhoan/update-user':
+        require_once './admin/business/user.php';
+        update_user();
+    break;
     default:
         # code...
         break;
