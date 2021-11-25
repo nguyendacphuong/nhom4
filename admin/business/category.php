@@ -43,6 +43,10 @@ function edit_form()
     // hiển thị view
     admin_render('category/edit-form.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
+function suaproduct()
+{
+    admin_render('category/suaproduct.php', [], 'admin-assets/custom/category_add.js');
+}
 function update_form()
 {
     $id = $_POST['id'];
