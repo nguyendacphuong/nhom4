@@ -31,6 +31,18 @@
                             <label for="">Avatar</label>
                             <input type="file" name="avatar" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
+                        <div class="form-group">
+                            <label for="usr">Phân Quyền</label>
+                            <select class="form-control" name="role_id" id="role_id">
+                                <option value="">-- Chọn --</option>
+                                <?php
+                                foreach ($cates as $role) {
+                                    extract($role);
+                                    echo "<option value = '.$id.'>$name</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
                         <br>
                         <div class="d-flex justify-content-center">
                             <a href="<?= ADMIN_URL . 'taikhoan'?>" class="btn btn-sm btn-danger">Hủy</a>

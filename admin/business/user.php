@@ -8,7 +8,9 @@
 	}
 
 	function user_add(){
-    	admin_render('user/user_add.php', [], 'admin-assets/custom/product_add.js');
+		$sql = "select * from role  ";
+    	$cates = pdo_query($sql, true);
+    	admin_render('user/user_add.php', compact('cates'), 'admin-assets/custom/product_add.js');
 	}
 	function user_save_add(){
             $fullname= $_POST['fullname'];
@@ -19,13 +21,16 @@
             $address= $_POST['address'];
             $avatar = $_FILES['avatar']; 
 		    $avatarname = "";
+		    $created_at = $updated_at = date('Y-m-d H:s:i');
+		    $role_id=$_POST['role_id'];
 		    if ($avatar['size'] > 0) {
 		        $avatarname = uniqid() . '-' . $avatar['name'];
 		        move_uploaded_file($avatar['tmp_name'], './public/uploads/' . $avatarname);
 		        $avatarname = 'uploads/' . $avatarname;
 		        $img = PUBLIC_URL. $avatarname;
 		    }
-            $sql = "INSERT into user (fullname, avatar, email, phone_number, address, password) values ('$fullname','$img', '$email', '$phone_number', '$address', '$password')";
+
+            $sql = "INSERT into user (fullname, avatar, email, phone_number, address, password,created_at, updated_at,role_id ) values ('$fullname','$img', '$email', '$phone_number', '$address', '$password','$category_id','$updated_at','$role_id')";
             executeQuery($sql);
             header ('Location:'.ADMIN_URL.'taikhoan');
         
