@@ -8,16 +8,16 @@
             $password= $_POST['password'];
             $repassword= $_POST['repassword'];
             $address= $_POST['address'];
-            if(empty($fullname && $email && $address && $password && $repassword && $phone_number)){
-                $err[] = '<script> alert("Vui lòng điền đầy đủ thông tin!") </script>';
+            if(empty($fullname && $email && $phone_number && $password && $repassword && $address )){
+               $err[] = '<script> alert("Bạn chưa điền đầy đủ thông tin") </script>';
             }
             if($password != $repassword){
-                $err[] = '<script> alert("Mật khẩu không khớp!") </script>';
+                $err[] = '<script> alert("Mật khẩu không khớp") </script>';
             }
             if(empty($err)){
                 $sql = "insert into user (fullname, email, phone_number, address, password) values ('$fullname', '$email', '$phone_number', '$address', '$password')";
                 executeQuery($sql);
-                header ('Location:'.BASE_URL.'dangnhap');
+                header ('Location:'.BASE_URL.'/');
             }
         }
         
