@@ -73,7 +73,17 @@ switch ($url) {
         require_once './admin/business/product.php';
         cate_save_add();
         break;
+<<<<<<< Updated upstream
     // end sản phẩm
+=======
+    case 'cp-admin/sanpham/suaproduct':
+        require_once './admin/business/product.php';
+        product_index();
+        break;
+
+
+        // end sản phẩm
+>>>>>>> Stashed changes
 
     case 'cp-admin/sanpham/capnhat':
         require_once './admin/business/product.php';
