@@ -111,6 +111,29 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-users" aria-hidden="true"></i>
+              <p>
+                Thương hiệu
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'thuong-hieu'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách thương hiệu</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'thuong-hieu/tao-moi'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tạo mới</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

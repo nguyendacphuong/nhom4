@@ -21,7 +21,9 @@
                         <th>Giảm giá</th>
                         <th>Hình sản phẩm</th>
                         <th>Mô tả</th>
+                        <th>Số lượng</th>
                         <th>Danh mục</th>
+                        <th>Thương hiệu</th>
                         <th>
                             <a href="<?= ADMIN_URL . 'sanpham/tao-moi' ?>" class="btn btn-sm btn-success">Tạo mới</a>
                         </th>
@@ -46,7 +48,10 @@
                                 <td><?= $item['discount'] ?> VNĐ</td>
                                 <td><?= $hinh?></td>
                                 <td><textarea name="" id="" cols="10" rows="5"><?= $item['description'] ?></textarea></td>
+                                <td><?= $item['number'] ?> </td>
                                 <td><?= $item['name_cate'] ?> </td>
+                                <td><?= $item['brand_id'] ?> </td>
+                                
                                 <td>
                                     <a href="<?= ADMIN_URL . 'sanpham/capnhat?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>

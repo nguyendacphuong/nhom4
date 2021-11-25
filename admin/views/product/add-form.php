@@ -26,11 +26,15 @@
                         </div>
                         <div class="form-group">
                             <label for="">Hình chi tiết</label>
-                            <input type="file" name="image" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
+                            <input type="file" name="image[]" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
                         </div>
                         <div class="form-group">
                             <label for="">Mô tả</label>
                             <textarea name="description" class="form-control" placeholder="" aria-describedby="helpId"id="" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Số lượng</label>
+                            <input type="number" name="number"  value="<?php echo $lis['number']; ?> " class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <br>
                         <div class="form-group">
@@ -41,6 +45,18 @@
                                 foreach ($cates as $category) {
                                     extract($category);
                                     echo "<option value = '.$id.'>$name</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="usr">Thương hiệu</label>
+                            <select class="form-control" name="category_id" id="category_id">
+                                <option value="">-- Chọn --</option>
+                                <?php
+                                foreach ($cate as $thuonghieu) {
+                                    extract($thuonghieu);
+                                    echo "<option value = '.$id.'>$name_brand</option>";
                                 }
                                 ?>
                             </select>
