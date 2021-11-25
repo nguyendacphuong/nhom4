@@ -31,7 +31,6 @@ function cate_save_add()
     $sql = "insert into category (name, show_menu) values ('$name', $show_menu)";
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'danh-muc');
-    
 }
 function edit_form()
 {
@@ -57,5 +56,61 @@ function update_form()
     header("location: " . ADMIN_URL . 'danh-muc');
 }
 // and danh mục
+function brand_index()
+{
+    $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
+    // lấy danh sách danh mục
+    $sql = "select * from brand where name_brand like '%$keyword%'";
+    $cates = executeQuery($sql, true);
 
-?>
+    // hiển thị view
+    admin_render('category/brand_index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
+}
+function brand_add_form()
+{
+    admin_render('category/brand-add.php', [], 'admin-assets/custom/category_add.js');
+}
+function brand_save_add()
+{
+    $name_brand = $_POST['name_brand'];
+  
+    $show_menu = isset($_POST['show_menu']) ? 1 : 0;
+    $sql = "INSERT INTO brand (name_brand,show_menu) values ('$name_brand', $show_menu)";
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'thuong-hieu');
+}
+
+function brand_remove()
+{
+    $id = $_GET['id'];
+    $sql = "delete from brand where id = $id";
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'thuong-hieu');
+}
+function brand_edit_form()
+{
+    $id = isset($_GET['id']) ? $_GET['id'] : "";
+    // lấy danh sách danh mục
+    $sql = "select * from brand where id = $id";
+    $cates = executeQuery($sql, '');
+
+    // hiển thị view
+    admin_render('category/brand-edit.php', compact('cates'), 'admin-assets/custom/category_index.js');
+}
+function brand_update_form()
+{
+    $id = $_POST['id'];
+    $name_brand = $_POST['name_brand'];
+    $image = $_FILES['image'];
+    $filename = "";
+    if ($image['size'] > 0) {
+        $filename = uniqid() . '-' . $image['name'];
+        move_uploaded_file($image['tmp_name'], './public/uploads/' . $filename);
+        $filename = 'uploads/' . $filename;
+        $img = PUBLIC_URL . $filename;
+    }
+    $show_menu = isset($_POST['show_menu']) ? 1 : 0;
+    $sql = " UPDATE brand set name_brand = '$name_brand', image = '$img',show_menu = '$show_menu' where id = $id";
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'thuong-hieu');
+}
