@@ -63,7 +63,7 @@
                         </div>
                         <div class="d-flex justify-content-center">
                             <a href="<?= ADMIN_URL . 'sanpham' ?>" class="btn btn-sm btn-danger">Hủy</a>
-                            &nbsp;
+&nbsp;
                             <button type="submit" class="btn btn-sm btn-primary">Lưu</button>
                         </div>
 

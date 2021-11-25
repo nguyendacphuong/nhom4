@@ -29,6 +29,7 @@ switch ($url) {
         require_once './admin/business/category.php';
         cate_save_add();
         break;
+<<<<<<< HEAD
         //    thương hiệu
     case 'cp-admin/thuong-hieu':
         require_once './admin/business/category.php';
@@ -55,8 +56,11 @@ switch ($url) {
         brand_update_form();
         break;
         // and thương hiệu
+=======
+    // chitietsp
+>>>>>>> 325224769395bda1674b06d849c5480e9ce11452
     case 'chitietsp':
-        require_once './client/business/homepage.php';
+        require_once './client/business/dashboard.php';
         chitiet();
         break;
     case 'dangnhap':
@@ -95,8 +99,7 @@ switch ($url) {
         require_once './admin/business/product.php';
         cate_save_add();
         break;
-
-        // end sản phẩm
+    // end sản phẩm
 
     case 'cp-admin/sanpham/capnhat':
         require_once './admin/business/product.php';
@@ -119,9 +122,20 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_save_add();
         break;
+<<<<<<< HEAD
         // Thương hiệu
 
 
+=======
+    case 'cp-admin/taikhoan/edit-user':
+        require_once './admin/business/user.php';
+        edit_user();
+        break;
+    case 'cp-admin/taikhoan/update-user':
+        require_once './admin/business/user.php';
+        update_user();
+    break;
+>>>>>>> 325224769395bda1674b06d849c5480e9ce11452
     default:
         # code...
         break;
