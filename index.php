@@ -72,7 +72,28 @@ switch ($url) {
         require_once './admin/business/product.php';
         cate_save_add();
         break;
-    
+    // end sản phẩm
+
+    case 'cp-admin/sanpham/capnhat':
+        require_once './admin/business/product.php';
+        edit_form();
+        break;
+    case 'cp-admin/sanpham/update':
+        require_once './admin/business/product.php';
+        update_form();
+        break;
+    case 'cp-admin/taikhoan':
+        require_once './admin/business/user.php';
+        user_index();
+        break;
+    case 'cp-admin/taikhoan/tao-moi':
+        require_once './admin/business/user.php';
+        user_add();
+        break;
+    case 'cp-admin/taikhoan/luu-tao-moi':
+        require_once './admin/business/user.php';
+        user_save_add();
+        break;
 
     default:
         # code...
