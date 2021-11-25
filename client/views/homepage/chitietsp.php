@@ -8,7 +8,7 @@
                         <li><a href="index.html">Home</a> <i class="fa fa-angle-right"></i></li>
                         <li><a href="shop.html">Shop</a> <i class="fa fa-angle-right"></i></li>
                         <li><a href="#">Women</a> <i class="fa fa-angle-right"></i></li>
-                        <li>Integer consequat ante lectus</li>
+                        <li><?=$item[0]['title']?></li>
                     </ul>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                     <div class="single-product-tab">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img alt="" src="img/product/tab/s1.jpg"></a></li>
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img alt="" src=""></a></li>
                         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><img alt="" src="img/product/tab/s2.jpg"></a></li>
                         <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><img alt="" src="img/product/tab/s3.jpg"></a></li>
                         <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><img alt="" src="img/product/tab/s4.jpg"></a></li>
@@ -33,7 +33,7 @@
 
                         <!-- Tab panes -->
                         <div class="tab-content">
-                        <div role="tabpanel" class="tab-pane active" id="home"><img alt="" src="img/product/tab/1.jpg"></div>
+                        <div role="tabpanel" class="tab-pane active" id="home"><img alt="" src="<?=$item[0]['thumbnail']?>"></div>
                         <div role="tabpanel" class="tab-pane" id="profile"><img alt="" src="img/product/tab/2.jpg"></div>
                         <div role="tabpanel" class="tab-pane" id="messages"><img alt="" src="img/product/tab/3.jpg"></div>
                         <div role="tabpanel" class="tab-pane" id="settings"><img alt="" src="img/product/tab/4.jpg"></div>
@@ -46,10 +46,10 @@
                     <div class="product-nav">
                         <a href="#"><i class="fa fa-angle-right"></i></a>
                     </div>
-                    <h1 class="product_title">Integer consequat ante lectus</h1>
+                    <h1 class="product_title"><?=$item[0]['title']?></h1>
                     <div class="price-box">
-                        <span class="new-price">£150.00</span>
-                        <span class="old-price">£190.00</span>
+                        <span class="new-price"><?=$item[0]['price']?>đ</span>
+                        <span class="old-price"><?=$item[0]['discount']?>d</span>
                     </div>
                     <div class="pro-rating">
                         <a href="#"><i class="fa fa-star"></i></a>
@@ -59,7 +59,7 @@
                         <a href="#"><i class="fa fa-star"></i></a>
                     </div>
                     <div class="short-description">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>						
+                        <p><?=$item[0]['description']?></p>						
                     </div>
                     <div class="stock-status">
                         <label>Availability</label>: <strong>In stock</strong>
@@ -98,8 +98,7 @@
                         <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="tab-desc">
                             <div class="product-tab-desc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum. Morbi ornare lectus quis justo gravida semper. Nulla tellus mi, vulputate adipiscing cursus eu, suscipit id nulla.</p>
-                                <p>Pellentesque aliquet, sem eget laoreet ultrices, ipsum metus feugiat sem, quis fermentum turpis eros eget velit. Donec ac tempus ante. Fusce ultricies massa massa. Fusce aliquam, purus eget sagittis vulputate, sapien libero hendrerit est, sed commodo augue nisi non neque. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, lorem et placerat vestibulum, metus nisi posuere nisl, in accumsan elit odio quis mi. Cras neque metus, consequat et blandit et, luctus a nunc. Etiam gravida vehicula tellus, in imperdiet ligula euismod eget.</p>
+                                <p><?=$item[0]['description']?></p>
                             </div>
                         </div>
                         <div role="tabpanel" class="tab-pane" id="page-comments">
@@ -220,7 +219,7 @@
                             </div>
                             <!-- single-product end -->				
                             <!-- single-product start -->
-                            <div class="col-12">
+                            <!-- <div class="col-12">
                                 <div class="single-product">
                                     <span class="sale-text">Sale</span>
                                     <div class="product-img">
@@ -263,10 +262,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- single-product end -->	
                             <!-- single-product start -->
-                            <div class="col-12">
+                            <!-- <div class="col-12">
                                 <div class="single-product">
                                     <div class="product-img">
                                         <a href="#">
@@ -307,10 +306,10 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- single-product end -->
                             <!-- single-product start -->
-                            <div class="col-12">
+                            <!-- <div class="col-12">
                                 <div class="single-product">
                                     <div class="product-img">
                                         <a href="#">
@@ -351,7 +350,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- single-product end -->							
                         </div>
                     </div>
@@ -360,28 +359,29 @@
             <div class="col-lg-3 col-md-12">
                 <!-- widget-recent start -->
                 <aside class="widget top-product-widget">
-                    <h3 class="sidebar-title">Recent</h3>
+                    <h3 class="sidebar-title">SẢN PHẨM CÙNG LOẠI</h3>
                     <ul>
+                        <?php foreach($itemcungloais as $itemcungloai):?>
                         <li>
                             <div class="single-product">
                                 <div class="product-img">
                                     <a href="#">
-                                        <img class="primary-image" src="img/product/15.jpg" alt="" />
-                                        <img class="secondary-image" src="img/product/16.jpg" alt="" />
+                                        <img class="primary-image" src="<?=$itemcungloai['thumbnail']?>" alt="" />
                                     </a>						
                                 </div>
                                 <div class="product-content">
                                     <div class="pro-info">
-                                        <h2 class="product-name"><a href="#">Curabitur vulputate</a></h2>
+                                        <h2 class="product-name"><a href="#"><?=$itemcungloai['title']?></a></h2>
                                         <div class="price-box">
-                                            <span class="new-price">£90.00</span>
-                                            <span class="old-price">£120.00</span>
+                                            <span class="new-price"><?=$itemcungloai['price']?>đ</span>
+                                            <span class="old-price"><?=$itemcungloai['discount']?>đ</span>
                                         </div>								
-                                    </div>									
+                                    </div>								
                                 </div>
-                            </div>
+                            </div>	
                         </li>
-                        <li>
+                        <?php endforeach?>
+                        <!-- <li>
                             <div class="single-product">
                                 <div class="product-img">
                                     <a href="#">
@@ -436,7 +436,7 @@
                                     </div>									
                                 </div>
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </aside>
                 <!-- widget-recent end -->				

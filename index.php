@@ -33,9 +33,9 @@ switch ($url) {
         require_once './admin/business/category.php';
         cate_save_add();
         break;
-       
+    // chitietsp
     case 'chitietsp':
-        require_once './client/business/homepage.php';
+        require_once './client/business/dashboard.php';
         chitiet();
         break;
     case 'dangnhap':
@@ -94,7 +94,6 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_save_add();
         break;
-
     default:
         # code...
         break;
