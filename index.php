@@ -29,7 +29,6 @@ switch ($url) {
         require_once './admin/business/category.php';
         cate_save_add();
         break;
-<<<<<<< HEAD
         //    thương hiệu
     case 'cp-admin/thuong-hieu':
         require_once './admin/business/category.php';
@@ -56,9 +55,6 @@ switch ($url) {
         brand_update_form();
         break;
         // and thương hiệu
-=======
-    // chitietsp
->>>>>>> 325224769395bda1674b06d849c5480e9ce11452
     case 'chitietsp':
         require_once './client/business/dashboard.php';
         chitiet();
@@ -99,20 +95,10 @@ switch ($url) {
         require_once './admin/business/product.php';
         cate_save_add();
         break;
-<<<<<<< Updated upstream
     // end sản phẩm
-=======
-    case 'cp-admin/sanpham/suaproduct':
-        require_once './admin/business/product.php';
-        product_index();
-        break;
-
-
-        // end sản phẩm
->>>>>>> Stashed changes
 
     case 'cp-admin/sanpham/capnhat':
-        require_once './admin/business/product.php';
+require_once './admin/business/product.php';
         edit_form();
         break;
     case 'cp-admin/sanpham/update':
@@ -132,11 +118,6 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_save_add();
         break;
-<<<<<<< HEAD
-        // Thương hiệu
-
-
-=======
     case 'cp-admin/taikhoan/edit-user':
         require_once './admin/business/user.php';
         edit_user();
@@ -145,7 +126,6 @@ switch ($url) {
         require_once './admin/business/user.php';
         update_user();
     break;
->>>>>>> 325224769395bda1674b06d849c5480e9ce11452
     default:
         # code...
         break;
