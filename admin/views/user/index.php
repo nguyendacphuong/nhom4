@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                              <input type="text" name="keyword" value="<?= $keyword ?>" class="form-control" placeholder="Tìm kiếm..." aria-describedby="helpId">
+                              <input type="text" name="keyword  " value="<?= $keyword ?>" class="form-control" placeholder="Tìm kiếm..." aria-describedby="helpId">
                             </div>
                         </div>
                     </div>
@@ -27,10 +27,19 @@
                         </th>
                     </thead>
                     <tbody>
-                        <?php foreach($cates as $index => $item): ?>
+
+                        <?php foreach($cates as $index => $item):
+                            $avatar =  $item['avatar'];
+                            if(empty($avatar)) {
+                                $anh = "không có";
+                            }else {
+                                // $hinh = "<img src=" IMAGE_URL . 'imguser/' .$hinha" class="rounded-circle shadow-4" style="width: 40px;" alt=""/>";
+                                $anh = "<img src='" . $hinha . "' height = '80px'>";
+                            }
+                            ?>
                             <tr>
                                 <td><?= $index + 1 ?></td>
-                                <td><img src="https://mdbootstrap.com/img/new/avatars/8.jpg" class="rounded-circle shadow-4" style="width: 40px;" alt="" /></td>
+                                <td><?= $hinh?></td>
                                 <td><?= $item['fullname'] ?></td>
                                 <td><?= $item['email'] ?></td>
                                 <td><?= $item['phone_number'] ?></td>

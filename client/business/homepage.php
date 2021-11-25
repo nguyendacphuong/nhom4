@@ -12,23 +12,23 @@
     function dangnhap(){
         if(isset($_POST) && isset($_POST['dangnhap'])){
             $email = $_POST['email'];
-            $pass = $_POST['pass'];
+            $password = $_POST['password'];
             $err = [];
             if ($email == "") {
                 $err['email'] ='bạn chưa nhập email';
             }
-            if ($pass == "") {
-                $err['pass'] ='bạn chưa nhập pass';
+            if ($password == "") {
+                $err['password'] ='bạn chưa nhập password';
             }
-            if ($email && $pass != '') {
-                $sql = "SELECT * FROM user WHERE email = '$email' and pass = '$pass'";
+            if ($email && $password != '') {
+                $sql = "SELECT * FROM user WHERE email = '$email' and password = '$password'";
                 $connect = get_connect();
                 $stmt = $connect->prepare($sql);
                 $stmt->execute();
                 $user = $stmt -> fetch();
                 if($user != false){
                     $_SESSION['email'] = $_POST['email'];
-                    $_SESSION['pass'] = $_POST['pass'];
+                    $_SESSION['password'] = $_POST['password'];
                     header("Location: ".BASE_URL.'cp-admin');
                 }
             }

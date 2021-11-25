@@ -15,7 +15,7 @@
                                 <input type="email" name="email" />
                             </p>
                             <p>
-                                <label>Password <span class="required">*</span></label>
+                                <label>password <span class="required">*</span></label>
                                 <input type="password" name="password" />
                             </p>
                             <p>

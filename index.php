@@ -96,6 +96,11 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_save_add();
         break;
+    case 'my-user':
+        require_once './client/business/taikhoan.php';
+        my_user();
+        break;
+    
     
     
 

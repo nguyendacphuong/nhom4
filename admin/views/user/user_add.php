@@ -5,7 +5,7 @@
                 <h3 class="card-title">Thêm Tài Khoản Mới</h3>
             </div>
             <div class="card-body">
-                <form action="<?= ADMIN_URL . 'taikhoan/luu-tao-moi'?>" method="post">
+                <form action="<?= ADMIN_URL . 'taikhoan/luu-tao-moi'?>" method="post" enctype="multipart/form-data">
                     <div class="col-6 offset-3">
                         <div class="form-group">
                           <label for="">Họ và tên</label>
@@ -16,7 +16,7 @@
                           <input type="email" name="email" required class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                          <label for="">Password</label>
+                          <label for="">password</label>
                           <input type="password" name="password" required class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
@@ -26,6 +26,10 @@
                         <div class="form-group">
                           <label for="">Address</label>
                           <input type="text" name="address" required class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Avatar</label>
+                            <input type="file" name="avatar" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">

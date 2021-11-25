@@ -6,6 +6,7 @@
 
 	admin_render('user/index.php', compact('cates', 'keyword'), 'admin-assets/custom/product_index.js');
 	}
+
 	function user_add(){
     	admin_render('user/user_add.php', [], 'admin-assets/custom/product_add.js');
 	}
@@ -16,7 +17,15 @@
             $password= $_POST['password'];
             $repassword= $_POST['repassword'];
             $address= $_POST['address'];
-            $sql = "INSERT into user (fullname, email, phone_number, address, password) values ('$fullname', '$email', '$phone_number', '$address', '$password')";
+            $avatar = $_FILES['avatar']; 
+		    $avatarname = "";
+		    if ($avatar['size'] > 0) {
+		        $filename = uniqid() . '-' . $avatar['name'];
+		        move_uploaded_file($avatar['tmp_name'], './public/uploads/' . $avatarname);
+		        $avatarname = 'uploads/' . $avatarname;
+		        $img = PUBLIC_URL. $avatarname;
+		    }
+            $sql = "INSERT into user (fullname, avatar, email, phone_number, address, password) values ('$fullname','$img', '$email', '$phone_number', '$address', '$password')";
             executeQuery($sql);
             header ('Location:'.ADMIN_URL.'taikhoan');
         
