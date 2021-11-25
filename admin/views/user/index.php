@@ -19,6 +19,7 @@
                         <th>Avatar</th>
                         <th>Tên tài khoản</th>
                         <th>Email</th>
+                        <th>Password</th>
                         <th>Số điện thoại</th>
                         <th>Địa chỉ</th>
                         <th>Role</th>
@@ -29,24 +30,25 @@
                     <tbody>
 
                         <?php foreach($cates as $index => $item):
-                            $avatar =  $item['avatar'];
-                            if(empty($avatar)) {
-                                $anh = "không có";
+                            $hinha =  $item['avatar'];
+                            if(empty($hinha)) {
+                                $hinh = "không có";
                             }else {
                                 // $hinh = "<img src=" IMAGE_URL . 'imguser/' .$hinha" class="rounded-circle shadow-4" style="width: 40px;" alt=""/>";
-                                $anh = "<img src='" . $hinha . "' height = '80px'>";
+                                $hinh = "<img src='" . $hinha . "'  height = '80px'>";
                             }
                             ?>
                             <tr>
                                 <td><?= $index + 1 ?></td>
-                                <td><?= $hinh?></td>
-                                <td><?= $item['fullname'] ?></td>
+                                <td class="bdimg"><?= $hinh?></td>
+                                <td> <?= $item['fullname'] ?></td>
                                 <td><?= $item['email'] ?></td>
+                                <td><?= $item['password'] ?></td>
                                 <td><?= $item['phone_number'] ?></td>
                                 <td><?= $item['address'] ?></td>
                                 <td><?= $item['role_id'] == 1 ? "Admin" : "Khách hàng" ?></td>
                                 <td>
-                                    <a href="<?= ADMIN_URL . 'taikhoan/capnhat?id='. $item['id'] ?>" class="btn btn-sm btn-info">
+                                    <a href="<?= ADMIN_URL . 'taikhoan/edit-user?id='. $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                     <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'taikhoan/xoa?id='. $item['id'] ?>', '<?= $item['id']?>')" class="btn btn-sm btn-danger">
