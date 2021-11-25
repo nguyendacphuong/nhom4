@@ -9,4 +9,16 @@
 	function user_add(){
     	admin_render('user/user_add.php', [], 'admin-assets/custom/product_add.js');
 	}
+	function user_save_add(){
+            $fullname= $_POST['fullname'];
+            $email= $_POST['email'];
+            $phone_number= $_POST['phone_number'];
+            $password= $_POST['password'];
+            $repassword= $_POST['repassword'];
+            $address= $_POST['address'];
+            $sql = "INSERT into user (fullname, email, phone_number, address, password) values ('$fullname', '$email', '$phone_number', '$address', '$password')";
+            executeQuery($sql);
+            header ('Location:'.ADMIN_URL.'taikhoan');
+        
+}
  ?>
