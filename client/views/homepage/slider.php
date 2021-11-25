@@ -35,7 +35,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h3>FEATURED PRODUCTS</h3>
+                    <h3>SẢN PHẨM NỔI BẬT</h3>
                 </div>
             </div>
         </div>
@@ -61,9 +61,8 @@
                                             <div class="single-product">
                                                 <span class="sale-text">Sale</span>
                                                 <div class="product-img">
-                                                    <a href="#">
-                                                        <img class="primary-image" src="<?= CLIENT_ASSET ?>img/product/17.jpg" alt="" />
-													    <img class="secondary-image" src="<?= CLIENT_ASSET ?>img/product/18.jpg" alt="" />
+                                                    <a href="<?=BASE_URL . 'chitietsp?id='.$item['id']?>">
+                                                        <img style="width: 255px; height: 327px" class="primary-image" src="<?=$item['thumbnail']?>" alt="" />
                                                     </a>
                                                     <div class="actions">
                                                         <div class="action-buttons">
@@ -80,13 +79,13 @@
                                                                 </div>
                                                             </div>
                                                             <div class="quickviewbtn">
-                                                                <a href="#" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
+                                                                <a href="" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="product-content">
-                                                    <h2 class="product-name"><a href="#"><?=$item['title']?></a></h2>
+                                                    <h2 class="product-name"><a href="<?=BASE_URL . 'chitietsp?id='.$item['id']?>"><?=$item['title']?></a></h2>
                                                     <div class="pro-rating">
                                                         <a href=""><i class="fa fa-star"></i></a>
                                                         <a href="#"><i class="fa fa-star"></i></a>
@@ -95,8 +94,8 @@
                                                         <a href="#"><i class="fa fa-star"></i></a>
                                                     </div>
                                                     <div class="price-box">
-                                                        <span class="new-price"><?=$item['price']?></span>
-                                                        <span class="old-price"><?=$item['discount']?></span>
+                                                        <span class="new-price"><?=$item['price']?>đ</span>
+                                                        <span class="old-price"><?=$item['discount']?>đ</span>
 
                                                     </div>
                                                 </div>
@@ -764,7 +763,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="section-heading">
-                    <h3>New Products</h3>
+                    <h3>SẢN PHẨM MỚI</h3>
                 </div>
             </div>
         </div>
@@ -772,14 +771,13 @@
         <div class="row">
             <div class="features-curosel">
                 <!-- single-product start -->
-                <?php foreach ($newitems as $newitem) :?>
+                <?php foreach ($newitems as $newitem):?>
                     <div class="col-12">
                         <div class="single-product">
                             <span class="sale-text">Sale</span>
                             <div class="product-img">
-                                <a href="#">
-                                    <img class="primary-image" src="<?= CLIENT_ASSET ?>img/product/15.jpg" alt="" />
-                                    <img class="secondary-image" src="<?= CLIENT_ASSET ?>img/product/16.jpg" alt="" />
+                                <a href="<?=BASE_URL . 'chitietsp?id='.$newitem['id']?>">
+                                    <img style="width: 255px; height: 327px" class="primary-image" src="<?=$newitem['thumbnail']?>" alt="" />
                                 </a>
                                 <div class="actions">
                                     <div class="action-buttons">
@@ -796,13 +794,13 @@
                                             </div>
                                         </div>
                                         <div class="quickviewbtn">
-                                            <a href="#" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
+                                            <a href="" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="product-content">
-                                <h2 class="product-name"><a href="#"><?=$newitem['title']?></a></h2>
+                                <h2 class="product-name"><a href="<?=BASE_URL . 'chitietsp?id='.$newitem['id']?>"><?=$newitem['title']?></a></h2>
                                 <div class="pro-rating">
                                     <a href="#"><i class="fa fa-star"></i></a>
                                     <a href="#"><i class="fa fa-star"></i></a>
@@ -811,8 +809,8 @@
                                     <a href="#"><i class="fa fa-star"></i></a>
                                 </div>
                                 <div class="price-box">
-                                    <span class="new-price"><?=$newitem['price']?></span>
-                                    <span class="old-price"><?=$newitem['discount']?></span>
+                                    <span class="new-price"><?=$newitem['price']?>đ</span>
+                                    <span class="old-price"><?=$newitem['discount']?>đ</span>
                                 </div>
                             </div>
                         </div>
@@ -830,7 +828,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="section-heading">
-						<h3>Top Sellers</h3>
+						<h3>SẢN PHẨM BÁN CHẠY</h3>
 					</div>
 				</div>
 			</div>
