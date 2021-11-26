@@ -16,25 +16,16 @@
                 <table class="table tabl-stripped">
                     <thead>
                         <th>STT</th>
-                        <th>Tên sản phẩm</th>
-                        <th>Giá sản phẩm</th>
-                        <th>Giảm giá</th>
-                        <th>Hình sản phẩm</th>
-                        <th>Mô tả</th>
-<<<<<<< Updated upstream
-=======
-                        <th>Số lượng</th>
-                        <th>Tình trạng</th>
->>>>>>> Stashed changes
-                        <th>Danh mục</th>
+                        <th>Tên slide</th>
+                        <th>Hình</th>
                         <th>
-                            <a href="<?= ADMIN_URL . 'sanpham/tao-moi' ?>" class="btn btn-sm btn-success">Tạo mới</a>
+                            <a href="<?= ADMIN_URL . 'slide/tao-moi' ?>" class="btn btn-sm btn-success">Tạo mới</a>
                         </th>
                     </thead>
                     <tbody>
 
                         <?php foreach ($cates as $index => $item) :
-                         $hinha =  $item['thumbnail'];
+                         $hinha =  $item['slideshow_img'];
                          if (empty($hinha)) {
                             $hinh = "không có";
                          } else {
@@ -46,22 +37,14 @@
                             
                             <tr>
                                 <td><?= $index + 1 ?></td>
-                                <td><?= $item['title'] ?></td>
-                                <td><?= $item['price'] ?> VNĐ</td>
-                                <td><?= $item['discount'] ?> VNĐ</td>
+                                <td><?= $item['slide_name'] ?></td>
                                 <td><?= $hinh?></td>
-                                <td><textarea name="" id="" cols="10" rows="5"><?= $item['description'] ?></textarea></td>
-<<<<<<< Updated upstream
-=======
-                                <td><?= $item['number'] ?> </td>
-                                <td><?= $item['status'] == 1 ? "Còn hàng" : "Hết hàng" ?></td>
->>>>>>> Stashed changes
-                                <td><?= $item['name_cate'] ?> </td>
+                                
                                 <td>
-                                    <a href="<?= ADMIN_URL . 'sanpham/capnhat?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
+                                    <a href="<?= ADMIN_URL . 'slide/capnhat?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'sanpham/xoa?id=' . $item['id'] ?>', '<?= $item['title'] ?>')" class="btn btn-sm btn-danger">
+                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'slide/xoa?id=' . $item['id'] ?>', '<?= $item['slide_name'] ?>')" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>

@@ -111,6 +111,78 @@
               </li>
             </ul>
           </li>
+<<<<<<< Updated upstream
+=======
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-users" aria-hidden="true"></i>
+              <p>
+                Thương hiệu
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'thuong-hieu'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách thương hiệu</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'thuong-hieu/tao-moi'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tạo mới</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-users" aria-hidden="true"></i>
+              <p>
+                SlideShow
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'slide'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách SlideShow</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'slide/tao-moi'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tạo mới</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-users" aria-hidden="true"></i>
+              <p>
+                Tin tức
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'news'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách tin tức</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'news/tao-moi'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tạo mới</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+>>>>>>> Stashed changes
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
