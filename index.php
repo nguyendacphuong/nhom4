@@ -9,10 +9,6 @@ switch ($url) {
         require_once './client/business/dashboard.php';
         dashboard_index();
         break;
-    case 'danh-muc':
-        require_once './client/business/category.php';
-        list_product();
-        break;
     case 'cp-admin':
         require_once './admin/business/dashboard.php';
         dashboard_index();
@@ -33,7 +29,32 @@ switch ($url) {
         require_once './admin/business/category.php';
         cate_save_add();
         break;
-    // chitietsp
+        //    thương hiệu
+    case 'cp-admin/thuong-hieu':
+        require_once './admin/business/category.php';
+        brand_index();
+        break;
+    case 'cp-admin/thuong-hieu/xoa':
+        require_once './admin/business/category.php';
+        brand_remove();
+        break;
+    case 'cp-admin/thuong-hieu/tao-moi':
+        require_once './admin/business/category.php';
+        brand_add_form();
+        break;
+    case 'cp-admin/thuong-hieu/luu-tao-moi':
+        require_once './admin/business/category.php';
+        brand_save_add();
+        break;
+    case 'cp-admin/thuong-hieu/capnhat':
+        require_once './admin/business/category.php';
+        brand_edit_form();
+        break;
+    case 'cp-admin/thuong-hieu/update':
+        require_once './admin/business/category.php';
+        brand_update_form();
+        break;
+        // and thương hiệu
     case 'chitietsp':
         require_once './client/business/dashboard.php';
         chitiet();
@@ -65,6 +86,7 @@ switch ($url) {
         require_once './admin/business/product.php';
         product_index();
         break;
+
     case 'cp-admin/sanpham/tao-moi':
         require_once './admin/business/product.php';
         cate_add_form();
@@ -76,13 +98,14 @@ switch ($url) {
     // end sản phẩm
 
     case 'cp-admin/sanpham/capnhat':
-        require_once './admin/business/product.php';
+require_once './admin/business/product.php';
         edit_form();
         break;
     case 'cp-admin/sanpham/update':
         require_once './admin/business/product.php';
         update_form();
         break;
+        // end sản phẩm
     case 'cp-admin/taikhoan':
         require_once './admin/business/user.php';
         user_index();
