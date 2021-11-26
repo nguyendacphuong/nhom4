@@ -3,9 +3,6 @@
     function home(){
         client_render('homepage/homepage.php');
     }
-    function chitiet(){
-        client_render('homepage/chitietsp.php');
-    }
     function dangky(){
         client_render('homepage/dangky.php');
     }

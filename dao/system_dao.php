@@ -12,7 +12,15 @@ function executeQuery($sql, $getAll = false){
         return $stmt->fetchAll();
     }
 
+
     return $stmt->fetch();
+}
+function select_page($sql)
+{
+    $conn = get_connect();
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $listRecord = $stmt->fetchAll();
 }
 /**
  * Thực thi câu lệnh sql truy vấn một bản ghi
