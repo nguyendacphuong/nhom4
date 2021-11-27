@@ -48,7 +48,7 @@
                                     <a href="<?= ADMIN_URL . 'taikhoan/edit-user?id='. $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'taikhoan/xoa?id='. $item['id'] ?>', '<?= $item['fullname']?>')" class="btn btn-sm btn-danger">
+                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'taikhoan/xoa?id=' . $item['id'] ?>', '<?= $item['fullname'] ?>')" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>

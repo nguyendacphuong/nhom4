@@ -5,7 +5,7 @@ function user_index()
 	$sql = "select * from user where email like '%$keyword%'";
 	$cates = executeQuery($sql, true);
 
-	admin_render('user/index.php', compact('cates', 'keyword'), 'admin-assets/custom/product_index.js');
+	admin_render('user/index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
 	}
 
 	function user_add(){
@@ -30,7 +30,6 @@ function user_index()
 		        $avatarname = 'uploads/' . $avatarname;
 		        $img = PUBLIC_URL. $avatarname;
 		    }
-
             $sql = "INSERT into user (fullname, avatar, email, phone_number, address, password,created_at, updated_at,role_id ) values ('$fullname','$img', '$email', '$phone_number', '$address', '$password','$category_id','$updated_at','$role_id')";
             executeQuery($sql);
             header ('Location:'.ADMIN_URL.'taikhoan');
@@ -54,7 +53,7 @@ function edit_user()
     $sql = "select * from user where id = $id ";
     $cates = executeQuery($sql);
     // hiển thị view
-    admin_render('user/edit_user.php', compact('cates'), 'admin-assets/custom/product_index.js');
+    admin_render('user/edit_user.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
 	function update_user(){
 		$fullname= $_POST['fullname'];
