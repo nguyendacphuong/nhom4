@@ -36,6 +36,8 @@
 	<!-- owl.theme CSS
 		============================================ -->
 	<link rel="stylesheet" href="<?= CLIENT_ASSET ?>css/owl.theme.css">
+	<link rel="stylesheet" href="<?= CLIENT_ASSET ?>css/my-user.css">
+
 
 	<!-- owl.transitions CSS
 		============================================ -->

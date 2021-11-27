@@ -159,6 +159,13 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_remove();
         //aa
+    case 'my-user':
+        checkAuth([ADMIN_ROLE,STAFF_ROLE,USER_ROLE]);
+        require_once './client/business/taikhoan.php';
+        my_user();
+        //aa
+    
+
     break;
     default:
         # code...
