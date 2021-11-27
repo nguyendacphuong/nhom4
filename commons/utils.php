@@ -46,7 +46,7 @@ function getFavoriteProducts(){
 function checkAuth($role_id = []){
     
     if(!isset($_SESSION['auth']) || $_SESSION['auth'] == null || !in_array($_SESSION['auth']['role_id'], $role_id)){
-        header('location: ' . BASE_URL);
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
         die;
     }
 }

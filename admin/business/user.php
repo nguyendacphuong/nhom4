@@ -36,7 +36,18 @@ function user_index()
             header ('Location:'.ADMIN_URL.'taikhoan');
         
 	}
-	function edit_user()
+
+
+function user_remove()
+{
+    $id = $_GET['id'];
+    $sql = "delete from user where id = $id";
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'taikhoan');
+}
+
+
+function edit_user()
 {
     $id = isset($_GET['id']) ? $_GET['id'] : "";
     // lấy danh sách danh mục
