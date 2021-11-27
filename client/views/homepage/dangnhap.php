@@ -1,28 +1,30 @@
-<div class="content">
-        <div class="left">
-            <h2>ĐĂNG NHẬP</h2>
-            <span>Nếu bạn đã có tài khoản, hãy đăng nhập để tích lũy điểm thành viên và nhận được những ưu<br> đãi tốt hơn!</span>
-            <form method="POST" action="<?php BASE_URL . 'dangnhap' ?>">
-                <div>
-                    <label for="">Email*</label><br>
-                    <input type="email" name="email">
-                    <span><?php echo (isset($err['email']) ? $err['email'] : '') ?></span>
+
+    <div class="my-account-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="<?= BASE_URL . 'dangnhap'?>" method="POST">
+                        <div class="form-fields">
+                            <h2>Login</h2>
+                            <p>
+                                <label>Email <span class="required">*</span></label>
+                                <input type="email" name="email" />
+                            </p>
+                            <p>
+                                <label>Password <span class="required">*</span></label>
+                                <input type="password" name="password" />
+                            </p>
+                        </div>
+                        <div class="form-action">
+                            <p class="lost_password"><a href="#">Lost your password?</a></p>
+                            <input type="submit" value="Login" name="dangnhap" />
+                            <label><input type="checkbox" />  Remember me </label>
+                        </div>
+                    </form>
                 </div>
-                <div>
-                    <label for="">Mật khẩu*</label><br>
-                    <input type="password" name="pass">
-                    <span><?php echo (isset($err['pass']) ? $err['pass'] : '') ?></span>
+                <div class="col-md-6">
+                    <img class="cl" src="./public/uploads/login-bn.png">
                 </div>
-                <div class="forgotpass">
-                    <a href="">Quên mật khẩu?</a>
-                </div>
-                <div>
-                    <button class="login" name="dangnhap">ĐĂNG NHẬP</button><br>
-                </div>
-            </form>
-            <a class="create" href=""><button class="createaccount">TẠO TÀI KHOẢN</button></a>
-        </div>
-        <div class="right">
-            <img src="./imgbanner/bannerlogin.jpg" alt="">
+            </div>
         </div>
     </div>

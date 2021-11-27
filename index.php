@@ -10,47 +10,58 @@ switch ($url) {
         dashboard_index();
         break;
     case 'cp-admin':
+        checkAuth([ADMIN_ROLE,STAFF_ROLE]);
         require_once './admin/business/dashboard.php';
         dashboard_index();
         break;
     case 'cp-admin/danh-muc':
+        checkAuth([ADMIN_ROLE,STAFF_ROLE]);
         require_once './admin/business/category.php';
         cate_index();
         break;
     case 'cp-admin/danh-muc/xoa':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         cate_remove();
         break;
     case 'cp-admin/danh-muc/tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         cate_add_form();
         break;
     case 'cp-admin/danh-muc/luu-tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         cate_save_add();
         break;
         //    thương hiệu
     case 'cp-admin/thuong-hieu':
+        checkAuth([ADMIN_ROLE,STAFF_ROLE]);
         require_once './admin/business/category.php';
         brand_index();
         break;
     case 'cp-admin/thuong-hieu/xoa':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         brand_remove();
         break;
     case 'cp-admin/thuong-hieu/tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         brand_add_form();
         break;
     case 'cp-admin/thuong-hieu/luu-tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         brand_save_add();
         break;
     case 'cp-admin/thuong-hieu/capnhat':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         brand_edit_form();
         break;
     case 'cp-admin/thuong-hieu/update':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         brand_update_form();
         break;
@@ -63,6 +74,11 @@ switch ($url) {
         require_once './client/business/homepage.php';
         dangnhap();
         break;
+    case 'dang-xuat':
+        require_once './client/business/homepage.php';
+        logout();
+        break;
+    
     case 'dang-ky':
         require_once './client/business/taikhoan.php';
         dangky();
@@ -73,56 +89,68 @@ switch ($url) {
         break;
 
     case 'cp-admin/danh-muc/capnhat':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         edit_form();
         break;
     case 'cp-admin/danh-muc/update':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         update_form();
         break;
         // and danh mục
 
     case 'cp-admin/sanpham':
+        checkAuth([ADMIN_ROLE,STAFF_ROLE]);
         require_once './admin/business/product.php';
         product_index();
         break;
 
     case 'cp-admin/sanpham/tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
         cate_add_form();
         break;
     case 'cp-admin/sanpham/luu-tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
         cate_save_add();
         break;
     // end sản phẩm
 
     case 'cp-admin/sanpham/capnhat':
-require_once './admin/business/product.php';
+        checkAuth([ADMIN_ROLE]);
+        require_once './admin/business/product.php';
         edit_form();
         break;
     case 'cp-admin/sanpham/update':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
         update_form();
         break;
         // end sản phẩm
     case 'cp-admin/taikhoan':
+        checkAuth([ADMIN_ROLE,STAFF_ROLE]);
         require_once './admin/business/user.php';
         user_index();
         break;
     case 'cp-admin/taikhoan/tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         user_add();
         break;
     case 'cp-admin/taikhoan/luu-tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         user_save_add();
         break;
     case 'cp-admin/taikhoan/edit-user':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         edit_user();
         break;
     case 'cp-admin/taikhoan/update-user':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         update_user();
         //aa
