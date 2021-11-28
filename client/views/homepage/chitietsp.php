@@ -218,7 +218,11 @@
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
                          >							
+=======
+                            <!-- single-product end -->								
+>>>>>>> thanhdmph17065
                         </div>
                     </div>
                 </div>
@@ -232,13 +236,13 @@
                         <li>
                             <div class="single-product">
                                 <div class="product-img">
-                                    <a href="#">
+                                    <a href="<?=BASE_URL . 'chitietsp?id='.$itemcungloai['id']?>">
                                         <img class="primary-image" src="<?=$itemcungloai['thumbnail']?>" alt="" />
                                     </a>						
                                 </div>
                                 <div class="product-content">
                                     <div class="pro-info">
-                                        <h2 class="product-name"><a href="#"><?=$itemcungloai['title']?></a></h2>
+                                        <h2 class="product-name"><a href="<?=BASE_URL . 'chitietsp?id='.$itemcungloai['id']?>"><?=$itemcungloai['title']?></a></h2>
                                         <div class="price-box">
                                             <span class="new-price"><?=$itemcungloai['price']?>đ</span>
                                             <span class="old-price"><?=$itemcungloai['discount']?>đ</span>
@@ -248,7 +252,10 @@
                             </div>	
                         </li>
                         <?php endforeach?>
+<<<<<<< HEAD
                        
+=======
+>>>>>>> thanhdmph17065
                     </ul>
                 </aside>
                 <!-- widget-recent end -->				
