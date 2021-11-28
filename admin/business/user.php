@@ -31,7 +31,8 @@ function user_index()
 		        $img = PUBLIC_URL. $avatarname;
 		    }
 
-            $sql = "INSERT into user (fullname, avatar, email, phone_number, address, password,created_at, updated_at,role_id ) values ('$fullname','$img', '$email', '$phone_number', '$address', '$password','$category_id','$updated_at','$role_id')";
+            $sql = "INSERT into user (fullname, avatar, email, phone_number, address, password,created_at, updated_at,role_id )
+			 values ('$fullname','$img', '$email', '$phone_number', '$address', '$password','$created_at','$updated_at','$role_id')";
             executeQuery($sql);
             header ('Location:'.ADMIN_URL.'taikhoan');
         
@@ -46,6 +47,7 @@ function user_index()
     admin_render('user/edit_user.php', compact('cates'), 'admin-assets/custom/product_index.js');
 }
 	function update_user(){
+		
 		$fullname= $_POST['fullname'];
         $email= $_POST['email'];
         $phone_number= $_POST['phone_number'];

@@ -111,82 +111,20 @@
 						<div class="mainmenu">
 							<nav>
 								<ul>
-									<li><a href="index.html">Home</a>
-										<ul class="sub-menu">
-											<li><a href="index-2.html">Home 2</a></li>
-											<li><a href="index-3.html">Home 3</a></li>
-											<li><a href="index-4.html">Home 4</a></li>
-										</ul>									
-									</li>
+									<li><a href="BASE_URL">Home</a>
+								
 									<li><a href="blog.html">Blog</a>
-										<div class="mega-menu">
-											<span>
-												<a class="mega-menu-title" href="#"> Blog Pages </a>
-												<a href="blog-archive.html">Archive</a>
-												<a href="blog-category.html">Category</a>
-												<a href="blog-tag.html">Tags </a>
-												<a href="blog-author.html">Blog Author</a>
-											</span>
-											<span>
-												<a class="mega-menu-title" href="#"> Post Formats </a>
-												<a href="blog-post-img.html">Image format</a>
-												<a href="blog-post-video.html">Video format</a>
-												<a href="blog-post-audio.html">Audio format</a>
-												<a href="blog-post-gallery.html">Gallery format</a>
-											</span>
-										</div>
+										
 									</li>
 									<li><a href="shop.html">Shop</a>
-										<div class="mega-menu">
-											<span>
-												<a class="mega-menu-title" href="#">Shop Pages</a>
-												<a href="shop-list.html">List View </a>
-												<a href="shop-category.html">Category</a>
-												<a href="my-account.html">My Account</a>
-												<a href="wishlist.html">Wishlist</a>
-												<a href="cart.html">Cart </a>
-												<a href="checkout.html">Checkout </a>
-											</span>
-											<span>
-												<a class="mega-menu-title" href="#">Product Types</a>
-												<a href="product-simple.html">Simple Product</a>
-												<a href="#">Variables Product</a>
-												<a href="#">Grouped Product</a>
-												<a href="#">Downloadable</a>
-												<a href="product-virtual.html">Virtual Product</a>
-												<a href="#">External Product</a>
-											</span>
-										</div>									
+																			
 									</li>
 									<li><a href="#">Pages</a>
-										<div class="mega-menu">
-											<span>
-												<a href="shop.html">Shop Grid View </a>
-												<a href="shop-list.html">Shop List View </a>
-												<a href="shop-category.html">Shop Category</a>
-												<a href="my-account.html">My Account</a>
-												<a href="wishlist.html">Wishlist</a>
-												<a href="cart.html">Cart </a>
-												<a href="checkout.html">Checkout </a>
-											</span>
-											<span>	
-												<a href="product-simple.html">Simple Product</a>
-												<a href="product-virtual.html">Virtual Product</a>
-												<a href="about-us.html">About Us</a>
-												<a href="contact.html">Contact</a>
-												<a href="faq.html"> FAQS </a>
-												<a href="sample-page.html"> Sample Page </a>
-												<a href="404.html"> 404 Error </a>
-											</span>
+										
 										</div>									
 									</li>
 									<li><a href="portfolio-3-column.html">Portfolio </a>
-										<ul class="sub-menu">
-											<li><a href="portfolio-2-column.html">2 Columns</a></li>
-											<li><a href="portfolio-3-column.html">3 Columns</a></li>
-											<li><a href="portfolio-4-column.html">4 Columns</a></li>
-											<li><a href="single-portfolio.html">Single Project</a></li>
-										</ul>									
+																		
 									</li>
 									<li><a href="contact.html">Contact</a></li>
 								</ul>
