@@ -9,68 +9,86 @@ switch ($url) {
         require_once './client/business/dashboard.php';
         dashboard_index();
         break;
-    case 'danh-muc':
-        require_once './client/business/category.php';
-        list_product();
-        break;
     case 'cp-admin':
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/dashboard.php';
         dashboard_index();
         break;
     case 'cp-admin/danh-muc':
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/category.php';
         cate_index();
         break;
     case 'cp-admin/danh-muc/xoa':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         cate_remove();
         break;
     case 'cp-admin/danh-muc/tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         cate_add_form();
         break;
     case 'cp-admin/danh-muc/luu-tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         cate_save_add();
         break;
-<<<<<<< Updated upstream
-       
-=======
-        //    thương hiệu
+
+
     case 'cp-admin/thuong-hieu':
+
         require_once './admin/business/category.php';
         brand_index();
         break;
     case 'cp-admin/thuong-hieu/xoa':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         brand_remove();
         break;
     case 'cp-admin/thuong-hieu/tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         brand_add_form();
         break;
     case 'cp-admin/thuong-hieu/luu-tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         brand_save_add();
         break;
     case 'cp-admin/thuong-hieu/capnhat':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         brand_edit_form();
         break;
     case 'cp-admin/thuong-hieu/update':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         brand_update_form();
         break;
         // and thương hiệu
->>>>>>> Stashed changes
+
     case 'chitietsp':
-        require_once './client/business/homepage.php';
+        require_once './client/business/dashboard.php';
         chitiet();
+        break;
+    case 'tintuc':
+        require_once './client/business/dashboard.php';
+        tintuc_index();
+        break;
+    case 'tintucchitiet':
+        require_once './client/business/dashboard.php';
+        tintucchitiet_index();
         break;
     case 'dangnhap':
         require_once './client/business/homepage.php';
         dangnhap();
         break;
+    case 'dang-xuat':
+        require_once './client/business/homepage.php';
+        logout();
+        break;
+
     case 'dang-ky':
         require_once './client/business/taikhoan.php';
         dangky();
@@ -81,65 +99,77 @@ switch ($url) {
         break;
 
     case 'cp-admin/danh-muc/capnhat':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         edit_form();
         break;
     case 'cp-admin/danh-muc/update':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
         update_form();
         break;
         // and danh mục
 
     case 'cp-admin/sanpham':
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/product.php';
         product_index();
         break;
+
     case 'cp-admin/sanpham/tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
         cate_add_form();
         break;
     case 'cp-admin/sanpham/luu-tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
         cate_save_add();
         break;
-<<<<<<< Updated upstream
-=======
+
     case 'cp-admin/sanpham/xoa':
         require_once './admin/business/product.php';
         product_remove();
         break;
         // end sản phẩm
->>>>>>> Stashed changes
+
 
     case 'cp-admin/sanpham/capnhat':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
         edit_form();
         break;
     case 'cp-admin/sanpham/update':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
         update_form();
         break;
+        // end sản phẩm
     case 'cp-admin/taikhoan':
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/user.php';
         user_index();
         break;
     case 'cp-admin/taikhoan/tao-moi':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         user_add();
         break;
-<<<<<<< Updated upstream
-    
 
-=======
+
     case 'cp-admin/taikhoan/luu-tao-moi':
+        checkAuth([ADMIN_ROLE]);
+
         require_once './admin/business/user.php';
         user_save_add();
         break;
     case 'cp-admin/taikhoan/edit-user':
+        checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         edit_user();
         break;
     case 'cp-admin/taikhoan/update-user':
+
         require_once './admin/business/user.php';
         update_user();
 
@@ -169,33 +199,39 @@ switch ($url) {
         slide_update_form();
         break;
 
-// ================================ TIN TỨC ======================================
+        // ================================ TIN TỨC ======================================
 
-case 'cp-admin/news':
-    require_once './admin/business/dashboard.php';
-    news_index();
-    break;
-case 'cp-admin/news/tao-moi':
-    require_once './admin/business/dashboard.php';
-    news_add();
-    break;
-case 'cp-admin/news/luu-tao-moi':
-    require_once './admin/business/dashboard.php';
-    news_save_add();
-    break;
-case 'cp-admin/news/xoa':
-    require_once './admin/business/dashboard.php';
-    news_remove();
-    break;
-case 'cp-admin/news/capnhat':
-    require_once './admin/business/dashboard.php';
-    news_edit_form();
-    break;
-case 'cp-admin/news/update':
-    require_once './admin/business/dashboard.php';
-    news_update_form();
-    break;
->>>>>>> Stashed changes
+    case 'cp-admin/news':
+        require_once './admin/business/dashboard.php';
+        news_index();
+        break;
+    case 'cp-admin/news/tao-moi':
+        require_once './admin/business/dashboard.php';
+        news_add();
+        break;
+    case 'cp-admin/news/luu-tao-moi':
+        require_once './admin/business/dashboard.php';
+        news_save_add();
+        break;
+    case 'cp-admin/news/xoa':
+        require_once './admin/business/dashboard.php';
+        news_remove();
+        break;
+    case 'cp-admin/news/capnhat':
+        require_once './admin/business/dashboard.php';
+        news_edit_form();
+        break;
+    case 'cp-admin/news/update':
+        require_once './admin/business/dashboard.php';
+        news_update_form();
+        break;
+
+        checkAuth([ADMIN_ROLE]);
+        require_once './admin/business/user.php';
+        update_user();
+        //aa
+        break;
+
     default:
         # code...
         break;

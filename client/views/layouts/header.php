@@ -6,7 +6,6 @@
 					<!-- header-top-left start -->
 					<div class="col-lg-6 col-md-6 col-sm-12">
 						<div class="header-top-left">
-							<div class="top-message">Default welcome message</div>
 							<div class="phone-number"> Call support free: <span>123 456  789</span></div>
 						</div>
 					</div>
@@ -21,10 +20,15 @@
 							</div>
 							<div class="top-menu">
 								<ul>
-									<li><a href="my-account.html">My Account</a></li>
-									<li><a href="wishlist.html">My Wishlist</a></li>
-									<li><a href="cart.html">Cart</a></li>
-									<li><a href="#">Login</a></li>
+									<li><a href="wishlist.html">Sản phẩm yêu thích</a></li>
+									<li><a href="cart.html">Giỏ Hàng</a></li>
+									<li>
+										<?php if(isset($_SESSION['auth']) && $_SESSION['auth'] != null):?>
+							            <p><a href=""><?= $_SESSION['auth']['fullname'] ?></a> &nbsp<a href="<?= BASE_URL . 'dang-xuat'?>">Đăng xuất</a></p>
+								        <?php else: ?>
+								            <a href="<?= BASE_URL . 'dangnhap'?>">Đăng nhập</a>
+								        <?php endif ?>
+									</li>
 								</ul>
 							</div>
 						</div>

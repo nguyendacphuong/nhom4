@@ -111,8 +111,7 @@
               </li>
             </ul>
           </li>
-<<<<<<< Updated upstream
-=======
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-users" aria-hidden="true"></i>
@@ -136,6 +135,7 @@
               </li>
             </ul>
           </li>
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-users" aria-hidden="true"></i>
@@ -182,7 +182,7 @@
               </li>
             </ul>
           </li>
->>>>>>> Stashed changes
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

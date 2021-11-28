@@ -29,6 +29,11 @@
                             <label for="">Mô tả</label>
                             <textarea name="description" value="<?php echo $lis['description']; ?> " class="form-control" placeholder="" aria-describedby="helpId"id="" cols="30" rows="10"></textarea>
                         </div>
+                        <div class="form-group">
+                            <label for="">Số lượng</label>
+                            <input type="number" name="number"  value="<?php echo $lis['number']; ?> " class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        
                         <br>
                         <div class="form-group">
                             <label for="usr">Danh Mục Sản Phẩm:</label>

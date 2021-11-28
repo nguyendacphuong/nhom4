@@ -26,9 +26,6 @@
                         </div>
                         <div class="form-group">
                             <label for="">Hình chi tiết</label>
-<<<<<<< Updated upstream
-                            <input type="file" name="image" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
-=======
                             <input type="file" name="image1" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
                         </div>
                         <div class="form-group">
@@ -42,14 +39,11 @@
                         <div class="form-group">
                             <label for="">Hình chi tiết</label>
                             <input type="file" name="image4" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
->>>>>>> Stashed changes
                         </div>
                         <div class="form-group">
                             <label for="">Mô tả</label>
                             <textarea name="description" class="form-control" placeholder="" aria-describedby="helpId"id="" cols="30" rows="10"></textarea>
                         </div>
-<<<<<<< Updated upstream
-=======
                         <div class="form-group">
                             <label for="">Số lượng</label>
                             <input type="number" name="number"  value="<?php echo $lis['number']; ?> " class="form-control" placeholder="" aria-describedby="helpId">
@@ -61,8 +55,8 @@
                                 
                             </div>
                         </div>
->>>>>>> Stashed changes
                         <br>
+
                         <div class="form-group">
                             <label for="usr">Danh Mục Sản Phẩm:</label>
                             <select class="form-control" name="category_id" id="category_id">
@@ -75,8 +69,6 @@
                                 ?>
                             </select>
                         </div>
-<<<<<<< Updated upstream
-=======
                         <div class="form-group">
                             <label for="usr">Thương hiệu</label>
                             <select class="form-control" name="brand_id" id="brand_id">
@@ -89,7 +81,7 @@
                                 ?>
                             </select>
                         </div>
->>>>>>> Stashed changes
+
                         <div class="d-flex justify-content-center">
                             <a href="<?= ADMIN_URL . 'sanpham' ?>" class="btn btn-sm btn-danger">Hủy</a>
                             &nbsp;
