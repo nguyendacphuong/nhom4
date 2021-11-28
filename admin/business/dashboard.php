@@ -1,5 +1,5 @@
 <?php
-
+require_once './dao/system_dao.php';
 function dashboard_index(){
     $totalProduct = rand(100, 999);
     $totalProfit = rand(1000, 500000);
