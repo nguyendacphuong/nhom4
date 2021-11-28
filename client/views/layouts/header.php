@@ -14,16 +14,10 @@
 					<!-- header-top-right start -->
 					<div class="col-lg-6 col-md-6 col-sm-12">
 						<div class="header-top-right">
-							<div class="lang-select">
-								<ul>
-									<li><a href="#"><img src="<?=CLIENT_ASSET ?>img/en.png" alt="" /></a></li>
-								</ul>
-							</div>
 							<div class="top-menu">
 								<ul>
 
 									<li><a href="wishlist.html">Sản phẩm yêu thích</a></li>
-									<li><a href="cart.html">Giỏ hàng</a></li>
 									<li><a href="wishlist.html">Sản phẩm yêu thích</a></li>
 									<li><a href="cart.html">Giỏ Hàng</a></li>
 									<li>
