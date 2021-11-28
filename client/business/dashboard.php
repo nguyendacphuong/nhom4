@@ -34,4 +34,19 @@ function tintucchitiet_index(){
 }
 
 
+function quan(){
+    client_render('homepage/quan.php'); 
+}
+function ao(){
+    client_render('homepage/ao.php'); 
+}
+function nam(){
+    $sql = "SELECT * FROM category";
+    $listRecord = select_page($sql);
+    client_render('layouts/header.php', compact('listRecord')); 
+}
+function nu(){
+    client_render('homepage/nu.php'); 
+}
+
 

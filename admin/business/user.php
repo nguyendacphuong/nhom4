@@ -5,7 +5,7 @@ function user_index()
 	$sql = "select * from user where email like '%$keyword%'";
 	$cates = executeQuery($sql, true);
 
-	admin_render('user/index.php', compact('cates', 'keyword'), 'admin-assets/custom/product_index.js');
+	admin_render('user/index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
 	}
 
 	function user_add(){
@@ -37,35 +37,46 @@ function user_index()
             header ('Location:'.ADMIN_URL.'taikhoan');
         
 	}
-	function edit_user()
+
+
+function user_remove()
+{
+    $id = $_GET['id'];
+    $sql = "delete from user where id = $id";
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'taikhoan');
+}
+
+
+function edit_user()
 {
     $id = isset($_GET['id']) ? $_GET['id'] : "";
     // lấy danh sách danh mục
     $sql = "select * from user where id = $id ";
     $cates = executeQuery($sql);
     // hiển thị view
-    admin_render('user/edit_user.php', compact('cates'), 'admin-assets/custom/product_index.js');
+    admin_render('user/edit_user.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
-	function update_user(){
+	// function update_user(){
 		
-		$fullname= $_POST['fullname'];
-        $email= $_POST['email'];
-        $phone_number= $_POST['phone_number'];
-        $password= $_POST['password'];
-        $repassword= $_POST['repassword'];
-        $address= $_POST['address'];
-        $avatar = $_FILES['avatar']; 
-	    $avatarname = "";
-	    if ($avatar['size'] > 0) {
-	        $filename = uniqid() . '-' . $avatar['name'];
-	        move_uploaded_file($avatar['tmp_name'], './public/uploads/' . $avatarname);
-	        $avatarname = 'uploads/' . $avatarname;
-	        $img = PUBLIC_URL. $avatarname;
-	    }
-	    $sql = " UPDATE user set fullname = '$fullname',avatar = '$img',phone_number = '$phone_number',password = '$password',address = '$address' where id = $id";
-	    executeQuery($sql);
-	    header("location: " . ADMIN_URL . 'user');
-	}
+	// 	$fullname= $_POST['fullname'];
+    //     $email= $_POST['email'];
+    //     $phone_number= $_POST['phone_number'];
+    //     $password= $_POST['password'];
+    //     $repassword= $_POST['repassword'];
+    //     $address= $_POST['address'];
+    //     $avatar = $_FILES['avatar']; 
+	//     $avatarname = "";
+	//     if ($avatar['size'] > 0) {
+	//         $filename = uniqid() . '-' . $avatar['name'];
+	//         move_uploaded_file($avatar['tmp_name'], './public/uploads/' . $avatarname);
+	//         $avatarname = 'uploads/' . $avatarname;
+	//         $img = PUBLIC_URL. $avatarname;
+	//     }
+	//     $sql = " UPDATE user set fullname = '$fullname',avatar = '$img',phone_number = '$phone_number',password = '$password',address = '$address' where id = $id";
+	//     executeQuery($sql);
+	//     header("location: " . ADMIN_URL . 'user');
+	// }
 
 
  ?>

@@ -174,8 +174,8 @@ switch ($url) {
         break;
     case 'cp-admin/taikhoan/update-user':
 
-        require_once './admin/business/user.php';
-        update_user();
+        // require_once './admin/business/user.php';
+        // update_user();
 
         // 
     case 'cp-admin/slide':
@@ -230,9 +230,48 @@ switch ($url) {
         news_update_form();
         break;
 
+        // checkAuth([ADMIN_ROLE]);
+        // require_once './admin/business/user.php';
+        // update_user();
+
+
+    case 'cp-admin/taikhoan/xoa':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
-        update_user();
+        user_remove();
+        //aa
+    case 'my-user':
+        checkAuth([ADMIN_ROLE,STAFF_ROLE,USER_ROLE]);
+        require_once './client/business/taikhoan.php';
+        my_user();
+        //aa
+    case 'my-user/edit':
+        require_once './client/business/taikhoan.php';
+        edit_my_user();
+        break;
+    case 'my-user/update':
+        require_once './client/business/taikhoan.php';
+        my_user_update();
+
+        break;
+    //hiển thị sản phẩm theo danh mục
+    case 'quan':
+        require_once './client/business/dashboard.php';
+        quan();
+        break;
+    case 'ao':
+        require_once './client/business/dashboard.php';
+        ao();
+        break;
+    case 'nam':
+        require_once './client/business/dashboard.php';
+        nam();
+        break;
+    case 'nu':
+        require_once './client/business/dashboard.php';
+        nu();
+        break;
+
         //aa
         break;
 
