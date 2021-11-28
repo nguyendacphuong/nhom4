@@ -217,141 +217,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- single-product end -->				
-                            <!-- single-product start -->
-                            <!-- <div class="col-12">
-                                <div class="single-product">
-                                    <span class="sale-text">Sale</span>
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img class="primary-image" src="img/product/1.jpg" alt="" />
-                                            <img class="secondary-image" src="img/product/2.jpg" alt="" />
-                                        </a>
-                                        <div class="actions">
-                                            <div class="action-buttons">
-                                                <div class="add-to-cart">
-                                                    <a href="#">Add to cart</a>
-                                                </div>
-                                                <div class="add-to-links">
-                                                    <div class="add-to-wishlist">
-                                                        <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-star"></i>
-                                                        </a>
-                                                    </div>
-                                                    <div class="compare-button">
-                                                        <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
-                                                    </div>									
-                                                </div>
-                                                <div class="quickviewbtn">
-                                                    <a href="#" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>							
-                                    </div>
-                                    <div class="product-content">
-                                        <h2 class="product-name"><a href="#">Vestibulum suscipit</a></h2>
-                                        <div class="pro-rating">
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="new-price">£50.00</span>
-                                            <span class="old-price">£80.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- single-product end -->	
-                            <!-- single-product start -->
-                            <!-- <div class="col-12">
-                                <div class="single-product">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img class="primary-image" src="img/product/women/2.jpg" alt="" />
-                                            <img class="secondary-image" src="img/product/women/1.jpg" alt="" />
-                                        </a>
-                                        <div class="actions">
-                                            <div class="action-buttons">
-                                                <div class="add-to-cart">
-                                                    <a href="#">Add to cart</a>
-                                                </div>
-                                                <div class="add-to-links">
-                                                    <div class="add-to-wishlist">
-                                                        <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-star"></i>
-                                                        </a>
-                                                    </div>
-                                                    <div class="compare-button">
-                                                        <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
-                                                    </div>									
-                                                </div>
-                                                <div class="quickviewbtn">
-                                                    <a href="#" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>							
-                                    </div>
-                                    <div class="product-content">
-                                        <h2 class="product-name"><a href="#">Pellentesque posuere</a></h2>
-                                        <div class="pro-rating">
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="new-price">£100.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- single-product end -->
-                            <!-- single-product start -->
-                            <!-- <div class="col-12">
-                                <div class="single-product">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img class="primary-image" src="img/product/women/7.jpg" alt="" />
-                                            <img class="secondary-image" src="img/product/women/2.jpg" alt="" />
-                                        </a>
-                                        <div class="actions">
-                                            <div class="action-buttons">
-                                                <div class="add-to-cart">
-                                                    <a href="#">Add to cart</a>
-                                                </div>
-                                                <div class="add-to-links">
-                                                    <div class="add-to-wishlist">
-                                                        <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-star"></i>
-                                                        </a>
-                                                    </div>
-                                                    <div class="compare-button">
-                                                        <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
-                                                    </div>									
-                                                </div>
-                                                <div class="quickviewbtn">
-                                                    <a href="#" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>							
-                                    </div>
-                                    <div class="product-content">
-                                        <h2 class="product-name"><a href="#">Pellentesque posuere</a></h2>
-                                        <div class="pro-rating">
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                            <a href="#"><i class="fa fa-star"></i></a>
-                                        </div>
-                                        <div class="price-box">
-                                            <span class="new-price">£100.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- single-product end -->							
+                            <!-- single-product end -->								
                         </div>
                     </div>
                 </div>
@@ -365,13 +231,13 @@
                         <li>
                             <div class="single-product">
                                 <div class="product-img">
-                                    <a href="#">
+                                    <a href="<?=BASE_URL . 'chitietsp?id='.$itemcungloai['id']?>">
                                         <img class="primary-image" src="<?=$itemcungloai['thumbnail']?>" alt="" />
                                     </a>						
                                 </div>
                                 <div class="product-content">
                                     <div class="pro-info">
-                                        <h2 class="product-name"><a href="#"><?=$itemcungloai['title']?></a></h2>
+                                        <h2 class="product-name"><a href="<?=BASE_URL . 'chitietsp?id='.$itemcungloai['id']?>"><?=$itemcungloai['title']?></a></h2>
                                         <div class="price-box">
                                             <span class="new-price"><?=$itemcungloai['price']?>đ</span>
                                             <span class="old-price"><?=$itemcungloai['discount']?>đ</span>
@@ -381,62 +247,6 @@
                             </div>	
                         </li>
                         <?php endforeach?>
-                        <!-- <li>
-                            <div class="single-product">
-                                <div class="product-img">
-                                    <a href="#">
-                                        <img class="primary-image" src="img/product/women/8.jpg" alt="" />
-                                        <img class="secondary-image" src="img/product/women/1.jpg" alt="" />
-                                    </a>						
-                                </div>
-                                <div class="product-content">
-                                    <div class="pro-info">
-                                        <h2 class="product-name"><a href="#">Aliquam lobortis est</a></h2>
-                                        <div class="price-box">
-                                            <span class="new-price">£70.00</span>
-                                            <span class="old-price">£100.00</span>
-                                        </div>								
-                                    </div>								
-                                </div>
-                            </div>	
-                        </li>
-                        <li>
-                            <div class="single-product">
-                                <div class="product-img">
-                                    <a href="#">
-                                        <img class="primary-image" src="img/product/women/2.jpg" alt="" />
-                                        <img class="secondary-image" src="img/product/women/3.jpg" alt="" />
-                                    </a>						
-                                </div>
-                                <div class="product-content">
-                                    <div class="pro-info">
-                                        <h2 class="product-name"><a href="#">Nulla sed libero</a></h2>
-                                        <div class="price-box">
-                                            <span class="new-price">£80.00</span>
-                                            <span class="old-price">£120.00</span>
-                                        </div>								
-                                    </div>								
-                                </div>
-                            </div>	
-                        </li>
-                        <li>
-                            <div class="single-product">
-                                <div class="product-img">
-                                    <a href="#">
-                                        <img class="primary-image" src="img/product/6.jpg" alt="" />
-                                        <img class="secondary-image" src="img/product/7.jpg" alt="" />
-                                    </a>						
-                                </div>
-                                <div class="product-content">
-                                    <div class="pro-info">
-                                        <h2 class="product-name"><a href="#">Pellentesque posuere</a></h2>
-                                        <div class="price-box">
-                                            <span class="new-price">£50.00</span>
-                                        </div>								
-                                    </div>									
-                                </div>
-                            </div>
-                        </li> -->
                     </ul>
                 </aside>
                 <!-- widget-recent end -->				

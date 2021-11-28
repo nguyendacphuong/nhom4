@@ -154,6 +154,7 @@ switch ($url) {
         require_once './admin/business/user.php';
         update_user();
 
+
     case 'cp-admin/taikhoan/xoa':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
@@ -171,6 +172,26 @@ switch ($url) {
     case 'my-user/update':
         require_once './client/business/taikhoan.php';
         my_user_update();
+
+        break;
+    //hiển thị sản phẩm theo danh mục
+    case 'quan':
+        require_once './client/business/dashboard.php';
+        quan();
+        break;
+    case 'ao':
+        require_once './client/business/dashboard.php';
+        ao();
+        break;
+    case 'nam':
+        require_once './client/business/dashboard.php';
+        nam();
+        break;
+    case 'nu':
+        require_once './client/business/dashboard.php';
+        nu();
+        break;
+
         //aa
     
     
