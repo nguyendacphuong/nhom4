@@ -2,25 +2,24 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Tạo mới thương hiệu</h3>
+                <h3 class="card-title">Tạo mới Slide_show</h3>
             </div>
             <div class="card-body">
-                <form action="<?= ADMIN_URL . 'thuong-hieu/update'?>" method="post">
+                <form action="<?= ADMIN_URL . 'slide/update'?>" method="post" enctype="multipart/form-data">
                 <input type="text" name="id" id="" value="<?php echo $cates['id']; ?>" hidden>
                     <div class="col-6 offset-3">
                         <div class="form-group">
-                          <label for="">Tên thương hiệu</label>
-                          <input type="text" name="name_brand" value="<?php echo $cates['name_brand']; ?>" class="form-control" placeholder="" aria-describedby="helpId">
+                          <label for="">Tên Slide</label>
+                          <input type="text" name="slide_name" value="<?php echo $cates['slide_name']; ?>" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" id="show_menu" name="show_menu" value="1" type="checkbox">
-                                <label class="form-check-label" for="show_menu">Hiển thị menu</label>
-                            </div>
+                          <label for="">Hình</label>
+                          <input type="file" name="slideshow_img" value="" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
+                        
                         <br>
                         <div class="d-flex justify-content-center">
-                            <a href="<?= ADMIN_URL . 'thuong-hieu'?>" class="btn btn-sm btn-danger">Hủy</a>
+                            <a href="<?= ADMIN_URL . 'slide'?>" class="btn btn-sm btn-danger">Hủy</a>
                             &nbsp;
                             <button type="submit" class="btn btn-sm btn-primary">Lưu</button>
                         </div>

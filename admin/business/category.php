@@ -80,6 +80,86 @@ function brand_save_add()
     header("location: " . ADMIN_URL . 'thuong-hieu');
 }
 
+function brand_edit_add()
+{
+  
+
+    // hiển thị view
+    admin_render('category/brand-edit.php', compact('cates'), 'admin-assets/custom/category_index.js');
+}
+
+// 
+
+function slide_index()
+{
+    $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
+    // lấy danh sách danh mục
+    $sql = "select * from slideshow where slide_name like '%$keyword%'";
+    $cates = executeQuery($sql, true);
+
+    // hiển thị view
+    admin_render('category/slide_index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
+}
+function slide_add()
+{
+ 
+    admin_render('category/slide_add.php',[], 'admin-assets/custom/product_add.js');
+}
+
+function slide_save_add()
+{
+
+    $slide_name = $_POST['slide_name'];
+   
+    $file = $_FILES['slideshow_img'];
+    
+    $filename = "";
+    
+    if ($file['size'] > 0) {
+        $filename = uniqid() . '-' . $file['name'];
+        move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
+        $filename = 'uploads/' . $filename;
+        $img = PUBLIC_URL . $filename;
+    }
+  
+    $sql = " INSERT INTO slideshow (slide_name,slideshow_img) values ('$slide_name','$img')";
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'slide');
+}
+function slide_remove()
+{
+    $id = $_GET['id'];
+    $sql = "delete from slideshow where id = $id";
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'slide');
+}
+function slide_edit_form()
+{
+    $id = isset($_GET['id']) ? $_GET['id'] : "";
+    // lấy danh sách danh mục
+    $sql = "select * from slideshow where id = $id";
+    $cates = executeQuery($sql, '');
+
+    // hiển thị view
+    admin_render('category/slide_edit.php', compact('cates'), 'admin-assets/custom/category_index.js');
+}
+function slide_update_form()
+{
+    $id = $_POST['id'];
+    $slide_name = $_POST['slide_name'];
+    $file = $_FILES['slideshow_img'];
+        $filename = "";
+        if ($file['size'] > 0) {
+            $filename = uniqid() . '-' . $file['name'];
+            move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
+            $filename = 'uploads/' . $filename;
+            $img = PUBLIC_URL . $filename;
+        }
+    $sql = " UPDATE slideshow set slide_name = '$slide_name',slideshow_img = '$img' where id = $id";
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'slide');
+}
+
 function brand_remove()
 {
     $id = $_GET['id'];
@@ -114,3 +194,4 @@ function brand_update_form()
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'thuong-hieu');
 }
+?>

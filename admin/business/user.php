@@ -30,7 +30,9 @@ function user_index()
 		        $avatarname = 'uploads/' . $avatarname;
 		        $img = PUBLIC_URL. $avatarname;
 		    }
-            $sql = "INSERT into user (fullname, avatar, email, phone_number, address, password,created_at, updated_at,role_id ) values ('$fullname','$img', '$email', '$phone_number', '$address', '$password','$category_id','$updated_at','$role_id')";
+
+            $sql = "INSERT into user (fullname, avatar, email, phone_number, address, password,created_at, updated_at,role_id )
+			 values ('$fullname','$img', '$email', '$phone_number', '$address', '$password','$created_at','$updated_at','$role_id')";
             executeQuery($sql);
             header ('Location:'.ADMIN_URL.'taikhoan');
         
@@ -55,25 +57,26 @@ function edit_user()
     // hiển thị view
     admin_render('user/edit_user.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
-	function update_user(){
-		$fullname= $_POST['fullname'];
-        $email= $_POST['email'];
-        $phone_number= $_POST['phone_number'];
-        $password= $_POST['password'];
-        $repassword= $_POST['repassword'];
-        $address= $_POST['address'];
-        $avatar = $_FILES['avatar']; 
-	    $avatarname = "";
-	    if ($avatar['size'] > 0) {
-	        $filename = uniqid() . '-' . $avatar['name'];
-	        move_uploaded_file($avatar['tmp_name'], './public/uploads/' . $avatarname);
-	        $avatarname = 'uploads/' . $avatarname;
-	        $img = PUBLIC_URL. $avatarname;
-	    }
-	    $sql = " UPDATE user set fullname = '$fullname',avatar = '$img',phone_number = '$phone_number',password = '$password',address = '$address' where id = $id";
-	    executeQuery($sql);
-	    header("location: " . ADMIN_URL . 'user');
-	}
+	// function update_user(){
+		
+	// 	$fullname= $_POST['fullname'];
+    //     $email= $_POST['email'];
+    //     $phone_number= $_POST['phone_number'];
+    //     $password= $_POST['password'];
+    //     $repassword= $_POST['repassword'];
+    //     $address= $_POST['address'];
+    //     $avatar = $_FILES['avatar']; 
+	//     $avatarname = "";
+	//     if ($avatar['size'] > 0) {
+	//         $filename = uniqid() . '-' . $avatar['name'];
+	//         move_uploaded_file($avatar['tmp_name'], './public/uploads/' . $avatarname);
+	//         $avatarname = 'uploads/' . $avatarname;
+	//         $img = PUBLIC_URL. $avatarname;
+	//     }
+	//     $sql = " UPDATE user set fullname = '$fullname',avatar = '$img',phone_number = '$phone_number',password = '$password',address = '$address' where id = $id";
+	//     executeQuery($sql);
+	//     header("location: " . ADMIN_URL . 'user');
+	// }
 
 
  ?>

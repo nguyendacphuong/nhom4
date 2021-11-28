@@ -28,24 +28,82 @@ function cate_save_add()
     $discount = $_POST['discount'];
     $description = $_POST['description'];
     $category_id = $_POST['category_id'];
+
     $brand_id = $_POST['brand_id'];
     $number = $_POST['number'];
+
     $created_at = $updated_at = date('Y-m-d H:s:i');
     $file = $_FILES['thumbnail'];
     
     $filename = "";
+    $brand_id = $_POST['brand_id'];
+    $number = $_POST['number'];
+    $status = isset($_POST['status']) ? 1 : 0;
+    $created_at = $updated_at = date('Y-m-d H:s:i');
+    $file = $_FILES['thumbnail'];
+    $filename = "";
+
+    $file1 = $_FILES['image1'];
+    $filename1 = "";
+
+    $file4 = $_FILES['image4'];
+    $filename4 = "";
+
+    $file3 = $_FILES['image3'];
+    $filename3 = "";
+
+    $file2 = $_FILES['image2'];
+    $filename2 = "";
     
+
     if ($file['size'] > 0) {
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
         $img = PUBLIC_URL . $filename;
     }
+
+
+    $sql = " INSERT INTO product (title,price,discount,thumbnail,description,category_id,created_at,updated_at) values
+     ('$title','$price','$discount','$img','$description','$category_id',' $created_at','$updated_at')";
+
+    if ($file1['size'] > 0) {
+        $filename1 = uniqid() . '-' . $file1['name'];
+        move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename1);
+        $filename1 = 'uploads/' . $filename1;
+        $img1 = PUBLIC_URL . $filename1;
+    }
+    if ($file2['size'] > 0) {
+        $filename2 = uniqid() . '-' . $file2['name'];
+        move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename2);
+        $filename2 = 'uploads/' . $filename2;
+        $img2 = PUBLIC_URL . $filename2;
+    }
+    if ($file3['size'] > 0) {
+        $filename3 = uniqid() . '-' . $file3['name'];
+        move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename3);
+        $filename3 = 'uploads/' . $filename3;
+        $img3 = PUBLIC_URL . $filename3;
+    }
+    if ($file4['size'] > 0) {
+        $filename4 = uniqid() . '-' . $file4['name'];
+        move_uploaded_file($file4['tmp_name'], './public/uploads/' . $filename4);
+        $filename4 = 'uploads/' . $filename4;
+        $img4 = PUBLIC_URL . $filename4;
+    }
   
    
 
-    $sql = " INSERT INTO product (title,price,discount,thumbnail,description,number,category_id,brand_id,created_at,updated_at) values
-     ('$title','$price','$discount','$img','$description','$number','$category_id','$brand_id',' $created_at','$updated_at')";
+    $sql = " INSERT INTO product (title,price,discount,thumbnail,image1,image2,image3,image4,description,number,category_id,brand_id,status,created_at,updated_at) values
+     ('$title','$price','$discount','$img','$img1','$img2','$img3','$img4','$description','$number','$category_id','$brand_id','$status',' $created_at','$updated_at')";
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'sanpham');
+}
+function product_remove()
+{
+    $id = $_GET['id'];
+    $sql = "delete from product where id = $id";
+
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'sanpham');
 }
@@ -56,11 +114,14 @@ function edit_form()
     $sql = "select * from product where id = $id ";
     $lis = executeQuery($sql);
 
-    $sql = "select * from category order by id desc";
+    $sql = "select * from category ";
     $cates = pdo_query($sql);
+    
+    $sql = "select * from brand ";
+    $cate = pdo_query($sql);
 
     // hiển thị view
-    admin_render('product/edit-form.php', compact('cates', 'lis'), 'admin-assets/custom/product_index.js');
+    admin_render('product/edit-form.php', compact('cates', 'lis','cate'), 'admin-assets/custom/product_index.js');
 }
 // function update_form()
 // {
