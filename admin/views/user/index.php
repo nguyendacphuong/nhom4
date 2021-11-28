@@ -33,14 +33,11 @@
                             $hinha =  $item['avatar'];
                             if(empty($hinha)) {
                                 $hinh = "không có";
-                            }else {
-                                // $hinh = "<img src=" IMAGE_URL . 'imguser/' .$hinha" class="rounded-circle shadow-4" style="width: 40px;" alt=""/>";
-                                $hinh = "<img src='" . $hinha . "'  height = '80px'>";
                             }
                             ?>
                             <tr>
                                 <td><?= $index + 1 ?></td>
-                                <td class="bdimg"><?= $hinh?></td>
+                                <td><img height = '40px' src="<?= $hinha ?>" alt="" class="rounded-circle"></td>
                                 <td> <?= $item['fullname'] ?></td>
                                 <td><?= $item['email'] ?></td>
                                 <td><?= $item['password'] ?></td>
@@ -51,7 +48,7 @@
                                     <a href="<?= ADMIN_URL . 'taikhoan/edit-user?id='. $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'taikhoan/xoa?id='. $item['id'] ?>', '<?= $item['id']?>')" class="btn btn-sm btn-danger">
+                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'taikhoan/xoa?id=' . $item['id'] ?>', '<?= $item['fullname'] ?>')" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>

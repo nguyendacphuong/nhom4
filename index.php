@@ -154,6 +154,25 @@ switch ($url) {
         require_once './admin/business/user.php';
         update_user();
 
+
+    case 'cp-admin/taikhoan/xoa':
+        checkAuth([ADMIN_ROLE]);
+        require_once './admin/business/user.php';
+        user_remove();
+        //aa
+    case 'my-user':
+        checkAuth([ADMIN_ROLE,STAFF_ROLE,USER_ROLE]);
+        require_once './client/business/taikhoan.php';
+        my_user();
+        //aa
+    case 'my-user/edit':
+        require_once './client/business/taikhoan.php';
+        edit_my_user();
+        break;
+    case 'my-user/update':
+        require_once './client/business/taikhoan.php';
+        my_user_update();
+
         break;
     //hiển thị sản phẩm theo danh mục
     case 'quan':
@@ -172,7 +191,11 @@ switch ($url) {
         require_once './client/business/dashboard.php';
         nu();
         break;
+
         //aa
+    
+    
+
     break;
     default:
         # code...

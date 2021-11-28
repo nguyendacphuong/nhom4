@@ -17,7 +17,7 @@
             if(empty($err)){
                 $sql = "insert into user (fullname, email, phone_number, address, password) values ('$fullname', '$email', '$phone_number', '$address', '$password')";
                 executeQuery($sql);
-                header ('Location:'.BASE_URL.'/');
+                header ('Location:'.BASE_URL);
             }
         }
         
@@ -25,4 +25,23 @@
         // header("Location:".BASE_URL. '/');
         client_render('homepage/dangky.php');
 }
+
+    function my_user(){
+        client_render('homepage/my-user-form.php');
+    }
+    function edit_my_user()
+{
+    $id = isset($_GET['id']) ? $_GET['id'] : "";
+    // lấy danh sách danh mục
+    $sql = "select * from user where id = $id ";
+    $cates = executeQuery($sql);
+    // hiển thị view
+    client_render('homepage/edit_my_user.php', compact('cates'), 'admin-assets/custom/category_index.js');
+}
+    function my_user_update(){
+        
+        
+    }
+ 
+
 ?>
