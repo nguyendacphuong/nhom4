@@ -164,6 +164,15 @@ switch ($url) {
         require_once './client/business/taikhoan.php';
         my_user();
         //aa
+    case 'my-user/edit':
+        require_once './client/business/taikhoan.php';
+        edit_my_user();
+        break;
+    case 'my-user/update':
+        require_once './client/business/taikhoan.php';
+        my_user_update();
+        //aa
+    
     
 
     break;

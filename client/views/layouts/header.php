@@ -24,7 +24,7 @@
 									<li><a href="cart.html">Giỏ Hàng</a></li>
 									<li>
 										<?php if(isset($_SESSION['auth']) && $_SESSION['auth'] != null):?>
-							            <p><a href=""><?= $_SESSION['auth']['fullname'] ?></a> &nbsp<a href="<?= BASE_URL . 'dang-xuat'?>">Đăng xuất</a></p>
+							            <p><a href="<?= BASE_URL . 'my-user'?>"><?= $_SESSION['auth']['fullname'] ?></a> &nbsp<a href="<?= BASE_URL . 'dang-xuat'?>">Đăng xuất</a></p>
 								        <?php else: ?>
 								            <a href="<?= BASE_URL . 'dangnhap'?>">Đăng nhập</a>
 								        <?php endif ?>

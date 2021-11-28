@@ -37,7 +37,7 @@
                     </form>
                 </div>
                 <div class="col-md-6">
-                    <img class="cl" src="./public/client-asset/img/banner/home-4/r.png">
+                    <img class="cl" src="<?= CLIENT_ASSET .''?>">
                 </div>
             </div>
         </div>

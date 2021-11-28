@@ -1,48 +1,39 @@
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
+        <?php if(isset($_SESSION['auth']) && $_SESSION['auth'] != null):?>
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                <img class="rounded-circle mt-5" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQF2psCzfbB611rnUhxgMi-lc2oB78ykqDGYb4v83xQ1pAbhPiB&usqp=CAU"><br>
-                <span class="font-weight-bold">Amelly</span><br>
-                <span class="text-black-50">amelly12@bbb.com</span>
+                <img class="rounded-circle mt-5" src="<?= $_SESSION['auth']['avatar'] ?>"><br>
+                <span class="font-weight-bold"><?= $_SESSION['auth']['fullname'] ?></span><br>
+                <span class="text-black-50"><?= $_SESSION['auth']['email'] ?></span>
                 <span> </span>
             </div>
         </div>
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Profile Settings</h4>
+                    <h4 class="text-right">THÔNG TIN TÀI KHOẢN</h4>
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-12">
                         <label class="labels">Họ Và Tên</label>
-                        <input type="text" class="form-control" placeholder="first name" value="">
+                        <h4 style="margin-left:20px ;"><?= $_SESSION['auth']['fullname'] ?></h4>
                     </div>
                     <div class="col-md-12">
                         <label class="labels">Email</label>
-                        <input type="text" class="form-control" placeholder="enter email id" value="">
+                        <h4 style="margin-left:20px ;"><?= $_SESSION['auth']['email'] ?></h4>
                     </div>
                     <div class="col-md-12">
-                        <label class="labels">PhoneNumber</label>
-                        <input type="text" class="form-control" placeholder="enter phone number" value="">
+                        <label class="labels">Số điện thoại</label>
+                        <h4 style="margin-left:20px ;"><?= $_SESSION['auth']['phone_number'] ?></h4>
                     </div>
                     <div class="col-md-12">
                         <label class="labels">Địa Chỉ</label>
-                        <input type="text" class="form-control" placeholder="enter address" value="">
-                    </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-md-6">
-                        <label class="labels">Country</label>
-                        <input type="text" class="form-control" placeholder="country" value="">
-                    </div>
-                    <div class="col-md-6">
-                        <label class="labels">State/Region</label>
-                        <input type="text" class="form-control" value="" placeholder="state">
+                        <h4 style="margin-left:20px ;"><?= $_SESSION['auth']['address'] ?></h4>
                     </div>
                 </div>
                 <div class="mt-5 text-center">
-                    <button class="btn btn-primary profile-button" type="button">Save Profile</button>
+                    <a href="<?= ADMIN_URL . 'my-user/update?id='. $item['id'] ?>" class="btn btn-primary profile-button">Chỉnh Sửa</a>
                 </div>
             </div>
         </div>
@@ -56,3 +47,4 @@
 </div>
 </div>
 </div>
+<?php endif ?>
