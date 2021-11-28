@@ -153,6 +153,25 @@ switch ($url) {
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         update_user();
+
+        break;
+    //hiển thị sản phẩm theo danh mục
+    case 'quan':
+        require_once './client/business/dashboard.php';
+        quan();
+        break;
+    case 'ao':
+        require_once './client/business/dashboard.php';
+        ao();
+        break;
+    case 'nam':
+        require_once './client/business/dashboard.php';
+        nam();
+        break;
+    case 'nu':
+        require_once './client/business/dashboard.php';
+        nu();
+        break;
         //aa
     break;
     default:
