@@ -153,8 +153,6 @@ switch ($url) {
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         update_user();
-
-
     case 'cp-admin/taikhoan/xoa':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
