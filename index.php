@@ -34,13 +34,10 @@ switch ($url) {
         require_once './admin/business/category.php';
         cate_save_add();
         break;
-<<<<<<< Updated upstream
 
 
-=======
        
         //    thương hiệu
->>>>>>> Stashed changes
     case 'cp-admin/thuong-hieu':
 
         require_once './admin/business/category.php';
@@ -72,10 +69,7 @@ switch ($url) {
         brand_update_form();
         break;
         // and thương hiệu
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
     case 'chitietsp':
         require_once './client/business/dashboard.php';
         chitiet();
@@ -134,19 +128,13 @@ switch ($url) {
         require_once './admin/business/product.php';
         cate_save_add();
         break;
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
     case 'cp-admin/sanpham/xoa':
         require_once './admin/business/product.php';
         product_remove();
         break;
         // end sản phẩm
-<<<<<<< Updated upstream
 
-=======
->>>>>>> Stashed changes
 
     case 'cp-admin/sanpham/capnhat':
         checkAuth([ADMIN_ROLE]);
@@ -169,13 +157,10 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_add();
         break;
-<<<<<<< Updated upstream
 
 
-=======
     
 
->>>>>>> Stashed changes
     case 'cp-admin/taikhoan/luu-tao-moi':
         checkAuth([ADMIN_ROLE]);
 
@@ -218,7 +203,6 @@ switch ($url) {
         slide_update_form();
         break;
 
-<<<<<<< Updated upstream
         // ================================ TIN TỨC ======================================
 
     case 'cp-admin/news':
@@ -252,34 +236,6 @@ switch ($url) {
         //aa
         break;
 
-=======
-// ================================ TIN TỨC ======================================
-
-case 'cp-admin/news':
-    require_once './admin/business/dashboard.php';
-    news_index();
-    break;
-case 'cp-admin/news/tao-moi':
-    require_once './admin/business/dashboard.php';
-    news_add();
-    break;
-case 'cp-admin/news/luu-tao-moi':
-    require_once './admin/business/dashboard.php';
-    news_save_add();
-    break;
-case 'cp-admin/news/xoa':
-    require_once './admin/business/dashboard.php';
-    news_remove();
-    break;
-case 'cp-admin/news/capnhat':
-    require_once './admin/business/dashboard.php';
-    news_edit_form();
-    break;
-case 'cp-admin/news/update':
-    require_once './admin/business/dashboard.php';
-    news_update_form();
-    break;
->>>>>>> Stashed changes
     default:
         # code...
         break;
