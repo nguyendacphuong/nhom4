@@ -218,11 +218,8 @@
                                     </div>
                                 </div>
                             </div>
-<<<<<<< HEAD
                          >							
-=======
                             <!-- single-product end -->								
->>>>>>> thanhdmph17065
                         </div>
                     </div>
                 </div>
@@ -252,10 +249,7 @@
                             </div>	
                         </li>
                         <?php endforeach?>
-<<<<<<< HEAD
                        
-=======
->>>>>>> thanhdmph17065
                     </ul>
                 </aside>
                 <!-- widget-recent end -->				
