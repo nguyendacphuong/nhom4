@@ -47,6 +47,18 @@
                                 ?>
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label for="usr">Thương hiệu</label>
+                            <select class="form-control" name="brand_id" id="brand_id">
+                                <option value="">-- Chọn --</option>
+                                <?php
+                                foreach ($cate as $thuonghieu) {
+                                    extract($thuonghieu);
+                                    echo "<option value = '.$id.'>$name_brand</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
                         <div class="d-flex justify-content-center">
                             <a href="<?= ADMIN_URL . 'sanpham' ?>" class="btn btn-sm btn-danger">Hủy</a>
                             &nbsp;

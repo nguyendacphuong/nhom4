@@ -10,12 +10,12 @@ switch ($url) {
         dashboard_index();
         break;
     case 'cp-admin':
-        checkAuth([ADMIN_ROLE,STAFF_ROLE]);
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/dashboard.php';
         dashboard_index();
         break;
     case 'cp-admin/danh-muc':
-        checkAuth([ADMIN_ROLE,STAFF_ROLE]);
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/category.php';
         cate_index();
         break;
@@ -34,9 +34,12 @@ switch ($url) {
         require_once './admin/business/category.php';
         cate_save_add();
         break;
+
+
+       
         //    thương hiệu
     case 'cp-admin/thuong-hieu':
-        checkAuth([ADMIN_ROLE,STAFF_ROLE]);
+
         require_once './admin/business/category.php';
         brand_index();
         break;
@@ -66,9 +69,18 @@ switch ($url) {
         brand_update_form();
         break;
         // and thương hiệu
+
     case 'chitietsp':
         require_once './client/business/dashboard.php';
         chitiet();
+        break;
+    case 'tintuc':
+        require_once './client/business/dashboard.php';
+        tintuc_index();
+        break;
+    case 'tintucchitiet':
+        require_once './client/business/dashboard.php';
+        tintucchitiet_index();
         break;
     case 'dangnhap':
         require_once './client/business/homepage.php';
@@ -78,7 +90,7 @@ switch ($url) {
         require_once './client/business/homepage.php';
         logout();
         break;
-    
+
     case 'dang-ky':
         require_once './client/business/taikhoan.php';
         dangky();
@@ -101,7 +113,7 @@ switch ($url) {
         // and danh mục
 
     case 'cp-admin/sanpham':
-        checkAuth([ADMIN_ROLE,STAFF_ROLE]);
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/product.php';
         product_index();
         break;
@@ -116,7 +128,13 @@ switch ($url) {
         require_once './admin/business/product.php';
         cate_save_add();
         break;
-    // end sản phẩm
+
+    case 'cp-admin/sanpham/xoa':
+        require_once './admin/business/product.php';
+        product_remove();
+        break;
+        // end sản phẩm
+
 
     case 'cp-admin/sanpham/capnhat':
         checkAuth([ADMIN_ROLE]);
@@ -130,7 +148,7 @@ switch ($url) {
         break;
         // end sản phẩm
     case 'cp-admin/taikhoan':
-        checkAuth([ADMIN_ROLE,STAFF_ROLE]);
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/user.php';
         user_index();
         break;
@@ -139,8 +157,13 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_add();
         break;
+
+
+    
+
     case 'cp-admin/taikhoan/luu-tao-moi':
         checkAuth([ADMIN_ROLE]);
+
         require_once './admin/business/user.php';
         user_save_add();
         break;
@@ -153,6 +176,68 @@ switch ($url) {
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         update_user();
+
+        // require_once './admin/business/user.php';
+        // update_user();
+
+        // 
+    case 'cp-admin/slide':
+        require_once './admin/business/category.php';
+        slide_index();
+        break;
+    case 'cp-admin/slide/tao-moi':
+        require_once './admin/business/category.php';
+        slide_add();
+        break;
+    case 'cp-admin/slide/luu-tao-moi':
+        require_once './admin/business/category.php';
+        slide_save_add();
+        break;
+    case 'cp-admin/slide/xoa':
+        require_once './admin/business/category.php';
+        slide_remove();
+        break;
+    case 'cp-admin/slide/capnhat':
+        require_once './admin/business/category.php';
+        slide_edit_form();
+        break;
+    case 'cp-admin/slide/update':
+        require_once './admin/business/category.php';
+        slide_update_form();
+        break;
+
+        // ================================ TIN TỨC ======================================
+
+    case 'cp-admin/news':
+        require_once './admin/business/dashboard.php';
+        news_index();
+        break;
+    case 'cp-admin/news/tao-moi':
+        require_once './admin/business/dashboard.php';
+        news_add();
+        break;
+    case 'cp-admin/news/luu-tao-moi':
+        require_once './admin/business/dashboard.php';
+        news_save_add();
+        break;
+    case 'cp-admin/news/xoa':
+        require_once './admin/business/dashboard.php';
+        news_remove();
+        break;
+    case 'cp-admin/news/capnhat':
+        require_once './admin/business/dashboard.php';
+        news_edit_form();
+        break;
+    case 'cp-admin/news/update':
+        require_once './admin/business/dashboard.php';
+        news_update_form();
+        break;
+
+        // checkAuth([ADMIN_ROLE]);
+        // require_once './admin/business/user.php';
+        // update_user();
+
+
     case 'cp-admin/taikhoan/xoa':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
@@ -191,10 +276,8 @@ switch ($url) {
         break;
 
         //aa
-    
-    
+        break;
 
-    break;
     default:
         # code...
         break;

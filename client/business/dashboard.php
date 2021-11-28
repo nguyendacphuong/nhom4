@@ -3,10 +3,11 @@
 function dashboard_index(){
     $sql = "select * from product order by view desc limit 0,6";
     $items = pdo_query($sql);
-
+    $sql = "select * from slideshow ";
+    $itemsl = pdo_query($sql);
     $sql = "select * from product order by id desc limit 0,13";
     $newitems = pdo_query($sql);
-    client_render('homepage/slider.php', compact('items', 'newitems')); 
+    client_render('homepage/slider.php', compact('items', 'newitems','itemsl')); 
 }
 
 function chitiet(){
@@ -18,6 +19,20 @@ function chitiet(){
     $itemcungloais = select_page($sql);
     client_render('homepage/chitietsp.php', compact('item', 'itemcungloais')); 
 }
+function tintuc_index(){
+    $sql = "select * from news";
+    $items = pdo_query($sql);
+
+    client_render('homepage/tintuc.php', compact( 'items')); 
+}
+function tintucchitiet_index(){
+    $id = $_GET['id'];
+    $sql = "select * from news where id = '$id'";
+    $itemct = pdo_query($sql);
+
+    client_render('homepage/tintucchitiet.php', compact( 'itemct')); 
+}
+
 
 function quan(){
     client_render('homepage/quan.php'); 

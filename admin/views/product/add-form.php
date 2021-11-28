@@ -26,14 +26,62 @@
                         </div>
                         <div class="form-group">
                             <label for="">Hình chi tiết</label>
-                            <input type="file" name="image" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
+                            <input type="file" name="image1" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
+                        </div>
+                        <div class="form-group">
+                            <label for="">Hình chi tiết</label>
+                            <input type="file" name="image2" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
+                        </div>
+                        <div class="form-group">
+                            <label for="">Hình chi tiết</label>
+                            <input type="file" name="image3" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
+                        </div>
+                        <div class="form-group">
+                            <label for="">Hình chi tiết</label>
+                            <input type="file" name="image4" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
                         </div>
                         <div class="form-group">
                             <label for="">Mô tả</label>
                             <textarea name="description" class="form-control" placeholder="" aria-describedby="helpId"id="" cols="30" rows="10"></textarea>
                         </div>
+                        <div class="form-group">
+                            <label for="">Số lượng</label>
+                            <input type="number" name="number"  value="<?php echo $lis['number']; ?> " class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" id="status" name="status" value="1" type="checkbox">
+                                <label class="form-check-label" for="status">Còn hàng</label>
+                                
+                            </div>
+                        </div>
                         <br>
-                        
+
+                        <div class="form-group">
+                            <label for="usr">Danh Mục Sản Phẩm:</label>
+                            <select class="form-control" name="category_id" id="category_id">
+                                <option value="">-- Chọn --</option>
+                                <?php
+                                foreach ($cates as $category) {
+                                    extract($category);
+                                    echo "<option value = '.$id.'>$name</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="usr">Thương hiệu</label>
+                            <select class="form-control" name="brand_id" id="brand_id">
+                                <option value="">-- Chọn --</option>
+                                <?php
+                                foreach ($cate as $thuonghieu) {
+                                    extract($thuonghieu);
+                                    echo "<option value = '.$id.'>$name_brand</option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+
                         <div class="d-flex justify-content-center">
                             <a href="<?= ADMIN_URL . 'sanpham' ?>" class="btn btn-sm btn-danger">Hủy</a>
                             &nbsp;

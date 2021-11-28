@@ -25,18 +25,19 @@
                     <div class="single-product-tab">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img alt="" src=""></a></li>
-                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><img alt="" src="img/product/tab/s2.jpg"></a></li>
-                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><img alt="" src="img/product/tab/s3.jpg"></a></li>
-                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><img alt="" src="img/product/tab/s4.jpg"></a></li>
+                        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img alt="" src="<?=$item[0]['thumbnail']?>"></a></li>
+                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab"><img alt="" src="<?=$item[0]['image1']?>"></a></li>
+                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab"><img alt="" src="<?=$item[0]['image2']?>"></a></li>
+                        <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab"><img alt="" src="<?=$item[0]['image3']?>"></a></li>
                         </ul>
 
                         <!-- Tab panes -->
                         <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="home"><img alt="" src="<?=$item[0]['thumbnail']?>"></div>
-                        <div role="tabpanel" class="tab-pane" id="profile"><img alt="" src="img/product/tab/2.jpg"></div>
-                        <div role="tabpanel" class="tab-pane" id="messages"><img alt="" src="img/product/tab/3.jpg"></div>
-                        <div role="tabpanel" class="tab-pane" id="settings"><img alt="" src="img/product/tab/4.jpg"></div>
+                        <div role="tabpanel" class="tab-pane" id="profile"><img alt="" src="<?=$item[0]['image1']?>"></div>
+                        <div role="tabpanel" class="tab-pane" id="messages"><img alt="" src="<?=$item[0]['image2']?>"></div>
+                        <div role="tabpanel" class="tab-pane" id="settings"><img alt="" src="<?=$item[0]['image3']?>"></div>
+                    
                         </div>
                     </div>
                 </div>
@@ -48,8 +49,8 @@
                     </div>
                     <h1 class="product_title"><?=$item[0]['title']?></h1>
                     <div class="price-box">
-                        <span class="new-price"><?=$item[0]['price']?>đ</span>
-                        <span class="old-price"><?=$item[0]['discount']?>d</span>
+                        <span class="new-price"><?=$item[0]['discount']?>đ</span>
+                        <span class="old-price"><?=$item[0]['price']?>d</span>
                     </div>
                     <div class="pro-rating">
                         <a href="#"><i class="fa fa-star"></i></a>
@@ -217,6 +218,7 @@
                                     </div>
                                 </div>
                             </div>
+                         >							
                             <!-- single-product end -->								
                         </div>
                     </div>
@@ -247,6 +249,7 @@
                             </div>	
                         </li>
                         <?php endforeach?>
+                       
                     </ul>
                 </aside>
                 <!-- widget-recent end -->				
