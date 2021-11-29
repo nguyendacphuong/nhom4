@@ -107,59 +107,65 @@
                             <div class="product-tab-desc">
                                 <div class="product-page-comments">
                                     <h2>1 review for Integer consequat ante lectus</h2>
-                                    <ul>
-                                        <li>
-                                            <div class="product-comments">
-                                                <img src="img/blog/avatar.png" alt="" />
-                                                <div class="product-comments-content">
-                                                    <p><strong><?= $_SESSION['auth']['fullname']?></strong> -
-                                                        <span><?= $created_at ?></span>
-                                                        <span class="pro-comments-rating">
-                                                            <i class="fa fa-star"></i>                              
-                                                            <i class="fa fa-star"></i>                              
-                                                            <i class="fa fa-star"></i>                              
-                                                            <i class="fa fa-star"></i>                              
-                                                        </span>
-                                                    </p>
-                                                    <div class="desc">
-                                                        <?= $content ?>
+                                        <ul>
+                                            <li>
+                                                <div class="product-comments">
+                                                    <img src="img/blog/avatar.png" alt="" />
+                                                    <div class="product-comments-content">
+                                                        <p><strong>admin</strong> -
+                                                            <span>March 7, 2015:</span>
+                                                            <span class="pro-comments-rating">
+                                                                <i class="fa fa-star"></i>                              
+                                                                <i class="fa fa-star"></i>                              
+                                                                <i class="fa fa-star"></i>                              
+                                                                <i class="fa fa-star"></i>                              
+                                                            </span>
+                                                        </p>
+                                                        <div class="desc">
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum.
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                            </li>
+                                        </ul>
                                     <div class="review-form-wrapper">
                                         <h3>Add a review</h3>
                                         <form action="#">
-                                            <input type="text" placeholder="your name"/>
-                                            <input type="email" placeholder="your email"/>
-                                            <div class="your-rating">
-                                                <h5>Your Rating</h5>
-                                                <!-- <span>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                </span>
-                                                <span>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                </span>
-                                                <span>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                </span>
-                                                <span>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                    <a href="#"><i class="fa fa-star"></i></a>
-                                                </span> -->
-                                            </div>
-                                            <textarea name="content" id="product-message" cols="30" rows="10" placeholder="Your Rating"></textarea>
-                                            <input type="submit" value="submit" />
+                                                <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) : ?>
+                                                <input type="text" value="<?= $_SESSION['auth']['fullname'] ?>"/>
+                                                <input type="email" value="<?= $_SESSION['auth']['email'] ?>"/>
+                                                <?php else : ?>
+                                                    <input type="text" name="name" required placeholder="Họ và tên"/>
+                                                    <input type="email" name="emailcmt" required placeholder="Email"/>
+
+                                                <?php endif ?>
+                                                <div class="your-rating">
+                                                    <h5>Your Rating</h5>
+                                                    <span>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                    </span>
+                                                    <span>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                    </span>
+                                                    <span>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                    </span>
+                                                    <span>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                        <a href="#"><i class="fa fa-star"></i></a>
+                                                    </span>
+                                                </div>
+                                                <textarea id="product-message" name="content" cols="30" rows="10" placeholder="Your Rating"></textarea>
+                                                <input type="submit" value="submit" />
                                         </form>
                                     </div>
                                 </div>
