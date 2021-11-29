@@ -19,6 +19,33 @@ function chitiet(){
     $category_id = $item[0]['category_id'];
     $sql = "SELECT * FROM product WHERE category_id = '$category_id' AND id != '$id' limit 4";
     $itemcungloais = select_page($sql);
+
+    //
+    
+    if(isset($_POST) && isset($_POST['comment'])){
+        $id_sp = $_GET['id'];
+        $contents = $_POST['contents'];
+        $created_at = date('Y-m-d H:s:i');
+        if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) {
+            $id_user = $_SESSION['auth']['id'];
+            $name = $_SESSION['auth']['fullname'];
+            $emailcmt = $_SESSION['auth']['email'];
+            $avtcmt = $_SESSION['auth']['avatar'];
+            $sql = "INSERT INTO contents (id_user, name, emailcmt,avtcmt,id_sp,contents,created_at) VALUES ('$id_user','$name','$emailcmt', '$avtcmt','$id_sp','$contents','$created_at')";
+            executeQuery($sql);
+            header('Location:'. BASE_URL . 'chitietsp?id='. $id);
+
+        }else{
+            $name = $_POST['name'];
+            $emailcmt = $_POST['emailcmt'];
+            $sql = "INSERT INTO contents (id_sp,contents,created_at,name, emailcmt) VALUES ('$id_sp','$contents','$created_at','$name','$emailcmt')";
+            executeQuery($sql);
+            header('Location:'. BASE_URL . 'chitietsp?id='. $id);
+        }
+            
+    }
+    
+
     client_render('homepage/chitietsp.php', compact('item', 'itemcungloais')); 
 }
 function tintuc_index(){

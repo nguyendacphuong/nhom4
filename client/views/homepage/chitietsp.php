@@ -130,10 +130,10 @@
                                         </ul>
                                     <div class="review-form-wrapper">
                                         <h3>Add a review</h3>
-                                        <form action="#">
+                                        <form  action="" method="post">
                                                 <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) : ?>
-                                                <input type="text" value="<?= $_SESSION['auth']['fullname'] ?>"/>
-                                                <input type="email" value="<?= $_SESSION['auth']['email'] ?>"/>
+                                                <input type="text" name="name" value="<?= $_SESSION['auth']['fullname'] ?>"/>
+                                                <input type="email" name="emailcmt" value="<?= $_SESSION['auth']['email'] ?>"/>
                                                 <?php else : ?>
                                                     <input type="text" name="name" required placeholder="Họ và tên"/>
                                                     <input type="email" name="emailcmt" required placeholder="Email"/>
@@ -164,8 +164,8 @@
                                                         <a href="#"><i class="fa fa-star"></i></a>
                                                     </span>
                                                 </div>
-                                                <textarea id="product-message" name="content" cols="30" rows="10" placeholder="Your Rating"></textarea>
-                                                <input type="submit" value="submit" />
+                                                <textarea id="product-message" name="contents" cols="30" rows="10" placeholder="Bình luận"></textarea>
+                                                <input type="submit" name="comment" value="Bình Luận" />
                                         </form>
                                     </div>
                                 </div>

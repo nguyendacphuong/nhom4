@@ -35,8 +35,7 @@ switch ($url) {
         cate_save_add();
         break;
 
-
-
+    
         //    thương hiệu
     case 'cp-admin/thuong-hieu':
 
@@ -69,12 +68,16 @@ switch ($url) {
         brand_update_form();
         break;
         // and thương hiệu
+    case 'cp-admin/comments':
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
+        require_once './admin/business/comments.php';
+        comment_index();
+        break;
 
     case 'chitietsp':
         require_once './client/business/dashboard.php';
         chitiet();
         break;
-
     case 'tintuc':
         require_once './client/business/dashboard.php';
         tintuc_index();
@@ -160,7 +163,7 @@ switch ($url) {
         break;
 
 
-
+    
 
     case 'cp-admin/taikhoan/luu-tao-moi':
         checkAuth([ADMIN_ROLE]);
@@ -176,7 +179,7 @@ switch ($url) {
     case 'cp-admin/taikhoan/update-user':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
-        // update_user();
+        update_user();
 
         // require_once './admin/business/user.php';
         // update_user();
@@ -237,11 +240,6 @@ switch ($url) {
         // checkAuth([ADMIN_ROLE]);
         // require_once './admin/business/user.php';
         // update_user();
-    case 'comment':
-        require_once './client/business/comment_form.php';
-        comment_form();
-        break;
-
 
     case 'cp-admin/taikhoan/xoa':
         checkAuth([ADMIN_ROLE]);
@@ -249,7 +247,7 @@ switch ($url) {
         user_remove();
         //aa
     case 'my-user':
-        checkAuth([ADMIN_ROLE, STAFF_ROLE, USER_ROLE]);
+        checkAuth([ADMIN_ROLE,STAFF_ROLE,USER_ROLE]);
         require_once './client/business/taikhoan.php';
         my_user();
         //aa
@@ -262,16 +260,25 @@ switch ($url) {
         my_user_update();
 
         break;
-        //hiển thị sản phẩm theo danh mục
-
-    case 'category':
+    //hiển thị sản phẩm theo danh mục
+    case 'quan':
         require_once './client/business/dashboard.php';
-        list_product();
+        quan();
+        break;
+    case 'ao':
+        require_once './client/business/dashboard.php';
+        ao();
+        break;
+    case 'nam':
+        require_once './client/business/dashboard.php';
+        nam();
+        break;
+    case 'nu':
+        require_once './client/business/dashboard.php';
+        nu();
         break;
 
-    case 'category_sp':
-        require_once './client/business/dashboard.php';
-        category_sp();
+        //aa
         break;
 
     default:
