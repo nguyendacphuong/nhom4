@@ -74,6 +74,7 @@ switch ($url) {
         require_once './client/business/dashboard.php';
         chitiet();
         break;
+
     case 'tintuc':
         require_once './client/business/dashboard.php';
         tintuc_index();
@@ -236,6 +237,10 @@ switch ($url) {
         // checkAuth([ADMIN_ROLE]);
         // require_once './admin/business/user.php';
         // update_user();
+    case 'comment':
+        require_once './client/business/comment_form.php';
+        comment_form();
+        break;
 
 
     case 'cp-admin/taikhoan/xoa':

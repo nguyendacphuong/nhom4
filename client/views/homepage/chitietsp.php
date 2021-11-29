@@ -93,6 +93,7 @@
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs description-list" role="tablist">
                         <li role="presentation" class="active"><a class="active" href="#tab-desc" aria-controls="tab-desc" role="tab" data-toggle="tab">Description</a></li>
+                        
                         <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Reviews (1)</a></li>
                         </ul>
                         <!-- Tab panes -->
@@ -111,17 +112,17 @@
                                             <div class="product-comments">
                                                 <img src="img/blog/avatar.png" alt="" />
                                                 <div class="product-comments-content">
-                                                    <p><strong>admin</strong> -
-                                                        <span>March 7, 2015:</span>
+                                                    <p><strong><?= $_SESSION['auth']['fullname']?></strong> -
+                                                        <span><?= $created_at ?></span>
                                                         <span class="pro-comments-rating">
-                                                            <i class="fa fa-star"></i>								
-                                                            <i class="fa fa-star"></i>								
-                                                            <i class="fa fa-star"></i>								
-                                                            <i class="fa fa-star"></i>								
+                                                            <i class="fa fa-star"></i>                              
+                                                            <i class="fa fa-star"></i>                              
+                                                            <i class="fa fa-star"></i>                              
+                                                            <i class="fa fa-star"></i>                              
                                                         </span>
                                                     </p>
                                                     <div class="desc">
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum.
+                                                        <?= $content ?>
                                                     </div>
                                                 </div>
                                             </div>
@@ -134,7 +135,7 @@
                                             <input type="email" placeholder="your email"/>
                                             <div class="your-rating">
                                                 <h5>Your Rating</h5>
-                                                <span>
+                                                <!-- <span>
                                                     <a href="#"><i class="fa fa-star"></i></a>
                                                     <a href="#"><i class="fa fa-star"></i></a>
                                                 </span>
@@ -155,9 +156,9 @@
                                                     <a href="#"><i class="fa fa-star"></i></a>
                                                     <a href="#"><i class="fa fa-star"></i></a>
                                                     <a href="#"><i class="fa fa-star"></i></a>
-                                                </span>
+                                                </span> -->
                                             </div>
-                                            <textarea id="product-message" cols="30" rows="10" placeholder="Your Rating"></textarea>
+                                            <textarea name="content" id="product-message" cols="30" rows="10" placeholder="Your Rating"></textarea>
                                             <input type="submit" value="submit" />
                                         </form>
                                     </div>
