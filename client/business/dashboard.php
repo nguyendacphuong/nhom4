@@ -1,5 +1,5 @@
 <?php
-
+require_once './dao/system_dao.php';
 function dashboard_index(){
     $sql = "select * from product order by view desc limit 0,6";
     $items = pdo_query($sql);
@@ -7,7 +7,9 @@ function dashboard_index(){
     $itemsl = pdo_query($sql);
     $sql = "select * from product order by id desc limit 0,13";
     $newitems = pdo_query($sql);
-    client_render('homepage/slider.php', compact('items', 'newitems','itemsl')); 
+    $sql = "SELECT * FROM category";
+    $list = select_page($sql);
+    client_render('homepage/slider.php', compact('items', 'newitems','itemsl','list')); 
 }
 
 function chitiet(){
@@ -22,8 +24,9 @@ function chitiet(){
 function tintuc_index(){
     $sql = "select * from news";
     $items = pdo_query($sql);
-
-    client_render('homepage/tintuc.php', compact( 'items')); 
+    $sql = "SELECT * FROM category";
+    $list = select_page($sql);
+    client_render('homepage/tintuc.php', compact( 'items','list')); 
 }
 function tintucchitiet_index(){
     $id = $_GET['id'];
@@ -34,19 +37,27 @@ function tintucchitiet_index(){
 }
 
 
-function quan(){
-    client_render('homepage/quan.php'); 
-}
-function ao(){
-    client_render('homepage/ao.php'); 
-}
-function nam(){
+
+function list_product(){
+    $sql = "SELECT * FROM product";
+    $items = select_page($sql);
     $sql = "SELECT * FROM category";
-    $listRecord = select_page($sql);
-    client_render('layouts/header.php', compact('listRecord')); 
+    $list = select_page($sql);
+    
+    client_render('homepage/shop.php',compact('items','list'));
 }
-function nu(){
-    client_render('homepage/nu.php'); 
+function category_sp(){
+    $id = $_GET['id'];
+    // $sql = "select * from product where id = '$id'";
+    // $item = pdo_query($sql);
+    
+    $sql = "SELECT * FROM product  JOIN category  where category_id = '$id'";
+    $itemcungloai = select_page($sql);
+    
+    $sql = "SELECT * FROM category ";
+    $list = select_page($sql);
+    client_render('homepage/category_sp.php', compact( 'itemcungloai','list')); 
 }
 
 
+?>

@@ -60,6 +60,13 @@ function pdo_execute_return_lastInsertId($sql){
         unset($conn);
     }
 }
+function select_dmuc($sql)
+{
+    $conn = get_connect();
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $listRecord = $stmt->fetch();
+}
 
 /**
  * Thực thi câu lệnh sql truy vấn một bản ghi
