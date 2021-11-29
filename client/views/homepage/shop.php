@@ -160,7 +160,7 @@
 									<span class="sale-text">Sale</span>
 									<div class="product-img">
 										<a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
-											<img class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
+											<img style="width: 255px; height: 327px" class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
 											<img class="secondary-image" src="<?= $item['image1'] ?>" alt="" />
 										</a>
 										<div class="actions">

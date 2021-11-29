@@ -45,7 +45,7 @@
 				<!-- logo start -->
 				<div class="col-lg-6 col-md-4 col-sm-12">
 					<div class="logo">
-						<a href="index.html"><img src="<?= CLIENT_ASSET ?>img/logo/logo.png" alt="" /></a>
+						<a href="<?= BASE_URL ?>"><img src="<?= CLIENT_ASSET ?>img/logo/logo.png" alt="" /></a>
 					</div>
 				</div>
 				<!-- logo end -->

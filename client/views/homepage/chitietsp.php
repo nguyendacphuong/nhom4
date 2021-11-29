@@ -234,7 +234,7 @@
                             <div class="single-product">
                                 <div class="product-img">
                                     <a href="<?=BASE_URL . 'chitietsp?id='.$itemcungloai['id']?>">
-                                        <img class="primary-image" src="<?=$itemcungloai['thumbnail']?>" alt="" />
+                                        <img  class="primary-image" src="<?=$itemcungloai['thumbnail']?>" alt="" />
                                     </a>						
                                 </div>
                                 <div class="product-content">
