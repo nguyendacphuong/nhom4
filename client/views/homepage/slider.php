@@ -89,8 +89,8 @@
                                                         <a href="#"><i class="fa fa-star"></i></a>
                                                     </div>
                                                     <div class="price-box">
-                                                        <span class="new-price"><?= $item['price'] ?>đ</span>
-                                                        <span class="old-price"><?= $item['discount'] ?>đ</span>
+                                                        <span class="new-price"><?= $item['discount'] ?>đ</span>
+                                                        <span class="old-price"><?= $item['price'] ?>đ</span>
 
                                                     </div>
                                                 </div>
@@ -804,8 +804,8 @@
                                     <a href="#"><i class="fa fa-star"></i></a>
                                 </div>
                                 <div class="price-box">
-                                    <span class="new-price"><?= $newitem['price'] ?>đ</span>
-                                    <span class="old-price"><?= $newitem['discount'] ?>đ</span>
+                                    <span class="new-price"><?= $item['discount'] ?>đ</span>
+                                    <span class="old-price"><?= $item['price'] ?>đ</span>
                                 </div>
                             </div>
                         </div>
