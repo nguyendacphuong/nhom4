@@ -48,11 +48,18 @@ function chitiet(){
         }
             
     }
+    $sql = "select * from contents where id_sp ='$id'";
+    $cmt = select_page($sql);
+
+
+
+
+
     $sql = "SELECT * FROM category";
     $list = select_page($sql);
     $sql = "SELECT * FROM brand";
     $thuonghieu = select_page($sql);
-    client_render('homepage/chitietsp.php', compact('item', 'itemcungloais','list','thuonghieu')); 
+    client_render('homepage/chitietsp.php', compact('item', 'itemcungloais', 'cmt','list','thuonghieu')); 
 }
 function tintuc_index(){
     $sql = "select * from news";
