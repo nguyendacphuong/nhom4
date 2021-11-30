@@ -42,10 +42,7 @@ function edit_form()
     // hiển thị view
     admin_render('category/edit-form.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
-function suaproduct()
-{
-    admin_render('category/suaproduct.php', [], 'admin-assets/custom/category_add.js');
-}
+
 function update_form()
 {
     $id = $_POST['id'];
@@ -172,7 +169,7 @@ function brand_edit_form()
     $id = isset($_GET['id']) ? $_GET['id'] : "";
     // lấy danh sách danh mục
     $sql = "select * from brand where id = $id";
-    $cates = executeQuery($sql, '');
+    $cates = executeQuery($sql);
 
     // hiển thị view
     admin_render('category/brand-edit.php', compact('cates'), 'admin-assets/custom/category_index.js');

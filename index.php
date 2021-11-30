@@ -265,22 +265,25 @@ switch ($url) {
         require_once './client/business/dashboard.php';
         quan();
         break;
-    case 'ao':
+    case 'thuonghieu':
         require_once './client/business/dashboard.php';
-        ao();
-        break;
-    case 'nam':
-        require_once './client/business/dashboard.php';
-        nam();
-        break;
-    case 'nu':
-        require_once './client/business/dashboard.php';
-        nu();
+        thuonghieu();
         break;
 
-        //aa
-        break;
+        // case 'category_sp':
+        //     require_once './client/business/dashboard.php';
+        //     category_sp();
+        //     break;
 
+
+        // <<======================== GIỎ HÀNG ======================== >>
+
+
+
+    case 'cart':
+        require_once './client/business/dashboard.php';
+        cart();
+        break;
     default:
         # code...
         break;
