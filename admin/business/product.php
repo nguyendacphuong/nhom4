@@ -114,35 +114,47 @@ function edit_form()
     $sql = "select * from product where id = $id ";
     $lis = executeQuery($sql);
 
-    $sql = "select * from category ";
+    $sql = "select * from category order by id desc";
+
     $cates = pdo_query($sql);
-    
-    $sql = "select * from brand ";
-    $cate = pdo_query($sql);
+    $sql = "select * from brand order by id desc";
+
+    $brand_id = pdo_query($sql);
 
     // hiển thị view
-    admin_render('product/edit-form.php', compact('cates', 'lis','cate'), 'admin-assets/custom/product_index.js');
+    admin_render('product/edit-form.php', compact('cates', 'lis','brand_id'), 'admin-assets/custom/product_index.js');
 }
-// function update_form()
-// {
-//     $id = $_POST['id'];
-//     $title = $_POST['title'];
-//     $price = $_POST['price'];
-//     $discount = $_POST['discount'];
-//     $description = $_POST['description'];
-//     $category_id = $_POST['category_id'];
-//     $file = $_FILES['thumbnail'];
-//     $filename = "";
-//     if ($file['size'] > 0) {
-//         $filename = uniqid() . '-' . $file['name'];
-//         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
-//         $filename = 'uploads/' . $filename;
-//     }
-//     $sql = " UPDATE product set title = '$title',price = '$price',discount = '$discount',description = '$description',
-//     category_id = '$category_id',thumbnail = '$filename', where id = $id";
-//     executeQuery($sql);
-//     header("location: " . ADMIN_URL . 'sanpham');
-// }
+
+function xoa_sp()
+{
+    $id = $_GET['id'];
+    $sql = "delete from product where id = $id";
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'sanpham');
+}
+function update_form()
+{
+    $id = $_POST['id'];
+    $title = $_POST['title'];
+    $price = $_POST['price'];
+    $discount = $_POST['discount'];
+    $description = $_POST['description'];
+    $category_id = $_POST['category_id'];
+    $brand_id = $_POST['brand_id'];
+    $number = $_POST['number'];
+    $file = $_FILES['thumbnail'];
+    $filename = "";
+    if ($file['size'] > 0) {
+        $filename = uniqid() . '-' . $file['name'];
+        move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
+        $filename = 'uploads/' . $filename;
+        $img = PUBLIC_URL . $filename;
+    }
+
+    $sql = " UPDATE product set category_id = '$category_id',brand_id='$brand_id',title ='$title',price = '$price',number = '$number',discount='$discount',thumbnail = '$img', description ='$description' where id = $id";
+    executeQuery($sql);
+    header("location: " . ADMIN_URL . 'sanpham');
+}
 
 // Full texts
 // id	

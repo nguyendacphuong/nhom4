@@ -95,11 +95,14 @@ switch ($url) {
         require_once './client/business/taikhoan.php';
         dangky();
         break;
-    case 'lienhe':
-        require_once './client/business/homepage.php';
+    case 'lien_he':
+        require_once './client/business/lienhe.php';
         lienhe();
         break;
-
+    case 'cp-admin/lien_he':
+        require_once './admin/business/lienhe.php';
+        checkAuth([ADMIN_ROLE]);
+        break;
     case 'cp-admin/danh-muc/capnhat':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
