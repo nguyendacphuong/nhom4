@@ -4,35 +4,35 @@
 			<!-- shop-left-sidebar start -->
 			<div class="col-lg-3 col-md-12 order-2 order-lg-1">
 				<div class="sider-bar-wrap">
-					<!-- widget-categories start -->
-					<aside class="widget widget-categories">
-						<h3 class="sidebar-title">Categories</h3>
-						<ul class="sidebar-menu">
-							<li><a href="#">Clothes</a> <span class="count">(14)</span></li>
-							<li><a href="#">Men</a> <span class="count">(9)</span></li>
-							<li><a href="#">Shoes</a> <span class="count">(2)</span></li>
-							<li><a href="#">Sunglasses</a> <span class="count">(2)</span></li>
-							<li><a href="#">Women</a> <span class="count">(8)</span></li>
+
+					<aside class="widget top-product-widget">
+						<h3 class="sidebar-title">Top rated products</h3>
+						<ul>
+							<?php foreach ($viewss as $item) : ?>
+								<li>
+									<div class="single-product">
+										<div class="product-img">
+											<a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
+												<img class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
+												
+											</a>
+										</div>
+										<div class="product-content">
+											<div class="pro-info">
+												<h2 class="product-name"><a href="#"><?= $item['title'] ?></a></h2>
+												<div class="price-box">
+													<span class="new-price"><?= $item['discount'] ?></span>
+													<span class="old-price"><?= $item['price'] ?></span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							<?php endforeach; ?>
+
 						</ul>
 					</aside>
-					<!-- widget-categories end -->
-					<!-- shop-filter start -->
-					<aside class="widget shop-filter">
-						<h3 class="sidebar-title">price</h3>
-						<div class="info_widget">
-							<div class="price_filter">
-								<div id="slider-range"></div>
-								<div class="price_slider_amount">
-									<input type="text" id="amount" name="price" placeholder="Add Your Price" />
-									<input type="submit" value="Filter" />
-								</div>
-							</div>
-						</div>
-					</aside>
-					<!-- shop-filter end -->
-					<!-- filter-by start -->
-				
-				
+					<!-- widget-recent end -->
 				</div>
 			</div>
 			<!-- blog-left-sidebar end -->
@@ -66,14 +66,14 @@
 				<div class="grid-view">
 					<div class="row">
 						<!-- single-product start -->
-						<?php foreach ($itemcungloai as $item) : ?>
+						<?php foreach ($items as $item) : ?>
 							<div class="col-lg-4 col-md-4 col-sm-12">
 								<div class="single-product">
 									<span class="sale-text">Sale</span>
 									<div class="product-img">
 										<a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
-											<img style="width: 255px; height: 327px" class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
-											
+											<img class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
+
 										</a>
 										<div class="actions">
 											<div class="action-buttons">

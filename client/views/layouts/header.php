@@ -97,7 +97,7 @@
 					<!-- header-search start -->
 					<div class="header-search">
 						<form action="#">
-							<input type="text" placeholder="Tìm Kiểm Sản Phẩm..." />
+							<input type="text" placeholder="Tìm Kiểm Sản Phẩm..." name="timkiem" />
 							<button type="submit"><i class="fa fa-search"></i></button>
 						</form>
 					</div>
@@ -119,19 +119,35 @@
 
 								<li>
 
-								<a href="<?= BASE_URL . 'category' ?>">Shop</a>
+									<a href="<?= BASE_URL . 'category' ?>">Shop</a>
 
 									<div class="mega-menu">
 										<?php foreach ($list as $menu) : ?>
 											<span>
 
-												<a href="<?= BASE_URL . 'category_sp?id=' . $menu['id'] ?>">
+												<a href="<?= BASE_URL . 'category?id=' . $menu['id'] ?>">
 													<?php echo $menu['name'] ?> </a>
 
 											</span>
 										<?php endforeach; ?>
 									</div>
-									
+
+
+								</li>
+								<li>
+									<a href="<?= BASE_URL . 'thuonghieu' ?>">Thương hiệu</a>
+
+									<div class="mega-menu">
+										<?php foreach ($thuonghieu as $menu) : ?>
+											<span>
+
+												<a href="<?= BASE_URL . 'thuonghieu?id=' . $menu['id'] ?>">
+													<?php echo $menu['name_brand'] ?> </a>
+
+											</span>
+										<?php endforeach; ?>
+									</div>
+
 
 								</li>
 
