@@ -182,6 +182,29 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-users" aria-hidden="true"></i>
+              <p>
+                Bình luận sản phẩm
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'comments'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Khách Hàng</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . '/khachvanglai'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Khách Vãng Lai</p>
+                </a>
+              </li>
+            </ul>
+          </li>
 
         </ul>
       </nav>

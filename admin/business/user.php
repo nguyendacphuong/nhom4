@@ -55,28 +55,33 @@ function edit_user()
     $sql = "select * from user where id = $id ";
     $cates = executeQuery($sql);
     // hiển thị view
-    admin_render('user/edit_user.php', compact('cates'), 'admin-assets/custom/category_index.js');
+    $sql2 = "select * from role  ";
+    $cates2 = pdo_query($sql2);
+    admin_render('user/edit_user.php', compact('cates','cates2'), 'admin-assets/custom/category_index.js');
+
 }
-	// function update_user(){
-		
-	// 	$fullname= $_POST['fullname'];
-    //     $email= $_POST['email'];
-    //     $phone_number= $_POST['phone_number'];
-    //     $password= $_POST['password'];
-    //     $repassword= $_POST['repassword'];
-    //     $address= $_POST['address'];
-    //     $avatar = $_FILES['avatar']; 
-	//     $avatarname = "";
-	//     if ($avatar['size'] > 0) {
-	//         $filename = uniqid() . '-' . $avatar['name'];
-	//         move_uploaded_file($avatar['tmp_name'], './public/uploads/' . $avatarname);
-	//         $avatarname = 'uploads/' . $avatarname;
-	//         $img = PUBLIC_URL. $avatarname;
-	//     }
-	//     $sql = " UPDATE user set fullname = '$fullname',avatar = '$img',phone_number = '$phone_number',password = '$password',address = '$address' where id = $id";
-	//     executeQuery($sql);
-	//     header("location: " . ADMIN_URL . 'user');
-	// }
+	function update_user(){
+    	$id = $_POST['id'];
+		$fullname= $_POST['fullname'];
+        $email= $_POST['email'];
+        $phone_number= $_POST['phone_number'];
+        $password= $_POST['password'];
+        $repassword= $_POST['repassword'];
+        $address= $_POST['address'];
+        $avatar = $_FILES['avatar']; 
+	    $avatarname = "";
+		$role_id=$_POST['role_id'];
+		$updated_at = date('Y-m-d H:s:i');
+	    if ($avatar['size'] > 0) {
+	        $filename = uniqid() . '-' . $avatar['name'];
+	        move_uploaded_file($avatar['tmp_name'], './public/uploads/' . $avatarname);
+	        $avatarname = 'uploads/' . $avatarname;
+	        $img = PUBLIC_URL. $avatarname;
+	    }
+	    $sql = " UPDATE user set fullname = '$fullname',avatar = '$img',phone_number = '$phone_number',password = '$password',address = '$address', role_id = '$role_id', updated_at = '$updated_at' where id = $id";
+	    executeQuery($sql);
+	    header("location: " . ADMIN_URL . 'taikhoan');
+	}
 
 
  ?>
