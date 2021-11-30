@@ -1,6 +1,8 @@
 <?php 
 	function comment_index(){
-		admin_render('comments/index.php', [], 'admin-assets/custom/category_add.js');
+		$keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
+		$sql = "select * from contents where emailcmt like '%$keyword%'";
+		$cates = executeQuery($sql, true);
+		admin_render('comments/index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
 	}
-	
  ?>
