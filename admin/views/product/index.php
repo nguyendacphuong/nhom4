@@ -23,9 +23,6 @@
                         <th>Mô tả</th>
                         <th>Số lượng</th>
                         <th>Tình trạng</th>
-
-                        <th>Số lượng</th>
-
                         <th>Danh mục</th>
                         <th>Thương hiệu</th>
                         <th>
@@ -56,7 +53,6 @@
                                 <td><?= $item['number'] ?> </td>
                                 <td><?= $item['status'] == 1 ? "Còn hàng" : "Hết hàng" ?></td>
 
-                                <td><?= $item['number'] ?> </td>
 
                                 <td><?= $item['name_cate'] ?> </td>
                                 <td><?= $item['brand_id'] ?> </td>

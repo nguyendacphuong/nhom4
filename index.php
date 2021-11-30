@@ -263,12 +263,25 @@ switch ($url) {
         require_once './client/business/dashboard.php';
         list_product();
         break;
-
-    case 'category_sp':
+    case 'thuonghieu':
         require_once './client/business/dashboard.php';
-        category_sp();
+        thuonghieu();
         break;
 
+        // case 'category_sp':
+        //     require_once './client/business/dashboard.php';
+        //     category_sp();
+        //     break;
+
+
+        // <<======================== GIỎ HÀNG ======================== >>
+
+
+
+    case 'cart':
+        require_once './client/business/dashboard.php';
+        cart();
+        break;
     default:
         # code...
         break;

@@ -169,7 +169,7 @@ function brand_edit_form()
     $id = isset($_GET['id']) ? $_GET['id'] : "";
     // lấy danh sách danh mục
     $sql = "select * from brand where id = $id";
-    $cates = executeQuery($sql, '');
+    $cates = executeQuery($sql);
 
     // hiển thị view
     admin_render('category/brand-edit.php', compact('cates'), 'admin-assets/custom/category_index.js');
