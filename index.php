@@ -261,9 +261,9 @@ switch ($url) {
 
         break;
     //hiển thị sản phẩm theo danh mục
-    case 'quan':
+    case 'category':
         require_once './client/business/dashboard.php';
-        quan();
+        list_product();
         break;
     case 'thuonghieu':
         require_once './client/business/dashboard.php';
