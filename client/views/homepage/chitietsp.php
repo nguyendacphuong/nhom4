@@ -76,16 +76,14 @@ breadcrumb-area start -->
                     <div class="product__tabs_inner">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs description-list" role="tablist">
-                            
-                            <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Reviews (1)</a></li>
+                            <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Bình Luận</a></li>
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content">
-
                             <div role="tabpanel" class="tab-pane" id="page-comments">
                                 <div class="product-tab-desc">
                                     <div class="product-page-comments">
-                                        <h2>1 review for Integer consequat ante lectus</h2>
+                                        <h2>Để lại bình luận sản phẩm</h2>
                                         <?php foreach ($cmt as $cmts) : ?>
                                         <ul>
                                             <li>
@@ -147,7 +145,7 @@ breadcrumb-area start -->
                                                         <a href="#"><i class="fa fa-star"></i></a>
                                                     </span>
                                                 </div>
-                                                <textarea id="product-message" name="contents" cols="30" rows="10" placeholder="Bình luận"></textarea>
+                                                <textarea id="product-message" required name="contents" cols="30" rows="10" placeholder="Bình luận"></textarea>
                                                 <input type="submit" name="comment" value="Bình Luận" />
                                         </form>
                                     </div>

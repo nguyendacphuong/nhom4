@@ -73,6 +73,12 @@ switch ($url) {
         require_once './admin/business/comments.php';
         comment_index();
         break;
+    case 'cp-admin/comments/xoa':
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
+        require_once './admin/business/comments.php';
+        comment_remove();
+        break;
+    
 
     case 'chitietsp':
         require_once './client/business/dashboard.php';

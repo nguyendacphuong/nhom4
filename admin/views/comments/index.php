@@ -42,12 +42,9 @@
                                 <td><?= $item['emailcmt'] ?></td>
                                 <td><?= $item['id_sp'] ?></td>
                                 <td><textarea style="width: 200px;" name="" id="" cols="10" rows="5"><?= $item['contents'] ?></textarea></td>
-                                <th style="font-weight: 20;"><?= $item['created_at'] ?></td>  
+                                <th style="font-weight: 500;"><?= $item['created_at'] ?></td>  
                                 <td>
-                                    <a href="<?= ADMIN_URL . 'taikhoan/edit-user?id='. $item['id'] ?>" class="btn btn-sm btn-info">
-                                        <i class="fas fa-edit"></i>
-                                    </a>
-                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'taikhoan/xoa?id=' . $item['id'] ?>', '<?= $item['contents'] ?>')" class="btn btn-sm btn-danger">
+                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'comments/xoa?id=' . $item['id'] ?>', '<?= $item['contents'] ?>')" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>
