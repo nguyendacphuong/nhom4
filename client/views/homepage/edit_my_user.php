@@ -10,33 +10,34 @@
                         <input type="hidden" name="id"  value="<?php echo $cates['id']; ?>">
                         <div class="form-group">
                           <label for="">Họ và tên</label>
-                          <input type="text" name="fullname" <?php echo $cates['fullname']; ?> required class="form-control" placeholder="" aria-describedby="helpId">
+                          <input type="text" name="fullname"  required class="form-control" placeholder="<?php echo $cates['fullname']; ?>" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                           <label for="">Email</label>
-                          <input type="email" name="email" <?php echo $cates['email']; ?> required class="form-control" placeholder="" aria-describedby="helpId">
+                          <input type="email" name="email"  required class="form-control" placeholder="<?php echo $cates['email']; ?>" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                           <label for="">password</label>
-                          <input type="password" name="password" <?php echo $cates['password']; ?> required class="form-control" placeholder="" aria-describedby="helpId">
+                          <input type="password" name="password"  required class="form-control" placeholder="<?php echo $cates['password']; ?>" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                           <label for="">Số điện thoại</label>
-                          <input type="text" name="phone_number" <?php echo $cates['phone_number']; ?> required class="form-control" placeholder="" aria-describedby="helpId">
+                          <input type="text" name="phone_number"  required class="form-control" placeholder="<?php echo $cates['phone_number']; ?>" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                           <label for="">Address</label>
-                          <input type="text" name="address" <?php echo $cates['address']; ?> required class="form-control" placeholder="" aria-describedby="helpId">
+                          <input type="text" name="address"  required class="form-control" placeholder="<?php echo $cates['address']; ?>" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                             <label for="">Avatar</label>
-                            <input type="file" name="avatar" <?php echo $cates['avatar']; ?> class="form-control" placeholder="" aria-describedby="helpId">
+                            <img src="<?php echo $cates['avatar']; ?>">
+                            <input type="file" name="avatar" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">
                             <a href="<?= CLIENT_URL . 'my-user'?>" class="btn btn-sm btn-danger">Hủy</a>
                             &nbsp;
-                            <button type="submit" class="btn btn-sm btn-primary">Đăng ký</button>
+                            <button type="submit" class="btn btn-sm btn-primary">Chỉnh sửa</button>
                         </div>
                     </div>
                 </form>

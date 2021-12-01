@@ -194,13 +194,13 @@
               <li class="nav-item">
                 <a href="<?= ADMIN_URL . 'comments'?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Khách Hàng</p>
+                  <p>Danh sách bình luận</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="<?= ADMIN_URL . '/khachvanglai'?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Khách Vãng Lai</p>
+                  <p>New</p>
                 </a>
               </li>
             </ul>

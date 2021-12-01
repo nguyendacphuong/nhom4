@@ -16,9 +16,9 @@
                             </p>
                         </div>
                         <div class="form-action">
-                            <p class="lost_password"><a href="<?= BASE_URL.'dang-ky'?>">Lost your password?</a></p>
+                            <p class="lost_password"><a href="<?= BASE_URL.'dang-ky'?>">Đăng ký tài khoản</a></p>
                             <input type="submit" value="Login" name="dangnhap" />
-                            <label><input type="checkbox" />  Remember me </label>
+                            <!-- <label><input type="checkbox" />Remember me </label> -->
                         </div>
                     </form>
                 </div>
