@@ -1,7 +1,4 @@
 	<!-- map-area start -->
-	<div class="map-area">
-		<div id="googleMap" style="width:100%;height:410px;"></div>
-	</div>
 	<!-- map-area end -->
 	<!-- contact-area start -->
 	<div class="contact-area">
@@ -13,15 +10,15 @@
 						<h3>THÔNG TIN LIÊN HỆ</h3>
 						<ul>
 							<li>
-								<i class="fa fa-map-marker"></i> <strong>ĐỊA CHỈ</strong>
+								<i class="fa fa-map-marker"></i> <strong>ĐỊA CHỈ: </strong>
 								1234 Pall Mall Street, London England
 							</li>
 							<li>
-								<i class="fa fa-envelope"></i> <strong>SỐ ĐIỆN THOẠI</strong>
+								<i class="fa fa-envelope"></i> <strong>SỐ ĐIỆN THOẠI: </strong>
 								(800) 0123 4567 890
 							</li>
 							<li>
-								<i class="fa fa-mobile"></i> <strong>Email</strong>
+								<i class="fa fa-mobile"></i> <strong>Email: </strong>
 								<a href="#">info@bootexperts.com</a>
 							</li>
 						</ul>
@@ -43,7 +40,7 @@
 									<input type="text" name="phone_number" placeholder="phone number (required)" />
 								</div>
 								<div class="col-md-12 col-sm-12 col-xs-12">
-									<input type="date" name="created_at" />
+									<input style="height: 50px;width: 540px;padding: 18px;margin-bottom: 19px;" type="date" name="created_at" />
 								</div>
 								<div class="col-md-12 col-sm-12 col-xs-12">
 									<input type="text" name="subject_name" placeholder="Subject" />
