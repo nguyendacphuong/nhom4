@@ -57,12 +57,12 @@
                                                 <span class="sale-text">Sale</span>
                                                 <div class="product-img">
                                                     <a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
-                                                        <img style="width: 255px; height: 327px" class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
+                                                        <img  class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
                                                     </a>
                                                     <div class="actions">
                                                         <div class="action-buttons">
                                                             <div class="add-to-cart">
-                                                                <a href="<?= BASE_URL . 'cart?id=' . $item['id'] ?>">Add to cart</a>
+                                                                <a href="<?= BASE_URL . 'cart?id=' . $item['id'] ?>">THÊM GIỎ HÀNG</a>
                                                             </div>
                                                             <div class="add-to-links">
                                                                 <div class="add-to-wishlist">
@@ -134,12 +134,12 @@
                             <span class="sale-text">Sale</span>
                             <div class="product-img">
                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $newitem['id'] ?>">
-                                    <img style="width: 255px; height: 327px" class="primary-image" src="<?= $newitem['thumbnail'] ?>" alt="" />
+                                    <img  class="primary-image" src="<?= $newitem['thumbnail'] ?>" alt="" />
                                 </a>
                                 <div class="actions">
                                     <div class="action-buttons">
                                         <div class="add-to-cart">
-                                            <a href="#">Add to cart</a>
+                                            <a href="#">THÊM GIỎ HÀNG</a>
                                         </div>
                                         <div class="add-to-links">
                                             <div class="add-to-wishlist">
@@ -181,7 +181,7 @@
     </div>
 </div>
 <!-- ================= END SẢN PHẨM MỚI NHẤT  ======================== -->
-<!-- =================  SẢN PHẨM BÁN CHẠY  ======================== -->
+<!-- =================  TOP 10 SẢN PHẨM  ======================== -->
 <div class="top-sells-area">
     <div class="container">
         <!-- section-heading start -->
@@ -201,7 +201,7 @@
                     <div class="single-product first-sells">
                         <div class="product-img">
                             <a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>">
-                                <img class="primary-image" src="<?= $list['thumbnail']?>" alt="" />
+                                <img  class="primary-image" src="<?= $list['thumbnail']?>" alt="" />
                                 
                             </a>
                         </div>
@@ -223,7 +223,7 @@
                             <div class="actions">
                                 <div class="action-buttons">
                                     <div class="add-to-cart">
-                                        <a href="#">Add to cart</a>
+                                        <a href="#">THÊM GIỎ HÀNG</a>
                                     </div>
                                 </div>
                             </div>
@@ -232,7 +232,7 @@
                     <div class="single-product">
                         <div class="product-img">
                             <a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>">
-                                <img class="primary-image" src="<?= $list['thumbnail']?>" alt="" />
+                                <img  class="primary-image" src="<?= $list['thumbnail']?>" alt="" />
                               
                             </a>
                         </div>
@@ -254,7 +254,7 @@
                             <div class="actions">
                                 <div class="action-buttons">
                                     <div class="add-to-cart">
-                                        <a href="#">Add to cart</a>
+                                        <a href="#">THÊM GIỎ HÀNG</a>
                                     </div>
                                 </div>
                             </div>

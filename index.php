@@ -99,9 +99,14 @@ switch ($url) {
         require_once './client/business/taikhoan.php';
         dangky();
         break;
+    //=============================================QUẢN LÝ PHẢN HỒI===============================================//
     case 'lienhe':
         require_once './client/business/homepage.php';
         lienhe();
+        break;
+    case 'cp-admin/contact':
+        require_once './admin/business/lienhe.php';
+        contact_index();
         break;
 
     case 'cp-admin/danh-muc/capnhat':

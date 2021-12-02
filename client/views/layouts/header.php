@@ -152,7 +152,7 @@
 								</li>
 
 								<li><a href="<?= BASE_URL . 'tintuc' ?>">Tin Tức</a></li>
-								<li><a href="<?= BASE_URL . 'lien_he' ?>">Liên Hệ</a></li>
+								<li><a href="<?= BASE_URL . 'lienhe' ?>">Liên Hệ</a></li>
 							</ul>
 						</nav>
 					</div>
