@@ -35,7 +35,7 @@ switch ($url) {
         cate_save_add();
         break;
 
-    
+
         //    thương hiệu
     case 'cp-admin/thuong-hieu':
 
@@ -78,7 +78,7 @@ switch ($url) {
         require_once './admin/business/comments.php';
         comment_remove();
         break;
-    
+
 
     case 'chitietsp':
         require_once './client/business/dashboard.php';
@@ -169,7 +169,7 @@ switch ($url) {
         break;
 
 
-    
+
 
     case 'cp-admin/taikhoan/luu-tao-moi':
         checkAuth([ADMIN_ROLE]);
@@ -253,7 +253,7 @@ switch ($url) {
         user_remove();
         //aa
     case 'my-user':
-        checkAuth([ADMIN_ROLE,STAFF_ROLE,USER_ROLE]);
+        checkAuth([ADMIN_ROLE, STAFF_ROLE, USER_ROLE]);
         require_once './client/business/taikhoan.php';
         my_user();
         //aa
@@ -266,7 +266,7 @@ switch ($url) {
         my_user_update();
 
         break;
-    //hiển thị sản phẩm theo danh mục
+        //hiển thị sản phẩm theo danh mục
     case 'category':
         require_once './client/business/dashboard.php';
         list_product();
