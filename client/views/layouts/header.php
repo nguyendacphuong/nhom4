@@ -17,8 +17,6 @@
 					<div class="header-top-right">
 						<div class="top-menu">
 							<ul>
-
-								<li><a href="wishlist.html">Sản phẩm yêu thích</a></li>
 								<li><a href="wishlist.html">Sản phẩm yêu thích</a></li>
 								<li><a href="cart.html">Giỏ Hàng</a></li>
 								<li>
