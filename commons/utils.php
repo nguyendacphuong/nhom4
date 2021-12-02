@@ -1,6 +1,6 @@
 <?php
 
-const BASE_URL = "http://localhost/nhom4/";
+const BASE_URL = "http://localhost:81/nhom4/";
 const PUBLIC_URL = BASE_URL . 'public/';
 const ADMIN_URL = BASE_URL . 'cp-admin/';
 const ADMIN_ASSET = BASE_URL . 'public/admin-assets/';
@@ -51,5 +51,3 @@ function checkAuth($role_id = []){
         die;
     }
 }
-
-?>
