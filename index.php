@@ -283,13 +283,21 @@ switch ($url) {
 
 
         // <<======================== GIỎ HÀNG ======================== >>
-
-
-
     case 'cart':
         require_once './client/business/dashboard.php';
         cart();
         break;
+        // <<======================== SẢN PHẨM YÊU THÍCH ======================== >>
+    case 'favorite':
+        require_once './client/business/dashboard.php';
+        favorite_profuct();
+        break;
+    case 'addfavorite':
+        require_once './client/business/dashboard.php';
+        add_favorite_profuct();
+        break;
+
+        // <<==================================================================== >>
     default:
         # code...
         break;

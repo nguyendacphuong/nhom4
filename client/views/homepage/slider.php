@@ -64,18 +64,33 @@
                                                             <div class="add-to-cart">
                                                                 <a href="<?= BASE_URL . 'cart?id=' . $item['id'] ?>">Add to cart</a>
                                                             </div>
-                                                            <div class="add-to-links">
-                                                                <div class="add-to-wishlist">
-                                                                    <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-star"></i>
-                                                                    </a>
+                                                            <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) { ?>
+                                                                <div class="add-to-links">
+                                                                    <div class="add-to-wishlist">
+                                                                        <a href="<?= BASE_URL . 'addfavorite?id=' . $item['id'] ?>" data-toggle="tooltip" title="Yêu thích"><i class="fa fa-star"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="compare-button">
+                                                                        <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="compare-button">
-                                                                    <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
+                                                                <div class="quickviewbtn">
+                                                                    <a href="" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
                                                                 </div>
-                                                            </div>
-                                                            <div class="quickviewbtn">
-                                                                <a href="" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
-                                                            </div>
+                                                            <?php } else { ?>
+                                                                <div class="add-to-links">
+                                                                    <div class="add-to-wishlist">
+                                                                        <a href="<?= BASE_URL . 'dangnhap' ?>" data-toggle="tooltip" title="Yêu thích"><i class="fa fa-star"></i>
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="compare-button">
+                                                                        <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="quickviewbtn">
+                                                                    <a href="" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
+                                                                </div>
+                                                            <?php } ?>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -103,8 +118,8 @@
                                 </div>
                             </div>
                         </div>
-                      
-                     
+
+
                     </div>
                 </div>
             </div>
@@ -143,7 +158,7 @@
                                         </div>
                                         <div class="add-to-links">
                                             <div class="add-to-wishlist">
-                                                <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-star"></i>
+                                                <a href="#" data-toggle="tooltip" title="Yêu thích"><i class="fa fa-star"></i>
                                                 </a>
                                             </div>
                                             <div class="compare-button">
@@ -197,72 +212,71 @@
             <div class="top-sells-curosel">
                 <!-- single-product start -->
                 <?php foreach ($listSale as $list) : ?>
-                <div class="col-12">
-                    <div class="single-product first-sells">
-                        <div class="product-img">
-                            <a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>">
-                                <img class="primary-image" src="<?= $list['thumbnail']?>" alt="" />
-                                
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="pro-info">
-                                <h2 class="product-name"><a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>"><?= $list['title']?></a></h2>
-                                <div class="pro-rating">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
+                    <div class="col-12">
+                        <div class="single-product first-sells">
+                            <div class="product-img">
+                                <a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>">
+                                    <img class="primary-image" src="<?= $list['thumbnail'] ?>" alt="" />
+
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <div class="pro-info">
+                                    <h2 class="product-name"><a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>"><?= $list['title'] ?></a></h2>
+                                    <div class="pro-rating">
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="new-price"><?= $list['discount'] ?></span>
+                                        <span class="old-price"><?= $list['price'] ?></span>
+                                    </div>
                                 </div>
-                                <div class="price-box">
-                                    <span class="new-price"><?= $list['discount']?></span>
-                                    <span class="old-price"><?= $list['price']?></span>
+                                <div class="actions">
+                                    <div class="action-buttons">
+                                        <div class="add-to-cart">
+                                            <a href="#">Add to cart</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="actions">
-                                <div class="action-buttons">
-                                    <div class="add-to-cart">
-                                        <a href="#">Add to cart</a>
+                        </div>
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>">
+                                    <img class="primary-image" src="<?= $list['thumbnail'] ?>" alt="" />
+
+                                </a>
+                            </div>
+                            <div class="product-content">
+                                <div class="pro-info">
+                                    <h2 class="product-name"><a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>"><?= $list['title'] ?></a></h2>
+                                    <div class="pro-rating">
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                        <a href="#"><i class="fa fa-star"></i></a>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="new-price"><?= $list['discount'] ?>đ</span>
+                                        <span class="old-price"><?= $list['price'] ?>đ</span>
+                                    </div>
+                                </div>
+                                <div class="actions">
+                                    <div class="action-buttons">
+                                        <div class="add-to-cart">
+                                            <a href="#">Add to cart</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="single-product">
-                        <div class="product-img">
-                            <a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>">
-                                <img class="primary-image" src="<?= $list['thumbnail']?>" alt="" />
-                              
-                            </a>
-                        </div>
-                        <div class="product-content">
-                            <div class="pro-info">
-                                <h2 class="product-name"><a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>"><?= $list['title']?></a></h2>
-                                <div class="pro-rating">
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                    <a href="#"><i class="fa fa-star"></i></a>
-                                </div>
-                                <div class="price-box">
-                                    <span class="new-price"><?= $list['discount']?>đ</span>
-                                    <span class="old-price"><?= $list['price']?>đ</span>
-                                </div>
-                            </div>
-                            <div class="actions">
-                                <div class="action-buttons">
-                                    <div class="add-to-cart">
-                                        <a href="#">Add to cart</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <?php endforeach; ?>
-                
             </div>
         </div>
     </div>
