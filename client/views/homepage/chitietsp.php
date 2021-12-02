@@ -51,7 +51,7 @@ breadcrumb-area start -->
                     <form action="#">
                         <div class="quantity">
                             <input type="number" value="1" />
-                            <button type="submit">Add to cart</button>
+                            <button type="submit">THÊM GIỎ HÀNG</button>
                         </div>
                     </form>
                     <div class="add-to-wishlist">
@@ -174,7 +174,7 @@ breadcrumb-area start -->
                                             <div class="actions">
                                                 <div class="action-buttons">
                                                     <div class="add-to-cart">
-                                                        <a href="#">Add to cart</a>
+                                                        <a href="#">THÊM GIỎ HÀNG</a>
                                                     </div>
                                                     <div class="add-to-links">
                                                         <div class="add-to-wishlist">

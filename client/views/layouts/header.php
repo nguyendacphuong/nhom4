@@ -17,8 +17,6 @@
 					<div class="header-top-right">
 						<div class="top-menu">
 							<ul>
-
-								<li><a href="wishlist.html">Sản phẩm yêu thích</a></li>
 								<li><a href="wishlist.html">Sản phẩm yêu thích</a></li>
 								<li><a href="cart.html">Giỏ Hàng</a></li>
 								<li>
@@ -152,7 +150,7 @@
 								</li>
 
 								<li><a href="<?= BASE_URL . 'tintuc' ?>">Tin Tức</a></li>
-								<li><a href="<?= BASE_URL . 'lien_he' ?>">Liên Hệ</a></li>
+								<li><a href="<?= BASE_URL . 'lienhe' ?>">Liên Hệ</a></li>
 							</ul>
 						</nav>
 					</div>
