@@ -289,7 +289,14 @@ switch ($url) {
 
         // <<======================== GIỎ HÀNG ======================== >>
 
-
+    case 'donhangct':
+        require_once './client/business/donhang.php';
+        donhang_ct();
+        break;
+    case 'cp-admin/donhang':
+        require_once './admin/business/donhang.php';
+        donhang();
+        break;
 
     case 'add-to-cart':
         require_once './client/business/homepage.php';
