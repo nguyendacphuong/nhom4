@@ -27,6 +27,7 @@ function client_render($view, $data = []){
     include_once "./client/views/layouts/main.php";
 }
 
+
 function admin_render($view, $data = [], $jsFile = null){
     extract($data);
     $view = './admin/views/' . $view;
@@ -49,6 +50,15 @@ function checkAuth($role_id = []){
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         die;
     }
+}
+function countCartNumber(){
+    $countProduct = 0;
+    if(isset($_SESSION['cart']) && count($_SESSION['cart']) > 0){
+        foreach ($_SESSION['cart'] as $item) {
+            $countProduct += $item['quantity'];
+        }
+    }
+    return $countProduct;
 }
 
 ?>

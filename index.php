@@ -36,7 +36,6 @@ switch ($url) {
         break;
 
 
-
         //    thương hiệu
     case 'cp-admin/thuong-hieu':
 
@@ -69,6 +68,17 @@ switch ($url) {
         brand_update_form();
         break;
         // and thương hiệu
+    case 'cp-admin/comments':
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
+        require_once './admin/business/comments.php';
+        comment_index();
+        break;
+    case 'cp-admin/comments/xoa':
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
+        require_once './admin/business/comments.php';
+        comment_remove();
+        break;
+
 
     case 'chitietsp':
         require_once './client/business/dashboard.php';
@@ -95,14 +105,16 @@ switch ($url) {
         require_once './client/business/taikhoan.php';
         dangky();
         break;
-    case 'lien_he':
-        require_once './client/business/lienhe.php';
+        //=============================================QUẢN LÝ PHẢN HỒI===============================================//
+    case 'lienhe':
+        require_once './client/business/homepage.php';
         lienhe();
         break;
-    case 'cp-admin/lien_he':
+    case 'cp-admin/contact':
         require_once './admin/business/lienhe.php';
-        checkAuth([ADMIN_ROLE]);
+        contact_index();
         break;
+
     case 'cp-admin/danh-muc/capnhat':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
@@ -178,7 +190,7 @@ switch ($url) {
     case 'cp-admin/taikhoan/update-user':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
-        // update_user();
+        update_user();
 
         // require_once './admin/business/user.php';
         // update_user();
@@ -240,7 +252,6 @@ switch ($url) {
         // require_once './admin/business/user.php';
         // update_user();
 
-
     case 'cp-admin/taikhoan/xoa':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
@@ -261,16 +272,62 @@ switch ($url) {
 
         break;
         //hiển thị sản phẩm theo danh mục
-
     case 'category':
         require_once './client/business/dashboard.php';
         list_product();
         break;
-
-    case 'category_sp':
+    case 'thuonghieu':
         require_once './client/business/dashboard.php';
-        category_sp();
+        thuonghieu();
         break;
+
+        // case 'category_sp':
+        //     require_once './client/business/dashboard.php';
+        //     category_sp();
+        //     break;
+
+
+        // <<======================== GIỎ HÀNG ======================== >>
+
+    case 'donhangct':
+        require_once './client/business/donhang.php';
+        donhang_ct();
+        break;
+    case 'cp-admin/donhang':
+        require_once './admin/business/donhang.php';
+        donhang();
+        break;
+
+    case 'add-to-cart':
+        require_once './client/business/homepage.php';
+        add2Cart();
+        break;
+    case 'check-out':
+        require_once './client/business/homepage.php';
+        checkout();
+        break;
+    case 'check-out1':
+        require_once './client/business/homepage.php';
+        checkout1();
+        break;
+    case 'pay-cart':
+        require_once './client/business/homepage.php';
+        paycart();
+        break;
+        // <<======================== SẢN PHẨM YÊU THÍCH ======================== >>
+    case 'favorite':
+        require_once './client/business/dashboard.php';
+        favorite_profuct();
+        break;
+    case 'addfavorite':
+        require_once './client/business/dashboard.php';
+        add_favorite_profuct();
+        break;
+    case 'favorite/xoa':
+        require_once './client/business/dashboard.php';
+        favorite_profuct_remove();
+        break;
+        // <<==================================================================== >>
 
     default:
         # code...

@@ -10,23 +10,23 @@
                         <input type="hidden" name="id"  value="<?php echo $cates['id']; ?>">
                         <div class="form-group">
                           <label for="">Họ và tên</label>
-                          <input type="text" name="fullname"  required class="form-control" placeholder="<?php echo $cates['fullname']; ?>" aria-describedby="helpId">
+                          <input type="text" name="fullname"   class="form-control" placeholder="<?php echo $cates['fullname']; ?>" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                           <label for="">Email</label>
-                          <input type="email" name="email"  required class="form-control" placeholder="<?php echo $cates['email']; ?>" aria-describedby="helpId">
+                          <input type="email" name="email"   class="form-control" placeholder="<?php echo $cates['email']; ?>" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                           <label for="">password</label>
-                          <input type="password" name="password"  required class="form-control" placeholder="<?php echo $cates['password']; ?>" aria-describedby="helpId">
+                          <input type="password" name="password"   class="form-control" placeholder="<?php echo $cates['password']; ?>" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                           <label for="">Số điện thoại</label>
-                          <input type="text" name="phone_number"  required class="form-control" placeholder="<?php echo $cates['phone_number']; ?>" aria-describedby="helpId">
+                          <input type="text" name="phone_number"   class="form-control" placeholder="<?php echo $cates['phone_number']; ?>" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                           <label for="">Address</label>
-                          <input type="text" name="address"  required class="form-control" placeholder="<?php echo $cates['address']; ?>" aria-describedby="helpId">
+                          <input type="text" name="address"   class="form-control" placeholder="<?php echo $cates['address']; ?>" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                             <label for="">Avatar</label>
@@ -35,6 +35,18 @@
                             </figure>
                             <input type="file" name="avatar"  class="form-control" placeholder="<?php echo $cates['avatar']; ?>" aria-describedby="helpId">
 
+                        </div>
+                        <div class="form-group">
+                            <label for="usr">Phân Quyền</label>
+                            <select class="form-control" name="role_id" id="role_id">
+                                <option value="">-- Chọn --</option>
+                                <?php
+                                foreach ($cates2 as $role) {
+                                    extract($role);
+                                    echo "<option value = '.$id.'>$name</option>";
+                                }
+                                ?>
+                            </select>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">
