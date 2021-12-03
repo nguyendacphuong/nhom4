@@ -92,8 +92,12 @@
                     <div class="product__tabs_inner">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs description-list" role="tablist">
+<<<<<<< Updated upstream
                         <li role="presentation" class="active"><a class="active" href="#tab-desc" aria-controls="tab-desc" role="tab" data-toggle="tab">Description</a></li>
                         <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Reviews (1)</a></li>
+=======
+                            <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Bình Luận</a></li>
+>>>>>>> Stashed changes
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content">
