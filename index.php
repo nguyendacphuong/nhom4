@@ -73,6 +73,12 @@ switch ($url) {
         require_once './admin/business/comments.php';
         comment_index();
         break;
+    case 'cp-admin/comments/xoa':
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
+        require_once './admin/business/comments.php';
+        comment_remove();
+        break;
+    
 
     case 'chitietsp':
         require_once './client/business/dashboard.php';
@@ -266,9 +272,9 @@ switch ($url) {
 
         break;
     //hiển thị sản phẩm theo danh mục
-    case 'quan':
+    case 'category':
         require_once './client/business/dashboard.php';
-        quan();
+        list_product();
         break;
     case 'thuonghieu':
         require_once './client/business/dashboard.php';

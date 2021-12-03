@@ -1,4 +1,4 @@
-<!-- breadcrumb-area start -->
+breadcrumb-area start -->
 <div class="breadcrumb-area">
     <div class="container">
         <div class="row">
@@ -76,37 +76,39 @@
                     <div class="product__tabs_inner">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs description-list" role="tablist">
-                            
-                            <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Reviews (1)</a></li>
+                            <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Bình Luận</a></li>
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content">
-
                             <div role="tabpanel" class="tab-pane" id="page-comments">
                                 <div class="product-tab-desc">
                                     <div class="product-page-comments">
-                                        <h2>1 review for Integer consequat ante lectus</h2>
+                                        <h2>Để lại bình luận sản phẩm</h2>
+                                        <?php foreach ($cmt as $cmts) : ?>
                                         <ul>
                                             <li>
                                                 <div class="product-comments">
-                                                    <img src="img/blog/avatar.png" alt="" />
+                                                    <p style="width: 40px;"><img  src="<?= $cmts['avtcmt'] ?>" alt="" class="rounded-circle"></p>
                                                     <div class="product-comments-content">
-                                                        <p><strong>admin</strong> -
-                                                            <span>March 7, 2015:</span>
-                                                            <span class="pro-comments-rating">
+                                                        <p><strong style="color:blue;"><?= $cmts['name'] ?></strong><br>
+                                                            <span><?= $cmts['created_at'] ?></span>
+                                                            <!-- <span class="pro-comments-rating">
                                                                 <i class="fa fa-star"></i>
                                                                 <i class="fa fa-star"></i>
                                                                 <i class="fa fa-star"></i>
                                                                 <i class="fa fa-star"></i>
-                                                            </span>
+                                                            </span> -->
                                                         </p>
-                                                        <div class="desc">
-                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam fringilla augue nec est tristique auctor. Donec non est at libero vulputate rutrum.
+                                                        <div style="font-size: 15px;color:black;" class="desc">
+                                                            <?= $cmts['contents'] ?>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                
                                             </li>
                                         </ul>
+                                    <?php endforeach; ?>
+                                    
                                     <div class="review-form-wrapper">
                                         <h3>Add a review</h3>
                                         <form  action="" method="post">
@@ -143,7 +145,7 @@
                                                         <a href="#"><i class="fa fa-star"></i></a>
                                                     </span>
                                                 </div>
-                                                <textarea id="product-message" name="contents" cols="30" rows="10" placeholder="Bình luận"></textarea>
+                                                <textarea id="product-message" required name="contents" cols="30" rows="10" placeholder="Bình luận"></textarea>
                                                 <input type="submit" name="comment" value="Bình Luận" />
                                         </form>
                                     </div>
@@ -319,4 +321,4 @@
         </div>
     </div>
 </div>
-<!-- brand-area end -->
+<!-- brand-area end

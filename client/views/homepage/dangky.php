@@ -37,7 +37,7 @@
                     </form>
                 </div>
                 <div class="col-md-6">
-                    <img class="cl" src="<?= CLIENT_ASSET .''?>">
+                    <img class="" src="<?= IMAGE_URL .'dk1.jpg'?>">
                 </div>
             </div>
         </div>

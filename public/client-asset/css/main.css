@@ -186,7 +186,9 @@ textarea {
 .clearfix:after {
     clear: both;
 }
-
+.cl1{
+    width: 2000%;
+}
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.

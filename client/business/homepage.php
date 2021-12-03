@@ -23,7 +23,11 @@
             }
             
         }
-        client_render('homepage/dangnhap.php');
+    $sql = "SELECT * FROM category";
+    $list = select_page($sql);
+    $sql = "SELECT * FROM brand";
+    $thuonghieu = select_page($sql);
+    client_render('homepage/dangnhap.php', compact('list','thuonghieu'), 'admin-assets/custom/category_index.js');
     }
     function logout(){
     unset($_SESSION['auth']);
