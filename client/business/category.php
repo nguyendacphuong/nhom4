@@ -4,4 +4,5 @@
         $mainView = "./client/views/category/index.php";
         include_once "./client/views/layouts/main.php";
     }
+
 ?>
