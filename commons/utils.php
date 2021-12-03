@@ -1,11 +1,11 @@
 <?php
 
-const BASE_URL = "http://localhost/nhom4/";
+const BASE_URL = "http://localhost:81/nhom4/";
 const PUBLIC_URL = BASE_URL . 'public/';
 const ADMIN_URL = BASE_URL . 'cp-admin/';
 const ADMIN_ASSET = BASE_URL . 'public/admin-assets/';
 const CLIENT_ASSET = BASE_URL . 'public/client-asset/';
-const IMAGE_URL = BASE_URL . 'public/uploads/';
+const IMAGE_URL = BASE_URL . 'public/';
 const ADMIN_ROLE = 1;
 const USER_ROLE = 2;
 const STAFF_ROLE = 3;
@@ -60,5 +60,3 @@ function countCartNumber(){
     }
     return $countProduct;
 }
-
-?>

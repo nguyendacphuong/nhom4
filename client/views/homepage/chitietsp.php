@@ -55,7 +55,7 @@
                         </div>
                     </form>
                     <div class="add-to-wishlist">
-                        <a href="<?= BASE_URL . 'addfavorite?id=' . $item['id'] ?>" data-toggle="tooltip" title="Yêu thích"><i class="fa fa-star"></i></a>
+                        <a href="#" data-toggle="tooltip" title="Yêu thích"><i class="fa fa-star"></i></a>
                         <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
                     </div>
                     <div class="share_buttons">
@@ -76,12 +76,7 @@
                     <div class="product__tabs_inner">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs description-list" role="tablist">
-<<<<<<< Updated upstream
                             <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Bình Luận</a></li>
-=======
-
-                            <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Reviews (1)</a></li>
->>>>>>> Stashed changes
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content">
@@ -179,7 +174,7 @@
                                                 <div class="actions">
                                                     <div class="action-buttons">
                                                         <div class="add-to-cart">
-                                                            <a href="#">Add to cart</a>
+                                                            <a href="#">THÊM GIỎ HÀNG</a>
                                                         </div>
                                                         <div class="add-to-links">
                                                             <div class="add-to-wishlist">

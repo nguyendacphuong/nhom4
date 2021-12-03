@@ -40,9 +40,6 @@
 									<input type="text" name="phone_number" placeholder="phone number (required)" />
 								</div>
 								<div class="col-md-12 col-sm-12 col-xs-12">
-									<input style="height: 50px;width: 540px;padding: 18px;margin-bottom: 19px;" type="date" name="created_at" />
-								</div>
-								<div class="col-md-12 col-sm-12 col-xs-12">
 									<input type="text" name="subject_name" placeholder="Subject" />
 								</div>
 								<div class="col-md-12 col-sm-12 col-xs-12">

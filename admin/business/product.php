@@ -62,14 +62,15 @@ function edit_form()
     $sql = "select * from product where id = $id ";
     $lis = executeQuery($sql);
 
-    $sql = "select * from category ";
-    $cates = pdo_query($sql);
+    $sql = "select * from category order by id desc";
 
-    $sql = "select * from brand ";
-    $cate = pdo_query($sql);
+    $cates = pdo_query($sql);
+    $sql = "select * from brand order by id desc";
+
+    $brand_id = pdo_query($sql);
 
     // hiển thị view
-    admin_render('product/edit-form.php', compact('cates', 'lis', 'cate'), 'admin-assets/custom/product_index.js');
+    admin_render('product/edit-form.php', compact('cates', 'lis','brand_id'), 'admin-assets/custom/product_index.js');
 }
 function update_form()
 {

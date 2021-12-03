@@ -32,14 +32,8 @@
                     <tbody>
 
                         <?php foreach ($cates as $index => $item) :
-                         $hinha =  $item['thumbnail'];
-                         if (empty($hinha)) {
-                            $hinh = "không có";
-                         } else {
-                             
-                             $hinh = "<img src='" . $hinha . "' height = '80px'>";
-                         }
-                    
+                         
+                         
                             ?>
                             
                             <tr>
@@ -47,8 +41,8 @@
                                 <td><?= $item['title'] ?></td>
                                 <td><?= $item['price'] ?> VNĐ</td>
                                 <td><?= $item['discount'] ?> VNĐ</td>
-                                <td><?= $hinh?></td>
-                                <td><textarea name="" id="" cols="10" rows="5"><?= $item['description'] ?></textarea></td>
+                                <td><img src="<?= IMAGE_URL . $item['thumbnail'] ?>" with="150px" height="100px" alt=""></td>
+                                <td><textarea name="" id=""  cols="10" rows="5"><?= $item['description'] ?></textarea></td>
 
                                 <td><?= $item['number'] ?> </td>
                                 <td><?= $item['status'] == 1 ? "Còn hàng" : "Hết hàng" ?></td>
@@ -61,9 +55,11 @@
                                     <a href="<?= ADMIN_URL . 'sanpham/capnhat?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
-                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'sanpham/xoa?id=' . $item['id'] ?>', '<?= $item['title'] ?>')" class="btn btn-sm btn-danger">
+                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'sanpham/xoa?id='. $item['id'] ?>', '<?= $item['title']?>')" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
+
+                                    
                                 </td>
                             </tr>
                         <?php endforeach ?>

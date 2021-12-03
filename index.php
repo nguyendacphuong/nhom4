@@ -114,6 +114,10 @@ switch ($url) {
         require_once './admin/business/lienhe.php';
         contact_index();
         break;
+    case 'cp-admin/contact/xoa':
+        require_once './admin/business/lienhe.php';
+        contact_remove();
+        break;
 
     case 'cp-admin/danh-muc/capnhat':
         checkAuth([ADMIN_ROLE]);
