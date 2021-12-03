@@ -51,7 +51,6 @@
 					<div class="cart-total">
 						<ul>
 							<li><a href="<?= BASE_URL . 'check-out'?>"><span class="cart-icon"><i class="fa fa-shopping-cart"></i></span> <span class="cart-no">Giỏ Hàng: (<?= countCartNumber() ?>)</span></a>
-								
 							</li>
 						</ul>
 					</div>
