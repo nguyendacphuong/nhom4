@@ -35,7 +35,6 @@
                             </div>
 
                         </div>
-
                             <div class="order-notes">
                                 <div class="checkout-form-list">
                                     <label>Ghi chú</label>
