@@ -51,7 +51,7 @@
                     <form action="#">
                         <div class="quantity">
                             <input type="number" value="1" />
-                            <button type="submit">Add to cart</button>
+                            <button type="submit">THÊM GIỎ HÀNG</button>
                         </div>
                     </form>
                     <div class="add-to-wishlist">
