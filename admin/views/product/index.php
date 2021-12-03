@@ -32,14 +32,8 @@
                     <tbody>
 
                         <?php foreach ($cates as $index => $item) :
-                         $hinha =  $item['thumbnail'];
-                         if (empty($hinha)) {
-                            $hinh = "không có";
-                         } else {
-                             
-                             $hinh = "<img src='" . $hinha . "' height = '80px'>";
-                         }
-                    
+                         
+                         
                             ?>
                             
                             <tr>
@@ -47,8 +41,8 @@
                                 <td><?= $item['title'] ?></td>
                                 <td><?= $item['price'] ?> VNĐ</td>
                                 <td><?= $item['discount'] ?> VNĐ</td>
-                                <td><?= $hinh?></td>
-                                <td><textarea name="" id="" cols="10" rows="5"><?= $item['description'] ?></textarea></td>
+                                <td><img src="<?= IMAGE_URL . $item['thumbnail'] ?>" with="150px" height="100px" alt=""></td>
+                                <td><textarea name="" id=""  cols="10" rows="5"><?= $item['description'] ?></textarea></td>
 
                                 <td><?= $item['number'] ?> </td>
                                 <td><?= $item['status'] == 1 ? "Còn hàng" : "Hết hàng" ?></td>

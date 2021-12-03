@@ -22,8 +22,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Hình sản phẩm </label><br>
-                            <img src="<?php echo $lis['thumbnail']; ?>" class="figure-img img-fluid rounded" alt="" width="100px" height="50px"><br>
-                            
+                            <img src="<?= IMAGE_URL . $lis['thumbnail'] ?>" class="figure-img img-fluid rounded" alt="" width="150px" height="100px"><br>
                             <input type="file" name="thumbnail"  value="<?php echo $lis['thumbnail']; ?> "class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
@@ -53,7 +52,7 @@
                             <select class="form-control" name="brand_id" id="brand_id">
                                 <option value="">-- Chọn --</option>
                                 <?php
-                                foreach ($cate as $thuonghieu) {
+                                foreach ($brand_id as $thuonghieu) {
                                     extract($thuonghieu);
                                     echo "<option value = '.$id.'>$name_brand</option>";
                                 }
