@@ -155,5 +155,5 @@ function favorite_profuct_remove()
     $id = $_GET['id'];
     $sql = "delete from favorite_products where id = $id";
     executeQuery($sql);
-    header("location: " . BASE_URL . 'favorite');
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
 }

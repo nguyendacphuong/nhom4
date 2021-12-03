@@ -55,7 +55,7 @@
                         </div>
                     </form>
                     <div class="add-to-wishlist">
-                        <a href="<?= BASE_URL . 'addfavorite?id=' . $item['id'] ?>" data-toggle="tooltip" title="Yêu thích"><i class="fa fa-star"></i></a>
+                        <a href="#" data-toggle="tooltip" title="Yêu thích"><i class="fa fa-star"></i></a>
                         <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
                     </div>
                     <div class="share_buttons">
@@ -174,7 +174,7 @@
                                                 <div class="actions">
                                                     <div class="action-buttons">
                                                         <div class="add-to-cart">
-                                                            <a href="#">Add to cart</a>
+                                                            <a href="#">THÊM GIỎ HÀNG</a>
                                                         </div>
                                                         <div class="add-to-links">
                                                             <div class="add-to-wishlist">
