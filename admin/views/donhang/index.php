@@ -21,22 +21,19 @@
 				            </tr>
 				        </thead>
 				        <tbody>
-				        	<!-- PAID -->
 				            <tr>
-				            	<?php foreach ($cates as $index => $item): ?>
+				            	<?php foreach ($cates as $index => $item) :?>
 				                <td><input type="checkbox" class="input-chk"></td>
 				                <td><?= $index + 1 ?></td>
-				                
 				                <td><?= $item['order_date'] ?></td>
 								<td style="font-weight: 400;"><a href="#" class="text-bold-600"><?= $item['id'] ?></a></td>
 				                <td><?= $item['user_id'] ?></td>
 				                <td><?= $item['fullname'] ?></td>
-				                
 				                <td><?= $item['email'] ?></td>
 				                <td><?= $item['phone_number'] ?></td>
 				                <th style="font-weight: 400;"><?= $item['address'] ?></th>
 				                <td><?= $item['note'] ?></td>
-				                <td><?= $item['ly_do_huy'] ?></td>
+				                <td><?= $item['lydohuy'] ?></td>
 				                <td><?= $item['total_money'] ?></td>
 				                <td><span class="badge badge-success badge-lg"><?= $item['status'] ?></span></td>
 				                <td>
@@ -50,28 +47,9 @@
 				                        </span>
 				                    </span>
 				                </td>
+				            </tr>
 				            <?php endforeach ?>
-				            </tr>
-				            
 				        </tbody>
-				        <tfoot>
-				            <tr>
-				                <th><input type="checkbox" class="input-chk-all"></th>
-				                <th>STT</th>
-				                <th>Date</th>
-				                <th>Mã ĐH</th>
-				                <th>Mã KH</th>
-				                <th>Tên KH</th>
-				                <th>Email</th>
-				                <th>SĐT</th>
-				                <th>Address</th>
-				                <th>Note</th>
-				                <th>LD hủy</th>
-				                <th>Tổng $</th>
-				                <th>Status</th>
-				                <th>HĐ</th>
-				            </tr>
-				        </tfoot>
 					</table>
 					</div>
 					<!--/ Invoices table -->
