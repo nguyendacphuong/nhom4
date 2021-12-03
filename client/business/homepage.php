@@ -48,7 +48,11 @@
                 header ('Location:'.BASE_URL);
             }
         }
-        client_render('homepage/lienhe.php');
+        $sql = "SELECT * FROM category";
+        $list = select_page($sql);
+        $sql = "SELECT * FROM brand";
+        $thuonghieu = select_page($sql);
+        client_render('homepage/lienhe.php', compact('list', 'thuonghieu'));
     }
     
 ?>
