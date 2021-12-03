@@ -225,6 +225,7 @@
             <div class="top-sells-curosel">
                 <!-- single-product start -->
                 <?php foreach ($listSale as $list) : ?>
+
                     <div class="col-12">
                         <div class="single-product first-sells">
                             <div class="product-img">
@@ -288,9 +289,10 @@
                                 </div>
                             </div>
                         </div>
-                    <?php endforeach; ?>
                     </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
-    <!--====================== END SẢN PHẨM BÁN CHẠY ================== -->
+</div>
+<!--====================== END SẢN PHẨM BÁN CHẠY ================== -->
