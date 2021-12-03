@@ -42,7 +42,7 @@
             $phone_number= $_POST['phone_number'];
             $subject_name= $_POST['subject_name'];
             $note= $_POST['note'];
-            $created_at= $_POST['created_at']; 
+            $created_at= date("Y-m-d H:i:s");
             if(empty($name && $email && $phone_number && $subject_name && $note && $created_at)){
                $err[] = '<script> alert("Bạn chưa điền đầy đủ thông tin") </script>';
             }
