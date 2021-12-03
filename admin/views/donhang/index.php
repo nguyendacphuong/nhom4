@@ -26,7 +26,7 @@
 				                <td><input type="checkbox" class="input-chk"></td>
 				                <td><?= $index + 1 ?></td>
 				                <td><?= $item['order_date'] ?></td>
-								<td style="font-weight: 400;"><a href="#" class="text-bold-600"><?= $item['id'] ?></a></td>
+								<td style="font-weight: 400;"><a href="" class="text-bold-600"><?= $item['id'] ?></a></td>
 				                <td><?= $item['user_id'] ?></td>
 				                <td><?= $item['fullname'] ?></td>
 				                <td><?= $item['email'] ?></td>
