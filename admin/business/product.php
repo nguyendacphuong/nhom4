@@ -72,14 +72,6 @@ function edit_form()
     // hiển thị view
     admin_render('product/edit-form.php', compact('cates', 'lis','brand_id'), 'admin-assets/custom/product_index.js');
 }
-
-function xoa_sp()
-{
-    $id = $_GET['id'];
-    $sql = "delete from product where id = $id";
-    executeQuery($sql);
-    header("location: " . ADMIN_URL . 'sanpham');
-}
 function update_form()
 {
     $id = $_POST['id'];
