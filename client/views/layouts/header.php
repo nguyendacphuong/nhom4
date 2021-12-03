@@ -23,6 +23,8 @@
 										<p><a href="<?= BASE_URL . 'my-user' ?>"><?= $_SESSION['auth']['fullname'] ?></a> &nbsp<a href="<?= BASE_URL . 'dang-xuat' ?>">Đăng xuất</a></p>
 									<?php else : ?>
 										<a href="<?= BASE_URL . 'dangnhap' ?>">Đăng nhập</a>
+
+										<a href="<?= BASE_URL . 'dang-ky' ?>">Đăng ký</a>
 									<?php endif ?>
 								</li>
 

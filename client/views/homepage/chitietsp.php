@@ -48,7 +48,7 @@
                     <div class="stock-status">
                         <label>Availability</label>: <strong>In stock</strong>
                     </div>
-                    <form action="#">
+                    <form action="<?= BASE_URL . 'add-to-cart' ?>">
                         <div class="quantity">
                             <input type="number" value="1" />
                             <button type="submit">THÊM GIỎ HÀNG</button>
@@ -76,7 +76,12 @@
                     <div class="product__tabs_inner">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs description-list" role="tablist">
+<<<<<<< Updated upstream
                             <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Bình Luận</a></li>
+=======
+
+                            <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Reviews (1)</a></li>
+>>>>>>> Stashed changes
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content">
