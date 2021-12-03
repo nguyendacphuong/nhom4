@@ -2,36 +2,37 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Thêm sản phẩm</h3>
+                <h3 class="card-title">Sửa sản phẩm</h3>
             </div>
             <div class="card-body">
-                <form action="<?= ADMIN_URL . 'sanpham/capnhat' ?>" method="post" enctype="multipart/form-data">
+                <form action="<?= ADMIN_URL . 'sanpham/update' ?>" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id"  value="<?php echo $lis['id']; ?>">
                     <div class="col-6 offset-3">
-                    <input type="hidden" name="id"  value="<?php echo $lis['id']; ?>">
                         <div class="form-group">
                             <label for="">Tên sản phẩm</label>
-                            <input type="text" name="title" value="<?php echo $lis['title']; ?> " class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="title" value="<?php echo $lis['title']; ?> " class="form-control" placeholder="Yêu cầu nhập tên sản phẩm" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                             <label for="">Giá sản phẩm</label>
-                            <input type="text" name="price" value="<?php echo $lis['price']; ?> " class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="price" value="<?php echo $lis['price']; ?> " class="form-control" placeholder="yêu cầu nhập giá gốc" aria-describedby="helpId">
                         </div>          
                         <div class="form-group">
                             <label for="">Giảm giá</label>
-                            <input type="text" name="discount"  value="<?php echo $lis['discount']; ?> " class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="discount"  value="<?php echo $lis['discount']; ?> " class="form-control" placeholder="yêu cầu nhập giá khuyến mãi" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                            <label for="">Hình sản phẩm</label>
-                            <input type="file" name="thumbnail"  value="<?php echo $lis['thumbnail']; ?> "class="form-control" placeholder="" aria-describedby="helpId">
+                            <label for="">Hình sản phẩm </label><br>
+                            <img src="<?php echo $lis['thumbnail']; ?>" class="figure-img img-fluid rounded" alt="" width="100px" height="50px"><br>
                             
+                            <input type="file" name="thumbnail"  value="<?php echo $lis['thumbnail']; ?> "class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                             <label for="">Mô tả</label>
-                            <textarea name="description" value="<?php echo $lis['description']; ?> " class="form-control" placeholder="" aria-describedby="helpId"id="" cols="30" rows="10"></textarea>
+                            <textarea name="description" value="" class="form-control" placeholder="yêu cầu nhập mô tả" aria-describedby="helpId"id="" cols="30" rows="10"><?php echo $lis['description']; ?> </textarea>
                         </div>
                         <div class="form-group">
                             <label for="">Số lượng</label>
-                            <input type="number" name="number"  value="<?php echo $lis['number']; ?> " class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="number"  value="<?php echo $lis['number']; ?> " class="form-control" placeholder="yêu cầu nhập số lượng" aria-describedby="helpId">
                         </div>
                         
                         <br>
