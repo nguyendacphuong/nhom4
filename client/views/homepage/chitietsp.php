@@ -51,11 +51,11 @@
                     <form action="#">
                         <div class="quantity">
                             <input type="number" value="1" />
-                            <button type="submit">THÊM GIỎ HÀNG</button>
+                            <button type="submit">Add to cart</button>
                         </div>
                     </form>
                     <div class="add-to-wishlist">
-                        <a href="<?= BASE_URL . 'addfavorite?id=' . $item['id'] ?>" data-toggle="tooltip" title="Yêu thích"><i class="fa fa-star"></i></a>
+                        <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-star"></i></a>
                         <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
                     </div>
                     <div class="share_buttons">
@@ -170,16 +170,11 @@
                                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $itemcungloai['id'] ?>">
                                                     <img class="primary-image" src="<?= $itemcungloai['thumbnail'] ?>" alt="" />
 
-                                            </a>
-                                            <div class="actions">
-                                                <div class="action-buttons">
-                                                    <div class="add-to-cart">
-                                                        <a href="#">THÊM GIỎ HÀNG</a>
-                                                    </div>
-                                                    <div class="add-to-links">
-                                                        <div class="add-to-wishlist">
-                                                            <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-star"></i>
-                                                            </a>
+                                                </a>
+                                                <div class="actions">
+                                                    <div class="action-buttons">
+                                                        <div class="add-to-cart">
+                                                            <a href="#">Add to cart</a>
                                                         </div>
                                                         <div class="add-to-links">
                                                             <div class="add-to-wishlist">
@@ -326,4 +321,5 @@
             </div>
         </div>
     </div>
-    <!-- brand-area end
+</div>
+<!-- brand-area end
