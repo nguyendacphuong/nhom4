@@ -127,18 +127,6 @@ function thuonghieu()
 }
 
 
-function cart()
-{
-    $id = $_GET['id'];
-
-    $sql = "SELECT * FROM product ";
-    $cart = select_page($sql);
-
-    $sql = "SELECT * FROM category ";
-    $list = select_page($sql);
-    client_render('cart/cart.php', compact('cart', 'list'));
-}
-
 function favorite_profuct()
 {
     $sql = "select yt.*, pr.title, pr.thumbnail, pr.price,pr.status from favorite_products yt join product pr on pr.id = yt.product_id join user us on yt.user_id = us.id where 1 order by id ASC";
