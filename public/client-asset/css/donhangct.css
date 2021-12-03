@@ -5,7 +5,7 @@
     background-color: #edf4f7;
     position: relative;
     border-top-left-radius: 25px;
-    max-width: 800px;
+    max-width: 1200px;
     padding-top: 20px;
     margin: 30px auto 0px
 }
@@ -35,17 +35,20 @@
 }
 
 .wrapper {
-    padding: 0px 50px 50px;
-    max-width: 800px;
+    padding: 20px;
+    background-color: #edf4f7;
+    max-width: 1200px;
     margin: 0px auto 40px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px
 }
 
 .table th {
-    border-top: none
+    border-top: none;
 }
-
+.table{
+    padding: 20px;
+}
 .table thead tr.text-uppercase th {
     font-size: 0.8rem;
     padding-left: 0px;
@@ -61,7 +64,7 @@
 }
 
 .table-responsive {
-    height: 100px
+    height: 300px
 }
 
 .list div b {

@@ -13,36 +13,25 @@
         <table class="table table-borderless">
             <thead>
                 <tr class="text-uppercase text-muted">
-                    <th scope="col">Sản phẩm</th>
-                    <th scope="col" class="text-right">Tổng tiền</th>
+                    <th scope="col">Ảnh</th>
+                    <th scope="col">Tên Sản Phẩm</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col" class="text-right">Thành tiền</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">Các Sản Phẩm</th>
+                    <td><div class="mx-3"> <img src="https://images.unsplash.com/photo-1602096934878-5028bf10ca50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="apple" class="rounded-circle" width="50" height="50"> </div></td>
+                    <td><div><b>3px</b></div></td>
+                    <td><div><b>3px</b></div></td>
                     <td class="text-right"><b>120.000đ</b></td>
                 </tr>
             </tbody>
         </table>
     </div>
-    <div class="d-flex justify-content-start align-items-center list py-1">
-        <div><b>1px</b></div>
-        <div class="mx-3"> <img src="https://images.pexels.com/photos/206959/pexels-photo-206959.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="apple" class="rounded-circle" width="30" height="30"> </div>
-        <div class="order-item">Apple</div>
-    </div>
     <div class="d-flex justify-content-start align-items-center list my-2 py-1">
-        <div><b>4px</b></div>
-        <div class="mx-3"> <img src="https://images.unsplash.com/photo-1602081593819-65e7a8cee0dd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" alt="apple" class="rounded-circle" width="30" height="30"> </div>
-        <div class="order-item">Mango</div>
-    </div>
-    <div class="d-flex justify-content-start align-items-center list my-2 py-1">
-        <div><b>2px</b></div>
-        <div class="mx-3"> <img src="https://images.unsplash.com/photo-1584183187885-071d53d42531?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="apple" class="rounded-circle" width="30" height="30"> </div>
-        <div class="order-item">Carrot Apple Ginger</div>
-    </div>
-    <div class="d-flex justify-content-start align-items-center list my-2 py-1">
-        <div><b>3px</b></div>
-        <div class="mx-3"> <img src="https://images.unsplash.com/photo-1602096934878-5028bf10ca50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="apple" class="rounded-circle" width="30" height="30"> </div>
+        
+        
         <div class="order-item">Pear</div>
     </div>
     <div class="pt-2 border-bottom mb-3"></div>
