@@ -25,16 +25,16 @@
 				            	<?php foreach ($cates as $index => $item) :?>
 				                <td><input type="checkbox" class="input-chk"></td>
 				                <td><?= $index + 1 ?></td>
-				                <td><?= $item['order_date'] ?></td>
+				                <td><?= $item['created_at'] ?></td>
 								<td style="font-weight: 400;"><a href="" class="text-bold-600"><?= $item['id'] ?></a></td>
-				                <td><?= $item['user_id'] ?></td>
-				                <td><?= $item['fullname'] ?></td>
-				                <td><?= $item['email'] ?></td>
-				                <td><?= $item['phone_number'] ?></td>
-				                <th style="font-weight: 400;"><?= $item['address'] ?></th>
+				                <td><?= $item['id_user'] ?></td>
+				                <td><?= $item['customer_name'] ?></td>
+				                <td><?= $item['customer_email'] ?></td>
+				                <td><?= $item['customer_phone_number'] ?></td>
+				                <th style="font-weight: 400;"><?= $item['customer_address'] ?></th>
 				                <td><?= $item['note'] ?></td>
-				                <td><?= $item['lydohuy'] ?></td>
-				                <td><?= $item['total_money'] ?></td>
+				                <td><?= $item['reason'] ?></td>
+				                <td><?= $item['total_price'] ?></td>
 				                <td><span class="badge badge-success badge-lg"><?= $item['status'] ?></span></td>
 				                <td>
 				                	<span class="dropdown">
@@ -42,8 +42,8 @@
 				                        <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
 				                            <a href="#" class="dropdown-item"><i class="la la-eye"></i>Xem chi tiết</a>
 				                            <a href="#" class="dropdown-item"><i class="la la-check"></i>Xác Nhận</a>
-				                            <a href="#" class="dropdown-item"><i class="ft-upload"></i>Chuyển đến XNDH</a>
-				                            <a href="#" class="dropdown-item"><i class="la la-trash"></i>Xóa đơn hàng</a>
+				                            <a href="#" class="dropdown-item"><i class="la la-trash"></i>Hủy đơn</a>
+				                            <a href="#" class="dropdown-item"><i class="la la-trash"></i>Giao Hàng Thành Công</a>
 				                        </span>
 				                    </span>
 				                </td>
