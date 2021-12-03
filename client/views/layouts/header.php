@@ -1,5 +1,4 @@
 <header>
-
 	<!-- header-top-area start -->
 	<div class="header-top-area">
 		<div class="container">
@@ -17,7 +16,7 @@
 					<div class="header-top-right">
 						<div class="top-menu">
 							<ul>
-								<li><a href="wishlist.html">Sản phẩm yêu thích</a></li>
+								<li><a href="<?= BASE_URL . 'favorite' ?>">Sản phẩm yêu thích</a></li>
 								<li><a href="cart.html">Giỏ Hàng</a></li>
 								<li>
 									<?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) : ?>

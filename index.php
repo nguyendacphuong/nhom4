@@ -314,6 +314,21 @@ switch ($url) {
         require_once './client/business/homepage.php';
         paycart();
         break;
+        // <<======================== SẢN PHẨM YÊU THÍCH ======================== >>
+    case 'favorite':
+        require_once './client/business/dashboard.php';
+        favorite_profuct();
+        break;
+    case 'addfavorite':
+        require_once './client/business/dashboard.php';
+        add_favorite_profuct();
+        break;
+    case 'favorite/xoa':
+        require_once './client/business/dashboard.php';
+        favorite_profuct_remove();
+        break;
+        // <<==================================================================== >>
+
     default:
         # code...
         break;
