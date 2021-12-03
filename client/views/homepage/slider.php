@@ -62,7 +62,7 @@
                                                     <div class="actions">
                                                         <div class="action-buttons">
                                                             <div class="add-to-cart">
-                                                                <a href="<?= BASE_URL . 'cart?id=' . $item['id'] ?>">THÊM GIỎ HÀNG</a>
+                                                                <a href="<?= BASE_URL . 'add-to-cart?id=' . $item['id'] ?>">THÊM GIỎ HÀNG</a>
                                                             </div>
                                                             <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) { ?>
                                                                 <div class="add-to-links">
@@ -152,7 +152,7 @@
                                 <div class="actions">
                                     <div class="action-buttons">
                                         <div class="add-to-cart">
-                                            <a href="#">THÊM GIỎ HÀNG</a>
+                                            <a href="<?= BASE_URL . 'add-to-cart?id=' . $newitem['id'] ?>">THÊM GIỎ HÀNG</a>
                                         </div>
                                         <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) { ?>
                                             <div class="add-to-links">
@@ -252,7 +252,7 @@
                                 <div class="actions">
                                     <div class="action-buttons">
                                         <div class="add-to-cart">
-                                            <a href="#">THÊM GIỎ HÀNG</a>
+                                            <a href="<?= BASE_URL . 'add-to-cart?id=' . $list['id'] ?>">THÊM GIỎ HÀNG</a>
                                         </div>
                                     </div>
                                 </div>

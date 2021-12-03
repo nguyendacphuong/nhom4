@@ -105,7 +105,7 @@ switch ($url) {
         require_once './client/business/taikhoan.php';
         dangky();
         break;
-    //=============================================QUẢN LÝ PHẢN HỒI===============================================//
+        //=============================================QUẢN LÝ PHẢN HỒI===============================================//
     case 'lienhe':
         require_once './client/business/homepage.php';
         lienhe();
@@ -288,9 +288,24 @@ switch ($url) {
 
 
         // <<======================== GIỎ HÀNG ======================== >>
-    case 'cart':
-        require_once './client/business/dashboard.php';
-        cart();
+
+
+
+    case 'add-to-cart':
+        require_once './client/business/homepage.php';
+        add2Cart();
+        break;
+    case 'check-out':
+        require_once './client/business/homepage.php';
+        checkout();
+        break;
+    case 'check-out1':
+        require_once './client/business/homepage.php';
+        checkout1();
+        break;
+    case 'pay-cart':
+        require_once './client/business/homepage.php';
+        paycart();
         break;
         // <<======================== SẢN PHẨM YÊU THÍCH ======================== >>
     case 'favorite':
