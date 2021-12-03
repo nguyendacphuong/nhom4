@@ -138,10 +138,14 @@ function cart()
     $list = select_page($sql);
     client_render('cart/cart.php', compact('cart', 'list'));
 }
+
 function favorite_profuct()
 {
-    client_render('favorite_profuct/favorite_profuct.php', []);
+    $sql = "select yt.*, pr.title, pr.thumbnail, pr.price,pr.status from favorite_products yt join product pr on pr.id = yt.product_id join user us on yt.user_id = us.id where 1 order by id ASC";
+    $favorite = executeQuery($sql, true);
+    client_render('favorite_profuct/favorite_profuct.php', compact('favorite'));
 }
+
 function add_favorite_profuct()
 {
     $id = $_GET['id'];
@@ -155,5 +159,13 @@ function add_favorite_profuct()
         $addFavoriteQuery = "insert into favorite_products (user_id, product_id, created_at) values ($userId, $id, '$currentTime')";
         executeQuery($addFavoriteQuery);
     }
-    header('location: ' . BASE_URL);
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+}
+
+function favorite_profuct_remove()
+{
+    $id = $_GET['id'];
+    $sql = "delete from favorite_products where id = $id";
+    executeQuery($sql);
+    header("location: " . BASE_URL . 'favorite');
 }

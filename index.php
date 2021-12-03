@@ -296,8 +296,12 @@ switch ($url) {
         require_once './client/business/dashboard.php';
         add_favorite_profuct();
         break;
-
+    case 'favorite/xoa':
+        require_once './client/business/dashboard.php';
+        favorite_profuct_remove();
+        break;
         // <<==================================================================== >>
+
     default:
         # code...
         break;

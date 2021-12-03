@@ -32,24 +32,17 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td class="product-remove"><a href="#">×</a></td>
-                    <td class="product-thumbnail"><a href="#"><img src="img/cart.jpg" alt="" /></a></td>
-                    <td class="product-name"><a href="#">Vestibulum suscipit</a></td>
-                    <td class="product-price"><span class="amount">£165.00</span></td>
-                    <td class="product-stock-status"><span class="wishlist-in-stock">In Stock</span></td>
-                    <td class="product-add-to-cart"><a href="#"> Add to Cart</a></td>
-                  </tr>
-                  <tr>
-                    <td class="product-remove"><a href="#">×</a></td>
-                    <td class="product-thumbnail"><a href="#"><img src="img/cart2.jpg" alt="" /></a></td>
-                    <td class="product-name"><a href="#">Vestibulum dictum magna</a></td>
-                    <td class="product-price"><span class="amount">£50.00</span></td>
-                    <td class="product-stock-status"><span class="wishlist-in-stock">In Stock</span></td>
-                    <td class="product-add-to-cart"><a href="#"> Add to Cart</a></td>
-                  </tr>
+                  <?php foreach ($favorite as $item) : ?>
+                    <tr>
+                      <td class="product-remove"><a href="<?= BASE_URL . 'favorite/xoa?id=' . $item['id'] ?>">×</a></td>
+                      <td class="product-thumbnail"><a href="<?= BASE_URL . 'chitietsp?id=' . $item['product_id'] ?>"><img style="width: 100px; height: 100px" class="primary-image" src="<?= $item['thumbnail'] ?>" alt="<?= $item['title'] ?>" /></a></td>
+                      <td class="product-name"><a href="<?= BASE_URL . 'chitietsp?id=' . $item['product_id'] ?>"><?= $item['title'] ?></a></td>
+                      <td class="product-price"><span class="amount"><?= number_format($item['price']) ?>đ</span></td>
+                      <td class="product-stock-status"><?= $item['status'] == 1 ? "Còn hàng" : "Hết hàng" ?></td>
+                      <td class="product-add-to-cart"><a href="#"> Add to Cart</a></td>
+                    </tr>
+                  <?php endforeach; ?>
                 </tbody>
-
               </table>
             </div>
           </form>

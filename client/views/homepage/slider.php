@@ -118,8 +118,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -156,18 +154,33 @@
                                         <div class="add-to-cart">
                                             <a href="#">Add to cart</a>
                                         </div>
-                                        <div class="add-to-links">
-                                            <div class="add-to-wishlist">
-                                                <a href="#" data-toggle="tooltip" title="Yêu thích"><i class="fa fa-star"></i>
-                                                </a>
+                                        <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) { ?>
+                                            <div class="add-to-links">
+                                                <div class="add-to-wishlist">
+                                                    <a href="<?= BASE_URL . 'addfavorite?id=' . $item['id'] ?>" data-toggle="tooltip" title="Yêu thích"><i class="fa fa-star"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="compare-button">
+                                                    <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
+                                                </div>
                                             </div>
-                                            <div class="compare-button">
-                                                <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
+                                            <div class="quickviewbtn">
+                                                <a href="" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
                                             </div>
-                                        </div>
-                                        <div class="quickviewbtn">
-                                            <a href="" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
-                                        </div>
+                                        <?php } else { ?>
+                                            <div class="add-to-links">
+                                                <div class="add-to-wishlist">
+                                                    <a href="<?= BASE_URL . 'dangnhap' ?>" data-toggle="tooltip" title="Yêu thích"><i class="fa fa-star"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="compare-button">
+                                                    <a href="#" data-toggle="tooltip" title="Compare"><i class="fa fa-exchange"></i></a>
+                                                </div>
+                                            </div>
+                                            <div class="quickviewbtn">
+                                                <a href="" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
+                                            </div>
+                                        <?php } ?>
                                     </div>
                                 </div>
                             </div>
