@@ -88,6 +88,31 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-truck" aria-hidden="true"></i>
+              <p>
+                Đơn Hàng
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'donhang'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách Đơn Hàng</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p></p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-users" aria-hidden="true"></i>
