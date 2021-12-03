@@ -170,16 +170,11 @@
                                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $itemcungloai['id'] ?>">
                                                     <img class="primary-image" src="<?= $itemcungloai['thumbnail'] ?>" alt="" />
 
-                                            </a>
-                                            <div class="actions">
-                                                <div class="action-buttons">
-                                                    <div class="add-to-cart">
-                                                        <a href="#">THÊM GIỎ HÀNG</a>
-                                                    </div>
-                                                    <div class="add-to-links">
-                                                        <div class="add-to-wishlist">
-                                                            <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-star"></i>
-                                                            </a>
+                                                </a>
+                                                <div class="actions">
+                                                    <div class="action-buttons">
+                                                        <div class="add-to-cart">
+                                                            <a href="#">Add to cart</a>
                                                         </div>
                                                         <div class="add-to-links">
                                                             <div class="add-to-wishlist">
@@ -326,4 +321,5 @@
             </div>
         </div>
     </div>
-    <!-- brand-area end
+    <!-- brand-area end -->
+</div>
