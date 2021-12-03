@@ -51,7 +51,7 @@
                     <form action="#">
                         <div class="quantity">
                             <input type="number" value="1" />
-                            <button type="submit">Add to cart</button>
+                            <button type="submit">THÊM GIỎ HÀNG</button>
                         </div>
                     </form>
                     <div class="add-to-wishlist">
@@ -170,11 +170,16 @@
                                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $itemcungloai['id'] ?>">
                                                     <img class="primary-image" src="<?= $itemcungloai['thumbnail'] ?>" alt="" />
 
-                                                </a>
-                                                <div class="actions">
-                                                    <div class="action-buttons">
-                                                        <div class="add-to-cart">
-                                                            <a href="#">Add to cart</a>
+                                            </a>
+                                            <div class="actions">
+                                                <div class="action-buttons">
+                                                    <div class="add-to-cart">
+                                                        <a href="#">THÊM GIỎ HÀNG</a>
+                                                    </div>
+                                                    <div class="add-to-links">
+                                                        <div class="add-to-wishlist">
+                                                            <a href="#" data-toggle="tooltip" title="Add to Wishlist"><i class="fa fa-star"></i>
+                                                            </a>
                                                         </div>
                                                         <div class="add-to-links">
                                                             <div class="add-to-wishlist">

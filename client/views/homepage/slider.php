@@ -57,12 +57,12 @@
                                                 <span class="sale-text">Sale</span>
                                                 <div class="product-img">
                                                     <a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
-                                                        <img style="width: 255px; height: 327px" class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
+                                                        <img class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
                                                     </a>
                                                     <div class="actions">
                                                         <div class="action-buttons">
                                                             <div class="add-to-cart">
-                                                                <a href="<?= BASE_URL . 'cart?id=' . $item['id'] ?>">Add to cart</a>
+                                                                <a href="<?= BASE_URL . 'cart?id=' . $item['id'] ?>">THÊM GIỎ HÀNG</a>
                                                             </div>
                                                             <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) { ?>
                                                                 <div class="add-to-links">
@@ -104,8 +104,8 @@
                                                         <a href="#"><i class="fa fa-star"></i></a>
                                                     </div>
                                                     <div class="price-box">
-                                                        <span class="new-price"><?= $item['price'] ?>đ</span>
-                                                        <span class="old-price"><?= $item['discount'] ?>đ</span>
+                                                        <span class="new-price"><?= $item['discount'] ?>đ</span>
+                                                        <span class="old-price"><?= $item['price'] ?>đ</span>
 
                                                     </div>
                                                     <span class="content__product-general-status">View:
@@ -147,12 +147,12 @@
                             <span class="sale-text">Sale</span>
                             <div class="product-img">
                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $newitem['id'] ?>">
-                                    <img style="width: 255px; height: 327px" class="primary-image" src="<?= $newitem['thumbnail'] ?>" alt="" />
+                                    <img class="primary-image" src="<?= $newitem['thumbnail'] ?>" alt="" />
                                 </a>
                                 <div class="actions">
                                     <div class="action-buttons">
                                         <div class="add-to-cart">
-                                            <a href="#">Add to cart</a>
+                                            <a href="#">THÊM GIỎ HÀNG</a>
                                         </div>
                                         <?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) { ?>
                                             <div class="add-to-links">
@@ -194,8 +194,8 @@
                                     <a href="#"><i class="fa fa-star"></i></a>
                                 </div>
                                 <div class="price-box">
-                                    <span class="new-price"><?= $newitem['price'] ?>đ</span>
-                                    <span class="old-price"><?= $newitem['discount'] ?>đ</span>
+                                    <span class="new-price"><?= $item['discount'] ?>đ</span>
+                                    <span class="old-price"><?= $item['price'] ?>đ</span>
                                 </div>
                                 <span class="content__product-general-status">View:
                                     <?= $newitem['view'] ?>
@@ -209,7 +209,7 @@
     </div>
 </div>
 <!-- ================= END SẢN PHẨM MỚI NHẤT  ======================== -->
-<!-- =================  SẢN PHẨM BÁN CHẠY  ======================== -->
+<!-- =================  TOP 10 SẢN PHẨM  ======================== -->
 <div class="top-sells-area">
     <div class="container">
         <!-- section-heading start -->
@@ -251,7 +251,7 @@
                                 <div class="actions">
                                     <div class="action-buttons">
                                         <div class="add-to-cart">
-                                            <a href="#">Add to cart</a>
+                                            <a href="#">THÊM GIỎ HÀNG</a>
                                         </div>
                                     </div>
                                 </div>
@@ -282,16 +282,15 @@
                                 <div class="actions">
                                     <div class="action-buttons">
                                         <div class="add-to-cart">
-                                            <a href="#">Add to cart</a>
+                                            <a href="#">THÊM GIỎ HÀNG</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    <?php endforeach; ?>
                     </div>
-                <?php endforeach; ?>
             </div>
         </div>
     </div>
-</div>
-<!--====================== END SẢN PHẨM BÁN CHẠY ================== -->
+    <!--====================== END SẢN PHẨM BÁN CHẠY ================== -->

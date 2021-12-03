@@ -205,7 +205,23 @@
               </li>
             </ul>
           </li>
-
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-users" aria-hidden="true"></i>
+              <p>
+                Quản lý phản hồi
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'contact'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách phản hồi</p>
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
