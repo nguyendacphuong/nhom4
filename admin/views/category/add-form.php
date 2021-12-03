@@ -1,3 +1,5 @@
+
+?>
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -9,7 +11,7 @@
                     <div class="col-6 offset-3">
                         <div class="form-group">
                           <label for="">Tên danh mục</label>
-                          <input type="text" name="name" class="form-control" placeholder="" aria-describedby="helpId">
+                          <input type="text" name="name" id="name" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                             <div class="form-check">
