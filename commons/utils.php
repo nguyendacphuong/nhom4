@@ -51,5 +51,14 @@ function checkAuth($role_id = []){
         die;
     }
 }
+function countCartNumber(){
+    $countProduct = 0;
+    if(isset($_SESSION['cart']) && count($_SESSION['cart']) > 0){
+        foreach ($_SESSION['cart'] as $item) {
+            $countProduct += $item['quantity'];
+        }
+    }
+    return $countProduct;
+}
 
 ?>

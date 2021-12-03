@@ -88,6 +88,31 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fas fa-money-bill"></i>
+              <p>
+                Đơn Hàng
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?= ADMIN_URL . 'donhang'?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Danh sách Đơn Hàng</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p></p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fas fa-users" aria-hidden="true"></i>
@@ -114,7 +139,7 @@
 
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fas fa-users" aria-hidden="true"></i>
+              <i class="fas fa-registered" aria-hidden="true"></i>
               <p>
                 Thương hiệu
                 <i class="fas fa-angle-left right"></i>
@@ -138,7 +163,7 @@
 
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fas fa-users" aria-hidden="true"></i>
+              <i class="fab fa-slideshare"  aria-hidden="true"></i>
               <p>
                 SlideShow
                 <i class="fas fa-angle-left right"></i>
@@ -161,7 +186,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fas fa-users" aria-hidden="true"></i>
+              <i class="fas fa-newspaper" aria-hidden="true"></i>
               <p>
                 Tin tức
                 <i class="fas fa-angle-left right"></i>
@@ -184,7 +209,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fas fa-users" aria-hidden="true"></i>
+              <i class="fas fa-comments" aria-hidden="true"></i>
               <p>
                 Bình luận sản phẩm
                 <i class="fas fa-angle-left right"></i>
@@ -207,7 +232,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="fas fa-users" aria-hidden="true"></i>
+              <i class="fas fa-id-card" aria-hidden="true"></i>
               <p>
                 Quản lý phản hồi
                 <i class="fas fa-angle-left right"></i>
