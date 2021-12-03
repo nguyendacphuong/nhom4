@@ -42,7 +42,7 @@
 				                        <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
 				                            <a href="#" class="dropdown-item"><i class="la la-eye"></i>Xem chi tiết</a>
 				                            <a href="#" class="dropdown-item"><i class="la la-check"></i>Xác Nhận</a>
-				                            <a href="#" class="dropdown-item"><i class="la la-trash"></i>Hủy đơn</a>
+				                            <a href="#" class="dropdown-item"><i class="la la-trash"></i>Hủy đơn hàng</a>
 				                            <a href="#" class="dropdown-item"><i class="la la-trash"></i>Giao Hàng Thành Công</a>
 				                        </span>
 				                    </span>
