@@ -40,7 +40,7 @@ function logout()
             $phone_number= $_POST['phone_number'];
             $subject_name= $_POST['subject_name'];
             $note= $_POST['note'];
-            $created_at= $_POST['created_at']; 
+            $created_at= date("Y-m-d H:i:s");
             if(empty($name && $email && $phone_number && $subject_name && $note && $created_at)){
                $err[] = '<script> alert("Bạn chưa điền đầy đủ thông tin") </script>';
             }
@@ -50,7 +50,11 @@ function logout()
                 header ('Location:'.BASE_URL);
             }
         }
-        client_render('homepage/lienhe.php');
+        $sql = "SELECT * FROM category";
+        $list = select_page($sql);
+        $sql = "SELECT * FROM brand";
+        $thuonghieu = select_page($sql);
+        client_render('homepage/lienhe.php', compact('list', 'thuonghieu'));
     }
     function add2Cart(){
         $pId = $_GET['id'];
