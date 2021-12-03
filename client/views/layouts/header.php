@@ -51,43 +51,8 @@
 					<!-- cart-total start -->
 					<div class="cart-total">
 						<ul>
-							<li><a href="cart.html"><span class="cart-icon"><i class="fa fa-shopping-cart"></i></span> <span class="cart-no">Giỏ Hàng: (2)</span></a>
-								<div class="mini-cart-content">
-									<div class="cart-img-details">
-										<div class="cart-img-photo">
-											<a href="#"><img src="<?= CLIENT_ASSET ?>img/product/total-cart.jpg" alt="" /></a>
-											<span class="quantity">1</span>
-										</div>
-										<div class="cart-img-contaent">
-											<a href="#">
-												<h4>Vestibulum suscipit</h4>
-											</a>
-											<span>£165.00</span>
-										</div>
-										<div class="pro-del"><a href="#"><i class="fa fa-times-circle"></i></a>
-										</div>
-									</div>
-									<div class="clear"></div>
-									<div class="cart-img-details">
-										<div class="cart-img-photo">
-											<a href="#"><img src="<?= CLIENT_ASSET ?>img/product/total-cart2.jpg" alt="" /></a>
-											<span class="quantity">1</span>
-										</div>
-										<div class="cart-img-contaent">
-											<a href="#">
-												<h4>Donec sodales mauris in</h4>
-											</a>
-											<span>£50.00</span>
-										</div>
-										<div class="pro-del"><a href="#"><i class="fa fa-times-circle"></i></a>
-										</div>
-									</div>
-									<div class="cart-inner-bottom">
-										<p class="total">Subtotal: <span class="amount">£215.00</span></p>
-										<div class="clear"></div>
-										<p class="cart-button-top"><a href="checkout.html">Checkout</a></p>
-									</div>
-								</div>
+							<li><a href="<?= BASE_URL . 'check-out'?>"><span class="cart-icon"><i class="fa fa-shopping-cart"></i></span> <span class="cart-no">Giỏ Hàng: (<?= countCartNumber() ?>)</span></a>
+								
 							</li>
 						</ul>
 					</div>
