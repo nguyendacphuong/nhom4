@@ -9,7 +9,7 @@
                     <div class="col-6 offset-3">
                         <div class="form-group">
                             <label for="">Tên sản phẩm</label>
-                            <input type="text" name="title" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="title" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Giá sản phẩm</label>
