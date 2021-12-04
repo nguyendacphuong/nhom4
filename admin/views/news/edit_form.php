@@ -14,11 +14,12 @@
                         </div>
                         <div class="form-group">
                           <label for="">Hình</label>
+                          <img src="<?= IMAGE_URL . $cates['news_img'] ?>" class="figure-img img-fluid rounded" alt="" width="150px" height="100px"><br>
                           <input type="file" name="news_img" value="" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                           <label for="">Nội dung</label>
-                          <textarea name="content" value="<?php echo $lis['content']; ?> " class="form-control" placeholder="" aria-describedby="helpId"id="" cols="30" rows="10"></textarea>
+                          <textarea name="content" value="<?php echo $cates['content']; ?> " class="form-control" placeholder="" aria-describedby="helpId"id="" cols="30" rows="10"></textarea>
 
                         </div>
                         <br>

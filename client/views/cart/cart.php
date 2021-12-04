@@ -24,7 +24,7 @@
 								<?php foreach ($cart as $item) : ?>
 									<tr>
 
-										<td class="product-thumbnail"><a href="#"><img src="<?= $item['thumbnail'] ?>" alt="" /></a></td>
+										<td class="product-thumbnail"><a href="#"><img src="<?= IMAGE_URL ?><?= $item['thumbnail'] ?>" alt="" /></a></td>
 										<td class="product-name"><a href="#"></a><?= $item['title'] ?></td>
 										<td class="product-price"><span class="amount"><?= $item['discount'] ?></span>$</td>
 										<td class="product-quantity"><input type="number" value="<?= $item['quantity'] ?>" /></td>
