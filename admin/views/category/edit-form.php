@@ -1,3 +1,5 @@
+
+
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -15,7 +17,7 @@
                     
                         <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" id="show_menu" name="show_menu" value="1" type="checkbox">
+                                <input class="form-check-input" id="show_menu" name="show_menu" value="1" type="checkbox" >
                                 <label class="form-check-label" for="show_menu">Hiển thị menu</label>
                             </div>
                         </div>

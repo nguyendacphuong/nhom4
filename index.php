@@ -36,7 +36,6 @@ switch ($url) {
         break;
 
 
-       
         //    thương hiệu
     case 'cp-admin/thuong-hieu':
 
@@ -69,6 +68,17 @@ switch ($url) {
         brand_update_form();
         break;
         // and thương hiệu
+    case 'cp-admin/comments':
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
+        require_once './admin/business/comments.php';
+        comment_index();
+        break;
+    case 'cp-admin/comments/xoa':
+        checkAuth([ADMIN_ROLE, STAFF_ROLE]);
+        require_once './admin/business/comments.php';
+        comment_remove();
+        break;
+
 
     case 'chitietsp':
         require_once './client/business/dashboard.php';
@@ -95,9 +105,18 @@ switch ($url) {
         require_once './client/business/taikhoan.php';
         dangky();
         break;
+        //=============================================QUẢN LÝ PHẢN HỒI===============================================//
     case 'lienhe':
         require_once './client/business/homepage.php';
         lienhe();
+        break;
+    case 'cp-admin/contact':
+        require_once './admin/business/lienhe.php';
+        contact_index();
+        break;
+    case 'cp-admin/contact/xoa':
+        require_once './admin/business/lienhe.php';
+        contact_remove();
         break;
 
     case 'cp-admin/danh-muc/capnhat':
@@ -159,7 +178,7 @@ switch ($url) {
         break;
 
 
-    
+
 
     case 'cp-admin/taikhoan/luu-tao-moi':
         checkAuth([ADMIN_ROLE]);
@@ -173,6 +192,9 @@ switch ($url) {
         edit_user();
         break;
     case 'cp-admin/taikhoan/update-user':
+        checkAuth([ADMIN_ROLE]);
+        require_once './admin/business/user.php';
+        update_user();
 
         // require_once './admin/business/user.php';
         // update_user();
@@ -234,14 +256,13 @@ switch ($url) {
         // require_once './admin/business/user.php';
         // update_user();
 
-
     case 'cp-admin/taikhoan/xoa':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         user_remove();
         //aa
     case 'my-user':
-        checkAuth([ADMIN_ROLE,STAFF_ROLE,USER_ROLE]);
+        checkAuth([ADMIN_ROLE, STAFF_ROLE, USER_ROLE]);
         require_once './client/business/taikhoan.php';
         my_user();
         //aa
@@ -254,26 +275,63 @@ switch ($url) {
         my_user_update();
 
         break;
-    //hiển thị sản phẩm theo danh mục
-    case 'quan':
+        //hiển thị sản phẩm theo danh mục
+    case 'category':
         require_once './client/business/dashboard.php';
-        quan();
+        list_product();
         break;
-    case 'ao':
+    case 'thuonghieu':
         require_once './client/business/dashboard.php';
-        ao();
-        break;
-    case 'nam':
-        require_once './client/business/dashboard.php';
-        nam();
-        break;
-    case 'nu':
-        require_once './client/business/dashboard.php';
-        nu();
+        thuonghieu();
         break;
 
-        //aa
+        // case 'category_sp':
+        //     require_once './client/business/dashboard.php';
+        //     category_sp();
+        //     break;
+
+
+        // <<======================== GIỎ HÀNG ======================== >>
+
+    case 'donhangct':
+        require_once './client/business/donhang.php';
+        donhang_ct();
         break;
+    case 'cp-admin/donhang':
+        require_once './admin/business/donhang.php';
+        donhang();
+        break;
+
+    case 'add-to-cart':
+        require_once './client/business/homepage.php';
+        add2Cart();
+        break;
+    case 'check-out':
+        require_once './client/business/homepage.php';
+        checkout();
+        break;
+    case 'check-out1':
+        require_once './client/business/homepage.php';
+        checkout1();
+        break;
+    case 'pay-cart':
+        require_once './client/business/homepage.php';
+        paycart();
+        break;
+        // <<======================== SẢN PHẨM YÊU THÍCH ======================== >>
+    case 'favorite':
+        require_once './client/business/dashboard.php';
+        favorite_profuct();
+        break;
+    case 'addfavorite':
+        require_once './client/business/dashboard.php';
+        add_favorite_profuct();
+        break;
+    case 'favorite/xoa':
+        require_once './client/business/dashboard.php';
+        favorite_profuct_remove();
+        break;
+        // <<==================================================================== >>
 
     default:
         # code...

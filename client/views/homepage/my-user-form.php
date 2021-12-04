@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="mt-5 text-center">
-                    <a href="<?= ADMIN_URL . 'my-user/update?id='. $item['id'] ?>" class="btn btn-primary profile-button">Chỉnh Sửa</a>
+                    <a href="<?= BASE_URL . 'my-user/update?id='. $item['id'] ?>" class="btn btn-primary profile-button">Chỉnh Sửa</a>
                 </div>
             </div>
         </div>

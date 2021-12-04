@@ -15,6 +15,11 @@
 	<link href='<?= CLIENT_ASSET ?>http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
 	<link href='<?= CLIENT_ASSET ?>http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
+
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 	<!-- Favicon
 		============================================ -->
 	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
@@ -22,6 +27,7 @@
 	<!-- CSS  -->
 
 	<!-- Bootstrap CSS
+	  
 		============================================ -->
 	<link rel="stylesheet" href="<?= CLIENT_ASSET ?>css/bootstrap.min.css">
 
@@ -37,6 +43,9 @@
 		============================================ -->
 	<link rel="stylesheet" href="<?= CLIENT_ASSET ?>css/owl.theme.css">
 	<link rel="stylesheet" href="<?= CLIENT_ASSET ?>css/my-user.css">
+	<link rel="stylesheet" href="<?= CLIENT_ASSET ?>css/donhangct.css">
+	
+
 
 
 	<!-- owl.transitions CSS

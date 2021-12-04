@@ -9,7 +9,7 @@
                     <div class="col-6 offset-3">
                         <div class="form-group">
                             <label for="">Tên sản phẩm</label>
-                            <input type="text" name="title" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="title" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Giá sản phẩm</label>
@@ -24,22 +24,7 @@
                             <input type="file" name="thumbnail" class="form-control" placeholder="" aria-describedby="helpId">
                             
                         </div>
-                        <div class="form-group">
-                            <label for="">Hình chi tiết</label>
-                            <input type="file" name="image1" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
-                        </div>
-                        <div class="form-group">
-                            <label for="">Hình chi tiết</label>
-                            <input type="file" name="image2" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
-                        </div>
-                        <div class="form-group">
-                            <label for="">Hình chi tiết</label>
-                            <input type="file" name="image3" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
-                        </div>
-                        <div class="form-group">
-                            <label for="">Hình chi tiết</label>
-                            <input type="file" name="image4" class="form-control" placeholder="" aria-describedby="helpId" multiple ="multiple" >
-                        </div>
+                        
                         <div class="form-group">
                             <label for="">Mô tả</label>
                             <textarea name="description" class="form-control" placeholder="" aria-describedby="helpId"id="" cols="30" rows="10"></textarea>
