@@ -59,7 +59,7 @@
 					<!-- cart-total end -->
 					<!-- header-search start -->
 					<div class="header-search">
-						<form action="#">
+						<form action="<?=BASE_URL.'category'?>">
 							<input type="text" placeholder="Tìm Kiểm Sản Phẩm..." name="timkiem" />
 							<button type="submit"><i class="fa fa-search"></i></button>
 						</form>

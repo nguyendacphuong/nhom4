@@ -39,11 +39,13 @@ function cate_save_add()
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
-        $img = PUBLIC_URL . $filename;
+      
     }
 
+
     $sql = " INSERT INTO product (title,price,discount,thumbnail,description,number,category_id,brand_id,status,created_at,updated_at) values
-     ('$title','$price','$discount','$img','$description','$number','$category_id','$brand_id','$status',' $created_at','$updated_at')";
+     ('$title','$price','$discount','$filename','$description','$number','$category_id','$brand_id','$status',' $created_at','$updated_at')";
+
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'sanpham');
 }

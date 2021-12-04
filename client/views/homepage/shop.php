@@ -13,7 +13,7 @@
 									<div class="single-product">
 										<div class="product-img">
 											<a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
-												<img class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
+												<img class="primary-image" src="<?= IMAGE_URL ?><?= $item['thumbnail'] ?>" alt="" />
 											</a>
 										</div>
 										<div class="product-content">
@@ -71,7 +71,7 @@
 									<span class="sale-text">Sale</span>
 									<div class="product-img">
 										<a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
-											<img class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
+											<img class="primary-image" src="<?= IMAGE_URL ?><?= $item['thumbnail'] ?>" alt="" />
 
 										</a>
 										<div class="actions">
