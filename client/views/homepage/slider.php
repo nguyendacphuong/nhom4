@@ -57,7 +57,10 @@
                                                 <span class="sale-text">Sale</span>
                                                 <div class="product-img">
                                                     <a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
-                                                        <img class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
+
+                                                        <img class="primary-image" src="<?= IMAGE_URL?><?= $item['thumbnail'] ?>" alt="" />
+
+
                                                     </a>
                                                     <div class="actions">
                                                         <div class="action-buttons">
@@ -147,7 +150,9 @@
                             <span class="sale-text">Sale</span>
                             <div class="product-img">
                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $newitem['id'] ?>">
-                                    <img class="primary-image" src="<?= $newitem['thumbnail'] ?>" alt="" />
+
+                                    <img class="primary-image" src="<?= IMAGE_URL?><?= $newitem['thumbnail'] ?>" alt="" />
+
                                 </a>
                                 <div class="actions">
                                     <div class="action-buttons">
@@ -224,15 +229,182 @@
         <div class="row">
             <div class="top-sells-curosel">
                 <!-- single-product start -->
+
+
                 <?php foreach ($listSale as $list) : ?>
 
                     <div class="col-12">
                         <div class="single-product first-sells">
                             <div class="product-img">
                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>">
+
+                                    <img class="primary-image" src="<?= IMAGE_URL?><?= $list['thumbnail'] ?>" alt="" />
+
+                                </a>
+
+                            </div>
+                            <div class="actions">
+                                <div class="action-buttons">
+                                    <div class="add-to-cart">
+                                        <a href="#">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-product">
+                        <div class="product-img">
+                            <a href="#">
+                                <img class="primary-image" src="<?= CLIENT_ASSET ?>img/product/1.jpg" alt="" />
+                                <img class="secondary-image" src="<?= CLIENT_ASSET ?>img/product/2.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="pro-info">
+                                <h2 class="product-name"><a href="#">Tincidunt malesuada</a></h2>
+                                <div class="pro-rating">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                </div>
+                                <div class="price-box">
+                                    <span class="new-price">£100.00</span>
+                                    <span class="old-price">£150.00</span>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div class="action-buttons">
+                                    <div class="add-to-cart">
+                                        <a href="#">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single-product end -->
+                <!-- single-product start -->
+                <div class="col-12">
+                    <div class="single-product first-sells">
+                        <div class="product-img">
+                            <a href="#">
+                                <img class="primary-image" src="<?= CLIENT_ASSET ?>img/product/women/8.jpg" alt="" />
+                                <img class="secondary-image" src="<?= CLIENT_ASSET ?>img/product/women/1.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="pro-info">
+                                <h2 class="product-name"><a href="#">Aliquam lobortis est</a></h2>
+                                <div class="pro-rating">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                </div>
+                                <div class="price-box">
+                                    <span class="new-price">£70.00</span>
+                                    <span class="old-price">£100.00</span>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div class="action-buttons">
+                                    <div class="add-to-cart">
+                                        <a href="#">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>">
+                                    <img class="primary-image" src="<?= IMAGE_URL?><?= $list['thumbnail'] ?>" alt="" />
+
+                                </a>
+                            </div>
+                            <div class="actions">
+                                <div class="action-buttons">
+                                    <div class="add-to-cart">
+                                        <a href="#">Add to cart</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single-product end -->
+                <!-- single-product start -->
+                <div class="col-12">
+                    <div class="single-product first-sells">
+                        <div class="product-img">
+                            <a href="#">
+                                <img class="primary-image" src="<?= CLIENT_ASSET ?>img/product/3.jpg" alt="" />
+                                <img class="secondary-image" src="<?= CLIENT_ASSET ?>img/product/5.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="pro-info">
+                                <h2 class="product-name"><a href="#">Nulla sed libero</a></h2>
+                                <div class="pro-rating">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                </div>
+                                <div class="price-box">
+                                    <span class="new-price">£60.00</span>
+                                    <span class="old-price">£90.00</span>
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div class="action-buttons">
+                                    <div class="add-to-cart">
+                                        <a href="#">Add to cart</a>
+                                    </div>
+                                </div>
+                                <div class="actions">
+                                    <div class="action-buttons">
+                                        <div class="add-to-cart">
+                                            <a href="<?= BASE_URL . 'add-to-cart?id=' . $list['id'] ?>">THÊM GIỎ HÀNG</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single-product end -->
+                <!-- single-product start -->
+                <div class="col-12">
+                    <div class="single-product first-sells">
+                        <div class="product-img">
+                            <a href="#">
+                                <img class="primary-image" src="<?= CLIENT_ASSET ?>img/product/women/3.jpg" alt="" />
+                                <img class="secondary-image" src="<?= CLIENT_ASSET ?>img/product/women/4.jpg" alt="" />
+                            </a>
+                        </div>
+                        <div class="product-content">
+                            <div class="pro-info">
+                                <h2 class="product-name"><a href="#">Nulla sed libero</a></h2>
+                                <div class="pro-rating">
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                    <a href="#"><i class="fa fa-star"></i></a>
+                                </div>
+                                <div class="price-box">
+                                    <span class="new-price">£120.00</span>
+                                    <span class="old-price">£140.00</span>
+                                </div>
+
                                     <img class="primary-image" src="<?= $list['thumbnail'] ?>" alt="" />
 
                                 </a>
+
                             </div>
                             <div class="product-content">
                                 <div class="pro-info">
