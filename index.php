@@ -83,6 +83,7 @@ switch ($url) {
     case 'chitietsp':
         require_once './client/business/dashboard.php';
         chitiet();
+
         break;
     case 'tintuc':
         require_once './client/business/dashboard.php';
@@ -195,6 +196,7 @@ switch ($url) {
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         update_user();
+        break;
 
         // require_once './admin/business/user.php';
         // update_user();
@@ -260,11 +262,13 @@ switch ($url) {
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/user.php';
         user_remove();
+        break;
         //aa
     case 'my-user':
         checkAuth([ADMIN_ROLE, STAFF_ROLE, USER_ROLE]);
         require_once './client/business/taikhoan.php';
         my_user();
+        break;
         //aa
     case 'my-user/edit':
         require_once './client/business/taikhoan.php';
