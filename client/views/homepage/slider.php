@@ -57,7 +57,11 @@
                                                 <span class="sale-text">Sale</span>
                                                 <div class="product-img">
                                                     <a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
+<<<<<<< Updated upstream
                                                         <img style="width: 255px; height: 327px" class="primary-image" src="<?= $item['thumbnail'] ?>" alt="" />
+=======
+                                                        <img class="primary-image" src="<?= IMAGE_URL?><?= $item['thumbnail'] ?>" alt="" />
+>>>>>>> Stashed changes
                                                     </a>
                                                     <div class="actions">
                                                         <div class="action-buttons">
@@ -772,7 +776,11 @@
                             <span class="sale-text">Sale</span>
                             <div class="product-img">
                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $newitem['id'] ?>">
+<<<<<<< Updated upstream
                                     <img style="width: 255px; height: 327px" class="primary-image" src="<?= $newitem['thumbnail'] ?>" alt="" />
+=======
+                                    <img class="primary-image" src="<?= IMAGE_URL?><?= $newitem['thumbnail'] ?>" alt="" />
+>>>>>>> Stashed changes
                                 </a>
                                 <div class="actions">
                                     <div class="action-buttons">
@@ -831,6 +839,7 @@
         <div class="row">
             <div class="top-sells-curosel">
                 <!-- single-product start -->
+<<<<<<< Updated upstream
                 <div class="col-12">
                     <div class="single-product first-sells">
                         <div class="product-img">
@@ -853,6 +862,17 @@
                                     <span class="new-price">£90.00</span>
                                     <span class="old-price">£120.00</span>
                                 </div>
+=======
+                <?php foreach ($listSale as $list) : ?>
+
+                    <div class="col-12">
+                        <div class="single-product first-sells">
+                            <div class="product-img">
+                                <a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>">
+                                    <img class="primary-image" src="<?= IMAGE_URL?><?= $list['thumbnail'] ?>" alt="" />
+
+                                </a>
+>>>>>>> Stashed changes
                             </div>
                             <div class="actions">
                                 <div class="action-buttons">
@@ -928,6 +948,7 @@
                                 </div>
                             </div>
                         </div>
+<<<<<<< Updated upstream
                     </div>
                     <div class="single-product">
                         <div class="product-img">
@@ -949,6 +970,14 @@
                                 <div class="price-box">
                                     <span class="new-price">£50.00</span>
                                 </div>
+=======
+                        <div class="single-product">
+                            <div class="product-img">
+                                <a href="<?= BASE_URL . 'chitietsp?id=' . $list['id'] ?>">
+                                    <img class="primary-image" src="<?= IMAGE_URL?><?= $list['thumbnail'] ?>" alt="" />
+
+                                </a>
+>>>>>>> Stashed changes
                             </div>
                             <div class="actions">
                                 <div class="action-buttons">
@@ -991,6 +1020,7 @@
                                         <a href="#">Add to cart</a>
                                     </div>
                                 </div>
+<<<<<<< Updated upstream
                             </div>
                         </div>
                     </div>
@@ -1020,6 +1050,13 @@
                                 <div class="action-buttons">
                                     <div class="add-to-cart">
                                         <a href="#">Add to cart</a>
+=======
+                                <div class="actions">
+                                    <div class="action-buttons">
+                                        <div class="add-to-cart">
+                                            <a href="<?= BASE_URL . 'add-to-cart?id=' . $list['id'] ?>">THÊM GIỎ HÀNG</a>
+                                        </div>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
                             </div>

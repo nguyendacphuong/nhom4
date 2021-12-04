@@ -33,6 +33,27 @@ function tintucchitiet_index(){
     client_render('homepage/tintucchitiet.php', compact( 'itemct')); 
 }
 
+<<<<<<< Updated upstream
+=======
+function list_product()
+{
+    $sql = "SELECT * FROM category";
+    $list = select_page($sql);
+    $sql = "SELECT * FROM brand";
+    $thuonghieu = select_page($sql);
+
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $sql = "SELECT * FROM product   where category_id = '$id'";
+    } else {
+        $value = isset($_GET['timkiem']) ? $_GET['timkiem'] : "";
+        $sql = "SELECT * FROM product INNER JOIN brand ON product.brand_id = brand.id WHERE 
+        title like '%$value%'
+        OR price LIKE '%$value%' 
+         ";
+    }
+    $items = select_page($sql);
+>>>>>>> Stashed changes
 
 function quan(){
     client_render('homepage/quan.php'); 
@@ -42,8 +63,30 @@ function ao(){
 }
 function nam(){
     $sql = "SELECT * FROM category";
+<<<<<<< Updated upstream
     $listRecord = select_page($sql);
     client_render('layouts/header.php', compact('listRecord')); 
+=======
+    $list = select_page($sql);
+    $sql = "SELECT * FROM brand";
+    $thuonghieu = select_page($sql);
+
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $sql = "SELECT * FROM product   where brand_id = '$id'";
+    } else {
+        $value = isset($_GET['timkiem']) ? $_GET['timkiem'] : "";
+        $sql = "SELECT * FROM product INNER JOIN brand ON product.brand_id = brand.id WHERE 
+        title like '%$value%'
+        OR price LIKE '%$value%' 
+         ";
+    }
+    $items = select_page($sql);
+
+    $sql = "SELECT * FROM product  ORDER BY view desc limit 6";
+    $viewss = select_page($sql);
+    client_render('homepage/thuonghieu.php', compact('items', 'list', 'viewss', 'thuonghieu'));
+>>>>>>> Stashed changes
 }
 function nu(){
     client_render('homepage/nu.php'); 

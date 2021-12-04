@@ -14,6 +14,7 @@
 
 						</div>
 					</div>
+<<<<<<< Updated upstream
 					<!-- header-top-left end -->
 					<!-- header-top-right start -->
 					<div class="col-lg-6 col-md-6 col-sm-12">
@@ -44,6 +45,40 @@
 								</ul>
 							</div>
 						</div>
+=======
+				</div>
+				<!-- header-top-right end -->
+			</div>
+		</div>
+	</div>
+	<!-- header-top-area end -->
+	<!-- header-mid-area start -->
+	<div class="header-mid-area">
+		<div class="container">
+			<div class="row">
+				<!-- logo start -->
+				<div class="col-lg-6 col-md-4 col-sm-12">
+					<div class="logo">
+						<a href="<?= BASE_URL ?>"><img src="<?= CLIENT_ASSET ?>img/logo/logo.png" alt="" /></a>
+					</div>
+				</div>
+				<!-- logo end -->
+				<div class="col-lg-6 col-md-8 col-sm-12">
+					<!-- cart-total start -->
+					<div class="cart-total">
+						<ul>
+							<li><a href="<?= BASE_URL . 'check-out'?>"><span class="cart-icon"><i class="fa fa-shopping-cart"></i></span> <span class="cart-no">Giỏ Hàng: (<?= countCartNumber() ?>)</span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- cart-total end -->
+					<!-- header-search start -->
+					<div class="header-search">
+						<form action="<?=BASE_URL.'category'?>">
+							<input type="text" placeholder="Tìm Kiểm Sản Phẩm..." name="timkiem" />
+							<button type="submit"><i class="fa fa-search"></i></button>
+						</form>
+>>>>>>> Stashed changes
 					</div>
 					<!-- header-top-right end -->
 				</div>

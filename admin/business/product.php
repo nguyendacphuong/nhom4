@@ -60,9 +60,10 @@ function cate_save_add()
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
-        $img = PUBLIC_URL . $filename;
+      
     }
 
+<<<<<<< Updated upstream
 
     $sql = " INSERT INTO product (title,price,discount,thumbnail,description,category_id,created_at,updated_at) values
      ('$title','$price','$discount','$img','$description','$category_id',' $created_at','$updated_at')";
@@ -96,6 +97,10 @@ function cate_save_add()
 
     $sql = " INSERT INTO product (title,price,discount,thumbnail,image1,image2,image3,image4,description,number,category_id,brand_id,status,created_at,updated_at) values
      ('$title','$price','$discount','$img','$img1','$img2','$img3','$img4','$description','$number','$category_id','$brand_id','$status',' $created_at','$updated_at')";
+=======
+    $sql = " INSERT INTO product (title,price,discount,thumbnail,description,number,category_id,brand_id,status,created_at,updated_at) values
+     ('$title','$price','$discount','$filename','$description','$number','$category_id','$brand_id','$status',' $created_at','$updated_at')";
+>>>>>>> Stashed changes
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'sanpham');
 }
