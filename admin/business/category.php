@@ -116,10 +116,10 @@ function slide_save_add()
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
-        $img = PUBLIC_URL . $filename;
+        
     }
   
-    $sql = " INSERT INTO slideshow (slide_name,slideshow_img) values ('$slide_name','$img')";
+    $sql = " INSERT INTO slideshow (slide_name,slideshow_img) values ('$slide_name','$filename')";
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'slide');
 }
@@ -150,46 +150,46 @@ function slide_update_form()
             $filename = uniqid() . '-' . $file['name'];
             move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
             $filename = 'uploads/' . $filename;
-            $img = PUBLIC_URL . $filename;
+           
         }
-    $sql = " UPDATE slideshow set slide_name = '$slide_name',slideshow_img = '$img' where id = $id";
+    $sql = " UPDATE slideshow set slide_name = '$slide_name',slideshow_img = '$filename' where id = $id";
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'slide');
 }
 
-function brand_remove()
-{
-    $id = $_GET['id'];
-    $sql = "delete from brand where id = $id";
-    executeQuery($sql);
-    header("location: " . ADMIN_URL . 'thuong-hieu');
-}
-function brand_edit_form()
-{
-    $id = isset($_GET['id']) ? $_GET['id'] : "";
-    // lấy danh sách danh mục
-    $sql = "select * from brand where id = $id";
-    $cates = executeQuery($sql);
+// function brand_remove()
+// {
+//     $id = $_GET['id'];
+//     $sql = "delete from brand where id = $id";
+//     executeQuery($sql);
+//     header("location: " . ADMIN_URL . 'thuong-hieu');
+// }
+// function brand_edit_form()
+// {
+//     $id = isset($_GET['id']) ? $_GET['id'] : "";
+//     // lấy danh sách danh mục
+//     $sql = "select * from brand where id = $id";
+//     $cates = executeQuery($sql);
 
-    // hiển thị view
-    admin_render('category/brand-edit.php', compact('cates'), 'admin-assets/custom/category_index.js');
-}
-function brand_update_form()
-{
-    $id = $_POST['id'];
-    $name_brand = $_POST['name_brand'];
-    $image = $_FILES['image'];
-    $filename = "";
-    if ($image['size'] > 0) {
-        $filename = uniqid() . '-' . $image['name'];
-        move_uploaded_file($image['tmp_name'], './public/uploads/' . $filename);
-        $filename = 'uploads/' . $filename;
-        $img = PUBLIC_URL . $filename;
-    }
-    $show_menu = isset($_POST['show_menu']) ? 1 : 0;
-    $sql = " UPDATE brand set name_brand = '$name_brand', image = '$img',show_menu = '$show_menu' where id = $id";
-    executeQuery($sql);
-    header("location: " . ADMIN_URL . 'thuong-hieu');
-}
+//     // hiển thị view
+//     admin_render('category/brand-edit.php', compact('cates'), 'admin-assets/custom/category_index.js');
+// }
+// function brand_update_form()
+// {
+//     $id = $_POST['id'];
+//     $name_brand = $_POST['name_brand'];
+//     $image = $_FILES['image'];
+//     $filename = "";
+//     if ($image['size'] > 0) {
+//         $filename = uniqid() . '-' . $image['name'];
+//         move_uploaded_file($image['tmp_name'], './public/uploads/' . $filename);
+//         $filename = 'uploads/' . $filename;
+//         $img = PUBLIC_URL . $filename;
+//     }
+//     $show_menu = isset($_POST['show_menu']) ? 1 : 0;
+//     $sql = " UPDATE brand set name_brand = '$name_brand', image = '$img',show_menu = '$show_menu' where id = $id";
+//     executeQuery($sql);
+//     header("location: " . ADMIN_URL . 'thuong-hieu');
+// }
 
 ?>

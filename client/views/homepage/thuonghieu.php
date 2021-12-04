@@ -111,7 +111,7 @@
 										</div>
 									</div>
 									<div class="product-content">
-										<h2 class="product-name"><a href="#"><?= $item['title'] ?></a></h2>
+										<h2 class="product-name"><a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>"><?= $item['title'] ?></a></h2>
 										<div class="pro-rating">
 											<a href="#"><i class="fa fa-star"></i></a>
 											<a href="#"><i class="fa fa-star"></i></a>
