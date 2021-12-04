@@ -73,9 +73,9 @@ function news_update_form()
             $filename = uniqid() . '-' . $file['name'];
             move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
             $filename = 'uploads/' . $filename;
-            $img = PUBLIC_URL . $filename;
+            
         }
-    $sql = " UPDATE news set news_name = '$news_name',content = '$content',news_img = '$img' where id = $id";
+    $sql = " UPDATE news set news_name = '$news_name',content = '$content',news_img = '$filename' where id = $id";
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'news');
 }

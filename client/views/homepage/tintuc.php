@@ -44,7 +44,7 @@
                    
                         <div class="post-thumbnail">
                            
-                            <a href="#"><img src="<?=$newitem['news_img']?>" alt="" /></a>
+                            <a href="#"><img src="<?=IMAGE_URL?><?=$newitem['news_img']?>" alt="" /></a>
                         
                         </div>
                         <div class="post-information">
