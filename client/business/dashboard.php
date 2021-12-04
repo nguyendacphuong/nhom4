@@ -109,10 +109,6 @@ function list_product()
 function thuonghieu()
 {
     $sql = "SELECT * FROM category";
-
-    $listRecord = select_page($sql);
-    client_render('layouts/header.php', compact('listRecord')); 
-
     $list = select_page($sql);
     $sql = "SELECT * FROM brand";
     $thuonghieu = select_page($sql);

@@ -59,7 +59,7 @@
                         <div class="entry-content">
                             
                             <div class="post-thumbnail">
-                                <img src="<?= $itemct[0]['news_img'] ?>" alt="" />
+                                <img src="<?=IMAGE_URL?><?= $itemct[0]['news_img'] ?>" alt="" />
                             </div>
                             <br>
                             <p><?= $itemct[0]['content'] ?></p>
