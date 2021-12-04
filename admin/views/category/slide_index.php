@@ -25,20 +25,14 @@
                     <tbody>
 
                         <?php foreach ($cates as $index => $item) :
-                         $hinha =  $item['slideshow_img'];
-                         if (empty($hinha)) {
-                            $hinh = "không có";
-                         } else {
-                             
-                             $hinh = "<img src='" . $hinha . "' height = '80px'>";
-                         }
+                         
                     
                             ?>
                             
                             <tr>
                                 <td><?= $index + 1 ?></td>
                                 <td><?= $item['slide_name'] ?></td>
-                                <td><?= $hinh?></td>
+                                <td><img src="<?=IMAGE_URL . $item['slideshow_img'] ?> " with="150px" height="100px" alt=""></td>
                                 
                                 <td>
                                     <a href="<?= ADMIN_URL . 'slide/capnhat?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
