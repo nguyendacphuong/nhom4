@@ -221,37 +221,10 @@
                             </div>
                         </div>
 
-                        </div>
-                    </div>						
-                </div>
-                <div class="clear"></div>
-                <div class="upsells_products_widget">
-                    <div class="section-heading">
-                        <h3>Up-Sells</h3>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-12">
-                    <!-- widget-recent start -->
-                    <aside class="widget top-product-widget">
-                        <h3 class="sidebar-title">SẢN PHẨM CÙNG LOẠI</h3>
-                        <ul>
-                            <?php foreach ($itemcungloais as $itemcungloai) : ?>
-                                <li>
-                                    <div class="single-product">
-                                        <div class="product-img">
-                                            <a href="<?= BASE_URL . 'chitietsp?id=' . $itemcungloai['id'] ?>">
-                                                <img class="primary-image" src="<?= $itemcungloai['thumbnail'] ?>" alt="" />
-                                            </a>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="pro-info">
-                                                <h2 class="product-name"><a href="<?= BASE_URL . 'chitietsp?id=' . $itemcungloai['id'] ?>"><?= $itemcungloai['title'] ?></a></h2>
-                                                <div class="price-box">
-                                                    <span class="new-price"><?= $itemcungloai['price'] ?>đ</span>
-                                                    <span class="old-price"><?= $itemcungloai['discount'] ?>đ</span>
-                                                </div>
-
             </div>
+           
             <div class="col-lg-3 col-md-12">
                 <!-- widget-recent start -->
                 <aside class="widget top-product-widget">
@@ -262,7 +235,7 @@
                                 <div class="single-product">
                                     <div class="product-img">
                                         <a href="<?= BASE_URL . 'chitietsp?id=' . $itemcungloai['id'] ?>">
-                                            <img class="primary-image" src="<?= IMAGE_URL ?><?= $itemcungloai['thumbnail'] ?>" alt="" />
+                                            <img class="primary-image" src="<?=IMAGE_URL?><?= $itemcungloai['thumbnail'] ?>" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-content">
@@ -271,12 +244,12 @@
                                             <div class="price-box">
                                                 <span class="new-price"><?= $itemcungloai['price'] ?>đ</span>
                                                 <span class="old-price"><?= $itemcungloai['discount'] ?>đ</span>
-
                                             </div>
-                                        </div>
-                                    </div>
 
-                                </div>
+                                        </div>
+                                      
+
+
                             </li>
                         <?php endforeach ?>
 
@@ -284,93 +257,84 @@
                 </aside>
                 <!-- widget-recent end -->
             </div>
-
-
-                                </li>
-                            <?php endforeach ?>
-
-                        </ul>
-                    </aside>
-                    <!-- widget-recent end -->
-                </div>
-            </div>
-
         </div>
-    </div>
 
-    <!-- brand-area start -->
-    <div class="brand-area">
-        <div class="container">
-            <!-- section-heading start -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-heading">
-                        <h3>Our Brands</h3>
-                    </div>
-                </div>
-            </div>
-            <!-- section-heading end -->
-            <div class="row">
-                <div class="brand-curosel">
-                    <!-- single-brand start -->
-                    <div class="col-12">
-                        <div class="single-brand">
-                            <a href="#"><img src="img/brand/1.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <!-- single-brand end -->
-                    <!-- single-brand start -->
-                    <div class="col-12">
-                        <div class="single-brand">
-                            <a href="#"><img src="img/brand/1.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <!-- single-brand end -->
-                    <!-- single-brand start -->
-                    <div class="col-12">
-                        <div class="single-brand">
-                            <a href="#"><img src="img/brand/1.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <!-- single-brand end -->
-                    <!-- single-brand start -->
-                    <div class="col-12">
-                        <div class="single-brand">
-                            <a href="#"><img src="img/brand/1.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <!-- single-brand end -->
-                    <!-- single-brand start -->
-                    <div class="col-12">
-                        <div class="single-brand">
-                            <a href="#"><img src="img/brand/1.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <!-- single-brand end -->
-                    <!-- single-brand start -->
-                    <div class="col-12">
-                        <div class="single-brand">
-                            <a href="#"><img src="img/brand/1.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <!-- single-brand end -->
-                    <!-- single-brand start -->
-                    <div class="col-12">
-                        <div class="single-brand">
-                            <a href="#"><img src="img/brand/1.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <!-- single-brand end -->
-                    <!-- single-brand start -->
-                    <div class="col-12">
-                        <div class="single-brand">
-                            <a href="#"><img src="img/brand/1.png" alt="" /></a>
-                        </div>
-                    </div>
-                    <!-- single-brand end -->
+    </div>
+</div>
+
+<!-- brand-area start -->
+<div class="brand-area">
+    <div class="container">
+        <!-- section-heading start -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-heading">
+                    <h3>Our Brands</h3>
                 </div>
             </div>
         </div>
+        <!-- section-heading end -->
+        <div class="row">
+            <div class="brand-curosel">
+                <!-- single-brand start -->
+                <div class="col-12">
+                    <div class="single-brand">
+                        <a href="#"><img src="img/brand/1.png" alt="" /></a>
+                    </div>
+                </div>
+                <!-- single-brand end -->
+                <!-- single-brand start -->
+                <div class="col-12">
+                    <div class="single-brand">
+                        <a href="#"><img src="img/brand/1.png" alt="" /></a>
+                    </div>
+                </div>
+                <!-- single-brand end -->
+                <!-- single-brand start -->
+                <div class="col-12">
+                    <div class="single-brand">
+                        <a href="#"><img src="img/brand/1.png" alt="" /></a>
+                    </div>
+                </div>
+                <!-- single-brand end -->
+                <!-- single-brand start -->
+                <div class="col-12">
+                    <div class="single-brand">
+                        <a href="#"><img src="img/brand/1.png" alt="" /></a>
+                    </div>
+                </div>
+                <!-- single-brand end -->
+                <!-- single-brand start -->
+                <div class="col-12">
+                    <div class="single-brand">
+                        <a href="#"><img src="img/brand/1.png" alt="" /></a>
+                    </div>
+                </div>
+                <!-- single-brand end -->
+                <!-- single-brand start -->
+                <div class="col-12">
+                    <div class="single-brand">
+                        <a href="#"><img src="img/brand/1.png" alt="" /></a>
+                    </div>
+                </div>
+                <!-- single-brand end -->
+                <!-- single-brand start -->
+                <div class="col-12">
+                    <div class="single-brand">
+                        <a href="#"><img src="img/brand/1.png" alt="" /></a>
+                    </div>
+                </div>
+                <!-- single-brand end -->
+                <!-- single-brand start -->
+                <div class="col-12">
+                    <div class="single-brand">
+                        <a href="#"><img src="img/brand/1.png" alt="" /></a>
+                    </div>
+                </div>
+                <!-- single-brand end -->
+            </div>
+        </div>
     </div>
-    <!-- brand-area end -->
+</div>
+<!-- brand-area end -->
 </div>
