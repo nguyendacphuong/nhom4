@@ -131,7 +131,7 @@ function thuonghieu()
 
 }
 
-
+// yêu thích sản phẩm 
 function favorite_profuct()
 {
     $sql = "select yt.*, pr.title, pr.thumbnail, pr.price,pr.status from favorite_products yt join product pr on pr.id = yt.product_id join user us on yt.user_id = us.id where 1 order by id ASC";
