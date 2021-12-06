@@ -27,9 +27,9 @@
 										<td class="product-thumbnail"><a href="#"><img src="<?= IMAGE_URL ?><?= $item['thumbnail'] ?>" alt="" /></a></td>
 										<td class="product-name"><a href="#"></a><?= $item['title'] ?></td>
 										<td class="product-price"><span class="amount"><?= $item['discount'] ?></span>$</td>
-										<td class="product-quantity"><input type="number" value="<?= $item['quantity'] ?>" /></td>
+										<td class="product-quantity"><input type="number" name="quantity" value="<?= $item['quantity'] ?>" /></td>
 										<td class="product-subtotal"><?= $item['discount'] * $item['quantity'] ?>$</td>
-										<td class="product-remove"><a href="<?= BASE_URL . 'remove?id=' . $item['id'] ?>"><i class="fa fa-times"></i></a></td>
+										<td class="product-remove"> <a href="<?= BASE_URL . 'remove?id=' . $item['id'] ?>"><i class="fa fa-times"></i> </a></td>
 										<?php $totalPrice += $item['discount'] * $item['quantity'] ?>
 									</tr>
 								<?php endforeach; ?>
@@ -45,8 +45,8 @@
 					<div class="row">
 						<div class="col-md-8 col-sm-12">
 							<div class="buttons-cart">
-								<input type="hidden" name="id" id="" value="">
-								<input type="submit" name="quantity" value="Update Cart" />
+								<input type="hidden" name="id" id="" value="<?= $item['id'] ?>">
+								<input type="submit" name="update" value="Update Cart" />
 								<a href="<?= BASE_URL . 'check-out1' ?>">Tiếp tục </a>
 							</div>
 

@@ -48,10 +48,10 @@
                     <div class="stock-status">
                         <label>Availability</label>: <strong>In stock</strong>
                     </div>
-                    <form action="<?= BASE_URL . 'add-to-cart' ?>">
+                    <form action="">
                         <div class="quantity">
                             <input type="number" value="1" />
-                            <button type="submit">THÊM GIỎ HÀNG</button>
+                            <BUtton><a href="<?= BASE_URL . 'add-to-cart?id=' . $item[0]['id'] ?>">THÊM GIỎ HÀNG</a> </BUtton>
                         </div>
                     </form>
                     <div class="add-to-wishlist">
@@ -177,7 +177,7 @@
                                                 <div class="actions">
                                                     <div class="action-buttons">
                                                         <div class="add-to-cart">
-                                                            <a href="#">THÊM GIỎ HÀNG</a>
+                                                            <a href="<?= BASE_URL . 'add-to-cart?id=' . $itemcungloai['id'] ?>">THÊM GIỎ HÀNG</a>
                                                         </div>
                                                         <div class="add-to-links">
                                                             <div class="add-to-wishlist">

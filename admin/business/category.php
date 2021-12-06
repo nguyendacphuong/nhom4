@@ -191,3 +191,5 @@ function brand_update_form()
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'thuong-hieu');
 }
+
+?>
