@@ -39,7 +39,7 @@
                       <td class="product-name"><a href="<?= BASE_URL . 'chitietsp?id=' . $item['product_id'] ?>"><?= $item['title'] ?></a></td>
                       <td class="product-price"><span class="amount"><?= number_format($item['price']) ?>đ</span></td>
                       <td class="product-stock-status"><?= $item['status'] == 1 ? "Còn hàng" : "Hết hàng" ?></td>
-                      <td class="product-add-to-cart"><a href="#"> Add to Cart</a></td>
+                      <td class="product-add-to-cart"><a href="<?= BASE_URL . 'add-to-cart?id=' . $item['id'] ?>"> Add to Cart</a></td>
                     </tr>
                   <?php endforeach; ?>
                 </tbody>

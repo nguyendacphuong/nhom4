@@ -314,10 +314,19 @@ switch ($url) {
         require_once './client/business/homepage.php';
         checkout();
         break;
+    case 'remove':
+        require_once './client/business/homepage.php';
+        remove();
+        break;
+    case 'camon':
+        require_once './client/business/homepage.php';
+        camon();
+        break;
     case 'check-out1':
         require_once './client/business/homepage.php';
         checkout1();
         break;
+   
     case 'pay-cart':
         require_once './client/business/homepage.php';
         paycart();
