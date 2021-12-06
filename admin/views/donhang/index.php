@@ -44,7 +44,7 @@
 				                        <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
 				                            <a href="#" style="color: blue;" class="dropdown-item"><i class="la la-eye"></i>Xem chi tiết</a>
 				                            <a href="#" style="color: green ;" class="dropdown-item"><i class="la la-check"></i>Xác Nhận</a>
-				                            <a href="javascript:;" onclick="lydohuy('<?= $item['reason']?>')" style="color: red;" class="dropdown-item"><i class="la la-trash"></i>Hủy đơn hàng</a>
+				                            <a href="#" style="color: black ;" class="dropdown-item"><i class="la la-check"></i>Hủy đơn hàng</a>
 				                            <a href="#" style="color: black;" class="dropdown-item"><i class="la la-trash"></i>Giao Hàng Thành Công</a>
 				                        </span>
 				                    </span>
