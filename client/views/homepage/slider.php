@@ -3,7 +3,7 @@
         <div class="fullwidthbanner">
             <ul>
                 <?php foreach ($itemsl as $newitem) : ?>
-                    <li data-transition="parallaxtoright,parallaxtoleft" data-slotamount="7" data-masterspeed="600" data-saveperformance="off"> <img src="<?= IMAGE_URL ?><?= $newitem['slideshow_img'] ?>" alt="banner_slider02" data-bgposition="left bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
+                    <li data-transition="parallaxtoright,parallaxtoleft" data-slotamount="7" data-masterspeed="600" data-saveperformance="off"> <img src="<?= IMAGE_URL . $newitem['slideshow_img'] ?>" alt="banner_slider02" data-bgposition="left bottom" data-bgfit="cover" data-bgrepeat="no-repeat">
                         <div class="tp-caption customin" data-x="304" data-y="111" data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:3;scaleY:3;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;" data-speed="1000" data-start="1500" data-easing="easeInOutExpo" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 5;"><img src="<?= CLIENT_ASSET ?>img/slider/slider-1/slider-text-1.png" alt="">
                         </div>
 
@@ -58,7 +58,7 @@
                                                 <div class="product-img">
                                                     <a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
 
-                                                        <img class="primary-image" src="<?= IMAGE_URL ?><?= $item['thumbnail'] ?>" alt="" />
+                                                        <img class="primary-image" src="<?= IMAGE_URL . $item['thumbnail'] ?>" alt="" />
 
 
                                                     </a>
@@ -150,9 +150,7 @@
                             <span class="sale-text">Sale</span>
                             <div class="product-img">
                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $newitem['id'] ?>">
-
-                                    <img class="primary-image" src="<?= IMAGE_URL ?><?= $newitem['thumbnail'] ?>" alt="" />
-
+                                    <img class="primary-image" src="<?= IMAGE_URL . $newitem['thumbnail'] ?>" alt="" />
                                 </a>
                                 <div class="actions">
                                     <div class="action-buttons">
@@ -228,15 +226,15 @@
         <!-- section-heading end -->
 
         <div class="row">
-            
-                <div class="top-sells-curosel">
-                    <!-- single-product start -->
-                    <?php foreach ($listSale as $item) : ?>
+
+            <div class="top-sells-curosel">
+                <!-- single-product start -->
+                <?php foreach ($listSale as $item) : ?>
                     <div class="col-12">
                         <div class="single-product first-sells">
                             <div class="product-img">
                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
-                                    <img class="primary-image" src="<?= IMAGE_URL ?><?= $item['thumbnail'] ?>" alt="" />
+                                    <img class="primary-image" src="<?= IMAGE_URL . $item['thumbnail'] ?>" alt="" />
 
                                 </a>
                             </div>
@@ -267,7 +265,7 @@
                         <div class="single-product">
                             <div class="product-img">
                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $newitem['id'] ?>">
-                                    <img class="primary-image" src="<?= IMAGE_URL ?><?= $item['thumbnail'] ?>" alt="" />
+                                    <img class="primary-image" src="<?= IMAGE_URL . $item['thumbnail'] ?>" alt="" />
 
                                 </a>
                             </div>
@@ -301,7 +299,7 @@
                 <!-- single-product start -->
 
                 <!-- single-product end -->
-                </div>
+            </div>
         </div>
     </div>
 </div>

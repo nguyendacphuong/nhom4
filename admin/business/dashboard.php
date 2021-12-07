@@ -1,11 +1,14 @@
 <?php
 require_once './dao/system_dao.php';
-function dashboard_index(){
+function dashboard_index()
+{
     $totalProduct = rand(100, 999);
     $totalProfit = rand(1000, 500000);
     $totalCustomer = rand(50, 20000);
-    admin_render('dashboard/index.php', 
-        compact('totalProduct', 'totalProfit', 'totalCustomer')); 
+    admin_render(
+        'dashboard/index.php',
+        compact('totalProduct', 'totalProfit', 'totalCustomer')
+    );
 }
 
 function news_index()
@@ -20,8 +23,8 @@ function news_index()
 }
 function news_add()
 {
- 
-    admin_render('news/add_form.php',[], 'admin-assets/custom/product_add.js');
+
+    admin_render('news/add_form.php', [], 'admin-assets/custom/product_add.js');
 }
 
 function news_save_add()
@@ -31,16 +34,16 @@ function news_save_add()
     $content = $_POST['content'];
     $update_at = $created_at = date('Y-m-d H:s:i');
     $file = $_FILES['news_img'];
-    
+
     $filename = "";
-    
+
     if ($file['size'] > 0) {
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
         $img = PUBLIC_URL . $filename;
     }
-  
+
     $sql = " INSERT INTO news (news_name,news_img,content,update_at,created_at) values ('$news_name','$img','$content','$update_at','$created_at')";
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'news');
@@ -68,15 +71,30 @@ function news_update_form()
     $news_name = $_POST['news_name'];
     $content = $_POST['content'];
     $file = $_FILES['news_img'];
-        $filename = "";
-        if ($file['size'] > 0) {
-            $filename = uniqid() . '-' . $file['name'];
-            move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
-            $filename = 'uploads/' . $filename;
-            
-        }
+    $filename = "";
+    if ($file['size'] > 0) {
+        $filename = uniqid() . '-' . $file['name'];
+        move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
+        $filename = 'uploads/' . $filename;
+    }
     $sql = " UPDATE news set news_name = '$news_name',content = '$content',news_img = '$filename' where id = $id";
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'news');
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

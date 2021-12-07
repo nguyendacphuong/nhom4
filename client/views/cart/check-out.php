@@ -35,13 +35,13 @@
                             </div>
 
                         </div>
-                            <div class="order-notes">
-                                <div class="checkout-form-list">
-                                    <label>Ghi chú</label>
-                                    <textarea id="checkout-mess" name="note" cols="30" rows="10" placeholder="Ghi chú"></textarea>
-                                </div>
+                        <div class="order-notes">
+                            <div class="checkout-form-list">
+                                <label>Ghi chú</label>
+                                <textarea id="checkout-mess" name="note" cols="30" rows="10" placeholder="Ghi chú"></textarea>
                             </div>
-                        
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
@@ -73,7 +73,7 @@
                                     </tbody>
                                 <?php endforeach; ?>
                                 <tfoot>
-                                    
+
 
                                     <tr class="order-total">
                                         <th>Order Total</th>
@@ -84,7 +84,7 @@
                             </table>
                         </div>
                         <div class="payment-method">
-
+                            
                             <div class="order-button-payment">
                                 <input type="submit" value="Thanh toán" />
                             </div>

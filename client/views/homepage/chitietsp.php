@@ -22,10 +22,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="single-product-image">
-
-                    <a href="#"><img src="<?= IMAGE_URL ?><?= $item[0]['thumbnail'] ?>" alt="" /></a>
-
-
+                    <a href="#"><img src="<?= IMAGE_URL . $item[0]['thumbnail'] ?>" alt="" /></a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -51,10 +48,10 @@
                     <div class="stock-status">
                         <label>Availability</label>: <strong>In stock</strong>
                     </div>
-                    <form action="<?= BASE_URL . 'add-to-cart' ?>">
+                    <form action="">
                         <div class="quantity">
                             <input type="number" value="1" />
-                            <button type="submit">THÊM GIỎ HÀNG</button>
+                            <BUtton><a href="<?= BASE_URL . 'add-to-cart?id=' . $item[0]['id'] ?>">THÊM GIỎ HÀNG</a> </BUtton>
                         </div>
                     </form>
                     <div class="add-to-wishlist">
@@ -180,7 +177,7 @@
                                                 <div class="actions">
                                                     <div class="action-buttons">
                                                         <div class="add-to-cart">
-                                                            <a href="#">THÊM GIỎ HÀNG</a>
+                                                            <a href="<?= BASE_URL . 'add-to-cart?id=' . $itemcungloai['id'] ?>">THÊM GIỎ HÀNG</a>
                                                         </div>
                                                         <div class="add-to-links">
                                                             <div class="add-to-wishlist">
@@ -224,7 +221,7 @@
                     </div>
                 </div>
             </div>
-           
+
             <div class="col-lg-3 col-md-12">
                 <!-- widget-recent start -->
                 <aside class="widget top-product-widget">
@@ -235,7 +232,7 @@
                                 <div class="single-product">
                                     <div class="product-img">
                                         <a href="<?= BASE_URL . 'chitietsp?id=' . $itemcungloai['id'] ?>">
-                                            <img class="primary-image" src="<?=IMAGE_URL?><?= $itemcungloai['thumbnail'] ?>" alt="" />
+                                            <img class="primary-image" src="<?= IMAGE_URL ?><?= $itemcungloai['thumbnail'] ?>" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-content">
@@ -247,7 +244,7 @@
                                             </div>
 
                                         </div>
-                                      
+
 
 
                             </li>
