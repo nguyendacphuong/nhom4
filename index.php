@@ -4,6 +4,9 @@ $url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : "/";
 require_once './commons/utils.php';
 require_once './dao/system_dao.php';
 require_once 'globol.php';
+require_once './vendor/PHPMailer/src/Exception.php';
+require_once './vendor/PHPMailer/src/PHPMailer.php';
+require_once './vendor/PHPMailer/src/SMTP.php';
 switch ($url) {
     case '/':
         require_once './client/business/dashboard.php';
@@ -346,6 +349,12 @@ switch ($url) {
         break;
         // <<==================================================================== >>
 
+        // <<======================== SẢN PHẨM YÊU THÍCH ======================== >>
+    case 'send-email-form':
+        require_once './admin/business/lienhe.php';
+        email_form();
+        break;
+        // <<==================================================================== >>
     default:
         # code...
         break;
