@@ -128,7 +128,6 @@ function thuonghieu()
     $sql = "SELECT * FROM product  ORDER BY view desc limit 6";
     $viewss = select_page($sql);
     client_render('homepage/thuonghieu.php', compact('items', 'list', 'viewss', 'thuonghieu'));
-
 }
 
 // yêu thích sản phẩm 
@@ -136,7 +135,11 @@ function favorite_profuct()
 {
     $sql = "select yt.*, pr.title, pr.thumbnail, pr.price,pr.status from favorite_products yt join product pr on pr.id = yt.product_id join user us on yt.user_id = us.id where 1 order by id ASC";
     $favorite = executeQuery($sql, true);
-    client_render('favorite_profuct/favorite_profuct.php', compact('favorite'));
+    $sql = "SELECT * FROM category";
+    $list = select_page($sql);
+    $sql = "SELECT * FROM brand";
+    $thuonghieu = select_page($sql);
+    client_render('favorite_profuct/favorite_profuct.php', compact('favorite', 'list', 'thuonghieu'));
 }
 
 function add_favorite_profuct()
