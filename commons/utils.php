@@ -1,6 +1,6 @@
 <?php
 
-const BASE_URL = "http://localhost/nhom4/";
+const BASE_URL = "http://localhost:81/nhom4/";
 const PUBLIC_URL = BASE_URL . 'public/';
 const ADMIN_URL = BASE_URL . 'cp-admin/';
 const ADMIN_ASSET = BASE_URL . 'public/admin-assets/';
@@ -11,31 +11,34 @@ const USER_ROLE = 2;
 const STAFF_ROLE = 3;
 
 
-function dd(){
+function dd()
+{
     $data = func_get_args();
     echo "<pre>";
-    foreach($data as $item){
+    foreach ($data as $item) {
         var_dump($item);
     }
     echo "</pre>";
-
 }
 
-function client_render($view, $data = []){
+function client_render($view, $data = [])
+{
     extract($data);
     $view = './client/views/' . $view;
     include_once "./client/views/layouts/main.php";
 }
 
 
-function admin_render($view, $data = [], $jsFile = null){
+function admin_render($view, $data = [], $jsFile = null)
+{
     extract($data);
     $view = './admin/views/' . $view;
     include_once "./admin/views/layouts/main.php";
 }
 
-function getFavoriteProducts(){
-    if(!isset($_SESSION['auth']) || $_SESSION['auth'] == null){
+function getFavoriteProducts()
+{
+    if (!isset($_SESSION['auth']) || $_SESSION['auth'] == null) {
         return false;
     }
     $userId = $_SESSION['auth']['id'];
@@ -44,16 +47,18 @@ function getFavoriteProducts(){
     return $favoriteProducts;
 }
 
-function checkAuth($role_id = []){
-    
-    if(!isset($_SESSION['auth']) || $_SESSION['auth'] == null || !in_array($_SESSION['auth']['role_id'], $role_id)){
+function checkAuth($role_id = [])
+{
+
+    if (!isset($_SESSION['auth']) || $_SESSION['auth'] == null || !in_array($_SESSION['auth']['role_id'], $role_id)) {
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         die;
     }
 }
-function countCartNumber(){
+function countCartNumber()
+{
     $countProduct = 0;
-    if(isset($_SESSION['cart']) && count($_SESSION['cart']) > 0){
+    if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
         foreach ($_SESSION['cart'] as $item) {
             $countProduct += $item['quantity'];
         }
