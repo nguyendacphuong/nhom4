@@ -10,5 +10,7 @@
         select_page($sql);
         header("location: " . ADMIN_URL . 'contact');
     }
-
+    function email_form(){
+        admin_render('category/brand-add.php', []);
+    }
 ?>
