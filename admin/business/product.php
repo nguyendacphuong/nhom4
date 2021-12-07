@@ -39,7 +39,6 @@ function cate_save_add()
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
-      
     }
 
 
@@ -72,7 +71,7 @@ function edit_form()
     $brand_id = pdo_query($sql);
 
     // hiển thị view
-    admin_render('product/edit-form.php', compact('cates', 'lis','brand_id'), 'admin-assets/custom/product_index.js');
+    admin_render('product/edit-form.php', compact('cates', 'lis', 'brand_id'), 'admin-assets/custom/product_index.js');
 }
 function update_form()
 {
@@ -96,7 +95,6 @@ function update_form()
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'sanpham');
 }
-
 // Full texts
 // id	
 // iddm	
@@ -105,3 +103,20 @@ function update_form()
 // discount	
 // thumbnail	
 // description
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

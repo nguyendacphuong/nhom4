@@ -31,9 +31,10 @@
                                 <td><?= $itemcontact['email'] ?></td>
                                 <td><?= $itemcontact['phone_number'] ?></td>
                                 <td><?= $itemcontact['subject_name'] ?></td>
-                                <td><textarea><?= $itemcontact['note'] ?></textarea></td>
+                                <td><?= $itemcontact['note'] ?></td>
                                 <th><?= $itemcontact['created_at'] ?></th>
                                 <td>
+                                    <a href="<?= ADMIN_URL . 'contact/phanhoi?id=' . $itemcontact['id'] ?>" class="btn btn-sm btn-info">Phản hồi</a>
                                     <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'contact/xoa?id=' . $itemcontact['id'] ?>' , '<?= $itemcontact['name'] ?>')" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
@@ -45,4 +46,4 @@
             </div>
         </div>
     </div>
-</div><i class="fas fa-trash"></i>
+</div>

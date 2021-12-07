@@ -70,7 +70,7 @@ function brand_add_form()
 function brand_save_add()
 {
     $name_brand = $_POST['name_brand'];
-  
+
     $show_menu = isset($_POST['show_menu']) ? 1 : 0;
     $sql = "INSERT INTO brand (name_brand,show_menu) values ('$name_brand', $show_menu)";
     executeQuery($sql);
@@ -79,7 +79,7 @@ function brand_save_add()
 
 function brand_edit_add()
 {
-  
+
 
     // hiển thị view
     admin_render('category/brand-edit.php', compact('cates'), 'admin-assets/custom/category_index.js');
@@ -99,26 +99,25 @@ function slide_index()
 }
 function slide_add()
 {
- 
-    admin_render('category/slide_add.php',[], 'admin-assets/custom/product_add.js');
+
+    admin_render('category/slide_add.php', [], 'admin-assets/custom/product_add.js');
 }
 
 function slide_save_add()
 {
 
     $slide_name = $_POST['slide_name'];
-   
+
     $file = $_FILES['slideshow_img'];
-    
+
     $filename = "";
-    
+
     if ($file['size'] > 0) {
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
-        
     }
-  
+
     $sql = " INSERT INTO slideshow (slide_name,slideshow_img) values ('$slide_name','$filename')";
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'slide');
@@ -145,13 +144,12 @@ function slide_update_form()
     $id = $_POST['id'];
     $slide_name = $_POST['slide_name'];
     $file = $_FILES['slideshow_img'];
-        $filename = "";
-        if ($file['size'] > 0) {
-            $filename = uniqid() . '-' . $file['name'];
-            move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
-            $filename = 'uploads/' . $filename;
-           
-        }
+    $filename = "";
+    if ($file['size'] > 0) {
+        $filename = uniqid() . '-' . $file['name'];
+        move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
+        $filename = 'uploads/' . $filename;
+    }
     $sql = " UPDATE slideshow set slide_name = '$slide_name',slideshow_img = '$filename' where id = $id";
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'slide');
@@ -193,3 +191,19 @@ function brand_update_form()
 }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

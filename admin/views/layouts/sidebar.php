@@ -43,6 +43,7 @@
             </p>
           </a>
         </li>
+
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="fa fa-list-ol" aria-hidden="true"></i>
@@ -66,6 +67,7 @@
             </li>
           </ul>
         </li>
+
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="fa fa-truck" aria-hidden="true"></i>
@@ -162,6 +164,7 @@
           </ul>
 
         </li>
+
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="fas fa-users" aria-hidden="true"></i>
@@ -181,7 +184,6 @@
           </ul>
 
         </li>
-
 
         <li class="nav-item">
           <a href="#" class="nav-link">
@@ -206,6 +208,7 @@
             </li>
           </ul>
         </li>
+
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="fas fa-newspaper" aria-hidden="true"></i>
@@ -229,6 +232,7 @@
             </li>
           </ul>
         </li>
+
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="fas fa-comments" aria-hidden="true"></i>
@@ -252,6 +256,7 @@
             </li>
           </ul>
         </li>
+
         <li class="nav-item">
           <a href="#" class="nav-link">
             <i class="fas fa-id-card" aria-hidden="true"></i>
@@ -265,6 +270,24 @@
               <a href="<?= ADMIN_URL . 'contact' ?>" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Danh sách phản hồi</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <p>
+              Gửi email cho khách hàng
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="<?= ADMIN_URL . 'send-email-form' ?>" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Gửi email</p>
               </a>
             </li>
           </ul>

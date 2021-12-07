@@ -37,11 +37,9 @@
                             <div class="form-check">
                                 <input class="form-check-input" id="status" name="status" value="1" type="checkbox">
                                 <label class="form-check-label" for="status">Còn hàng</label>
-
                             </div>
                         </div>
                         <br>
-
                         <div class="form-group">
                             <label for="usr">Danh Mục Sản Phẩm:</label>
                             <select class="form-control" name="category_id" id="category_id">
@@ -72,8 +70,6 @@
                             &nbsp;
                             <button type="submit" class="btn btn-sm btn-primary">Lưu</button>
                         </div>
-
-
                     </div>
                 </form>
             </div>

@@ -33,7 +33,6 @@
                             <label for="">Số lượng</label>
                             <input type="text" name="number" value="<?php echo $lis['number']; ?> " class="form-control" placeholder="yêu cầu nhập số lượng" aria-describedby="helpId">
                         </div>
-
                         <br>
                         <div class="form-group">
                             <label for="usr">Danh Mục Sản Phẩm:</label>
@@ -64,8 +63,6 @@
                             &nbsp;
                             <button type="submit" class="btn btn-sm btn-primary">Lưu</button>
                         </div>
-
-
                     </div>
                 </form>
             </div>

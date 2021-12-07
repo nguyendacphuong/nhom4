@@ -118,6 +118,14 @@ switch ($url) {
         require_once './admin/business/lienhe.php';
         contact_index();
         break;
+    case 'cp-admin/contact/phanhoi':
+        require_once './admin/business/lienhe.php';
+        feedback();
+        break;
+    case 'cp-admin/contact/gui-phanhoi':
+        require_once './admin/business/lienhe.php';
+        send_email();
+        break;
     case 'cp-admin/contact/xoa':
         require_once './admin/business/lienhe.php';
         contact_remove();
@@ -349,13 +357,34 @@ switch ($url) {
         break;
         // <<==================================================================== >>
 
-        // <<======================== SẢN PHẨM YÊU THÍCH ======================== >>
-    case 'send-email-form':
+        // <<======================== Gửi email cho khashc hàng ======================== >>
+    case 'cp-admin/send-email-form':
         require_once './admin/business/lienhe.php';
         email_form();
+        break;
+    case 'cp-admin/submit-email':
+        require_once './admin/business/lienhe.php';
+        send_email();
         break;
         // <<==================================================================== >>
     default:
         # code...
         break;
 }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
