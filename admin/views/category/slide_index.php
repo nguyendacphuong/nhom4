@@ -25,15 +25,15 @@
                     <tbody>
 
                         <?php foreach ($cates as $index => $item) :
-                         
-                    
-                            ?>
-                            
+
+
+                        ?>
+
                             <tr>
                                 <td><?= $index + 1 ?></td>
                                 <td><?= $item['slide_name'] ?></td>
-                                <td><img src="<?=IMAGE_URL . $item['slideshow_img'] ?> " with="150px" height="100px" alt=""></td>
-                                
+                                <td><img src="<?= IMAGE_URL . $item['slideshow_img'] ?> " with="150px" height="100px" alt=""></td>
+
                                 <td>
                                     <a href="<?= ADMIN_URL . 'slide/capnhat?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
