@@ -326,7 +326,7 @@ switch ($url) {
         require_once './client/business/homepage.php';
         checkout1();
         break;
-   
+
     case 'pay-cart':
         require_once './client/business/homepage.php';
         paycart();
