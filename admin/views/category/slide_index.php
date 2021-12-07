@@ -23,12 +23,7 @@
                         </th>
                     </thead>
                     <tbody>
-
-                        <?php foreach ($cates as $index => $item) :
-
-
-                        ?>
-
+                        <?php foreach ($cates as $index => $item) : ?>
                             <tr>
                                 <td><?= $index + 1 ?></td>
                                 <td><?= $item['slide_name'] ?></td>
