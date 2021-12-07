@@ -1,6 +1,6 @@
 <?php
 
-const BASE_URL = "http://localhost/nhom4/";
+const BASE_URL = "http://localhost:81/nhom4/";
 const PUBLIC_URL = BASE_URL . 'public/';
 const ADMIN_URL = BASE_URL . 'cp-admin/';
 const ADMIN_ASSET = BASE_URL . 'public/admin-assets/';
@@ -65,3 +65,17 @@ function countCartNumber()
     }
     return $countProduct;
 }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
