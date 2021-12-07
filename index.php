@@ -4,6 +4,9 @@ $url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : "/";
 require_once './commons/utils.php';
 require_once './dao/system_dao.php';
 require_once 'globol.php';
+require_once './vendor/PHPMailer/src/Exception.php';
+require_once './vendor/PHPMailer/src/PHPMailer.php';
+require_once './vendor/PHPMailer/src/SMTP.php';
 switch ($url) {
     case '/':
         require_once './client/business/dashboard.php';
@@ -114,6 +117,14 @@ switch ($url) {
     case 'cp-admin/contact':
         require_once './admin/business/lienhe.php';
         contact_index();
+        break;
+    case 'cp-admin/contact/phanhoi':
+        require_once './admin/business/lienhe.php';
+        feedback();
+        break;
+    case 'cp-admin/contact/gui-phanhoi':
+        require_once './admin/business/lienhe.php';
+        send_email();
         break;
     case 'cp-admin/contact/xoa':
         require_once './admin/business/lienhe.php';
@@ -326,7 +337,7 @@ switch ($url) {
         require_once './client/business/homepage.php';
         checkout1();
         break;
-   
+
     case 'pay-cart':
         require_once './client/business/homepage.php';
         paycart();
@@ -346,7 +357,34 @@ switch ($url) {
         break;
         // <<==================================================================== >>
 
+        // <<======================== Gửi email cho khashc hàng ======================== >>
+    case 'cp-admin/send-email-form':
+        require_once './admin/business/lienhe.php';
+        email_form();
+        break;
+    case 'cp-admin/submit-email':
+        require_once './admin/business/lienhe.php';
+        send_email();
+        break;
+        // <<==================================================================== >>
     default:
         # code...
         break;
 }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

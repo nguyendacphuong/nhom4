@@ -5,12 +5,12 @@
                 <h3 class="card-title">Tạo mới thương hiệu</h3>
             </div>
             <div class="card-body">
-                <form action="<?= ADMIN_URL . 'thuong-hieu/update'?>" method="post">
-                <input type="text" name="id" id="" value="<?php echo $cates['id']; ?>" hidden>
+                <form action="<?= ADMIN_URL . 'thuong-hieu/update' ?>" method="post">
+                    <input type="text" name="id" id="" value="<?php echo $cates['id']; ?>" hidden>
                     <div class="col-6 offset-3">
                         <div class="form-group">
-                          <label for="">Tên thương hiệu</label>
-                          <input type="text" name="name_brand" value="<?php echo $cates['name_brand']; ?>" class="form-control" placeholder="" aria-describedby="helpId">
+                            <label for="">Tên thương hiệu</label>
+                            <input type="text" name="name_brand" value="<?php echo $cates['name_brand']; ?>" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
                             <div class="form-check">
@@ -20,7 +20,7 @@
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">
-                            <a href="<?= ADMIN_URL . 'thuong-hieu'?>" class="btn btn-sm btn-danger">Hủy</a>
+                            <a href="<?= ADMIN_URL . 'thuong-hieu' ?>" class="btn btn-sm btn-danger">Hủy</a>
                             &nbsp;
                             <button type="submit" class="btn btn-sm btn-primary">Lưu</button>
                         </div>

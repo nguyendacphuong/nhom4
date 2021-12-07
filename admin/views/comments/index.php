@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                              <input type="text" name="keyword" value="<?= $keyword ?>" class="form-control" placeholder="Tìm kiếm..." aria-describedby="helpId">
+                                <input type="text" name="keyword" value="<?= $keyword ?>" class="form-control" placeholder="Tìm kiếm..." aria-describedby="helpId">
                             </div>
                         </div>
                     </div>
@@ -24,32 +24,32 @@
                         <th>Bình Luận</th>
                         <th>Thời Gian</th>
                         <!-- <th>
-                            <a href="<?= ADMIN_URL . 'news/tao-moi'?>" class="btn btn-sm btn-success">Tạo mới</a>
+                            <a href="<?= ADMIN_URL . 'news/tao-moi' ?>" class="btn btn-sm btn-success">Tạo mới</a>
                         </th> -->
                     </thead>
                     <tbody>
-                        <?php foreach($cates as $index => $item):
+                        <?php foreach ($cates as $index => $item) :
                             $hinha =  $item['avtcmt'];
-                            if(empty($hinha)) {
+                            if (empty($hinha)) {
                                 $hinh = "không có";
                             }
-                            ?>
+                        ?>
                             <tr>
                                 <td><?= $index + 1 ?></td>
                                 <td><?= $item['id_user'] ?></td>
-                                <td><img height = '40px' src="<?= $hinha ?>" alt="" class="rounded-circle"></td>
+                                <td><img height='40px' src="<?= $hinha ?>" alt="" class="rounded-circle"></td>
                                 <td><?= $item['name'] ?></td>
                                 <td><?= $item['emailcmt'] ?></td>
                                 <td><?= $item['id_sp'] ?></td>
                                 <td><textarea style="width: 200px;" name="" id="" cols="10" rows="5"><?= $item['contents'] ?></textarea></td>
-                                <th style="font-weight: 500;"><?= $item['created_at'] ?></td>  
+                                <th style="font-weight: 500;"><?= $item['created_at'] ?></td>
                                 <td>
                                     <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'comments/xoa?id=' . $item['id'] ?>', '<?= $item['contents'] ?>')" class="btn btn-sm btn-danger">
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>
                             </tr>
-                        <?php endforeach?>
+                        <?php endforeach ?>
                     </tbody>
                 </table>
             </div>
