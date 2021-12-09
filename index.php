@@ -96,6 +96,7 @@ switch ($url) {
         require_once './client/business/dashboard.php';
         tintucchitiet_index();
         break;
+    //===================================================TÀI KHOẢN===================================================//
     case 'dangnhap':
         require_once './client/business/homepage.php';
         dangnhap();
@@ -104,10 +105,17 @@ switch ($url) {
         require_once './client/business/homepage.php';
         logout();
         break;
-
     case 'dang-ky':
         require_once './client/business/taikhoan.php';
         dangky();
+        break;
+    case 'quenmk':
+        require_once './client/business/taikhoan.php';
+        quenmk();
+        break;
+    case 'doi_mk':
+        require_once './client/business/taikhoan.php';
+        doi_mk();
         break;
         //=============================================QUẢN LÝ PHẢN HỒI===============================================//
     case 'lienhe':
