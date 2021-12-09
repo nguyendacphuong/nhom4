@@ -35,11 +35,11 @@
                   <?php foreach ($favorite as $item) : ?>
                     <tr>
                       <td class="product-remove"><a href="<?= BASE_URL . 'favorite/xoa?id=' . $item['id'] ?>">×</a></td>
-                      <td class="product-thumbnail"><a href="<?= BASE_URL . 'chitietsp?id=' . $item['product_id'] ?>"><img style="width: 100px; height: 100px" class="primary-image" src="<?= IMAGE_URL ?><?= $item['thumbnail'] ?>" alt="<?= $item['title'] ?>" /></a></td>
+                      <td class="product-thumbnail"><a href="<?= BASE_URL . 'chitietsp?id=' . $item['product_id'] ?>"><img style="width: 100px; height: 150px" class="primary-image" src="<?= IMAGE_URL . $item['thumbnail'] ?>" alt="<?= $item['title'] ?>" /></a></td>
                       <td class="product-name"><a href="<?= BASE_URL . 'chitietsp?id=' . $item['product_id'] ?>"><?= $item['title'] ?></a></td>
                       <td class="product-price"><span class="amount"><?= number_format($item['price']) ?>đ</span></td>
                       <td class="product-stock-status"><?= $item['status'] == 1 ? "Còn hàng" : "Hết hàng" ?></td>
-                      <td class="product-add-to-cart"><a href="#"> Add to Cart</a></td>
+                      <td class="product-add-to-cart"><a href="<?= BASE_URL . 'add-to-cart?id=' . $item['id'] ?>"> Add to Cart</a></td>
                     </tr>
                   <?php endforeach; ?>
                 </tbody>

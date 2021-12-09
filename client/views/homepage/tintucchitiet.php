@@ -28,9 +28,9 @@
                             <li><a href="#">WordPress</a> (4)</li>
                         </ul>
                     </aside>
-                   
-                   
-                   
+
+
+
                 </div>
             </div>
             <!-- blog-left-sidebar end -->
@@ -39,7 +39,7 @@
                 <article class="blog-post-wrapper">
 
                     <div class="post-information">
-                    <h2><?= $itemct[0]['news_name'] ?></h2>
+                        <h2><?= $itemct[0]['news_name'] ?></h2>
                         <div class="entry-meta">
                             <span class="author-meta"><i class="fa fa-user"></i> <a href="#">admin</a></span>
                             <span><i class="fa fa-clock-o"></i> <?= $itemct[0]['update_at'] ?></span>
@@ -57,9 +57,9 @@
                             <span><i class="fa fa-comments-o"></i> <a href="#">6 comments</a></span>
                         </div>
                         <div class="entry-content">
-                            
+
                             <div class="post-thumbnail">
-                                <img src="<?=IMAGE_URL?><?= $itemct[0]['news_img'] ?>" alt="" />
+                                <img src="<?= IMAGE_URL ?><?= $itemct[0]['news_img'] ?>" alt="" />
                             </div>
                             <br>
                             <p><?= $itemct[0]['content'] ?></p>
@@ -189,9 +189,7 @@
                             </ul>
                         </div>
                     </div>
-                    
                 </div>
-               
                 <!-- single-blog end -->
             </div>
         </div>

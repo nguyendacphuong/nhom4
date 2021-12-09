@@ -1,3 +1,4 @@
+
 <?php    
     function dangky(){
         $err=[];
@@ -32,18 +33,18 @@
         client_render('homepage/my-user-form.php', compact('list','thuonghieu'));
     }
 
-    // function edit_my_user(){
-    //     $id = isset($_GET['id']) ? $_GET['id'] : "";
-    //     // lấy danh sách danh mục
-    //     $sql = "select * from user where id = $id ";
-    //     $cates = executeQuery($sql);
-    //     // hiển thị view
-    //     $sql = "SELECT * FROM category";
-    //     $list = select_page($sql);
-    //     $sql = "SELECT * FROM brand";
-    //     $thuonghieu = select_page($sql);
-    //     client_render('homepage/edit_my_user.php', compact('cates','list','thuonghieu'), 'admin-assets/custom/category_index.js');
-    // }
+    function edit_my_user(){
+         $id = isset($_GET['id']) ? $_GET['id'] : "";
+         // lấy danh sách danh mục
+         $sql = "select * from user where id = $id ";
+         $cates = executeQuery($sql);
+         // hiển thị view
+         $sql = "SELECT * FROM category";
+         $list = select_page($sql);
+         $sql = "SELECT * FROM brand";
+         $thuonghieu = select_page($sql);
+         client_render('homepage/edit_my_user.php', compact('cates','list','thuonghieu'), 'admin-assets/custom/category_index.js');
+    }
 
     function quenmk(){
         $loi = "";
@@ -135,3 +136,4 @@
     //     select_page($sql);
     // }
 ?>
+
