@@ -364,7 +364,7 @@ switch ($url) {
         break;
         // <<==================================================================== >>
 
-        // <<======================== Gửi email cho khashc hàng ======================== >>
+        // <<======================== Gửi email cho khách hàng ======================== >>
     case 'cp-admin/send-email-form':
         require_once './admin/business/lienhe.php';
         email_form();
