@@ -96,7 +96,7 @@ switch ($url) {
         require_once './client/business/dashboard.php';
         tintucchitiet_index();
         break;
-    //===================================================TÀI KHOẢN===================================================//
+        //===================================================TÀI KHOẢN===================================================//
     case 'dangnhap':
         require_once './client/business/homepage.php';
         dangnhap();
