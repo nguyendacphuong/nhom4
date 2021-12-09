@@ -76,9 +76,7 @@
                     <div class="product__tabs_inner">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs description-list" role="tablist">
-
                             <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Bình Luận</a></li>
-
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content">
