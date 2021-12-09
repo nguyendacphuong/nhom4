@@ -59,7 +59,7 @@
                 $loi = "Email bạn nhập không tồn tại!";
             }
             else {
-                $matkhaumoi =  substr(md5(rand(0,999999)),0,8);
+                $matkhaumoi =  substr(md5(rand(0,999999)) ,0, 8);
                 $sql = "UPDATE user set password = ? WHERE email = ?";
                 $stmt = $connect->prepare($sql);
                 $stmt->execute([$matkhaumoi, $email]);
