@@ -296,7 +296,6 @@ switch ($url) {
     case 'my-user/update':
         require_once './client/business/taikhoan.php';
         my_user_update();
-
         break;
         //hiển thị sản phẩm theo danh mục
     case 'category':
