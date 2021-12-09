@@ -22,10 +22,7 @@
         <div class="row">
             <div class="col-lg-6 col-md-6">
                 <div class="single-product-image">
-
-                    <a href="#"><img src="<?= IMAGE_URL ?><?= $item[0]['thumbnail'] ?>" alt="" /></a>
-
-
+                    <a href="#"><img src="<?= IMAGE_URL . $item[0]['thumbnail'] ?>" alt="" /></a>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
@@ -51,10 +48,10 @@
                     <div class="stock-status">
                         <label>Availability</label>: <strong>In stock</strong>
                     </div>
-                    <form action="<?= BASE_URL . 'add-to-cart' ?>">
+                    <form action="">
                         <div class="quantity">
                             <input type="number" value="1" />
-                            <button type="submit">THÊM GIỎ HÀNG</button>
+                            <BUtton><a href="<?= BASE_URL . 'add-to-cart?id=' . $item[0]['id'] ?>">THÊM GIỎ HÀNG</a> </BUtton>
                         </div>
                     </form>
                     <div class="add-to-wishlist">
@@ -68,7 +65,6 @@
             </div>
         </div>
     </div>
-
 </div>
 <!-- product-simple-area end -->
 <div class="product-tab-area">
@@ -79,9 +75,7 @@
                     <div class="product__tabs_inner">
                         <!-- Nav tabs -->
                         <ul class="nav nav-tabs description-list" role="tablist">
-
                             <li role="presentation"><a href="#page-comments" aria-controls="page-comments" role="tab" data-toggle="tab">Bình Luận</a></li>
-
                         </ul>
                         <!-- Tab panes -->
                         <div class="tab-content">
@@ -113,7 +107,6 @@
                                                 </li>
                                             </ul>
                                         <?php endforeach; ?>
-
                                         <div class="review-form-wrapper">
                                             <h3>Add a review</h3>
                                             <form action="" method="post">
@@ -123,7 +116,6 @@
                                                 <?php else : ?>
                                                     <input type="text" name="name" required placeholder="Họ và tên" />
                                                     <input type="email" name="emailcmt" required placeholder="Email" />
-
                                                 <?php endif ?>
                                                 <div class="your-rating">
                                                     <h5>Your Rating</h5>
@@ -158,7 +150,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="clear"></div>
                     <div class="upsells_products_widget">
@@ -175,12 +166,11 @@
                                             <div class="product-img">
                                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $itemcungloai['id'] ?>">
                                                     <img class="primary-image" src="<?= IMAGE_URL ?><?= $itemcungloai['thumbnail'] ?>" alt="" />
-
                                                 </a>
                                                 <div class="actions">
                                                     <div class="action-buttons">
                                                         <div class="add-to-cart">
-                                                            <a href="#">THÊM GIỎ HÀNG</a>
+                                                            <a href="<?= BASE_URL . 'add-to-cart?id=' . $itemcungloai['id'] ?>">THÊM GIỎ HÀNG</a>
                                                         </div>
                                                         <div class="add-to-links">
                                                             <div class="add-to-wishlist">
@@ -194,9 +184,6 @@
                                                         <div class="quickviewbtn">
                                                             <a href="#" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
                                                         </div>
-
-
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -216,15 +203,12 @@
                                         </div>
                                     </div>
                                 <?php endforeach ?>
-
                                 <!-- single-product end -->
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-           
             <div class="col-lg-3 col-md-12">
                 <!-- widget-recent start -->
                 <aside class="widget top-product-widget">
@@ -235,7 +219,7 @@
                                 <div class="single-product">
                                     <div class="product-img">
                                         <a href="<?= BASE_URL . 'chitietsp?id=' . $itemcungloai['id'] ?>">
-                                            <img class="primary-image" src="<?=IMAGE_URL?><?= $itemcungloai['thumbnail'] ?>" alt="" />
+                                            <img class="primary-image" src="<?= IMAGE_URL ?><?= $itemcungloai['thumbnail'] ?>" alt="" />
                                         </a>
                                     </div>
                                     <div class="product-content">
@@ -245,20 +229,16 @@
                                                 <span class="new-price"><?= $itemcungloai['price'] ?>đ</span>
                                                 <span class="old-price"><?= $itemcungloai['discount'] ?>đ</span>
                                             </div>
-
                                         </div>
-                                      
-
-
+                                    </div>
+                                </div>
                             </li>
                         <?php endforeach ?>
-
                     </ul>
                 </aside>
                 <!-- widget-recent end -->
             </div>
         </div>
-
     </div>
 </div>
 
@@ -337,4 +317,3 @@
     </div>
 </div>
 <!-- brand-area end -->
-</div>

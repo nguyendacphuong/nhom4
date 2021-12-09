@@ -26,7 +26,6 @@
                 <div class="col-md-6">
                     <img class="cl" src="./public/uploads/login-bn.png">
                 </div>
-                
             </div>
         </div>
     </div>
