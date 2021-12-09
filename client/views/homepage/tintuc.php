@@ -28,8 +28,8 @@
                             <li><a href="#">WordPress</a> (4)</li>
                         </ul>
                     </aside>
-                    
-                   
+
+
                     <!-- widget-tags end -->
                 </div>
             </div>
@@ -40,24 +40,24 @@
                 </div>
                 <!-- single-blog start -->
                 <?php foreach ($items as $newitem) : ?>
-                <article class="blog-post-wrapper">
-                   
+                    <article class="blog-post-wrapper">
+
                         <div class="post-thumbnail">
-                           
-                            <a href="#"><img src="<?=IMAGE_URL?><?=$newitem['news_img']?>" alt="" /></a>
-                        
+
+                            <a href="#"><img src="<?= IMAGE_URL ?><?= $newitem['news_img'] ?>" alt="" /></a>
+
                         </div>
                         <div class="post-information">
                             <h2><a href="#">Post in Video format</a></h2>
                             <div class="small-meta">
-                                <span><i class="fa fa-calendar"></i> <?=$newitem['update_at']?> </span>
+                                <span><i class="fa fa-calendar"></i> <?= $newitem['update_at'] ?> </span>
                                 <a href="#"><i class="fa fa-comments-o"></i> 2 comments</a>
                             </div>
-                            <p><?=$newitem['news_name']?></p>
-                            <a class="readmore" href="<?=BASE_URL . 'tintucchitiet?id='.$newitem['id']?>">read more</a>
+                            <p><?= $newitem['news_name'] ?></p>
+                            <a class="readmore" href="<?= BASE_URL . 'tintucchitiet?id=' . $newitem['id'] ?>">read more</a>
                         </div>
-                   
-                </article>
+
+                    </article>
                 <?php endforeach; ?>
 
                 <!-- single-blog end -->

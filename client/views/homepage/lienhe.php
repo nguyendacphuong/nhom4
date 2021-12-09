@@ -28,15 +28,15 @@
 				<div class="col-md-6 col-sm-12">
 					<div class="contact-form">
 						<h3><i class="fa fa-envelope-o"></i>PHẢN HỒI</h3>
-				        <form  action="<?= BASE_URL . 'lienhe'?>" method="POST">
-						    <div class="row">
+						<form action="<?= BASE_URL . 'lienhe' ?>" method="POST">
+							<div class="row">
 								<div class="col-md-6 col-sm-6 col-xs-12">
 									<input type="text" name="name" placeholder="Name (required)" />
 								</div>
 								<div class="col-md-6 col-sm-6 col-xs-12">
 									<input type="email" name="email" placeholder="Email (required)" />
 								</div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="col-md-12 col-sm-12 col-xs-12">
 									<input type="text" name="phone_number" placeholder="phone number (required)" />
 								</div>
 								<div class="col-md-12 col-sm-12 col-xs-12">
@@ -46,7 +46,7 @@
 									<textarea id="message" name="note" cols="30" rows="10" placeholder="Message"></textarea>
 									<input type="submit" name="btnsend" value="GỬI PHẢN HỒI" />
 								</div>
-						      </div>
+							</div>
 						</form>
 					</div>
 				</div>

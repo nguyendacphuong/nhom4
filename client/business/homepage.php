@@ -105,7 +105,7 @@ function checkout()
     $list = select_page($sql);
     $sql = "SELECT * FROM brand";
     $thuonghieu = select_page($sql);
-    client_render('cart/cart.php', compact('cart','list','thuonghieu'));
+    client_render('cart/cart.php', compact('cart', 'list', 'thuonghieu'));
 }
 function remove()
 {
@@ -122,7 +122,7 @@ function checkout1()
     $sql = "SELECT * FROM brand";
     $thuonghieu = select_page($sql);
     $cart = $_SESSION['cart'];
-    client_render('cart/check-out.php', compact('cart','list','thuonghieu'));
+    client_render('cart/check-out.php', compact('cart', 'list', 'thuonghieu'));
 }
 
 function paycart()
@@ -160,14 +160,33 @@ function paycart()
 
     unset($_SESSION['cart']);
 
-    header('location: ' . BASE_URL.'camon');
+    header('location: ' . BASE_URL . 'camon');
     die;
 }
-function camon(){
+function camon()
+{
     $sql = "SELECT * FROM category";
     $list = select_page($sql);
     $sql = "SELECT * FROM brand";
     $thuonghieu = select_page($sql);
     $cart = $_SESSION['cart'];
-    client_render('cart/camon.php' , compact('list','thuonghieu'));
+    client_render('cart/camon.php', compact('list', 'thuonghieu'));
 }
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
