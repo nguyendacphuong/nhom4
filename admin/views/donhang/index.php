@@ -34,7 +34,7 @@
 						<th style="font-weight: 400;"><?= $item['customer_address'] ?></th>
 						<td><?= $item['note'] ?></td>
 						<td><?= $item['reason'] ?></td>
-						<td><?= $item['total_price'] ?></td>
+						<td><?= number_format($item['total_price']) ?> VNĐ</td>
 						<td><span class="badge badge-success badge-lg"><?= $item['status'] ?></span></td>
 						<td>
 							<span class="dropdown">

@@ -70,7 +70,9 @@ switch ($url) {
         require_once './admin/business/category.php';
         brand_update_form();
         break;
-        // and thương hiệu
+        // end thương hiệu
+
+        // bình luận
     case 'cp-admin/comments':
         checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/comments.php';
@@ -113,10 +115,10 @@ switch ($url) {
         require_once './client/business/taikhoan.php';
         quenmk();
         break;
-    case 'doi_mk':
-        require_once './client/business/taikhoan.php';
-        doi_mk();
-        break;
+    // case 'doi_mk':
+    //     require_once './client/business/taikhoan.php';
+    //     doi_mk();
+    //     break;
         //=============================================QUẢN LÝ PHẢN HỒI===============================================//
     case 'lienhe':
         require_once './client/business/homepage.php';
@@ -293,10 +295,10 @@ switch ($url) {
         require_once './client/business/taikhoan.php';
         edit_my_user();
         break;
-    case 'my-user/update':
-        require_once './client/business/taikhoan.php';
-        my_user_update();
-        break;
+        // case 'my-user/update':
+        //     require_once './client/business/taikhoan.php';
+        //     my_user_update();
+        //     break;
         //hiển thị sản phẩm theo danh mục
     case 'category':
         require_once './client/business/dashboard.php';

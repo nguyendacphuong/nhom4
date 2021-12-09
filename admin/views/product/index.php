@@ -34,10 +34,10 @@
                             <tr>
                                 <td><?= $index + 1 ?></td>
                                 <td><?= $item['title'] ?></td>
-                                <td><?= $item['price'] ?> VNĐ</td>
-                                <td><?= $item['discount'] ?> VNĐ</td>
+                                <td><?= number_format($item['price']) ?> VNĐ</td>
+                                <td><?= number_format($item['discount']) ?> VNĐ</td>
                                 <td><img src="<?= IMAGE_URL . $item['thumbnail'] ?>" with="150px" height="100px" alt=""></td>
-                                <td><textarea name="" id="" cols="10" rows="5"><?= $item['description'] ?></textarea></td>
+                                <td><textarea name="" id="" cols="50" rows="5"><?= $item['description'] ?></textarea></td>
                                 <td><?= $item['number'] ?> </td>
                                 <td><?= $item['status'] == 1 ? "Còn hàng" : "Hết hàng" ?></td>
                                 <td><?= $item['name_cate'] ?> </td>

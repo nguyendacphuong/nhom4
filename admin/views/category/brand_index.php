@@ -27,7 +27,7 @@
                         <?php foreach ($cates as $index => $item) :
                         ?>
                             <tr>
-                                <td><?= $index + 1 ?></td>
+                                <td><?= $item['id'] ?></td>
                                 <td><?= $item['name_brand'] ?></td>
                                 <td><?= $item['show_menu'] == 1 ? "Có" : "Không" ?></td>
                                 <td>
