@@ -65,7 +65,6 @@
             </div>
         </div>
     </div>
-
 </div>
 <!-- product-simple-area end -->
 <div class="product-tab-area">
@@ -108,7 +107,6 @@
                                                 </li>
                                             </ul>
                                         <?php endforeach; ?>
-
                                         <div class="review-form-wrapper">
                                             <h3>Add a review</h3>
                                             <form action="" method="post">
@@ -118,7 +116,6 @@
                                                 <?php else : ?>
                                                     <input type="text" name="name" required placeholder="Họ và tên" />
                                                     <input type="email" name="emailcmt" required placeholder="Email" />
-
                                                 <?php endif ?>
                                                 <div class="your-rating">
                                                     <h5>Your Rating</h5>
@@ -153,7 +150,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="clear"></div>
                     <div class="upsells_products_widget">
@@ -170,7 +166,6 @@
                                             <div class="product-img">
                                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $itemcungloai['id'] ?>">
                                                     <img class="primary-image" src="<?= IMAGE_URL ?><?= $itemcungloai['thumbnail'] ?>" alt="" />
-
                                                 </a>
                                                 <div class="actions">
                                                     <div class="action-buttons">
@@ -189,9 +184,6 @@
                                                         <div class="quickviewbtn">
                                                             <a href="#" data-toggle="tooltip" title="Quick View"><i class="fa fa-search-plus"></i></a>
                                                         </div>
-
-
-
                                                     </div>
                                                 </div>
                                             </div>
@@ -211,15 +203,12 @@
                                         </div>
                                     </div>
                                 <?php endforeach ?>
-
                                 <!-- single-product end -->
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-3 col-md-12">
                 <!-- widget-recent start -->
                 <aside class="widget top-product-widget">
@@ -240,20 +229,16 @@
                                                 <span class="new-price"><?= $itemcungloai['price'] ?>đ</span>
                                                 <span class="old-price"><?= $itemcungloai['discount'] ?>đ</span>
                                             </div>
-
                                         </div>
-
-
-
+                                    </div>
+                                </div>
                             </li>
                         <?php endforeach ?>
-
                     </ul>
                 </aside>
                 <!-- widget-recent end -->
             </div>
         </div>
-
     </div>
 </div>
 
@@ -332,4 +317,3 @@
     </div>
 </div>
 <!-- brand-area end -->
-</div>
