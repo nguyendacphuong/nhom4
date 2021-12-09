@@ -16,7 +16,8 @@
                             </p>
                         </div>
                         <div class="form-action">
-                            <p class="lost_password"><a href="<?= BASE_URL.'dang-ky'?>">Đăng ký tài khoản</a></p>
+                            <p class="lost_password"><a style="margin-right:10px;" href="<?= BASE_URL.'dang-ky'?>">Đăng ký tài khoản</a></p>
+                            <p class="lost_password"><a href="<?= BASE_URL.'quenmk'?>">Quên mật khẩu</a></p>
                             <input type="submit" value="Login" name="dangnhap" />
                             <!-- <label><input type="checkbox" />Remember me </label> -->
                         </div>
@@ -25,6 +26,7 @@
                 <div class="col-md-6">
                     <img class="cl" src="./public/uploads/login-bn.png">
                 </div>
+                
             </div>
         </div>
     </div>

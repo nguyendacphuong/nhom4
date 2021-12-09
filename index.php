@@ -4,6 +4,9 @@ $url = isset($_GET['url']) ? rtrim($_GET['url'], '/') : "/";
 require_once './commons/utils.php';
 require_once './dao/system_dao.php';
 require_once 'globol.php';
+require_once './vendor/PHPMailer/src/Exception.php';
+require_once './vendor/PHPMailer/src/PHPMailer.php';
+require_once './vendor/PHPMailer/src/SMTP.php';
 switch ($url) {
     case '/':
         require_once './client/business/dashboard.php';
@@ -93,6 +96,7 @@ switch ($url) {
         require_once './client/business/dashboard.php';
         tintucchitiet_index();
         break;
+    //===================================================TÀI KHOẢN===================================================//
     case 'dangnhap':
         require_once './client/business/homepage.php';
         dangnhap();
@@ -101,10 +105,17 @@ switch ($url) {
         require_once './client/business/homepage.php';
         logout();
         break;
-
     case 'dang-ky':
         require_once './client/business/taikhoan.php';
         dangky();
+        break;
+    case 'quenmk':
+        require_once './client/business/taikhoan.php';
+        quenmk();
+        break;
+    case 'doi_mk':
+        require_once './client/business/taikhoan.php';
+        doi_mk();
         break;
         //=============================================QUẢN LÝ PHẢN HỒI===============================================//
     case 'lienhe':
