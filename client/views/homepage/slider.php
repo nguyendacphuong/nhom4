@@ -44,7 +44,6 @@
                         <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">women</a></li>
                         <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Clothes</a></li>
                     </ul>
-
                     <!-- Tab panes -->
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="home">
@@ -57,10 +56,7 @@
                                                 <span class="sale-text">Sale</span>
                                                 <div class="product-img">
                                                     <a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
-
                                                         <img class="primary-image" src="<?= IMAGE_URL . $item['thumbnail'] ?>" alt="" />
-
-
                                                     </a>
                                                     <div class="actions">
                                                         <div class="action-buttons">
@@ -224,9 +220,7 @@
             </div>
         </div>
         <!-- section-heading end -->
-
         <div class="row">
-
             <div class="top-sells-curosel">
                 <!-- single-product start -->
                 <?php foreach ($listSale as $item) : ?>
@@ -235,7 +229,6 @@
                             <div class="product-img">
                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $item['id'] ?>">
                                     <img class="primary-image" src="<?= IMAGE_URL . $item['thumbnail'] ?>" alt="" />
-
                                 </a>
                             </div>
                             <div class="product-content">
@@ -266,7 +259,6 @@
                             <div class="product-img">
                                 <a href="<?= BASE_URL . 'chitietsp?id=' . $newitem['id'] ?>">
                                     <img class="primary-image" src="<?= IMAGE_URL . $item['thumbnail'] ?>" alt="" />
-
                                 </a>
                             </div>
                             <div class="product-content">

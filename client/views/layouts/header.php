@@ -52,14 +52,14 @@
 					<!-- cart-total start -->
 					<div class="cart-total">
 						<ul>
-							<li><a href="<?= BASE_URL . 'check-out'?>"><span class="cart-icon"><i class="fa fa-shopping-cart"></i></span> <span class="cart-no">Giỏ Hàng: (<?= countCartNumber() ?>)</span></a>
+							<li><a href="<?= BASE_URL . 'check-out' ?>"><span class="cart-icon"><i class="fa fa-shopping-cart"></i></span> <span class="cart-no">Giỏ Hàng: (<?= countCartNumber() ?>)</span></a>
 							</li>
 						</ul>
 					</div>
 					<!-- cart-total end -->
 					<!-- header-search start -->
 					<div class="header-search">
-						<form action="<?=BASE_URL.'category'?>">
+						<form action="<?= BASE_URL . 'category' ?>">
 							<input type="text" placeholder="Tìm Kiểm Sản Phẩm..." name="timkiem" />
 							<button type="submit"><i class="fa fa-search"></i></button>
 						</form>
@@ -79,41 +79,28 @@
 						<nav>
 							<ul>
 								<li><a href="<?= BASE_URL ?>">Trang Chủ</a></li>
-
 								<li>
-
 									<a href="<?= BASE_URL . 'category' ?>">Shop</a>
-
 									<div class="mega-menu">
 										<?php foreach ($list as $menu) : ?>
 											<span>
-
 												<a href="<?= BASE_URL . 'category?id=' . $menu['id'] ?>">
 													<?php echo $menu['name'] ?> </a>
-
 											</span>
 										<?php endforeach; ?>
 									</div>
-
-
 								</li>
 								<li>
 									<a href="<?= BASE_URL . 'thuonghieu' ?>">Thương hiệu</a>
-
 									<div class="mega-menu">
 										<?php foreach ($thuonghieu as $menu) : ?>
 											<span>
-
 												<a href="<?= BASE_URL . 'thuonghieu?id=' . $menu['id'] ?>">
 													<?php echo $menu['name_brand'] ?> </a>
-
 											</span>
 										<?php endforeach; ?>
 									</div>
-
-
 								</li>
-
 								<li><a href="<?= BASE_URL . 'tintuc' ?>">Tin Tức</a></li>
 								<li><a href="<?= BASE_URL . 'lienhe' ?>">Liên Hệ</a></li>
 							</ul>

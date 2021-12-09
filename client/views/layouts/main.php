@@ -22,10 +22,10 @@
 
 	<!-- banner-area end -->
 	<!-- features-area start -->
-	
+
 	<!-- features-area end -->
 	<!-- new-product-area start -->
-	<?= include_once $view ;?>
+	<?= include_once $view; ?>
 	<!-- new-product-area end -->
 	<!-- banner-2-area start -->
 
@@ -40,7 +40,7 @@
 
 	<!-- JS -->
 	<?php include_once './client/views/layouts/script.php'; ?>
-	
+
 
 </body>
 
