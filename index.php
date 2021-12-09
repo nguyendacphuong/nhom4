@@ -316,6 +316,10 @@ switch ($url) {
         require_once './admin/business/donhang.php';
         donhang();
         break;
+    case 'cp-admin/donhang/donhangct':
+        require_once './admin/business/donhang.php';
+        ad_donhangct();
+        break;
 
     case 'add-to-cart':
         require_once './client/business/homepage.php';

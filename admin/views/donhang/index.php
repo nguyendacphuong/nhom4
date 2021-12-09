@@ -40,13 +40,9 @@
 				                	<!-- badge badge-warning badge-lg
 				                	badge badge-danger badge-lg -->
 				                	<span class="dropdown">
-				                        <button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="fas fa-cogs"></i></button>
-				                        <span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
-				                            <a href="#" style="color: blue;" class="dropdown-item"><i class="la la-eye"></i>Xem chi tiết</a>
-				                            <a href="#" style="color: green ;" class="dropdown-item"><i class="la la-check"></i>Xác Nhận</a>
-				                            <a href="#" style="color: black ;" class="dropdown-item"><i class="la la-check"></i>Hủy đơn hàng</a>
-				                            <a href="#" style="color: black;" class="dropdown-item"><i class="la la-trash"></i>Giao Hàng Thành Công</a>
-				                        </span>
+				                		<a href="<?= ADMIN_URL . 'donhang/donhangct'?>">
+				                			<i class="fas fa-cogs"></i>
+				                		</a>
 				                    </span>
 				                </td>
 				            </tr>

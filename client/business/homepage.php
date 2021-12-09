@@ -171,3 +171,4 @@ function camon(){
     $cart = $_SESSION['cart'];
     client_render('cart/camon.php' , compact('list','thuonghieu'));
 }
+

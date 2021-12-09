@@ -5,6 +5,10 @@ function donhang()
 	$cates = executeQuery($sql, true);
 	admin_render('donhang/index.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
+
+function ad_donhangct(){
+	admin_render('donhang/donhangct.php');
+}
 ?>
 
 <!DOCTYPE html>
