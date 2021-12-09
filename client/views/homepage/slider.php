@@ -105,7 +105,6 @@
                                                     <div class="price-box">
                                                         <span class="new-price"><?= $item['discount'] ?>đ</span>
                                                         <span class="old-price"><?= $item['price'] ?>đ</span>
-
                                                     </div>
                                                     <span class="content__product-general-status">View:
                                                         <?= $item['view'] ?>
@@ -289,7 +288,6 @@
                 <?php endforeach; ?>
                 <!-- single-product end -->
                 <!-- single-product start -->
-
                 <!-- single-product end -->
             </div>
         </div>
