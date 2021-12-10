@@ -14,6 +14,7 @@ function comment_remove()
 	executeQuery($sql);
 	header("location: " . ADMIN_URL . 'comments');
 }
+
 ?>
 
 <!DOCTYPE html>
