@@ -37,7 +37,7 @@
                                 <td><?= number_format($item['price']) ?> VNĐ</td>
                                 <td><?= number_format($item['discount']) ?> VNĐ</td>
                                 <td><img src="<?= IMAGE_URL . $item['thumbnail'] ?>" with="150px" height="100px" alt=""></td>
-                                <td><textarea name="" id="" cols="50" rows="5"><?= $item['description'] ?></textarea></td>
+                                <td><textarea cols="30" rows="5"><?= $item['description'] ?></textarea></td>
                                 <td><?= $item['number'] ?> </td>
                                 <td><?= $item['status'] == 1 ? "Còn hàng" : "Hết hàng" ?></td>
                                 <td><?= $item['name_cate'] ?> </td>
