@@ -34,9 +34,7 @@ function news_save_add()
     $content = $_POST['content'];
     $update_at = $created_at = date('Y-m-d H:s:i');
     $file = $_FILES['news_img'];
-
     $filename = "";
-
     if ($file['size'] > 0) {
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
