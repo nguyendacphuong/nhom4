@@ -38,9 +38,8 @@ function news_save_add()
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
-        $img = PUBLIC_URL . $filename;
     }
-    $sql = " INSERT INTO news (news_name,news_img,content,update_at,created_at) values ('$news_name','$img','$content','$update_at','$created_at')";
+    $sql = " INSERT INTO news (news_name,news_img,content,update_at,created_at) values ('$news_name','$filename','$content','$update_at','$created_at')";
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'news');
 }
