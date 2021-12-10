@@ -22,7 +22,6 @@ function cate_add_form()
 
 function cate_save_add()
 {
-
     $title = $_POST['title'];
     $price = $_POST['price'];
     $discount = $_POST['discount'];
@@ -40,7 +39,6 @@ function cate_save_add()
         $filename = 'uploads/' . $filename;
     }
     $sql = " INSERT INTO product (title,price,discount,thumbnail,description,number,category_id,brand_id,status,created_at,updated_at) values ('$title','$price','$discount','$filename','$description','$number','$category_id','$brand_id','$status',' $created_at','$updated_at')";
-
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'sanpham');
 }
@@ -59,14 +57,10 @@ function edit_form()
     // lấy danh sách danh mục
     $sql = "select * from product where id = $id ";
     $lis = executeQuery($sql);
-
     $sql = "select * from category order by id desc";
-
     $cates = pdo_query($sql);
     $sql = "select * from brand order by id desc";
-
     $brand_id = pdo_query($sql);
-
     // hiển thị view
     admin_render('product/edit-form.php', compact('cates', 'lis', 'brand_id'), 'admin-assets/custom/product_index.js');
 }
