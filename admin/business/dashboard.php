@@ -29,7 +29,6 @@ function news_add()
 
 function news_save_add()
 {
-
     $news_name = $_POST['news_name'];
     $content = $_POST['content'];
     $update_at = $created_at = date('Y-m-d H:s:i');
@@ -41,7 +40,6 @@ function news_save_add()
         $filename = 'uploads/' . $filename;
         $img = PUBLIC_URL . $filename;
     }
-
     $sql = " INSERT INTO news (news_name,news_img,content,update_at,created_at) values ('$news_name','$img','$content','$update_at','$created_at')";
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'news');
