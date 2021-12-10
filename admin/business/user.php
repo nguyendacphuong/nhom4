@@ -7,10 +7,9 @@ function user_index()
 
 	admin_render('user/index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
 }
-
 function user_add()
 {
-	$sql = "select * from role  ";
+	$sql = "select * from role";
 	$cates = pdo_query($sql, true);
 	admin_render('user/user_add.php', compact('cates'), 'admin-assets/custom/product_add.js');
 }
@@ -30,14 +29,12 @@ function user_save_add()
 		$avatarname = uniqid() . '-' . $avatar['name'];
 		move_uploaded_file($avatar['tmp_name'], './public/uploads/' . $avatarname);
 		$avatarname = 'uploads/' . $avatarname;
-		$img = PUBLIC_URL . $avatarname;
 	}
 
-	$sql = "INSERT into user (fullname, avatar, email, phone_number, address, password,created_at, updated_at,role_id ) values ('$fullname','$img', '$email', '$phone_number', '$address', '$password','$created_at','$updated_at','$role_id')";
+	$sql = "INSERT into user (fullname, avatar, email, phone_number, address, password,created_at, updated_at,role_id ) values ('$fullname','$avatarname', '$email', '$phone_number', '$address', '$password','$created_at','$updated_at','$role_id')";
 	executeQuery($sql);
 	header('Location:' . ADMIN_URL . 'taikhoan');
 }
-
 
 function user_remove()
 {
@@ -46,7 +43,6 @@ function user_remove()
 	executeQuery($sql);
 	header("location: " . ADMIN_URL . 'taikhoan');
 }
-
 
 function edit_user()
 {
