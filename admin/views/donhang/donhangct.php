@@ -17,10 +17,10 @@
       </div>
       <div class="col-sm-6 col-12 text-center text-sm-right">
         <h2>Hóa Đơn</h2>
-        <p class="pb-sm-3"># INV-001001</p>
+        <p class="pb-sm-3">Mã Hóa Đơn :# <?= $list[0]['id'] ?> </p>
         <ul class="px-0 list-unstyled">
           <li>Tổng Tiền</li>
-          <li class="lead text-bold-800">$12,000.00</li>
+          <li class="lead text-bold-800"><?= $list[0]['total_price'] ?>vnđ</li>
         </ul>
       </div>
     </div>
@@ -33,15 +33,16 @@
       </div>
       <div class="col-sm-6 col-12 text-center text-sm-left">
         <ul class="px-0 list-unstyled">
-          <li style="font-size:25px;" class="text-bold-800">Nguyễn Đắc Phương</li>
-          <li style="width: 200px;">Tỳ Điện - Phú Hòa - Lương Tài - Bắc Ninh</li>
+          <li style="font-size:25px;" class="text-bold-800">Họ và tên:&nbsp;<?= $list[0]['customer_name'] ?></li>
+          <li style="width: 200px;">Địa chỉ:&nbsp;<?= $list[0]['customer_address'] ?></li>
+          <li style="width: 200px;">Số điện thoại:&nbsp;<?= $list[0]['customer_phone_number'] ?></li>
           
         </ul>
       </div>
       <div class="col-sm-6 col-12 text-center text-sm-right">
-        <p><span class="text-muted">Ngày mua hàng :</span> 06/05/2019</p>
+        <p><span class="text-muted">Ngày mua hàng :</span><?= $list[0]['created_at'] ?></p>
         <p><span class="text-muted">Trạng thái :</span> Đang chờ xử lý</p>
-        <p><span class="text-muted">Ngày sửa :</span> 10/05/2019</p>
+        <p><span class="text-muted">Ngày sửa :</span> <?= $list[0]['updated_at'] ?></p>
       </div>
     </div>
     <!-- Invoice Customer Details -->
@@ -159,20 +160,21 @@
     <div id="invoice-footer">
       <div class="row">
         <div class="col-sm-5 col-12 text-center">
-        	<div class="col-md-6">
-        		<form>
-                <div class="form-group">
+        	<div style="margin-left:800px ;" class="col-md-6">
+        		<form  action="<?= ADMIN_URL . 'donhang/update-dh' ?>" method="post">
+                  <input type="hidden" name="id" value="<?= $list[0]['id'] ?>">
                   <label style="text-align: left;">Trạng Thái Đơn Hàng</label>
-                  <select class="form-control select2" style="width: 100%;">
-                    <option style="color:black;" selected="selected">Đang chờ xử lý</option>
-                    <option style="color:green;">Xác đơn hàng</option>
-                    <option style="color:red;">Hủy</option>
+                  <select  class="form-control select2" name="id_ttdh" style="width: 100%;margin: 10px 0px;">
+                        <?php
+                        foreach ($tt as $tts) {
+                            extract($tts);
+                            echo "<option value = '.$id.'>$name</option>";
+                        }
+                        ?>
                   </select>
-                  <br>
                   <a style="padding: 12px 20px;" href="<?= ADMIN_URL . 'donhang' ?>" class="btn btn-sm btn-danger">Hủy</a>
-                            &nbsp;
-                  <button type="button" class="btn btn-info btn-print btn-lg my-1"><i class="la la-paper-plane-o mr-50"></i>Xác Nhận</button>
-                </div>
+                            &nbsp;&nbsp;
+                  <button type="submit" class="btn btn-info btn-print btn-lg my-1"><i class="la la-paper-plane-o mr-50"></i>Xác Nhận</button>
           	</form>
         </div>
       </div>

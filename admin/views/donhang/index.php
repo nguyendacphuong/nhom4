@@ -33,14 +33,13 @@
 				                <td><?= $item['note'] ?></td>
 				                <td><?= $item['reason'] ?></td>
 				                <td><?= $item['total_price'] ?></td>
-				                <td><span id="status" class="badge badge-success badge-lg">
-				                	<?= $item['status'] ?>
+				                <td><span><?= $item['status'] ?>
 				                </span></td>
 				                <td>
 				                	<!-- badge badge-warning badge-lg
 				                	badge badge-danger badge-lg -->
 				                	<span class="dropdown">
-				                		<a href="<?= ADMIN_URL . 'donhang/donhangct'?>">
+				                		<a href="<?= ADMIN_URL . 'donhang/donhangct?id=' . $item['id'] ?>">
 				                			<i class="fas fa-cogs"></i>
 				                		</a>
 				                    </span>
