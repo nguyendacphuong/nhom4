@@ -6,11 +6,9 @@ function cate_index()
     // lấy danh sách danh mục
     $sql = "select * from category where name like '%$keyword%'";
     $cates = executeQuery($sql, true);
-
     // hiển thị view
     admin_render('category/index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
 }
-
 function cate_remove()
 {
     $id = $_GET['id'];
