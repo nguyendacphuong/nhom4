@@ -40,7 +40,7 @@
                                 <td><img height='40px' src="<?= $hinha ?>" alt="" class="rounded-circle"></td>
                                 <td><?= $item['name'] ?></td>
                                 <td><?= $item['emailcmt'] ?></td>
-                                <td><?= $item['id_sp'] ?></td>
+                                <td><?= $item['title'] ?></td>
                                 <td><?= $item['contents'] ?></td>
                                 <th style="font-weight: 500;"><?= $item['created_at'] ?></td>
                                 <td>
