@@ -70,6 +70,7 @@ function edit_form()
     // hiển thị view
     admin_render('product/edit-form.php', compact('cates', 'lis', 'brand_id'), 'admin-assets/custom/product_index.js');
 }
+
 function update_form()
 {
     $id = $_POST['id'];
