@@ -1,5 +1,5 @@
 <?php
-
+// các chức anwng của danh mục
 function cate_index()
 {
     $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
@@ -18,12 +18,10 @@ function cate_remove()
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'danh-muc');
 }
-
 function cate_add_form()
 {
     admin_render('category/add-form.php', [], 'admin-assets/custom/category_add.js');
 }
-
 function cate_save_add()
 {
     $name = $_POST['name'];
@@ -42,7 +40,6 @@ function edit_form()
     // hiển thị view
     admin_render('category/edit-form.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
-
 function update_form()
 {
     $id = $_POST['id'];
@@ -52,7 +49,9 @@ function update_form()
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'danh-muc');
 }
-// and danh mục
+//============================================
+
+// các hàm thêm sửa xóa của thuwong hiệu
 function brand_index()
 {
     $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
@@ -67,6 +66,7 @@ function brand_add_form()
 {
     admin_render('category/brand-add.php', [], 'admin-assets/custom/category_add.js');
 }
+
 function brand_save_add()
 {
     $name_brand = $_POST['name_brand'];
@@ -79,14 +79,11 @@ function brand_save_add()
 
 function brand_edit_add()
 {
-
-
     // hiển thị view
     admin_render('category/brand-edit.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
-
-// 
-
+//==========================================================
+// các chức của slide show
 function slide_index()
 {
     $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
@@ -105,19 +102,14 @@ function slide_add()
 
 function slide_save_add()
 {
-
     $slide_name = $_POST['slide_name'];
-
     $file = $_FILES['slideshow_img'];
-
     $filename = "";
-
     if ($file['size'] > 0) {
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
     }
-
     $sql = " INSERT INTO slideshow (slide_name,slideshow_img) values ('$slide_name','$filename')";
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'slide');
