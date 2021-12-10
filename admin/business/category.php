@@ -163,8 +163,6 @@ function slide_update_form()
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'slide');
 }
-
-
 ?>
 
 <!DOCTYPE html>
