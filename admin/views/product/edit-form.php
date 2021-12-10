@@ -61,7 +61,7 @@
                         <div class="d-flex justify-content-center">
                             <a href="<?= ADMIN_URL . 'sanpham' ?>" class="btn btn-sm btn-danger">Hủy</a>
                             &nbsp;
-                            <button type="submit" class="btn btn-sm btn-primary">Lưu</button>
+                            <button type="submit" class="btn btn-sm btn-primary">Cập nhật</button>
                         </div>
                     </div>
                 </form>
