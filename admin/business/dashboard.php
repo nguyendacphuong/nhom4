@@ -17,16 +17,13 @@ function news_index()
     // lấy danh sách danh mục
     $sql = "select * from news where news_name like '%$keyword%'";
     $cates = executeQuery($sql, true);
-
     // hiển thị view
     admin_render('news/index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
 }
 function news_add()
 {
-
     admin_render('news/add_form.php', [], 'admin-assets/custom/product_add.js');
 }
-
 function news_save_add()
 {
     $news_name = $_POST['news_name'];
