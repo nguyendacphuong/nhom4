@@ -32,7 +32,7 @@
                     <tbody>
                         <?php foreach ($cates as $index => $item) : ?>
                             <tr>
-                                <td><?= $index + 1 ?></td>
+                                <td><?= $item['id']  ?></td>
                                 <td><?= $item['title'] ?></td>
                                 <td><?= number_format($item['price']) ?> VNĐ</td>
                                 <td><?= number_format($item['discount']) ?> VNĐ</td>
