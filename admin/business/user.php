@@ -33,8 +33,7 @@ function user_save_add()
 		$img = PUBLIC_URL . $avatarname;
 	}
 
-	$sql = "INSERT into user (fullname, avatar, email, phone_number, address, password,created_at, updated_at,role_id )
-			 values ('$fullname','$img', '$email', '$phone_number', '$address', '$password','$created_at','$updated_at','$role_id')";
+	$sql = "INSERT into user (fullname, avatar, email, phone_number, address, password,created_at, updated_at,role_id ) values ('$fullname','$img', '$email', '$phone_number', '$address', '$password','$created_at','$updated_at','$role_id')";
 	executeQuery($sql);
 	header('Location:' . ADMIN_URL . 'taikhoan');
 }
