@@ -34,27 +34,25 @@ function cate_save_add()
     $created_at = $updated_at = date('Y-m-d H:s:i');
     $file = $_FILES['thumbnail'];
     $filename = "";
-
     if ($file['size'] > 0) {
         $filename = uniqid() . '-' . $file['name'];
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
     }
-
-
     $sql = " INSERT INTO product (title,price,discount,thumbnail,description,number,category_id,brand_id,status,created_at,updated_at) values ('$title','$price','$discount','$filename','$description','$number','$category_id','$brand_id','$status',' $created_at','$updated_at')";
 
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'sanpham');
 }
+
 function product_remove()
 {
     $id = $_GET['id'];
     $sql = "delete from product where id = $id";
-
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'sanpham');
 }
+
 function edit_form()
 {
     $id = isset($_GET['id']) ? $_GET['id'] : "";
