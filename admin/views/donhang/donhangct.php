@@ -53,13 +53,16 @@
         <div class="table-responsive col-12">
           <table class="table">
             <thead>
-              <tr>
-                <th>STT</th>
-                <th class="text-center">Ảnh sản phẩm</th>
-                <th class="text-left">Tên sản phẩm</th>
+               <?php foreach ($cates as $index => $item): ?>
+                <tr>
+                <th><?= $index + 1?></th>
+                <th class="text-center"><img src="<?= $item['thumbnail'] ?> <?php IMAGE_URl ?>"></th>
+                <th class="text-left"></th>
                 <th class="text-right">Số lượng</th>
-                <th class="text-right">Giá tiền</th>
-              </tr>
+                <th class="text-right">Giá tiền</th>  
+              
+            </tr>
+          <?php endforeach ?>
             </thead>
             <tbody>
               <tr>
@@ -70,24 +73,6 @@
                 </td>
                 <td class="text-right">120</td>
                 <td class="text-right">$2400.00</td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td class="text-center"><img src="#"></td>
-                <td>
-                  <p>iOS Application Development</p>
-                </td>
-                <td class="text-right">260</td>
-                <td class="text-right">$6500.00</td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td class="text-center"><img src="#"></td>
-                <td>
-                  <p>WordPress Template Development</p>
-                </td>
-                <td class="text-right">300</td>
-                <td class="text-right">$6000.00</td>
               </tr>
             </tbody>
           </table>
