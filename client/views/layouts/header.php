@@ -7,7 +7,6 @@
 				<div class="col-lg-6 col-md-6 col-sm-12">
 					<div class="header-top-left">
 						<div class="phone-number"> Call support free: <span>123 456 789</span></div>
-
 					</div>
 				</div>
 				<!-- header-top-left end -->
