@@ -37,11 +37,8 @@ switch ($url) {
         require_once './admin/business/category.php';
         cate_save_add();
         break;
-
-
         //    thương hiệu
     case 'cp-admin/thuong-hieu':
-
         require_once './admin/business/category.php';
         brand_index();
         break;
@@ -71,7 +68,6 @@ switch ($url) {
         brand_update_form();
         break;
         // end thương hiệu
-
         // bình luận
     case 'cp-admin/comments':
         checkAuth([ADMIN_ROLE, STAFF_ROLE]);
@@ -83,8 +79,6 @@ switch ($url) {
         require_once './admin/business/comments.php';
         comment_remove();
         break;
-
-
     case 'chitietsp':
         require_once './client/business/dashboard.php';
         chitiet();
@@ -140,7 +134,6 @@ switch ($url) {
         require_once './admin/business/lienhe.php';
         contact_remove();
         break;
-
     case 'cp-admin/danh-muc/capnhat':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
@@ -152,13 +145,11 @@ switch ($url) {
         update_form();
         break;
         // and danh mục
-
     case 'cp-admin/sanpham':
         checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/product.php';
         product_index();
         break;
-
     case 'cp-admin/sanpham/tao-moi':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
@@ -169,14 +160,11 @@ switch ($url) {
         require_once './admin/business/product.php';
         product_save_add();
         break;
-
     case 'cp-admin/sanpham/xoa':
         require_once './admin/business/product.php';
         product_remove();
         break;
         // end sản phẩm
-
-
     case 'cp-admin/sanpham/capnhat':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
@@ -198,13 +186,8 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_add();
         break;
-
-
-
-
     case 'cp-admin/taikhoan/luu-tao-moi':
         checkAuth([ADMIN_ROLE]);
-
         require_once './admin/business/user.php';
         user_save_add();
         break;
@@ -218,10 +201,8 @@ switch ($url) {
         require_once './admin/business/user.php';
         update_user();
         break;
-
         // require_once './admin/business/user.php';
         // update_user();
-
         // 
     case 'cp-admin/slide':
         require_once './admin/business/category.php';
