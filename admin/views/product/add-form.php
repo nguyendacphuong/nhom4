@@ -57,7 +57,7 @@
                             <select class="form-control" name="brand_id" id="brand_id">
                                 <option value="">-- Chọn --</option>
                                 <?php
-                                foreach ($cate as $thuonghieu) {
+                                foreach ($brand as $thuonghieu) {
                                     extract($thuonghieu);
                                     echo "<option value = '.$id.'>$name_brand</option>";
                                 }

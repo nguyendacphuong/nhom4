@@ -35,13 +35,13 @@
                             }
                         ?>
                             <tr>
-                                <td><?= $index + 1 ?></td>
+                                <td><?= $item['id'] ?></td>
                                 <td><?= $item['id_user'] ?></td>
                                 <td><img height='40px' src="<?= $hinha ?>" alt="" class="rounded-circle"></td>
                                 <td><?= $item['name'] ?></td>
                                 <td><?= $item['emailcmt'] ?></td>
-                                <td><?= $item['id_sp'] ?></td>
-                                <td><textarea style="width: 200px;" name="" id="" cols="10" rows="5"><?= $item['contents'] ?></textarea></td>
+                                <td><?= $item['title'] ?></td>
+                                <td><?= $item['contents'] ?></td>
                                 <th style="font-weight: 500;"><?= $item['created_at'] ?></td>
                                 <td>
                                     <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'comments/xoa?id=' . $item['id'] ?>', '<?= $item['contents'] ?>')" class="btn btn-sm btn-danger">
