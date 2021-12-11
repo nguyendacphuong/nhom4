@@ -69,7 +69,11 @@ function news_update_form()
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
     }
-    $sql = " UPDATE news set news_name = '$news_name',content = '$content',news_img = '$filename' where id = $id";
+    if ($filename != "") {
+        $sql = " UPDATE news set news_name = '$news_name',content = '$content',news_img = '$filename' where id = $id";
+    } else {
+        $sql = " UPDATE news set news_name = '$news_name',content = '$content' where id = $id";
+    }
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'news');
 }
