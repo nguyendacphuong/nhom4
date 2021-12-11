@@ -115,10 +115,10 @@ switch ($url) {
         require_once './client/business/taikhoan.php';
         quenmk();
         break;
-    // case 'doi_mk':
-    //     require_once './client/business/taikhoan.php';
-    //     doi_mk();
-    //     break;
+        // case 'doi_mk':
+        //     require_once './client/business/taikhoan.php';
+        //     doi_mk();
+        //     break;
         //=============================================QUẢN LÝ PHẢN HỒI===============================================//
     case 'lienhe':
         require_once './client/business/homepage.php';
@@ -162,12 +162,12 @@ switch ($url) {
     case 'cp-admin/sanpham/tao-moi':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
-        cate_add_form();
+        product_add_form();
         break;
     case 'cp-admin/sanpham/luu-tao-moi':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
-        cate_save_add();
+        product_save_add();
         break;
 
     case 'cp-admin/sanpham/xoa':

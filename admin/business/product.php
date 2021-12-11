@@ -10,16 +10,16 @@ function product_index()
     admin_render('product/index.php', compact('product', 'keyword'), 'admin-assets/custom/product_index.js');
 }
 
-function cate_add_form()
+function product_add_form()
 {
     $sql = "select * from category  ";
     $cates = pdo_query($sql, true);
     $sql = "select id , name_brand from brand  ";
-    $cate = pdo_query($sql, true);
-    admin_render('product/add-form.php', compact('cates', 'cate'), 'admin-assets/custom/product_add.js');
+    $brand = pdo_query($sql, true);
+    admin_render('product/add-form.php', compact('cates', 'brand'), 'admin-assets/custom/product_add.js');
 }
 
-function cate_save_add()
+function product_save_add()
 {
     $title = $_POST['title'];
     $price = $_POST['price'];
