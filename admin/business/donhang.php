@@ -3,8 +3,7 @@ function donhang()
 {
 	$sql = "select * from tinhtrangdh";
 	$list = executeQuery($sql);
-	$sql = "SELECT * from orders order by id desc";
-	$sql = "SELECT orders.*,tinhtrangdh.name AS 'status' FROM orders JOIN tinhtrangdh ON orders.id_ttdh = tinhtrangdh.id";
+	$sql = "SELECT orders.*,tinhtrangdh.name AS 'status' FROM orders JOIN tinhtrangdh ON orders.id_ttdh = tinhtrangdh.id order by id desc";
 	$cates = executeQuery($sql, true);
 	admin_render('donhang/index.php', compact('cates', 'list'), 'admin-assets/custom/category_index.js');
 }
