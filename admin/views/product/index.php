@@ -30,7 +30,7 @@
                         </th>
                     </thead>
                     <tbody>
-                        <?php foreach ($cates as $index => $item) : ?>
+                        <?php foreach ($product as $index => $item) : ?>
                             <tr>
                                 <td><?= $item['id']  ?></td>
                                 <td><?= $item['title'] ?></td>

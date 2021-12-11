@@ -23,7 +23,7 @@
                         <div class="form-group">
                             <label for="">Hình sản phẩm </label><br>
                             <img src="<?= IMAGE_URL . $lis['thumbnail'] ?>" class="figure-img img-fluid rounded" alt="" width="150px" height="100px"><br>
-                            <input type="file" name="thumbnail" value="<?php echo $lis['thumbnail']; ?> " class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="file" name="thumbnail" class="form-control">
                         </div>
                         <div class="form-group">
                             <label for="">Mô tả</label>
@@ -61,7 +61,7 @@
                         <div class="d-flex justify-content-center">
                             <a href="<?= ADMIN_URL . 'sanpham' ?>" class="btn btn-sm btn-danger">Hủy</a>
                             &nbsp;
-                            <button type="submit" class="btn btn-sm btn-primary">Cập nhật</button>
+                            <button type="submit" class="btn btn-sm btn-primary">Lưu</button>
                         </div>
                     </div>
                 </form>
