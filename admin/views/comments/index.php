@@ -23,9 +23,6 @@
                         <th>Mã Sản Phẩm</th>
                         <th>Bình Luận</th>
                         <th>Thời Gian</th>
-                        <!-- <th>
-                            <a href="<?= ADMIN_URL . 'news/tao-moi' ?>" class="btn btn-sm btn-success">Tạo mới</a>
-                        </th> -->
                     </thead>
                     <tbody>
                         <?php foreach ($cates as $index => $item) :
