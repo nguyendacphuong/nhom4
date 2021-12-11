@@ -89,7 +89,6 @@ function update_form()
         $sql = " UPDATE product set title = '$title',price = '$price',discount = '$discount',description = '$description',
         category_id = '$category_id', brand_id = '$brand_id',status = '$status', updated_at = '$updated_at',created_at='$created_at' where id = $id";
     }
-
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'sanpham');
 }
