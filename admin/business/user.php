@@ -18,7 +18,6 @@ function user_save_add()
 	$email = $_POST['email'];
 	$phone_number = $_POST['phone_number'];
 	$password = $_POST['password'];
-	$repassword = $_POST['repassword'];
 	$address = $_POST['address'];
 	$avatar = $_FILES['avatar'];
 	$avatarname = "";
