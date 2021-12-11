@@ -157,7 +157,11 @@ function slide_update_form()
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
     }
-    $sql = " UPDATE slideshow set slide_name = '$slide_name',slideshow_img = '$filename' where id = $id";
+    if ($filename != "") {
+        $sql = " UPDATE slideshow set slide_name = '$slide_name',slideshow_img = '$filename' where id = $id";
+    } else {
+        $sql = " UPDATE slideshow set slide_name = '$slide_name' where id = $id";
+    }
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'slide');
 }
