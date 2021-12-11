@@ -61,19 +61,21 @@ function update_user()
 	$email = $_POST['email'];
 	$phone_number = $_POST['phone_number'];
 	$password = $_POST['password'];
-	$repassword = $_POST['repassword'];
 	$address = $_POST['address'];
 	$avatar = $_FILES['avatar'];
-	$avatarname = "";
+	$filename = "";
 	$role_id = $_POST['role_id'];
 	$updated_at = date('Y-m-d H:s:i');
 	if ($avatar['size'] > 0) {
 		$filename = uniqid() . '-' . $avatar['name'];
-		move_uploaded_file($avatar['tmp_name'], './public/uploads/' . $avatarname);
-		$avatarname = 'uploads/' . $avatarname;
-		$img = PUBLIC_URL . $avatarname;
+		move_uploaded_file($avatar['tmp_name'], './public/uploads/' . $filename);
+		$filename = 'uploads/' . $filename;
 	}
-	$sql = " UPDATE user set fullname = '$fullname',avatar = '$img',phone_number = '$phone_number',password = '$password',address = '$address', role_id = '$role_id', updated_at = '$updated_at' where id = $id";
+	if ($filename != "") {
+		$sql = " UPDATE user set fullname = '$fullname',email = '$email',avatar = '$filename',phone_number = '$phone_number',password = '$password',address = '$address', role_id = '$role_id', updated_at = '$updated_at' where id = $id";
+	} else {
+		$sql = " UPDATE user set fullname = '$fullname',email = '$email', phone_number = '$phone_number',password = '$password',address = '$address', role_id = '$role_id', updated_at = '$updated_at' where id = $id";
+	}
 	executeQuery($sql);
 	header("location: " . ADMIN_URL . 'taikhoan');
 }
