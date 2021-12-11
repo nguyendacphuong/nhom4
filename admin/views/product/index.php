@@ -41,7 +41,7 @@
                                 <td><?= $item['number'] ?> </td>
                                 <td><?= $item['status'] == 1 ? "Còn hàng" : "Hết hàng" ?></td>
                                 <td><?= $item['name_cate'] ?> </td>
-                                <td><?= $item['brand_id'] ?> </td>
+                                <td><?= $item['name_brand'] ?> </td>
                                 <td>
                                     <a href="<?= ADMIN_URL . 'sanpham/capnhat?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
