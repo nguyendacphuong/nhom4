@@ -53,7 +53,6 @@ function news_edit_form()
     // lấy danh sách danh mục
     $sql = "select * from news where id = $id";
     $cates = executeQuery($sql, '');
-
     // hiển thị view
     admin_render('news/edit_form.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
