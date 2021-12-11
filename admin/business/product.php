@@ -6,7 +6,6 @@ function product_index()
     // lấy danh sách sản phẩm
     $sql = "SELECT product.*,category.name AS 'name_cate' FROM product JOIN category ON product.category_id = category.id where title like '%$keyword%'";
     $cates = executeQuery($sql, true);
-
     // hiển thị view
     admin_render('product/index.php', compact('cates', 'keyword'), 'admin-assets/custom/product_index.js');
 }
