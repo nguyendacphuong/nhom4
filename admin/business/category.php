@@ -34,7 +34,6 @@ function edit_form()
     // lấy danh sách danh mục
     $sql = "select * from category where id = $id";
     $cates = executeQuery($sql, '');
-
     // hiển thị view
     admin_render('category/edit-form.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
@@ -56,7 +55,6 @@ function brand_index()
     // lấy danh sách danh mục
     $sql = "select * from brand where name_brand like '%$keyword%'";
     $cates = executeQuery($sql, true);
-
     // hiển thị view
     admin_render('category/brand_index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
 }
