@@ -106,12 +106,12 @@
                 <p>Danh sách Đơn Hàng</p>
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p></p>
               </a>
-            </li>
+            </li> -->
           </ul>
         </li>
 
