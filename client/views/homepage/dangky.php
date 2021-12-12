@@ -5,6 +5,9 @@
                 <form action="<?= BASE_URL . 'dang-ky' ?>" method="POST">
                     <div class="form-fields">
                         <h2>Đăng ký</h2>
+                        <?php if(isset($success)) { ?>
+                            <h2 style="color: green;"><?=$success?></h2>
+                        <?php } ?>
                         <p>
                             <label>Họ và tên <span class="required">*</span></label>
                             <input type="text" name="fullname" value="<?php if(isset($_POST['fullname'])) echo $_POST['fullname'];?>" />

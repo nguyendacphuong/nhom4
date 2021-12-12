@@ -52,9 +52,11 @@ function dangky()
         if (empty($err)) {
             $sql = "insert into user (fullname, email, phone_number, address, password) values ('$fullname', '$email', '$phone_number', '$address', '$password')";
             executeQuery($sql);
-            header('Location:' . BASE_URL);
+            $success = [];
+            $success = "ĐĂNG KÝ THÀNH CÔNG!";
+            client_render('homepage/dangky.php', compact('success'));
         }
-        client_render('homepage/dangky.php', compact('err'));
+        client_render('homepage/dangky.php', compact('err',));
     }
 
     $sql = "SELECT * FROM category";
