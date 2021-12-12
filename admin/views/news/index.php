@@ -19,17 +19,17 @@
                         <th>Tiều đề</th>
                         <th>Hình ảnh</th>
                         <th>Nội dung</th>
-                        <th>
+                        <th class="col-1">
                             <a href="<?= ADMIN_URL . 'news/tao-moi' ?>" class="btn btn-sm btn-success">Tạo mới</a>
                         </th>
                     </thead>
                     <tbody>
                         <?php foreach ($cates as $index => $item) : ?>
                             <tr>
-                                <td><?= $index + 1 ?></td>
-                                <td><textarea name="" id="" cols="50" rows="5"><?= $item['news_name'] ?></textarea></td>
+                                <td><?= $item['id'] ?></td>
+                                <td><?= $item['news_name'] ?></td>
                                 <td><img src="<?= IMAGE_URL ?><?= $item['news_img'] ?>" with="150px" height="100px" alt=""></td>
-                                <td><textarea name="" id="" cols="50" rows="5"><?= $item['content'] ?></textarea></td>
+                                <td><?= $item['content'] ?></td>
                                 <td>
                                     <a href="<?= ADMIN_URL . 'news/capnhat?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>

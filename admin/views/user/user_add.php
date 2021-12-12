@@ -16,7 +16,7 @@
                             <input type="email" name="email" required class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                            <label for="">password</label>
+                            <label for="">Mật khẩu</label>
                             <input type="password" name="password" required class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
@@ -24,7 +24,7 @@
                             <input type="text" name="phone_number" required class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                            <label for="">Address</label>
+                            <label for="">Địa chỉ</label>
                             <input type="text" name="address" required class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">

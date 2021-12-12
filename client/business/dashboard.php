@@ -50,11 +50,6 @@ function chitiet()
     }
     $sql = "select * from contents where id_sp ='$id'";
     $cmt = select_page($sql);
-
-
-
-
-
     $sql = "SELECT * FROM category";
     $list = select_page($sql);
     $sql = "SELECT * FROM brand";
@@ -95,14 +90,9 @@ function list_product()
         $sql = "SELECT * FROM product   where category_id = '$id'";
     } else {
         $value = isset($_GET['timkiem']) ? $_GET['timkiem'] : "";
-        $sql = "SELECT * FROM product INNER JOIN brand ON product.brand_id = brand.id WHERE 
-        title like '%$value%'
-        OR price LIKE '%$value%' 
-         ";
+        $sql = "SELECT * FROM product INNER JOIN brand ON product.brand_id = brand.id WHERE title like '%$value%' OR price LIKE '%$value%'";
     }
     $items = select_page($sql);
-
-
     $viewss = select_page($sql);
     client_render('homepage/shop.php', compact('items', 'list', 'viewss', 'thuonghieu'));
 }
@@ -118,13 +108,9 @@ function thuonghieu()
         $sql = "SELECT * FROM product   where brand_id = '$id'";
     } else {
         $value = isset($_GET['timkiem']) ? $_GET['timkiem'] : "";
-        $sql = "SELECT * FROM product INNER JOIN brand ON product.brand_id = brand.id WHERE 
-        title like '%$value%'
-        OR price LIKE '%$value%' 
-         ";
+        $sql = "SELECT * FROM product INNER JOIN brand ON product.brand_id = brand.id WHERE title like '%$value%' OR price LIKE '%$value%'";
     }
     $items = select_page($sql);
-
     $sql = "SELECT * FROM product  ORDER BY view desc limit 6";
     $viewss = select_page($sql);
     client_render('homepage/thuonghieu.php', compact('items', 'list', 'viewss', 'thuonghieu'));

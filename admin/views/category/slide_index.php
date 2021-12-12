@@ -44,4 +44,4 @@
             </div>
         </div>
     </div>
-</div><i class="fas fa-trash"></i>
+</div>
