@@ -6,10 +6,10 @@
                     <div class="form-fields">
                         <h2>BẠN QUÊN MẬT KHẨU ?</h2>
                         <?php if ($loi != "") { ?>
-                            <h2><?= $loi ?></h2>
+                            <h2 style="color: red;"><?= $loi ?></h2>
                         <?php } ?>
-                        <?php if (isset($email) == true) { ?>
-                            <h2><?= $success ?></h2>
+                        <?php if ($success != "") { ?>
+                            <h2 style="color: green;"><?=$success?></h2>
                         <?php } ?>
                         <p>
                             <label>Nhập Email<span class="required">*</span></label>

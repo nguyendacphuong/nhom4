@@ -1,7 +1,6 @@
 <?php
 function dangky()
 {
-    $err = [];
     if (isset($_POST) && isset($_POST['btn_dangky'])) {
         $fullname = $_POST['fullname'];
         $email = $_POST['email'];
@@ -9,20 +8,61 @@ function dangky()
         $password = $_POST['password'];
         $repassword = $_POST['repassword'];
         $address = $_POST['address'];
-        if (empty($fullname && $email && $phone_number && $password && $repassword && $address)) {
-            $err[] = '<script> alert("Bạn chưa điền đầy đủ thông tin") </script>';
+        $err = [];
+        if (empty($fullname)) {
+            $err['fullname'] = "Hãy điền đầy đủ tên đăng nhập!";
+        }else{
+            $fullname = $_POST['fullname'];
         }
+
+        if (empty($email)) {
+            $err['email'] = "Hãy điền đầy đủ email!";
+        }else{
+            $email = $_POST['email'];
+        }
+
+        if (empty($phone_number)) {
+            $err['phone_number'] = "Hãy điền đầy đủ số điện thoại!";
+        }else{
+            $phone_number = $_POST['phone_number'];
+        }
+
+        if (empty($password)) {
+            $err['password'] = "Hãy điền đầy đủ mật khẩu!";
+        }else{
+            $password = $_POST['password'];
+        }
+
+        if (empty($repassword)) {
+            $err['repassword'] = "Hãy nhập lại đầy đủ mật khẩu!";
+        }else{
+            $repassword = $_POST['repassword'];
+        }
+
+        if (empty($address)) {
+            $err['address'] = "Hãy điền đầy đủ địa chỉ!";
+        }else{
+            $address = $_POST['address'];
+        }
+
         if ($password != $repassword) {
-            $err[] = '<script> alert("Mật khẩu không khớp") </script>';
+            $err['checkmk'] = "mật khẩu không trùng khớp!";
+
         }
         if (empty($err)) {
             $sql = "insert into user (fullname, email, phone_number, address, password) values ('$fullname', '$email', '$phone_number', '$address', '$password')";
             executeQuery($sql);
             header('Location:' . BASE_URL);
         }
+        client_render('homepage/dangky.php', compact('err'));
     }
+
+    $sql = "SELECT * FROM category";
+    $list = select_page($sql);
+    $sql = "SELECT * FROM brand";
+    $thuonghieu = select_page($sql);
     // header("Location:".BASE_URL. '/');
-    client_render('homepage/dangky.php');
+    client_render('homepage/dangky.php', compact('list','thuonghieu'));
 }
 
 function my_user()
@@ -50,6 +90,7 @@ function my_user()
 function quenmk()
 {
     $loi = "";
+    $success = "";
     if (isset($_POST['btn_quenmk']) == true) {
         $email = $_POST['email'];
         $connect = get_connect();
@@ -58,30 +99,22 @@ function quenmk()
         $stmt->execute([$email]);
         $count = $stmt->rowCount();
         if ($count == 0) {
-            $loi = "Email bạn nhập không tồn tại!";
+            $loi = "Tài khoản bạn nhập không tồn tại!";
         } else {
+            $success = "Gửi thành công hãy kiểm tra email của bạn!";
             $matkhaumoi =  substr(md5(rand(0, 999999)), 0, 8);
             $sql = "UPDATE user set password = ? WHERE email = ?";
             $stmt = $connect->prepare($sql);
-            $stmt->execute([$email]);
+            $stmt->execute([$matkhaumoi, $email]);
             $count = $stmt->rowCount();
-            if ($count == 0) {
-                $loi = "Email bạn nhập không tồn tại!";
-            }
-            else {
-                $matkhaumoi =  substr(md5(rand(0,999999)), 0, 8);
-                $sql = "UPDATE user set password = ? WHERE email = ?";
-                $stmt = $connect->prepare($sql);
-                $stmt->execute([$matkhaumoi, $email]);
-                send_mail_mk($email, $matkhaumoi);
-            }
+            send_mail_mk($email, $matkhaumoi);
         }
     }
     $sql = "SELECT * FROM category";
     $list = select_page($sql);
     $sql = "SELECT * FROM brand";
     $thuonghieu = select_page($sql);
-    client_render('homepage/quenmk.php', compact('loi', 'list', 'thuonghieu'));
+    client_render('homepage/quenmk.php', compact('loi', 'list', 'thuonghieu', 'success'));
 }
 
 function send_mail_mk($email, $matkhaumoi)
@@ -116,7 +149,6 @@ function send_mail_mk($email, $matkhaumoi)
             )
         ));
         $mail->send();
-        echo 'Đã gửi mail xong';
     } catch (Exception $e) {
         echo 'Error: ', $mail->ErrorInfo;
     }
@@ -158,7 +190,6 @@ function send_mail_mk($email, $matkhaumoi)
 </head>
 
 <body>
-
-</body>
+</body >
 
 </html>
