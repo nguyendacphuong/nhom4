@@ -5,6 +5,7 @@
                 <form action="" method="get">
                     <div class="row">
                         <div class="col-6">
+                            <h4>Dách sách thương hiệu</h4>
                             <div class="form-group">
                                 <input type="text" name="keyword" value="<?= $keyword ?>" class="form-control" placeholder="Tìm kiếm..." aria-describedby="helpId">
                             </div>
@@ -27,7 +28,7 @@
                         <?php foreach ($cates as $index => $item) :
                         ?>
                             <tr>
-                                <td><?= $index + 1 ?></td>
+                                <td><?= $item['id'] ?></td>
                                 <td><?= $item['name_brand'] ?></td>
                                 <td><?= $item['show_menu'] == 1 ? "Có" : "Không" ?></td>
                                 <td>

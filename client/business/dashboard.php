@@ -50,11 +50,6 @@ function chitiet()
     }
     $sql = "select * from contents where id_sp ='$id'";
     $cmt = select_page($sql);
-
-
-
-
-
     $sql = "SELECT * FROM category";
     $list = select_page($sql);
     $sql = "SELECT * FROM brand";
@@ -95,14 +90,9 @@ function list_product()
         $sql = "SELECT * FROM product   where category_id = '$id'";
     } else {
         $value = isset($_GET['timkiem']) ? $_GET['timkiem'] : "";
-        $sql = "SELECT * FROM product INNER JOIN brand ON product.brand_id = brand.id WHERE 
-        title like '%$value%'
-        OR price LIKE '%$value%' 
-         ";
+        $sql = "SELECT * FROM product INNER JOIN brand ON product.brand_id = brand.id WHERE title like '%$value%' OR price LIKE '%$value%'";
     }
     $items = select_page($sql);
-
-
     $viewss = select_page($sql);
     client_render('homepage/shop.php', compact('items', 'list', 'viewss', 'thuonghieu'));
 }
@@ -118,17 +108,12 @@ function thuonghieu()
         $sql = "SELECT * FROM product   where brand_id = '$id'";
     } else {
         $value = isset($_GET['timkiem']) ? $_GET['timkiem'] : "";
-        $sql = "SELECT * FROM product INNER JOIN brand ON product.brand_id = brand.id WHERE 
-        title like '%$value%'
-        OR price LIKE '%$value%' 
-         ";
+        $sql = "SELECT * FROM product INNER JOIN brand ON product.brand_id = brand.id WHERE title like '%$value%' OR price LIKE '%$value%'";
     }
     $items = select_page($sql);
-
     $sql = "SELECT * FROM product  ORDER BY view desc limit 6";
     $viewss = select_page($sql);
     client_render('homepage/thuonghieu.php', compact('items', 'list', 'viewss', 'thuonghieu'));
-
 }
 
 // yêu thích sản phẩm 
@@ -136,7 +121,11 @@ function favorite_profuct()
 {
     $sql = "select yt.*, pr.title, pr.thumbnail, pr.price,pr.status from favorite_products yt join product pr on pr.id = yt.product_id join user us on yt.user_id = us.id where 1 order by id ASC";
     $favorite = executeQuery($sql, true);
-    client_render('favorite_profuct/favorite_profuct.php', compact('favorite'));
+    $sql = "SELECT * FROM category";
+    $list = select_page($sql);
+    $sql = "SELECT * FROM brand";
+    $thuonghieu = select_page($sql);
+    client_render('favorite_profuct/favorite_profuct.php', compact('favorite', 'list', 'thuonghieu'));
 }
 
 function add_favorite_profuct()
@@ -162,3 +151,20 @@ function favorite_profuct_remove()
     executeQuery($sql);
     header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
