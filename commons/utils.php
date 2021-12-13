@@ -11,31 +11,34 @@ const USER_ROLE = 2;
 const STAFF_ROLE = 3;
 
 
-function dd(){
+function dd()
+{
     $data = func_get_args();
     echo "<pre>";
-    foreach($data as $item){
+    foreach ($data as $item) {
         var_dump($item);
     }
     echo "</pre>";
-
 }
 
-function client_render($view, $data = []){
+function client_render($view, $data = [])
+{
     extract($data);
     $view = './client/views/' . $view;
     include_once "./client/views/layouts/main.php";
 }
 
 
-function admin_render($view, $data = [], $jsFile = null){
+function admin_render($view, $data = [], $jsFile = null)
+{
     extract($data);
     $view = './admin/views/' . $view;
     include_once "./admin/views/layouts/main.php";
 }
 
-function getFavoriteProducts(){
-    if(!isset($_SESSION['auth']) || $_SESSION['auth'] == null){
+function getFavoriteProducts()
+{
+    if (!isset($_SESSION['auth']) || $_SESSION['auth'] == null) {
         return false;
     }
     $userId = $_SESSION['auth']['id'];
@@ -44,21 +47,38 @@ function getFavoriteProducts(){
     return $favoriteProducts;
 }
 
-function checkAuth($role_id = []){
-    
-    if(!isset($_SESSION['auth']) || $_SESSION['auth'] == null || !in_array($_SESSION['auth']['role_id'], $role_id)){
+function checkAuth($role_id = [])
+{
+
+    if (!isset($_SESSION['auth']) || $_SESSION['auth'] == null || !in_array($_SESSION['auth']['role_id'], $role_id)) {
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         die;
     }
 }
-function countCartNumber(){
+function countCartNumber()
+{
     $countProduct = 0;
-    if(isset($_SESSION['cart']) && count($_SESSION['cart']) > 0){
+    if (isset($_SESSION['cart']) && count($_SESSION['cart']) > 0) {
         foreach ($_SESSION['cart'] as $item) {
             $countProduct += $item['quantity'];
         }
     }
     return $countProduct;
 }
-
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

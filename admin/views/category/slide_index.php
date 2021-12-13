@@ -5,6 +5,7 @@
                 <form action="" method="get">
                     <div class="row">
                         <div class="col-6">
+                            <h4>Danh sách Slide show</h4>
                             <div class="form-group">
                                 <input type="text" name="keyword" value="<?= $keyword ?>" class="form-control" placeholder="Tìm kiếm..." aria-describedby="helpId">
                             </div>
@@ -23,23 +24,12 @@
                         </th>
                     </thead>
                     <tbody>
-
-                        <?php foreach ($cates as $index => $item) :
-                         $hinha =  $item['slideshow_img'];
-                         if (empty($hinha)) {
-                            $hinh = "không có";
-                         } else {
-                             
-                             $hinh = "<img src='" . $hinha . "' height = '80px'>";
-                         }
-                    
-                            ?>
-                            
+                        <?php foreach ($cates as $index => $item) : ?>
                             <tr>
                                 <td><?= $index + 1 ?></td>
                                 <td><?= $item['slide_name'] ?></td>
-                                <td><?= $hinh?></td>
-                                
+                                <td><img src="<?= IMAGE_URL . $item['slideshow_img'] ?> " with="150px" height="100px" alt=""></td>
+
                                 <td>
                                     <a href="<?= ADMIN_URL . 'slide/capnhat?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
@@ -55,4 +45,4 @@
             </div>
         </div>
     </div>
-</div><i class="fas fa-trash"></i>
+</div>

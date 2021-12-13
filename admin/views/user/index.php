@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">
-                              <input type="text" name="keyword  " value="<?= $keyword ?>" class="form-control" placeholder="Tìm kiếm..." aria-describedby="helpId">
+                                <input type="text" name="keyword  " value="<?= $keyword ?>" class="form-control" placeholder="Tìm kiếm..." aria-describedby="helpId">
                             </div>
                         </div>
                     </div>
@@ -24,28 +24,22 @@
                         <th>Địa chỉ</th>
                         <th>Role</th>
                         <th>
-                            <a href="<?= ADMIN_URL . 'taikhoan/tao-moi'?>" class="btn btn-sm btn-success">Tạo tài khoản mới</a>
+                            <a href="<?= ADMIN_URL . 'taikhoan/tao-moi' ?>" class="btn btn-sm btn-success">Tạo tài khoản mới</a>
                         </th>
                     </thead>
                     <tbody>
-
-                        <?php foreach($cates as $index => $item):
-                            $hinha =  $item['avatar'];
-                            if(empty($hinha)) {
-                                $hinh = "không có";
-                            }
-                            ?>
+                        <?php foreach ($cates as $index => $item) : ?>
                             <tr>
-                                <td><?= $index + 1 ?></td>
-                                <td><img height = '40px' src="<?= $hinha ?>" alt="" class="rounded-circle"></td>
+                                <td><?= $item['id'] ?></td>
+                                <td><img src="<?= IMAGE_URL . $item['avatar'] ?>" with="150px" height="100px" alt=""></td>
                                 <td> <?= $item['fullname'] ?></td>
                                 <td><?= $item['email'] ?></td>
                                 <td><?= $item['password'] ?></td>
                                 <td><?= $item['phone_number'] ?></td>
                                 <td><?= $item['address'] ?></td>
-                                <td><?= $item['role_id'] == 1 ? "Admin" : "Khách hàng" ?></td>
+                                <td><?= $item['role_id'] ?></td>
                                 <td>
-                                    <a href="<?= ADMIN_URL . 'taikhoan/edit-user?id='. $item['id'] ?>" class="btn btn-sm btn-info">
+                                    <a href="<?= ADMIN_URL . 'taikhoan/edit-user?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                     <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'taikhoan/xoa?id=' . $item['id'] ?>', '<?= $item['fullname'] ?>')" class="btn btn-sm btn-danger">
@@ -53,7 +47,7 @@
                                     </a>
                                 </td>
                             </tr>
-                        <?php endforeach?>
+                        <?php endforeach ?>
                     </tbody>
                 </table>
             </div>

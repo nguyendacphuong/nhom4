@@ -12,3 +12,4 @@ function confirm_remove(url, name){
         }
     })
 }
+
