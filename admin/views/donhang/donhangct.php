@@ -19,7 +19,7 @@
     </div>
     <div class="col-sm-6 col-12 text-center text-sm-right">
       <h2>Hóa Đơn</h2>
-      <p class="pb-sm-3">Mã Hóa Đơn :# <?= $list[0]['id'] ?> </p>
+      <p class="pb-sm-3">Mã Hóa Đơn :# <?= $list[0]['id'] ?> </p> 
       <ul class="px-0 list-unstyled">
         <li>Tổng Tiền</li>
         <li class="lead text-bold-800"><?= $list[0]['total_price'] ?>vnđ</li>
@@ -77,6 +77,8 @@
             </tbody>
           <?php endforeach; ?>
         </table>
+        <hr>
+        <h3 style="color: red;">Tổng tiền: <?= number_format($list[0]['total_price']) ?> vnđ</h3>
       </div>
     </div>
     <hr style="padding: 15px 0px;">
