@@ -1,8 +1,10 @@
 <?php
 function user_index()
 {
+	$sql = "select * from role";
 	$keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
-	$sql = "select * from user where email like '%$keyword%'";
+	$sql = "SELECT * from user where email like '%$keyword%'";
+	$sql = "SELECT user.*,role.name AS 'role_id' FROM user JOIN role ON user.role_id = role.id where email like '%$keyword%'";
 	$cates = executeQuery($sql, true);
 	admin_render('user/index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
 }
