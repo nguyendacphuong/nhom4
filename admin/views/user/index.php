@@ -37,7 +37,7 @@
                                 <td><?= $item['password'] ?></td>
                                 <td><?= $item['phone_number'] ?></td>
                                 <td><?= $item['address'] ?></td>
-                                <td><?= $item['role_id'] == 1 ? "Admin" : "Khách hàng" ?></td>
+                                <td><?= $item['role_id'] ?></td>
                                 <td>
                                     <a href="<?= ADMIN_URL . 'taikhoan/edit-user?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
