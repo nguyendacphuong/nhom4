@@ -9,15 +9,15 @@
                     <div class="col-6 offset-3">
                         <div class="form-group">
                             <label for="">Tên nội dung</label>
-                            <input type="text" name="news_name" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="news_name" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Hình </label>
-                            <input type="file" name="news_img" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="file" name="news_img" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Nội dung</label>
-                            <textarea name="content" class="form-control" placeholder="" aria-describedby="helpId" id="" cols="30" rows="10"></textarea>
+                            <textarea name="content" class="form-control" placeholder="" aria-describedby="helpId" id="" cols="30" rows="10" required></textarea>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">

@@ -13,36 +13,36 @@
                         </div>
                         <div class="form-group">
                             <label for="">Giá sản phẩm</label>
-                            <input type="text" name="price" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="price" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Giảm giá</label>
-                            <input type="text" name="discount" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="discount" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Hình sản phẩm</label>
-                            <input type="file" name="thumbnail" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="file" name="thumbnail" class="form-control" placeholder="" aria-describedby="helpId" required>
 
                         </div>
 
                         <div class="form-group">
                             <label for="">Mô tả</label>
-                            <textarea name="description" class="form-control" placeholder="" aria-describedby="helpId" id="" cols="30" rows="10"></textarea>
+                            <textarea name="description" class="form-control" placeholder="" aria-describedby="helpId" id="" cols="30" rows="10" required></textarea>
                         </div>
                         <div class="form-group">
                             <label for="">Số lượng</label>
-                            <input type="number" name="number" value="<?php echo $lis['number']; ?> " class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="number" name="number" value="<?php echo $lis['number']; ?> " class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" id="status" name="status" value="1" type="checkbox">
+                                <input class="form-check-input" id="status" name="status" value="1" type="checkbox" required>
                                 <label class="form-check-label" for="status">Còn hàng</label>
                             </div>
                         </div>
                         <br>
                         <div class="form-group">
                             <label for="usr">Danh Mục Sản Phẩm:</label>
-                            <select class="form-control" name="category_id" id="category_id">
+                            <select class="form-control" name="category_id" id="category_id" required>
                                 <option value="">-- Chọn --</option>
                                 <?php
                                 foreach ($cates as $category) {
@@ -54,7 +54,7 @@
                         </div>
                         <div class="form-group">
                             <label for="usr">Thương hiệu</label>
-                            <select class="form-control" name="brand_id" id="brand_id">
+                            <select class="form-control" name="brand_id" id="brand_id" required>
                                 <option value="">-- Chọn --</option>
                                 <?php
                                 foreach ($brand as $thuonghieu) {

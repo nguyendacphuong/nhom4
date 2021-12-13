@@ -10,7 +10,7 @@
                         <input type="text" name="id" id="" value="<?php echo $cates['id']; ?>" hidden>
                         <div class="form-group">
                             <label for="">Tên danh mục</label>
-                            <input type="text" name="name" value="<?php echo $cates['name']; ?>" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="name" value="<?php echo $cates['name']; ?>" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
 
                         <div class="form-group">

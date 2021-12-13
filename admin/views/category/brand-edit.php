@@ -10,7 +10,7 @@
                     <div class="col-6 offset-3">
                         <div class="form-group">
                             <label for="">Tên thương hiệu</label>
-                            <input type="text" name="name_brand" value="<?php echo $cates['name_brand']; ?>" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="name_brand" value="<?php echo $cates['name_brand']; ?>" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <div class="form-check">

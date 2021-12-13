@@ -9,13 +9,12 @@
                     <div class="col-6 offset-3">
                         <div class="form-group">
                             <label for="">Tên thương hiệu</label>
-                            <input type="text" name="slide_name" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="slide_name" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
 
                         <div class="form-group">
                             <label for="">Hình sản phẩm</label>
-                            <input type="file" name="slideshow_img" class="form-control" placeholder="" aria-describedby="helpId">
-
+                            <input type="file" name="slideshow_img" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">

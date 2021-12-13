@@ -13,16 +13,16 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text"><i class="fas fa-envelope"></i></span>
                 </div>
-                <input type="text" class="form-control" name="recciever" placeholder="Email.....">
+                <input type="text" class="form-control" name="recciever" placeholder="Email....." required>
               </div>
             </div>
             <div class="form-group">
               <label for="">Tiêu đề</label>
-              <input type="text" name="title" class="form-control" placeholder="Tiêu đề.....">
+              <input type="text" name="title" class="form-control" placeholder="Tiêu đề....." required>
             </div>
             <div class="form-group">
               <label for="">Nội dung</label>
-              <textarea name="content" class="form-control" cols="30" rows="10"></textarea>
+              <textarea name="content" class="form-control" cols="30" rows="10" required></textarea>
             </div>
             <div class="d-flex justify-content-end">
               <button type="reset" class="btn btn-sm btn-danger">Nhập lại</button>

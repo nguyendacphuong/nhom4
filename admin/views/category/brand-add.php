@@ -9,12 +9,12 @@
                     <div class="col-6 offset-3">
                         <div class="form-group">
                             <label for="">Tên thương hiệu</label>
-                            <input type="text" name="name_brand" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="name_brand" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
 
                         <div class="form-group">
                             <div class="form-check">
-                                <input class="form-check-input" id="show_menu" name="show_menu" value="1" type="checkbox">
+                                <input class="form-check-input" id="show_menu" name="show_menu" value="1" type="checkbox" >
                                 <label class="form-check-label" for="show_menu">Hiển thị menu</label>
                             </div>
                         </div>

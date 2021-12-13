@@ -9,31 +9,31 @@
                     <div class="col-6 offset-3">
                         <div class="form-group">
                             <label for="">Họ và tên</label>
-                            <input type="text" name="fullname" required class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="fullname" required class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Email</label>
-                            <input type="email" name="email" required class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="email" name="email" required class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Mật khẩu</label>
-                            <input type="password" name="password" required class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="password" name="password" required class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Số điện thoại</label>
-                            <input type="text" name="phone_number" required class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="phone_number" required class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Địa chỉ</label>
-                            <input type="text" name="address" required class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="address" required class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Avatar</label>
-                            <input type="file" name="avatar" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="file" name="avatar" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="usr">Phân Quyền</label>
-                            <select class="form-control" name="role_id" id="role_id">
+                            <select class="form-control" name="role_id" id="role_id" required>
                                 <option value="">-- Chọn --</option>
                                 <?php
                                 foreach ($cates as $role) {

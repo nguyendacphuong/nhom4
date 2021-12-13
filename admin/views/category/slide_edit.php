@@ -10,12 +10,12 @@
                     <div class="col-6 offset-3">
                         <div class="form-group">
                             <label for="">Tên Slide</label>
-                            <input type="text" name="slide_name" value="<?php echo $cates['slide_name']; ?>" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="text" name="slide_name" value="<?php echo $cates['slide_name']; ?>" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
                         <div class="form-group">
                             <label for="">Hình</label>
                             <img src="<?= IMAGE_URL . $cates['slideshow_img'] ?>" class="figure-img img-fluid rounded" alt="" width="150px" height="100px"><br>
-                            <input type="file" name="slideshow_img" value="" class="form-control" placeholder="" aria-describedby="helpId">
+                            <input type="file" name="slideshow_img" value="" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>
 
                         <br>
