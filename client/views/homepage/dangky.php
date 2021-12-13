@@ -1,9 +1,8 @@
-
-    <div class="my-account-area">
+  <div class="my-account-area">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <form action="<?= BASE_URL . 'dang-ky'?>" method="POST">
+                    <form action="<?= BASE_URL . 'dang-ky'?>" method="POST" >
                         <div class="form-fields">
                             <h2>Đăng ký</h2>
                             <p>
