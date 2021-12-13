@@ -8,14 +8,13 @@
                 <form action="<?= ADMIN_URL . 'slide/luu-tao-moi' ?>" method="post" enctype="multipart/form-data">
                     <div class="col-6 offset-3">
                         <div class="form-group">
-                            <label for="">Tên thương hiệu</label>
+                            <label for="">Tên Slide</label>
                             <input type="text" name="slide_name" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
 
                         <div class="form-group">
-                            <label for="">Hình sản phẩm</label>
+                            <label for="">Hình ảnh slide</label>
                             <input type="file" name="slideshow_img" class="form-control" placeholder="" aria-describedby="helpId">
-
                         </div>
                         <br>
                         <div class="d-flex justify-content-center">
