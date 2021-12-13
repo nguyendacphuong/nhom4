@@ -2,7 +2,7 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Tạo mới Slide_show</h3>
+                <h3 class="card-title">Cập nhật Slide show</h3>
             </div>
             <div class="card-body">
                 <form action="<?= ADMIN_URL . 'slide/update' ?>" method="post" enctype="multipart/form-data">
@@ -13,7 +13,7 @@
                             <input type="text" name="slide_name" value="<?php echo $cates['slide_name']; ?>" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                            <label for="">Hình</label><br>
+                            <label for="">Hình ảnh slide</label><br>
                             <img src="<?= IMAGE_URL . $cates['slideshow_img'] ?>" class="figure-img img-fluid rounded" width="500px" height="300px" alt=""><br>
                             <input type="file" name="slideshow_img" value="" class="form-control" placeholder="" aria-describedby="helpId">
                         </div>

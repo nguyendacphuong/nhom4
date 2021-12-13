@@ -31,14 +31,14 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Dashboard</h1>
+              <h1 class="m-0">Trang quản trị</h1>
             </div><!-- /.col -->
-            <div class="col-sm-6">
+            <!-- <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
                 <li class="breadcrumb-item active">Dashboard v1</li>
               </ol>
-            </div><!-- /.col -->
+            </div>/.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
       </div>
@@ -56,11 +56,7 @@
     </div>
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-      <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-      All rights reserved.
-      <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.1.0
-      </div>
+      <strong>Copyright &copy; 2021-2022 <a href="#">Dự án 1 - Nhóm 4</a></strong>
     </footer>
 
     <!-- Control Sidebar -->

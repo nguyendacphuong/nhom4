@@ -58,7 +58,7 @@
             <?php foreach ($cates as $index => $item) : ?>
               <tr>
                 <th><?= $index + 1 ?></th>
-                <th class="text-center"><img src="<?= $item['thumbnail'] ?> <?php IMAGE_URl ?>"></th>
+                <th class="text-center"><img src="<?= IMAGE_URL . $item['thumbnail'] ?>"></th>
                 <th class="text-left"></th>
                 <th class="text-right">Số lượng</th>
                 <th class="text-right">Giá tiền</th>
