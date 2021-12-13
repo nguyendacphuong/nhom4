@@ -7,18 +7,20 @@ function donhang()
 	$cates = executeQuery($sql, true);
 	admin_render('donhang/index.php', compact('cates', 'list'), 'admin-assets/custom/category_index.js');
 }
+
 function edit_donhangct()
 {
 	$id = isset($_GET['id']) ? $_GET['id'] : "";
 	$sql = "SELECT * from orders where id = $id ";
 	$list = executeQuery($sql, true);
-	$sql = "SELECT * from order_detail";
-	$cates = executeQuery($sql, true);
+	$sql = $id = $_GET['id'];
+    $sql = "SELECT * FROM order_detail id JOIN product sp ON id.product_id = sp.id WHERE id.order_id = $id";
+    $oder = select_page($sql);
 	$sql = "SELECT * from tinhtrangdh";
 	$tt = executeQuery($sql, true);
 	$sql = "SELECT * from product";
 	$prd = executeQuery($sql, true);
-	admin_render('donhang/donhangct.php', compact('list', 'cates', 'tt', 'prd'));
+	admin_render('donhang/donhangct.php', compact('list', 'oder', 'tt', 'prd'));
 }
 
 function update_dh()
