@@ -53,7 +53,6 @@ function news_edit_form()
     // lấy danh sách danh mục
     $sql = "select * from news where id = $id";
     $cates = executeQuery($sql, '');
-
     // hiển thị view
     admin_render('news/edit_form.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
@@ -69,7 +68,11 @@ function news_update_form()
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
     }
-    $sql = " UPDATE news set news_name = '$news_name',content = '$content',news_img = '$filename' where id = $id";
+    if ($filename != "") {
+        $sql = " UPDATE news set news_name = '$news_name',content = '$content',news_img = '$filename' where id = $id";
+    } else {
+        $sql = " UPDATE news set news_name = '$news_name',content = '$content' where id = $id";
+    }
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'news');
 }

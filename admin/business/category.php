@@ -34,7 +34,6 @@ function edit_form()
     // lấy danh sách danh mục
     $sql = "select * from category where id = $id";
     $cates = executeQuery($sql, '');
-
     // hiển thị view
     admin_render('category/edit-form.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
@@ -56,7 +55,6 @@ function brand_index()
     // lấy danh sách danh mục
     $sql = "select * from brand where name_brand like '%$keyword%'";
     $cates = executeQuery($sql, true);
-
     // hiển thị view
     admin_render('category/brand_index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
 }
@@ -159,7 +157,11 @@ function slide_update_form()
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
     }
-    $sql = " UPDATE slideshow set slide_name = '$slide_name',slideshow_img = '$filename' where id = $id";
+    if ($filename != "") {
+        $sql = " UPDATE slideshow set slide_name = '$slide_name',slideshow_img = '$filename' where id = $id";
+    } else {
+        $sql = " UPDATE slideshow set slide_name = '$slide_name' where id = $id";
+    }
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'slide');
 }

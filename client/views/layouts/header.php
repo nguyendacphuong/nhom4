@@ -7,7 +7,6 @@
 				<div class="col-lg-6 col-md-6 col-sm-12">
 					<div class="header-top-left">
 						<div class="phone-number"> Call support free: <span>123 456 789</span></div>
-
 					</div>
 				</div>
 				<!-- header-top-left end -->
@@ -18,15 +17,13 @@
 							<ul>
 								<li><a href="<?= BASE_URL . 'favorite' ?>">Sản phẩm yêu thích</a></li>
 								<li><a href="">Giỏ Hàng</a></li>
-								<li>
-									<?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) : ?>
-										<p><a href="<?= BASE_URL . 'my-user' ?>"><?= $_SESSION['auth']['fullname'] ?></a> &nbsp<a href="<?= BASE_URL . 'dang-xuat' ?>">Đăng xuất</a></p>
-									<?php else : ?>
-										<a href="<?= BASE_URL . 'dangnhap' ?>">Đăng nhập</a>
-
-										<a href="<?= BASE_URL . 'dang-ky' ?>">Đăng ký</a>
-									<?php endif ?>
-								</li>
+								<?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) : ?>
+									<li><a href="<?= BASE_URL . 'my-user' ?>"><?= $_SESSION['auth']['fullname'] ?></a> </li>
+									<li><a href="<?= BASE_URL . 'dang-xuat' ?>">Đăng xuất</a></li>
+								<?php else : ?>
+									<li><a href="<?= BASE_URL . 'dangnhap' ?>">Đăng nhập</a></li>
+									<li><a href="<?= BASE_URL . 'dang-ky' ?>">Đăng ký</a> </li>
+								<?php endif ?>
 							</ul>
 						</div>
 					</div>
