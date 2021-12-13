@@ -54,9 +54,19 @@ function dangky()
             executeQuery($sql);
             $success = [];
             $success = "ĐĂNG KÝ THÀNH CÔNG!";
-            client_render('homepage/dangky.php', compact('success'));
+            $sql = "SELECT * FROM user WHERE email = '$email' and password = '$password'";
+            $connect = get_connect();
+            $stmt = $connect->prepare($sql);
+            $stmt->execute();
+            $user = $stmt->fetch();
+            if ($user != false) {
+                $_SESSION['email'] = $_POST['email'];
+                $_SESSION['password'] = $_POST['password'];
+                $_SESSION['auth'] = $user;
+                header("Location: " . BASE_URL);
+            }
         }
-        client_render('homepage/dangky.php', compact('err',));
+        client_render('homepage/dangky.php', compact('err','success'));
     }
 
     $sql = "SELECT * FROM category";
