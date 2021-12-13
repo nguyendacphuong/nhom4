@@ -10,15 +10,13 @@ function donhang()
 }
 function edit_donhangct(){
 	$id = isset($_GET['id']) ? $_GET['id'] : "";
-	$sql = "SELECT * from orders where id = $id";
+	$sql = "SELECT * from orders where id = $id ";
 	$list = executeQuery($sql, true);
 	$sql = "SELECT * from order_detail";
 	$cates = executeQuery($sql, true);
 	$sql = "SELECT * from tinhtrangdh";
 	$tt = executeQuery($sql, true);
-	$sql = "SELECT * from product";
-	$prd = executeQuery($sql, true);
-	admin_render('donhang/donhangct.php', compact('list','cates','tt','prd'));
+	admin_render('donhang/donhangct.php', compact('list','cates','tt'));
 }
 
 function update_dh(){
