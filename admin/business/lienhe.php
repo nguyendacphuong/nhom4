@@ -50,23 +50,18 @@ function send_email()
         $mail->Password   = 'nguyenthanhdat27042002';                               //SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
         $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
         //Recipients
         $mail->setFrom('toilaai27042002@gmail.com', 'Thành đạt');
-
         $arrEmail = explode(',', $recciever);
-
         foreach ($arrEmail as $em) {
             $mail->addAddress(trim($em));
         }
         $mail->addReplyTo('thuylinh10a2xala@gmail.com', 'Thùy linh');
-
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject =  $title;
         $mail->Body    = $content;
         $mail->AltBody = $content;
-
         $mail->send();
         echo 'Message has been sent';
     } catch (Exception $e) {
@@ -74,8 +69,6 @@ function send_email()
     }
     header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
-
-
 ?>
 
 <!DOCTYPE html>

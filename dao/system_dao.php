@@ -1,6 +1,7 @@
 <?php
 function get_connect(){
     $connect = new PDO("mysql:host=localhost;dbname=nhom4_duan1;charset=utf8", "root", "");
+    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $connect;
 }
 function executeQuery($sql, $getAll = false){

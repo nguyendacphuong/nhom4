@@ -28,15 +28,10 @@
                         </th>
                     </thead>
                     <tbody>
-                        <?php foreach ($cates as $index => $item) :
-                            $hinha =  $item['avatar'];
-                            if (empty($hinha)) {
-                                $hinh = "không có";
-                            }
-                        ?>
+                        <?php foreach ($cates as $index => $item) : ?>
                             <tr>
-                                <td><?= $index + 1 ?></td>
-                                <td><img height='40px' src="<?= $hinha ?>" alt="" class="rounded-circle"></td>
+                                <td><?= $item['id'] ?></td>
+                                <td><img src="<?= IMAGE_URL . $item['avatar'] ?>" with="150px" height="100px" alt=""></td>
                                 <td> <?= $item['fullname'] ?></td>
                                 <td><?= $item['email'] ?></td>
                                 <td><?= $item['password'] ?></td>

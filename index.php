@@ -37,11 +37,8 @@ switch ($url) {
         require_once './admin/business/category.php';
         cate_save_add();
         break;
-
-
         //    thương hiệu
     case 'cp-admin/thuong-hieu':
-
         require_once './admin/business/category.php';
         brand_index();
         break;
@@ -70,7 +67,8 @@ switch ($url) {
         require_once './admin/business/category.php';
         brand_update_form();
         break;
-        // and thương hiệu
+        // end thương hiệu
+        // bình luận
     case 'cp-admin/comments':
         checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/comments.php';
@@ -81,8 +79,6 @@ switch ($url) {
         require_once './admin/business/comments.php';
         comment_remove();
         break;
-
-
     case 'chitietsp':
         require_once './client/business/dashboard.php';
         chitiet();
@@ -96,6 +92,7 @@ switch ($url) {
         require_once './client/business/dashboard.php';
         tintucchitiet_index();
         break;
+        //===================================================TÀI KHOẢN===================================================//
     case 'dangnhap':
         require_once './client/business/homepage.php';
         dangnhap();
@@ -104,11 +101,18 @@ switch ($url) {
         require_once './client/business/homepage.php';
         logout();
         break;
-
     case 'dang-ky':
         require_once './client/business/taikhoan.php';
         dangky();
         break;
+    case 'quenmk':
+        require_once './client/business/taikhoan.php';
+        quenmk();
+        break;
+        // case 'doi_mk':
+        //     require_once './client/business/taikhoan.php';
+        //     doi_mk();
+        //     break;
         //=============================================QUẢN LÝ PHẢN HỒI===============================================//
     case 'lienhe':
         require_once './client/business/homepage.php';
@@ -130,7 +134,6 @@ switch ($url) {
         require_once './admin/business/lienhe.php';
         contact_remove();
         break;
-
     case 'cp-admin/danh-muc/capnhat':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/category.php';
@@ -142,31 +145,26 @@ switch ($url) {
         update_form();
         break;
         // and danh mục
-
     case 'cp-admin/sanpham':
         checkAuth([ADMIN_ROLE, STAFF_ROLE]);
         require_once './admin/business/product.php';
         product_index();
         break;
-
     case 'cp-admin/sanpham/tao-moi':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
-        cate_add_form();
+        product_add_form();
         break;
     case 'cp-admin/sanpham/luu-tao-moi':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
-        cate_save_add();
+        product_save_add();
         break;
-
     case 'cp-admin/sanpham/xoa':
         require_once './admin/business/product.php';
         product_remove();
         break;
         // end sản phẩm
-
-
     case 'cp-admin/sanpham/capnhat':
         checkAuth([ADMIN_ROLE]);
         require_once './admin/business/product.php';
@@ -188,13 +186,8 @@ switch ($url) {
         require_once './admin/business/user.php';
         user_add();
         break;
-
-
-
-
     case 'cp-admin/taikhoan/luu-tao-moi':
         checkAuth([ADMIN_ROLE]);
-
         require_once './admin/business/user.php';
         user_save_add();
         break;
@@ -208,10 +201,8 @@ switch ($url) {
         require_once './admin/business/user.php';
         update_user();
         break;
-
         // require_once './admin/business/user.php';
         // update_user();
-
         // 
     case 'cp-admin/slide':
         require_once './admin/business/category.php';
@@ -285,11 +276,10 @@ switch ($url) {
         require_once './client/business/taikhoan.php';
         edit_my_user();
         break;
-    case 'my-user/update':
-        require_once './client/business/taikhoan.php';
-        my_user_update();
-
-        break;
+        // case 'my-user/update':
+        //     require_once './client/business/taikhoan.php';
+        //     my_user_update();
+        //     break;
         //hiển thị sản phẩm theo danh mục
     case 'category':
         require_once './client/business/dashboard.php';
@@ -365,7 +355,7 @@ switch ($url) {
         break;
         // <<==================================================================== >>
 
-        // <<======================== Gửi email cho khashc hàng ======================== >>
+        // <<======================== Gửi email cho khách hàng ======================== >>
     case 'cp-admin/send-email-form':
         require_once './admin/business/lienhe.php';
         email_form();
