@@ -50,13 +50,11 @@
 									<td><span class="badge badge-success badge-lg"><?= $item['status'] ?></span></td>
 									<td>
 										<span class="dropdown">
-											<button id="btnSearchDrop2" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-primary dropdown-toggle dropdown-menu-right"><i class="ft-settings"></i></button>
-											<span aria-labelledby="btnSearchDrop2" class="dropdown-menu mt-1 dropdown-menu-right">
-												<a href="#" class="dropdown-item"><i class="la la-eye"></i>Xem chi tiết</a>
-												<a href="#" class="dropdown-item"><i class="la la-check"></i>Xác Nhận</a>
-												<a href="#" class="dropdown-item"><i class="la la-trash"></i>Hủy đơn hàng</a>
-												<a href="#" class="dropdown-item"><i class="la la-trash"></i>Giao Hàng Thành Công</a>
-											</span>
+											<span class="dropdown">
+				                				<a href="<?= ADMIN_URL . 'donhang/donhangct?id=' . $item['id'] ?>">
+				                			<i class="fas fa-cogs"></i>
+				                		</a>
+				                    </span>
 										</span>
 									</td>
 							</tr>
