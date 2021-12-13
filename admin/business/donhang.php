@@ -10,7 +10,7 @@ function donhang()
 function edit_donhangct()
 {
 	$id = isset($_GET['id']) ? $_GET['id'] : "";
-	$sql = "SELECT * from orders where id = $id";
+	$sql = "SELECT * from orders where id = $id ";
 	$list = executeQuery($sql, true);
 	$sql = "SELECT * from order_detail";
 	$cates = executeQuery($sql, true);
