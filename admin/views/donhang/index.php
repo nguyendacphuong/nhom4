@@ -37,8 +37,8 @@
 								<?php foreach ($cates as $index => $item) : ?>
 									<td><input type="checkbox" class="input-chk"></td>
 									<td><?= $item['id'] ?></td>
-									<td><?= $item['created_at'] ?></td>
-									<td style="font-weight: 400;"><a href="" class="text-bold-600"><?= $item['id'] ?></a></td>
+									<td><?= $item['updated_at'] ?></td>
+									<td style="font-weight: 400;"><a href="<?= ADMIN_URL . 'ctdonhang'?>" class="text-bold-600"><?= $item['id'] ?></a></td>
 									<td><?= $item['id_user'] ?></td>
 									<td><?= $item['customer_name'] ?></td>
 									<td><?= $item['customer_email'] ?></td>
