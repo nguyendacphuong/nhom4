@@ -2,15 +2,10 @@
 require_once './dao/system_dao.php';
 function dashboard_index()
 {
-    $totalProduct = rand(100, 999);
-    $totalProfit = rand(1000, 500000);
-    $totalCustomer = rand(50, 20000);
-    admin_render(
-        'dashboard/index.php',
-        compact('totalProduct', 'totalProfit', 'totalCustomer')
-    );
+    $sql = "select count(*) so_luong from product";
+    $thongke = executeQuery($sql, true);
+    admin_render('dashboard/index.php', compact('thongke'));
 }
-
 function news_index()
 {
     $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";

@@ -3,7 +3,7 @@
         <!-- small box -->
         <div class="small-box bg-info">
             <div class="inner">
-                <h3><?= $totalProduct ?></h3>
+                <h3><?= $thongke ?></h3>
                 <p>Số lượng sản phẩm</p>
             </div>
             <div class="icon">
