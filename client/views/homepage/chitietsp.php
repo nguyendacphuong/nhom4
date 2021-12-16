@@ -146,7 +146,6 @@
                         </div>
                     </div>
                     <div class="clear"></div>
-
                     <div class="upsells_products_widget">
                         <div class="section-heading">
                             <h3>Up-Sells</h3>
