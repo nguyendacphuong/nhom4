@@ -18,6 +18,9 @@
 								<li><a href="<?= BASE_URL . 'favorite' ?>">Sản phẩm yêu thích</a></li>
 								<li><a href="">Giỏ Hàng</a></li>
 								<?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) : ?>
+									<?php if ($_SESSION['auth']['role_id'] == 1) : ?>
+										<li><a href="<?= BASE_URL . 'cp-admin' ?>">Quản trị admin </a></li>
+									<?php endif ?>
 									<li><a href="<?= BASE_URL . 'my-user' ?>"><?= $_SESSION['auth']['fullname'] ?></a> </li>
 									<li><a href="<?= BASE_URL . 'dang-xuat' ?>">Đăng xuất</a></li>
 								<?php else : ?>
@@ -38,7 +41,7 @@
 		<div class="container">
 			<div class="row">
 				<!-- logo start -->
-				<div class="col-lg-6 col-md-4 col-sm-12">
+				<div class="col-lg-6 col-md-3 col-sm-12">
 					<div class="logo">
 						<a href="<?= BASE_URL ?>"><img src="<?= CLIENT_ASSET ?>img/logo/logo.png" alt="" /></a>
 					</div>
