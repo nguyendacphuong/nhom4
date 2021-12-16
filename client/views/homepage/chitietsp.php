@@ -91,12 +91,6 @@
                                                         <div class="product-comments-content">
                                                             <p><strong style="color:blue;"><?= $cmts['name'] ?></strong><br>
                                                                 <span><?= $cmts['created_at'] ?></span>
-                                                                <!-- <span class="pro-comments-rating">
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                            </span> -->
                                                             </p>
                                                             <div style="font-size: 15px;color:black;" class="desc">
                                                                 <?= $cmts['contents'] ?>
@@ -152,6 +146,7 @@
                         </div>
                     </div>
                     <div class="clear"></div>
+
                     <div class="upsells_products_widget">
                         <div class="section-heading">
                             <h3>Up-Sells</h3>
