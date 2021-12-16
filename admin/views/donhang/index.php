@@ -51,10 +51,10 @@
 									<td>
 										<span class="dropdown">
 											<span class="dropdown">
-				                				<a href="<?= ADMIN_URL . 'donhang/donhangct?id=' . $item['id'] ?>">
-				                			<i class="fas fa-cogs"></i>
-				                		</a>
-				                    </span>
+												<a href="<?= ADMIN_URL . 'donhang/donhangct?id=' . $item['id'] ?>">
+													<i class="fas fa-cogs"></i>
+												</a>
+											</span>
 										</span>
 									</td>
 							</tr>
