@@ -34,7 +34,7 @@
 						</thead>
 						<tbody>
 							<tr>
-								<?php foreach ($cates as $index => $item) : ?>
+								<?php foreach ($cates as $item) : ?>
 									<td><input type="checkbox" class="input-chk"></td>
 									<td><?= $item['id'] ?></td>
 									<td><?= $item['created_at'] ?></td>
