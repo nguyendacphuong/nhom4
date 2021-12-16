@@ -24,7 +24,7 @@
                         <th>Ngày Tạo</th>
                     </thead>
                     <tbody>
-                        <?php foreach ($itemcontacts as $index => $itemcontact) : ?>
+                        <?php foreach ($itemcontacts as $itemcontact) : ?>
                             <tr>
                                 <td><?= $itemcontact['id'] ?></td>
                                 <td><?= $itemcontact['name'] ?></td>
