@@ -37,13 +37,13 @@
     </div>
     <div class="col-lg-3 col-6">
         <!-- small box -->
-        <div class="small-box bg-danger">
+        <div class="small-box bg-warning">
             <div class="inner">
                 <h3><?= $binh_luan ?></h3>
                 <p>Bình luận</p>
             </div>
             <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="fas fa-comments" aria-hidden="true"></i>
             </div>
         </div>
     </div>
