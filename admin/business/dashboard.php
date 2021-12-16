@@ -2,9 +2,15 @@
 require_once './dao/system_dao.php';
 function dashboard_index()
 {
-    $sql = "select count(*) so_luong from product";
-    $thongke = executeQuery($sql, true);
-    admin_render('dashboard/index.php', compact('thongke'));
+    $sql = "select count(id) from product";
+    $product = count_all($sql);
+    $sql = "select count(id) from contents";
+    $binh_luan = count_all($sql);
+    $sql = "select count(id) from favorite_products";
+    $favorite = count_all($sql);
+    $sql = "select count(id) from user";
+    $user = count_all($sql);
+    admin_render('dashboard/index.php', compact('product', 'user', 'favorite', 'binh_luan'));
 }
 function news_index()
 {
