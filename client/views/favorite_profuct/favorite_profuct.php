@@ -19,7 +19,7 @@
       <div class="col-md-12 col-sm-12">
         <div class="wishlist-content">
           <form action="#">
-            <div class="wishlist-table table-responsive">
+            <div class="wishlist-table responsive">
               <table>
                 <thead>
                   <tr>
