@@ -24,9 +24,9 @@
                         </th>
                     </thead>
                     <tbody>
-                        <?php foreach ($cates as $index => $item) : ?>
+                        <?php foreach ($cates as $item) : ?>
                             <tr>
-                                <td><?= $index + 1 ?></td>
+                                <td><?= $item['id'] ?></td>
                                 <td><?= $item['slide_name'] ?></td>
                                 <td><img src="<?= IMAGE_URL . $item['slideshow_img'] ?> " with="150px" height="100px" alt=""></td>
 
