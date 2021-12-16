@@ -21,17 +21,23 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><div class="mx-3"> <img src="https://images.unsplash.com/photo-1602096934878-5028bf10ca50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="apple" class="rounded-circle" width="50" height="50"> </div></td>
-                    <td><div><b>3px</b></div></td>
-                    <td><div><b>3px</b></div></td>
+                    <td>
+                        <div class="mx-3"> <img src="https://images.unsplash.com/photo-1602096934878-5028bf10ca50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="apple" class="rounded-circle" width="50" height="50"> </div>
+                    </td>
+                    <td>
+                        <div><b>3px</b></div>
+                    </td>
+                    <td>
+                        <div><b>3px</b></div>
+                    </td>
                     <td class="text-right"><b>120.000đ</b></td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div class="d-flex justify-content-start align-items-center list my-2 py-1">
-        
-        
+
+
         <div class="order-item">Pear</div>
     </div>
     <div class="pt-2 border-bottom mb-3"></div>

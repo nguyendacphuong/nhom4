@@ -1,4 +1,3 @@
-
 <div style="margin: 80px 0px" class="my-account-area">
     <div class="container">
         <div class="row">
@@ -6,23 +5,23 @@
                 <form action="<?= BASE_URL . 'dangnhap' ?>" method="POST">
                     <div class="form-fields">
                         <h2>ĐĂNG NHẬP</h2>
-                        <?php if(isset($loi)) { ?>
-                            <h2 style="color: red;"><?=$loi?></h2>
+                        <?php if (isset($loi)) { ?>
+                            <h2 style="color: red;"><?= $loi ?></h2>
                         <?php } ?>
                         <p>
                             <label>Email <span class="required">*</span></label>
-                            <input type="email" name="email" value="<?php if(isset($_POST['email'])) echo $_POST['email'];?>" />
+                            <input type="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" />
 
                             <?php if (isset($err['email'])) { ?>
-                                <span style="color:red;">*<?php echo $err['email'];?></span>
+                                <span style="color:red;">*<?php echo $err['email']; ?></span>
                             <?php } ?>
                         </p>
                         <p>
                             <label>Password <span class="required">*</span></label>
-                            <input type="password" name="password" value="<?php if(isset($_POST['password'])) echo $_POST['password'];?>" />
+                            <input type="password" name="password" value="<?php if (isset($_POST['password'])) echo $_POST['password']; ?>" />
 
                             <?php if (isset($err['password'])) { ?>
-                                <span style="color:red;">*<?php echo $err['password'];?></span>
+                                <span style="color:red;">*<?php echo $err['password']; ?></span>
                             <?php } ?>
                         </p>
                     </div>
