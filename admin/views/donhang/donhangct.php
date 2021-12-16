@@ -66,12 +66,12 @@
           <?php foreach ($oder as $index => $item) : ?>
             <tbody>
               <tr>
-                <th scope="row"><?= $index + 1?></th>
+                <th scope="row"><?= $index + 1 ?></th>
                 <td class="text-center"><img src="<?= IMAGE_URL . $item['thumbnail'] ?> " width="100px"></td>
                 <td>
-                  <p><?= $item['title']?></p>
+                  <p><?= $item['title'] ?></p>
                 </td>
-                <td class="text-right"><?= $item['quantity']?></td>
+                <td class="text-right"><?= $item['quantity'] ?></td>
                 <td class="text-right"><?= number_format($item['price']) ?>đ</td>
               </tr>
             </tbody>
@@ -107,3 +107,4 @@
     <!-- Invoice Footer -->
 
   </div>
+</div>
