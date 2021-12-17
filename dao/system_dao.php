@@ -4,6 +4,17 @@ function get_connect(){
     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $connect;
 }
+function count_all($sql)
+{
+    try {
+        $conn = get_connect();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchColumn();
+    } catch (PDOException $e) {
+        die('Lỗi truy vấn' . $e->getMessage());
+    }
+}
 function executeQuery($sql, $getAll = false){
 
     $connect = get_connect();

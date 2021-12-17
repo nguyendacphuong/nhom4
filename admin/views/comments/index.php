@@ -25,11 +25,7 @@
                         <th>Thời Gian</th>
                     </thead>
                     <tbody>
-                        <?php foreach ($cates as $index => $item) :
-                            $hinha =  $item['avtcmt'];
-                            if (empty($hinha)) {
-                                $hinh = "không có";
-                            }
+                        <?php foreach ($cates as $item) :
                         ?>
                             <tr>
                                 <td><?= $item['id'] ?></td>

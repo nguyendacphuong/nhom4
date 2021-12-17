@@ -34,7 +34,7 @@
 						</thead>
 						<tbody>
 							<tr>
-								<?php foreach ($cates as $index => $item) : ?>
+								<?php foreach ($cates as $item) : ?>
 									<td><input type="checkbox" class="input-chk"></td>
 									<td><?= $item['id'] ?></td>
 									<td><?= $item['updated_at'] ?></td>
@@ -53,10 +53,10 @@
 									<td>
 										<span class="dropdown">
 											<span class="dropdown">
-				                				<a href="<?= ADMIN_URL . 'donhang/donhangct?id=' . $item['id'] ?>">
-				                			<i class="fas fa-cogs"></i>
-				                		</a>
-				                    </span>
+												<a href="<?= ADMIN_URL . 'donhang/donhangct?id=' . $item['id'] ?>">
+													<i class="fas fa-cogs"></i>
+												</a>
+											</span>
 										</span>
 									</td>
 							</tr>

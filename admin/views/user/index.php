@@ -28,7 +28,7 @@
                         </th>
                     </thead>
                     <tbody>
-                        <?php foreach ($cates as $index => $item) : ?>
+                        <?php foreach ($cates as $item) : ?>
                             <tr>
                                 <td><?= $item['id'] ?></td>
                                 <td><img src="<?= IMAGE_URL . $item['avatar'] ?>" with="150px" height="100px" alt=""></td>
