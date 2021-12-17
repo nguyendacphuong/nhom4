@@ -25,7 +25,7 @@
             <p class="pb-sm-3">Mã Hóa Đơn :# <?= $list[0]['id'] ?> </p>
             <ul class="px-0 list-unstyled">
               <li>Tổng Tiền</li>
-              <li class="lead text-bold-800"><?= $list[0]['total_price'] ?>vnđ</li>
+              <li class="lead text-bold-800"><?= number_format($list[0]['total_price']) ?>vnđ</li>
             </ul>
           </div>
         </div>
@@ -105,59 +105,3 @@
               </div>
             </div>
           </div>
-          <!-- Invoice Footer -->
-
-          <thead>
-            <tr>
-              <th>STT</th>
-              <th class="text-center">Ảnh sản phẩm</th>
-              <th class="text-left">Tên sản phẩm</th>
-              <th class="text-right">Số lượng</th>
-              <th class="text-right">Giá tiền</th>
-            </tr>
-          </thead>
-          <?php foreach ($oder as $index => $item) : ?>
-            <tbody>
-              <tr>
-                <th scope="row"><?= $index + 1?></th>
-                <td class="text-center"><img src="<?= IMAGE_URL . $item['thumbnail'] ?> " width="100px"></td>
-                <td>
-                  <p><?= $item['title']?></p>
-                </td>
-                <td class="text-right"><?= $item['quantity']?></td>
-                <td class="text-right"><?= number_format($item['price']) ?>đ</td>
-              </tr>
-            </tbody>
-          <?php endforeach; ?>
-        </table>
-        <hr>
-        <h3 style="color: red;">Tổng tiền: <?= number_format($list[0]['total_price']) ?> vnđ</h3>
-      </div>
-    </div>
-    <hr style="padding: 15px 0px;">
-  </div>
-  <!-- Invoice Footer -->
-  <div id="invoice-footer">
-    <div class="row">
-      <div class="col-sm-5 col-12 text-center">
-        <div style="margin-left:800px ;" class="col-md-6">
-          <form action="<?= ADMIN_URL . 'donhang/update-dh' ?>" method="post">
-            <input type="hidden" name="id" value="<?= $list[0]['id'] ?>">
-            <label style="text-align: left;">Trạng Thái Đơn Hàng</label>
-            <select class="form-control select2" name="id_ttdh" style="width: 100%;margin: 10px 0px;">
-              <?php
-              foreach ($tt as $tts) {
-                extract($tts);
-                echo "<option value = '.$id.'>$name</option>";
-              }
-              ?>
-            </select>
-            <a style="padding: 12px 20px;" href="<?= ADMIN_URL . 'donhang' ?>" class="btn btn-sm btn-danger">Hủy</a>
-            &nbsp;&nbsp;
-            <button type="submit" class="btn btn-info btn-print btn-lg my-1"><i class="la la-paper-plane-o mr-50"></i>Xác Nhận</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
