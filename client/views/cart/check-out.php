@@ -60,7 +60,7 @@
                                                 <?= $item['title'] ?> <strong class="product-quantity"> × <?= $item['quantity'] ?></strong>
                                             </td>
                                             <td class="product-total">
-                                                <span class="amount"><?= $item['discount'] * $item['quantity'] ?>đ</span>
+                                                <span class="amount"><?= number_format($item['discount'] * $item['quantity']) ?> đ</span>
                                             </td>
                                         </tr>
                                         <?php $totalPrice += $item['discount'] * $item['quantity'] ?>
@@ -69,7 +69,7 @@
                                 <tfoot>
                                     <tr class="order-total">
                                         <th>Order Total</th>
-                                        <td><strong><span class="amount"><?= $totalPrice ?>đ</span></strong>
+                                        <td><strong><span class="amount"><?= number_format($totalPrice) ?> đ</span></strong>
                                         </td>
                                     </tr>
                                 </tfoot>

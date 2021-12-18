@@ -61,8 +61,8 @@ function dangky()
             if ($user != false) {
                 $_SESSION['email'] = $_POST['email'];
                 $_SESSION['password'] = $_POST['password'];
-                $_SESSION['auth'] = $user;
-                header("Location: " . BASE_URL);
+                // $_SESSION['auth'] = $user;
+                header("Location: " . BASE_URL . 'dangnhap');
             }
         }
         client_render('homepage/dangky.php', compact('err', 'success'));

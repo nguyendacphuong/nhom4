@@ -153,8 +153,8 @@ function checkout()
 }
 function remove()
 {
-    $id = $_POST['id'];
-    unset($_SESSION['cart'][$id]);
+    
+    unset($_SESSION['cart']);
     header("location: " . BASE_URL . 'check-out');
 }
 function checkout1()
