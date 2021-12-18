@@ -25,7 +25,7 @@
 									<th class="product-price">Giá sản phẩm</th>
 									<th class="product-quantity">Số lượng</th>
 									<th class="product-subtotal">Thành tiền</th>
-									<th class="product-remove">Xóa</th>
+									
 								</tr>
 							</thead>
 							<tbody>
@@ -40,7 +40,7 @@
 										<td class="product-price"><span class="amount"><?= $item['discount'] ?></span>đ</td>
 										<td class="product-quantity"><input type="number" name="quantity" value="<?= $item['quantity'] ?>" /></td>
 										<td class="product-subtotal"><?= $item['discount'] * $item['quantity'] ?>đ</td>
-										<td class="product-remove"> <a href="<?= BASE_URL . 'remove?id=' . $item['id'] ?>"><i class="fa fa-times"></i> </a></td>
+										
 										<?php $totalPrice += $item['discount'] * $item['quantity'] ?>
 									</tr>
 								<?php endforeach; ?>
@@ -57,8 +57,8 @@
 						<div class="col-md-8 col-sm-12">
 							<div class="buttons-cart">
 							
-								<input type="submit" name="update" value="Update Cart" />
-								<a href="<?= BASE_URL . 'check-out1' ?>">Tiếp tục </a>
+							<td class="product-remove"> <a href="<?= BASE_URL . 'remove?id=' . $item['id'] ?>"><i>Xóa tất cả </i> </a> </td>
+								<a href="<?= BASE_URL . 'check-out1' ?>">Tiếp tục thanh toán</a>
 							</div>
 
 						</div>
