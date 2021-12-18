@@ -7,11 +7,11 @@
                         <h2>XÁC NHẬN TÀI KHOẢN</h2>
                         <h2><?php if (isset($error) && ($error != "")) echo $error; ?></h2>
                         <p>
-                            <label>Mật khẩu mới<span class="required">*</span></label>
+                            <label>Mật khẩu mới<span class="required" style="color: red;">*</span></label>
                             <input type="pass" name="mknew" />
                         </p>
                         <p>
-                            <label>Xác nhận mật khẩu<span class="required">*</span></label>
+                            <label>Xác nhận mật khẩu<span class="required" style="color: red;">*</span></label>
                             <input type="" name="verifymk" />
                         </p>
                     </div>
