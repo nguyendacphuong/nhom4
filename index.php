@@ -298,6 +298,15 @@ switch ($url) {
 
         // <<======================== GIỎ HÀNG ======================== >>
 
+    case 'timkiemdh':
+        require_once './client/business/donhang.php';
+        tk_donhang();
+        break;
+    case 'donhangdm':
+        require_once './client/business/donhang.php';
+        dh_damua();
+        break;
+    
     case 'donhangct':
         require_once './client/business/donhang.php';
         donhang_ct();
