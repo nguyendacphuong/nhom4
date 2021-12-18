@@ -77,7 +77,7 @@
 										<div class="actions">
 											<div class="action-buttons">
 												<div class="add-to-cart">
-													<a href="#">Add to cart</a>
+													<a href="<?= BASE_URL . 'add-to-cart?id=' . $item['id'] ?>">Add to cart</a>
 												</div>
 												<?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) { ?>
 													<div class="add-to-links">

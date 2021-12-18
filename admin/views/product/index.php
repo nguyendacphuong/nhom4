@@ -47,7 +47,11 @@
                                     <a href="<?= ADMIN_URL . 'sanpham/capnhat?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
                                     </a>
+<<<<<<< Updated upstream
                                     <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'sanpham/xoa?id=' . $item['id'] ?>', '<?= $item['title'] ?>')" class="btn btn-sm btn-danger">
+=======
+                                    <a href="javascript:;" onclick="confirm_remove('<?= ADMIN_URL . 'sanpham/xoa?id='. $item['id'] ?>', '<?= $item['title']?>')" class="btn btn-sm btn-danger">
+>>>>>>> Stashed changes
                                         <i class="fas fa-trash"></i>
                                     </a>
                                 </td>

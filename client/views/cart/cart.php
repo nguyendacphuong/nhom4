@@ -23,7 +23,7 @@
 								?>
 								<?php foreach ($cart as $item) : ?>
 									<tr>
-
+										<input type="hidden" name="id" id="" value="<?= $item['id'] ?>">
 										<td class="product-thumbnail"><a href="#"><img src="<?= IMAGE_URL ?><?= $item['thumbnail'] ?>" alt="" /></a></td>
 										<td class="product-name"><a href="#"></a><?= $item['title'] ?></td>
 										<td class="product-price"><span class="amount"><?= $item['discount'] ?></span>$</td>
@@ -45,7 +45,7 @@
 					<div class="row">
 						<div class="col-md-8 col-sm-12">
 							<div class="buttons-cart">
-								<input type="hidden" name="id" id="" value="<?= $item['id'] ?>">
+							
 								<input type="submit" name="update" value="Update Cart" />
 								<a href="<?= BASE_URL . 'check-out1' ?>">Tiếp tục </a>
 							</div>

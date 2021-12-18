@@ -340,6 +340,10 @@ switch ($url) {
         require_once './client/business/homepage.php';
         paycart();
         break;
+    case 'cart-detail':
+        require_once './client/business/homepage.php';
+        cart_detail();
+        break;
         // <<======================== SẢN PHẨM YÊU THÍCH ======================== >>
     case 'favorite':
         require_once './client/business/dashboard.php';
