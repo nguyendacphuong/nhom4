@@ -43,7 +43,7 @@
     </div>
     <div class="col-sm-6 col-12 text-center text-sm-right">
       <p><span class="text-muted">Ngày mua hàng :</span><?= $list[0]['created_at'] ?></p>
-      <p><span class="text-muted">Trạng thái :</span><?= $list[0]['id_ttdh'] ?></p>
+      <p><span name="status" class="text-muted">Trạng thái :</span><?= $list[0]['id_ttdh'] ?></p>
       <p><span class="text-muted">Ngày sửa :</span> <?= $list[0]['updated_at'] ?></p>
     </div>
   </div>
@@ -66,7 +66,7 @@
           <?php foreach ($oder as $index => $item) : ?>
             <tbody>
               <tr>
-                <th scope="row"><?= $index + 1?></th>
+                <th scope="row"><?= $index + 1 ?></th>
                 <td class="text-center"><img src="<?= IMAGE_URL . $item['thumbnail'] ?> " width="100px"></td>
                 <td>
                   <p><?= $item['title']?></p>

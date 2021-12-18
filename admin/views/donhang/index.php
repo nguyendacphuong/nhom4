@@ -34,10 +34,10 @@
 						</thead>
 						<tbody>
 							<tr>
-								<?php foreach ($cates as $item) : ?>
+								<?php foreach ($cates as $index => $item) : ?>
 									<td><input type="checkbox" class="input-chk"></td>
-									<td><?= $item['id'] ?></td>
-									<td><?= $item['updated_at'] ?></td>
+									<td><?= $index + 1 ?></td>
+									<td style="color:green;"><?= $item['updated_at'] ?></td>
 									<td style="font-weight: 400;">
 										<a href="<?= ADMIN_URL . 'donhang/ctdonhang?id=' . $item['id'] ?>"><?= $item['id'] ?></a>
 									</td>
@@ -48,7 +48,7 @@
 									<th style="font-weight: 400;"><?= $item['customer_address'] ?></th>
 									<td><?= $item['note'] ?></td>
 									<td><?= $item['reason'] ?></td>
-									<td><?= number_format($item['total_price']) ?> VNĐ</td>
+									<td style="color:red;"><?= number_format($item['total_price']) ?> VNĐ</td>
 									<td><span class="badge badge-success badge-lg"><?= $item['status'] ?></span></td>
 									<td>
 										<span class="dropdown">
