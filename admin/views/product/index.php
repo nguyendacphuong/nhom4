@@ -5,7 +5,7 @@
                 <form action="" method="get">
                     <div class="row">
                         <div class="col-6">
-                            <h4>Dánh sách sản phẩm</h4>
+                            <h4>Danh sách sản phẩm</h4>
                             <div class="form-group">
                                 <input type="text" name="keyword" value="<?= $keyword ?>" class="form-control" placeholder="Tìm kiếm..." aria-describedby="helpId">
                             </div>
