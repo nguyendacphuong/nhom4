@@ -5,6 +5,7 @@
                 <form action="" method="get">
                     <div class="row">
                         <div class="col-6">
+                            <h4>Danh sách bình luận</h4>
                             <div class="form-group">
                                 <input type="text" name="keyword" value="<?= $keyword ?>" class="form-control" placeholder="Tìm kiếm..." aria-describedby="helpId">
                             </div>
@@ -25,11 +26,7 @@
                         <th>Thời Gian</th>
                     </thead>
                     <tbody>
-                        <?php foreach ($cates as $index => $item) :
-                            $hinha =  $item['avtcmt'];
-                            if (empty($hinha)) {
-                                $hinh = "không có";
-                            }
+                        <?php foreach ($cates as $item) :
                         ?>
                             <tr>
                                 <td><?= $item['id'] ?></td>

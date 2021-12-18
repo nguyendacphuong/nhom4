@@ -11,43 +11,42 @@ function dangky()
         $err = [];
         if (empty($fullname)) {
             $err['fullname'] = "Hãy điền đầy đủ tên đăng nhập!";
-        }else{
+        } else {
             $fullname = $_POST['fullname'];
         }
 
         if (empty($email)) {
             $err['email'] = "Hãy điền đầy đủ email!";
-        }else{
+        } else {
             $email = $_POST['email'];
         }
 
         if (empty($phone_number)) {
             $err['phone_number'] = "Hãy điền đầy đủ số điện thoại!";
-        }else{
+        } else {
             $phone_number = $_POST['phone_number'];
         }
 
         if (empty($password)) {
             $err['password'] = "Hãy điền đầy đủ mật khẩu!";
-        }else{
+        } else {
             $password = $_POST['password'];
         }
 
         if (empty($repassword)) {
             $err['repassword'] = "Hãy nhập lại đầy đủ mật khẩu!";
-        }else{
+        } else {
             $repassword = $_POST['repassword'];
         }
 
         if (empty($address)) {
             $err['address'] = "Hãy điền đầy đủ địa chỉ!";
-        }else{
+        } else {
             $address = $_POST['address'];
         }
 
         if ($password != $repassword) {
             $err['checkmk'] = "mật khẩu không trùng khớp!";
-
         }
         if (empty($err)) {
             $sql = "insert into user (fullname, email, phone_number, address, password) values ('$fullname', '$email', '$phone_number', '$address', '$password')";
@@ -66,7 +65,7 @@ function dangky()
                 header("Location: " . BASE_URL);
             }
         }
-        client_render('homepage/dangky.php', compact('err','success'));
+        client_render('homepage/dangky.php', compact('err', 'success'));
     }
 
     $sql = "SELECT * FROM category";
@@ -74,7 +73,7 @@ function dangky()
     $sql = "SELECT * FROM brand";
     $thuonghieu = select_page($sql);
     // header("Location:".BASE_URL. '/');
-    client_render('homepage/dangky.php', compact('list','thuonghieu'));
+    client_render('homepage/dangky.php', compact('list', 'thuonghieu'));
 }
 
 function my_user()
@@ -86,18 +85,19 @@ function my_user()
     client_render('homepage/my-user-form.php', compact('list', 'thuonghieu'));
 }
 
-    function edit_my_user(){
-        $id = isset($_GET['id']) ? $_GET['id'] : "";
-        // lấy danh sách danh mục
-        $sql = "select * from user where id = $id ";
-        $cates = executeQuery($sql);
-        // hiển thị view
-        $sql = "SELECT * FROM category";
-        $list = select_page($sql);
-        $sql = "SELECT * FROM brand";
-        $thuonghieu = select_page($sql);
-        client_render('homepage/edit_my_user.php', compact('cates','list','thuonghieu'), 'admin-assets/custom/category_index.js');
-    }
+function edit_my_user()
+{
+    $id = isset($_GET['id']) ? $_GET['id'] : "";
+    // lấy danh sách danh mục
+    $sql = "select * from user where id = $id ";
+    $cates = executeQuery($sql);
+    // hiển thị view
+    $sql = "SELECT * FROM category";
+    $list = select_page($sql);
+    $sql = "SELECT * FROM brand";
+    $thuonghieu = select_page($sql);
+    client_render('homepage/edit_my_user.php', compact('cates', 'list', 'thuonghieu'), 'admin-assets/custom/category_index.js');
+}
 
 function quenmk()
 {
@@ -141,11 +141,11 @@ function send_mail_mk($email, $matkhaumoi)
         $mail->CharSet  = "utf-8";
         $mail->Host = 'smtp.gmail.com';  //SMTP servers
         $mail->SMTPAuth = true; // Enable authentication
-        $mail->Username = 'dactrong2001@gmail.com'; // SMTP username
-        $mail->Password = 'yukihirasouma';   // SMTP password
+        $mail->Username = 'datthanhnguyen2704@gmail.com'; // SMTP username
+        $mail->Password = 'nguyenthanhdat27042002';   // SMTP password
         $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
         $mail->Port = 465;  // port to connect to                
-        $mail->setFrom('dactrong2001@gmail.com', 'trong');
+        $mail->setFrom('datthanhnguyen2704@gmail.com', 'Zonker Shop');
         $mail->addAddress($email, $matkhaumoi);
         $mail->isHTML(true);  // Set email format to HTML
         $mail->Subject = 'MAIL ĐỔI MẬT KHẨU';
@@ -202,6 +202,6 @@ function send_mail_mk($email, $matkhaumoi)
 </head>
 
 <body>
-</body >
+</body>
 
 </html>

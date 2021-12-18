@@ -27,6 +27,11 @@ function chitiet()
     $itemcungloais = select_page($sql);
 
     //
+    $luotXemUD = $item[0]['view'] + 1;
+    $sqlUd = "UPDATE product SET view='$luotXemUD' WHERE id = '$id'";
+    $conn = get_connect();
+    $stmt = $conn->prepare($sqlUd);
+    $stmt->execute();
 
     if (isset($_POST) && isset($_POST['comment'])) {
         $id_sp = $_GET['id'];

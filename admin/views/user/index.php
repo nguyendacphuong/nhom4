@@ -5,6 +5,7 @@
                 <form action="" method="get">
                     <div class="row">
                         <div class="col-6">
+                            <h4>Danh sách tài khoản</h4>
                             <div class="form-group">
                                 <input type="text" name="keyword  " value="<?= $keyword ?>" class="form-control" placeholder="Tìm kiếm..." aria-describedby="helpId">
                             </div>
@@ -28,7 +29,7 @@
                         </th>
                     </thead>
                     <tbody>
-                        <?php foreach ($cates as $index => $item) : ?>
+                        <?php foreach ($cates as $item) : ?>
                             <tr>
                                 <td><?= $item['id'] ?></td>
                                 <td><img src="<?= IMAGE_URL . $item['avatar'] ?>" with="150px" height="100px" alt=""></td>
