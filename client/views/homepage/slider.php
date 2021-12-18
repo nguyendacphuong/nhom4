@@ -30,8 +30,7 @@
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs justify-content-center" role="tablist">
                         <li role="presentation" class="active"><a class="active" href="#home" aria-controls="home" role="tab" data-toggle="tab">Men</a></li>
-                        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">women</a></li>
-                        <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Clothes</a></li>
+           
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">
@@ -92,8 +91,8 @@
                                                         <a href="#"><i class="fa fa-star"></i></a>
                                                     </div>
                                                     <div class="price-box">
-                                                        <span class="new-price"><?= $item['discount'] ?>đ</span>
-                                                        <span class="old-price"><?= $item['price'] ?>đ</span>
+                                                        <span class="new-price"><?=number_format( $item['discount']) ?>đ</span>
+                                                        <span class="old-price"><?=number_format( $item['price'] )?>đ</span>
                                                     </div>
                                                     <span class="content__product-general-status">View:
                                                         <?= $item['view'] ?>
@@ -186,8 +185,8 @@
                                                         <a href="#"><i class="fa fa-star"></i></a>
                                                     </div>
                                                     <div class="price-box">
-                                                        <span class="new-price"><?= $item['discount'] ?>đ</span>
-                                                        <span class="old-price"><?= $item['price'] ?>đ</span>
+                                                        <span class="new-price"><?=number_format( $item['discount']) ?>đ</span>
+                                                        <span class="old-price"><?=number_format( $item['price']) ?>đ</span>
                                                     </div>
                                                     <span class="content__product-general-status">View:
                                                         <?= $newitem['view'] ?>
@@ -217,6 +216,7 @@
                 </div>
             </div>
         </div>
+        
         <!-- section-heading end -->
         <div class="row">
             <div class="top-sells-curosel">
@@ -240,8 +240,8 @@
                                         <a href="#"><i class="fa fa-star"></i></a>
                                     </div>
                                     <div class="price-box">
-                                        <span class="new-price">£<?= $item['discount'] ?></span>
-                                        <span class="old-price">£<?= $item['price'] ?></span>
+                                        <span class="new-price"><?=number_format($item['discount'])  ?>đ</span>
+                                        <span class="old-price"><?=number_format( $item['price'] )?>đ</span>
                                     </div>
                                 </div>
                                 <div class="actions">
@@ -270,8 +270,8 @@
                                         <a href="#"><i class="fa fa-star"></i></a>
                                     </div>
                                     <div class="price-box">
-                                        <span class="new-price">£<?= $item['discount'] ?></span>
-                                        <span class="old-price">£<?= $item['price'] ?></span>
+                                        <span class="new-price"><?=number_format( $item['discount'] )?>đ</span>
+                                        <span class="old-price"><?=number_format( $item['price'] )?>đ</span>
                                     </div>
                                 </div>
                                 <div class="actions">
