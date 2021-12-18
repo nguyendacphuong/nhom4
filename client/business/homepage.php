@@ -204,7 +204,6 @@ function camon()
     $list = select_page($sql);
     $sql = "SELECT * FROM brand";
     $thuonghieu = select_page($sql);
-    $cart = $_SESSION['cart'];
     client_render('cart/camon.php', compact('list', 'thuonghieu'));
 }
 

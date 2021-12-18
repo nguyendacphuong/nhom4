@@ -60,7 +60,7 @@
                 </form>
             </div>
             <div class="col-md-6">
-                <img class="" src="<?= IMAGE_URL . 'dk1.jpg' ?>">
+                <img class="" src="./public/uploads/dk1.jpg">
             </div>
         </div>
     </div>
