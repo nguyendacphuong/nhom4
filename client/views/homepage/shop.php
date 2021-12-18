@@ -20,8 +20,8 @@
 											<div class="pro-info">
 												<h2 class="product-name"><a href="#"><?= $item['title'] ?></a></h2>
 												<div class="price-box">
-													<span class="new-price"><?= $item['discount'] ?></span>
-													<span class="old-price"><?= $item['price'] ?></span>
+													<span class="new-price"><?= $item['discount'] ?> đ</span>
+													<span class="old-price"><?= $item['price'] ?>đ</span>
 												</div>
 											</div>
 										</div>
@@ -77,7 +77,7 @@
 										<div class="actions">
 											<div class="action-buttons">
 												<div class="add-to-cart">
-													<a href="#">Add to cart</a>
+													<a href="<?= BASE_URL . 'add-to-cart?id=' . $item['id'] ?>">Add to cart</a>
 												</div>
 												<?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) { ?>
 													<div class="add-to-links">

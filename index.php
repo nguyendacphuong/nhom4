@@ -306,6 +306,11 @@ switch ($url) {
         require_once './admin/business/donhang.php';
         donhang();
         break;
+    case 'cp-admin/donhang/ctdonhang':
+        require_once './admin/business/donhang.php';
+        ct_donhang();
+        break;
+
     case 'cp-admin/donhang/donhangct':
         require_once './admin/business/donhang.php';
         edit_donhangct();
@@ -340,6 +345,7 @@ switch ($url) {
         require_once './client/business/homepage.php';
         paycart();
         break;
+   
         // <<======================== SẢN PHẨM YÊU THÍCH ======================== >>
     case 'favorite':
         require_once './client/business/dashboard.php';

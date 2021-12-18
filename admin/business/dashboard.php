@@ -2,15 +2,16 @@
 require_once './dao/system_dao.php';
 function dashboard_index()
 {
-    $totalProduct = rand(100, 999);
-    $totalProfit = rand(1000, 500000);
-    $totalCustomer = rand(50, 20000);
-    admin_render(
-        'dashboard/index.php',
-        compact('totalProduct', 'totalProfit', 'totalCustomer')
-    );
+    $sql = "select count(id) from product";
+    $product = count_all($sql);
+    $sql = "select count(id) from contents";
+    $binh_luan = count_all($sql);
+    $sql = "select count(id) from favorite_products";
+    $favorite = count_all($sql);
+    $sql = "select count(id) from user";
+    $user = count_all($sql);
+    admin_render('dashboard/index.php', compact('product', 'user', 'favorite', 'binh_luan'));
 }
-
 function news_index()
 {
     $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
@@ -53,7 +54,6 @@ function news_edit_form()
     // lấy danh sách danh mục
     $sql = "select * from news where id = $id";
     $cates = executeQuery($sql, '');
-
     // hiển thị view
     admin_render('news/edit_form.php', compact('cates'), 'admin-assets/custom/category_index.js');
 }
@@ -69,7 +69,11 @@ function news_update_form()
         move_uploaded_file($file['tmp_name'], './public/uploads/' . $filename);
         $filename = 'uploads/' . $filename;
     }
-    $sql = " UPDATE news set news_name = '$news_name',content = '$content',news_img = '$filename' where id = $id";
+    if ($filename != "") {
+        $sql = " UPDATE news set news_name = '$news_name',content = '$content',news_img = '$filename' where id = $id";
+    } else {
+        $sql = " UPDATE news set news_name = '$news_name',content = '$content' where id = $id";
+    }
     executeQuery($sql);
     header("location: " . ADMIN_URL . 'news');
 }

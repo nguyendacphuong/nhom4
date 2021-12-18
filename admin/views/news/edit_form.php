@@ -2,18 +2,18 @@
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Tạo mới news_show</h3>
+                <h3 class="card-title">Cập nhật tin tức</h3>
             </div>
             <div class="card-body">
                 <form action="<?= ADMIN_URL . 'news/update' ?>" method="post" enctype="multipart/form-data">
-                    <input type="text" name="id" id="" value="<?php echo $cates['id']; ?>" hidden>
+                    <input type="text" name="id" id="" value="<?= $cates['id']; ?>" hidden>
                     <div class="col-6 offset-3">
                         <div class="form-group">
                             <label for="">Tên news</label>
-                            <input type="text" name="news_name" value="<?php echo $cates['news_name']; ?>" class="form-control" placeholder="" aria-describedby="helpId" required>
+                            <input type="text" name="news_name" value="<?= $cates['news_name']; ?>" class="form-control" aria-describedby="helpId">
                         </div>
                         <div class="form-group">
-                            <label for="">Hình</label>
+                            <label for="">Hình</label><br>
                             <img src="<?= IMAGE_URL . $cates['news_img'] ?>" class="figure-img img-fluid rounded" alt="" width="150px" height="100px"><br>
                             <input type="file" name="news_img" value="" class="form-control" placeholder="" aria-describedby="helpId" required>
                         </div>

@@ -5,6 +5,7 @@
                 <form action="" method="get">
                     <div class="row">
                         <div class="col-6">
+                            <h4>Danh sách liên hệ</h4>
                             <div class="form-group">
                                 <!--làm dòng tìm kiếm tại đây-->
                             </div>
@@ -24,7 +25,7 @@
                         <th>Ngày Tạo</th>
                     </thead>
                     <tbody>
-                        <?php foreach ($itemcontacts as $index => $itemcontact) : ?>
+                        <?php foreach ($itemcontacts as $itemcontact) : ?>
                             <tr>
                                 <td><?= $itemcontact['id'] ?></td>
                                 <td><?= $itemcontact['name'] ?></td>

@@ -9,7 +9,7 @@
                             <h2 style="color: red;"><?= $loi ?></h2>
                         <?php } ?>
                         <?php if ($success != "") { ?>
-                            <h2 style="color: green;"><?=$success?></h2>
+                            <h2 style="color: green;"><?= $success ?></h2>
                         <?php } ?>
                         <p>
                             <label>Nhập Email<span class="required">*</span></label>

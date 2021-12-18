@@ -2,7 +2,7 @@
 function comment_index()
 {
 	$keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";
-	$sql = "select *, pr.id, pr.title from contents bl join product pr on bl.id_sp=pr.id where emailcmt like '%$keyword%'";
+	$sql = "select bl.*, pr.title from contents bl join product pr on bl.id_sp=pr.id where emailcmt like '%$keyword%'";
 	$cates = executeQuery($sql, true);
 	admin_render('comments/index.php', compact('cates', 'keyword'), 'admin-assets/custom/category_index.js');
 }
