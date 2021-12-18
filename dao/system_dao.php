@@ -1,5 +1,6 @@
 <?php
-function get_connect(){
+function get_connect()
+{
     $connect = new PDO("mysql:host=localhost;dbname=nhom4_duan1;charset=utf8", "root", "");
     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     return $connect;
@@ -15,12 +16,13 @@ function count_all($sql)
         die('Lỗi truy vấn' . $e->getMessage());
     }
 }
-function executeQuery($sql, $getAll = false){
+function executeQuery($sql, $getAll = false)
+{
 
     $connect = get_connect();
     $stmt = $connect->prepare($sql);
     $stmt->execute();
-    if($getAll){
+    if ($getAll) {
         return $stmt->fetchAll();
     }
 
@@ -41,34 +43,32 @@ function select_page($sql)
  * @return array mảng chứa bản ghi
  * @throws PDOException lỗi thực thi câu lệnh
  */
-function pdo_query($sql){
+function pdo_query($sql)
+{
     $sql_args = array_slice(func_get_args(), 1);
-    try{
+    try {
         $conn = get_connect();
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         $rows = $stmt->fetchAll();
         return $rows;
-    }
-    catch(PDOException $e){
+    } catch (PDOException $e) {
         throw $e;
-    }
-    finally{
+    } finally {
         unset($conn);
     }
 }
-function pdo_execute_return_lastInsertId($sql){
+function pdo_execute_return_lastInsertId($sql)
+{
     $sql_args = array_slice(func_get_args(), 1);
-    try{
+    try {
         $conn = get_connect();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
         return $conn->lastInsertId();
-    }
-    catch(PDOException $e){
+    } catch (PDOException $e) {
         throw $e;
-    }
-    finally{
+    } finally {
         unset($conn);
     }
 }
@@ -87,19 +87,18 @@ function select_dmuc($sql)
  * @return array mảng chứa bản ghi
  * @throws PDOException lỗi thực thi câu lệnh
  */
-function pdo_query_one($sql){
+function pdo_query_one($sql)
+{
     $sql_args = array_slice(func_get_args(), 1);
-    try{
+    try {
         $conn = get_connect();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         return $row;
-    }
-    catch(PDOException $e){
+    } catch (PDOException $e) {
         throw $e;
-    }
-    finally{
+    } finally {
         unset($conn);
     }
 }
@@ -110,26 +109,44 @@ function pdo_query_one($sql){
  * @return giá trị
  * @throws PDOException lỗi thực thi câu lệnh
  */
-function pdo_query_value($sql){
+function pdo_query_value($sql)
+{
     $sql_args = array_slice(func_get_args(), 1);
-    try{
+    try {
         $conn = get_connect();
         $stmt = $conn->prepare($sql);
         $stmt->execute($sql_args);
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         return array_values($row)[0];
-    }
-    catch(PDOException $e){
+    } catch (PDOException $e) {
         throw $e;
-    }
-    finally{
+    } finally {
         unset($conn);
     }
 }
-function insertDataAndGetId($sql){
+function insertDataAndGetId($sql)
+{
     $connect = get_connect();
     $stmt = $connect->prepare($sql);
     $stmt->execute();
     $id = $connect->lastInsertId();
     return $id;
 }
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
