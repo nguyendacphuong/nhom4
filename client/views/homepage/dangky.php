@@ -23,14 +23,14 @@
                             <?php } ?>
                         </p>
                         <p>
-                            <label>password <span class="required">*</span></label>
+                            <label>Mật khẩu <span class="required">*</span></label>
                             <input type="password" name="password" value="<?php if (isset($_POST['password'])) echo $_POST['password']; ?>" />
                             <?php if (isset($err['password'])) { ?>
                                 <span style="color:red;">*<?php echo $err['password']; ?></span>
                             <?php } ?>
                         </p>
                         <p>
-                            <label>Repassword <span class="required">*</span></label>
+                            <label>Nhập lại mật khẩu <span class="required">*</span></label>
                             <input type="password" name="repassword" value="<?php if (isset($_POST['repassword'])) echo $_POST['repassword']; ?>" />
                             <?php if (isset($err['repassword'])) { ?>
                                 <span style="color:red;">*<?php echo $err['repassword']; ?></span>
