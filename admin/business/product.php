@@ -64,10 +64,6 @@ function edit_form()
     admin_render('product/edit-form.php', compact('cates', 'lis', 'brand_id'), 'admin-assets/custom/product_index.js');
 }
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 function update_form()
 {
     $id = $_POST['id'];
