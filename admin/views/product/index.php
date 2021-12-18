@@ -31,9 +31,9 @@
                         </th>
                     </thead>
                     <tbody>
-                        <?php foreach ($product as $item) : ?>
+                        <?php foreach ($product as $index => $item) : ?>
                             <tr>
-                                <td><?= $item['id']  ?></td>
+                                <td><?= $index + 1  ?></td>
                                 <td><?= $item['title'] ?></td>
                                 <td><?= number_format($item['price']) ?> VNĐ</td>
                                 <td><?= number_format($item['discount']) ?> VNĐ</td>

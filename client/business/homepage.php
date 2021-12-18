@@ -177,8 +177,9 @@ function paycart()
     $email = $_POST['email'];
     $address = $_POST['address'];
     $note = $_POST['note'];
+    $created_at = $updated_at = date('Y-m-d H:s:i');
     // insert dữ liệu để tạo hóa đơn mới, sau đó lấy id của hóa đơn
-    $createorderQuery = "insert into orders (customer_name, customer_phone_number, customer_email, customer_address, note) values ('$name', '$phone', '$email', '$address', '$note')";
+    $createorderQuery = "insert into orders (customer_name, customer_phone_number, customer_email, customer_address, note,created_at,updated_at) values ('$name', '$phone', '$email', '$address', '$note','$created_at','$updated_at')";
     $orderId = insertDataAndGetId($createorderQuery);
     $totalPrice = 0;
     // chạy vòng lặp qua các phần tử của giỏ hàng, sau đó insert dữ liệu vào bảng order_detail
