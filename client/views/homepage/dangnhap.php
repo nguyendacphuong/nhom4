@@ -9,7 +9,7 @@
                             <h2 style="color: red;"><?= $loi ?></h2>
                         <?php } ?>
                         <p>
-                            <label>Email <span class="required">*</span></label>
+                            <label>Email <span class="required" style="color: red;">*</span></label>
                             <input type="email" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>" />
 
                             <?php if (isset($err['email'])) { ?>
@@ -17,7 +17,7 @@
                             <?php } ?>
                         </p>
                         <p>
-                            <label>Password <span class="required">*</span></label>
+                            <label>Password <span class="required" style="color: red;">*</span></label>
                             <input type="password" name="password" value="<?php if (isset($_POST['password'])) echo $_POST['password']; ?>" />
 
                             <?php if (isset($err['password'])) { ?>

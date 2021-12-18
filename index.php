@@ -298,6 +298,15 @@ switch ($url) {
 
         // <<======================== GIỎ HÀNG ======================== >>
 
+    case 'timkiemdh':
+        require_once './client/business/donhang.php';
+        tk_donhang();
+        break;
+    case 'donhangdm':
+        require_once './client/business/donhang.php';
+        dh_damua();
+        break;
+    
     case 'donhangct':
         require_once './client/business/donhang.php';
         donhang_ct();
@@ -310,7 +319,7 @@ switch ($url) {
         require_once './admin/business/donhang.php';
         ct_donhang();
         break;
-    
+
     case 'cp-admin/donhang/donhangct':
         require_once './admin/business/donhang.php';
         edit_donhangct();
@@ -345,6 +354,7 @@ switch ($url) {
         require_once './client/business/homepage.php';
         paycart();
         break;
+   
         // <<======================== SẢN PHẨM YÊU THÍCH ======================== >>
     case 'favorite':
         require_once './client/business/dashboard.php';

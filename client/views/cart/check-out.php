@@ -9,25 +9,25 @@
                             <div class="col-md-12">
                                 <div class="checkout-form-list">
                                     <label>Họ và tên <span class="required">*</span></label>
-                                    <input type="text" placeholder="Họ Tên" name="name" />
+                                    <input required type="text" placeholder="Họ Tên" name="name" />
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="checkout-form-list">
                                     <label>Địa chỉ<span class="required">*</span></label>
-                                    <input type="text" placeholder="Địa chỉ" name="address" />
+                                    <input required type="text" placeholder="Địa chỉ" name="address" />
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="checkout-form-list">
                                     <label>Email <span class="required">*</span></label>
-                                    <input type="email" placeholder="Email" name="email" />
+                                    <input required type="email" placeholder="Email" name="email" />
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="checkout-form-list">
                                     <label>Số điện thoại <span class="required">*</span></label>
-                                    <input type="text" placeholder="Phone" name="phone" />
+                                    <input required type="text" placeholder="Phone" name="phone" />
                                 </div>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                                                 <?= $item['title'] ?> <strong class="product-quantity"> × <?= $item['quantity'] ?></strong>
                                             </td>
                                             <td class="product-total">
-                                                <span class="amount">£<?= $item['discount'] * $item['quantity'] ?></span>
+                                                <span class="amount"><?= number_format($item['discount'] * $item['quantity']) ?> đ</span>
                                             </td>
                                         </tr>
                                         <?php $totalPrice += $item['discount'] * $item['quantity'] ?>
@@ -69,7 +69,7 @@
                                 <tfoot>
                                     <tr class="order-total">
                                         <th>Order Total</th>
-                                        <td><strong><span class="amount">£<?= $totalPrice ?></span></strong>
+                                        <td><strong><span class="amount"><?= number_format($totalPrice) ?> đ</span></strong>
                                         </td>
                                     </tr>
                                 </tfoot>

@@ -5,7 +5,7 @@
 				<form action="" method="get">
 					<div class="row">
 						<div class="col-6">
-							<h4>Dánh sách đơn hàng</h4>
+							<h4>Danh sách đơn hàng</h4>
 						</div>
 					</div>
 				</form>

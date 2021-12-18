@@ -1,11 +1,9 @@
 <div class="row">
   <div class="col-12">
     <div class="card">
-      <div class="card-header">
-        <h3 class="card-title">Sửa Thông Tin Tài Khoản</h3>
-      </div>
       <div class="card-body">
-        <form action="<?= CLIENT_URL . 'my-user/update' ?>" method="post" enctype="multipart/form-data">
+        <h3 class="card-title d-flex justify-content-center">Cập nhật thông tin tài khoản</h3>
+        <form action="<?= BASE_URL . 'my-user/update' ?>" method="post" enctype="multipart/form-data">
           <div class="col-6 offset-3">
             <input type="hidden" name="id" value="<?php echo $cates['id']; ?>">
             <div class="form-group">
@@ -35,7 +33,7 @@
             </div>
             <br>
             <div class="d-flex justify-content-center">
-              <a href="<?= CLIENT_URL . 'my-user' ?>" class="btn btn-sm btn-danger">Hủy</a>
+              <a href="<?= BASE_URL . 'my-user' ?>" class="btn btn-sm btn-danger">Hủy</a>
               &nbsp;
               <button type="submit" class="btn btn-sm btn-primary">Chỉnh sửa</button>
             </div>

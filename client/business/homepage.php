@@ -110,7 +110,6 @@ function add2Cart()
 {
     $pId = $_GET['id'];
     // lấy thông tin sản phẩm
-
     $getProductByIdQuery = "select * from product where id = $pId";
     $product = executeQuery($getProductByIdQuery, false);
     if (!$product) {
@@ -154,7 +153,9 @@ function checkout()
 }
 function remove()
 {
+    
     unset($_SESSION['cart']);
+    header("location: " . BASE_URL . 'check-out');
 }
 function checkout1()
 {
@@ -204,7 +205,6 @@ function camon()
     $list = select_page($sql);
     $sql = "SELECT * FROM brand";
     $thuonghieu = select_page($sql);
-    $cart = $_SESSION['cart'];
     client_render('cart/camon.php', compact('list', 'thuonghieu'));
 }
 

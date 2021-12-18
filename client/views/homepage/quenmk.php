@@ -1,7 +1,7 @@
 <div style="margin-top: 50px;" class="my-account-area">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div style="margin-top: 30px;" class="col-md-6">
                 <form action="<?= BASE_URL . 'quenmk' ?>" method="POST">
                     <div class="form-fields">
                         <h2>BẠN QUÊN MẬT KHẨU ?</h2>
@@ -13,7 +13,7 @@
                         <?php } ?>
                         <p>
                             <label>Nhập Email<span class="required">*</span></label>
-                            <input value="<?php if (isset($email) == true) echo $email ?>" type="email" name="email" />
+                            <input value="<?php if (isset($email) == true) echo $email ?>" type="email" name="keyword" />
                         </p>
                     </div>
                     <div class="form-action">
@@ -24,7 +24,7 @@
                 </form>
             </div>
             <div class="col-md-6">
-                <img class="" src="<?= IMAGE_URL . 'dk1.jpg' ?>">
+                <img class="" src="./public/uploads/login-bn.png">
             </div>
         </div>
     </div>
