@@ -44,6 +44,7 @@ function ct_donhang(){
 	$sql = "SELECT * from product";
 	$prd = executeQuery($sql, true);
 	admin_render('donhang/ctdonhang.php', compact('list', 'oder', 'tt', 'prd'));
+	client_render('donhangct.php', compact('list', 'oder', 'tt', 'prd'));
 }
 ?>
 

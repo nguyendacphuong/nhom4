@@ -15,6 +15,7 @@
 					<div class="header-top-right">
 						<div class="top-menu">
 							<ul>
+								<li><a href="<?= BASE_URL . 'timkiemdh' ?>">Đơn hàng đã mua</a></li>
 								<li><a href="<?= BASE_URL . 'favorite' ?>">Sản phẩm yêu thích</a></li>
 								<li><a href="">Giỏ Hàng</a></li>
 								<?php if (isset($_SESSION['auth']) && $_SESSION['auth'] != null) : ?>
