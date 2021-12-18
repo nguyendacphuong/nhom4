@@ -7,7 +7,7 @@
                         <div style="font-weight: 800;color: green;">Ngày đặt : <b style="color:black;"><?= $item['updated_at']?></b></div>
                         <div style="font-weight: 800;">Trạng Thái: <b style="color:black;"><?= $item['id_ttdh']?></b></div>
                         <div style="font-weight: 800;color: green;"> Tổng: <b style="color:red;"><?= number_format($item['total_price'])?> vnđ</b></div>
-                        <div ><a style="color:red;" href="<?= BASE_URL . 'donhangct'?>">Xem chi tiết</a></div>
+                        <div ><a style="color:red;" href="<?= BASE_URL . 'donhangct?id=' . $item['id']?>">Xem chi tiết</a></div>
                     </div>
                 </div>
         <?php endforeach ?>

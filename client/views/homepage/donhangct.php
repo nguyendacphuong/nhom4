@@ -1,88 +1,58 @@
-<div id="invoice-template" class="card-body p-4">
-  <!-- Invoice Company Details -->
-  <div id="invoice-company-details" class="row">
-    <div class="col-sm-6 col-12 text-center text-sm-left">
-      <div class="media row">
-        <div class="col-12 col-sm-3 col-xl-2">
-        </div>
-        <div class="col-12 col-sm-9 col-xl-10">
-          <div class="media-body">
-            <ul class="ml-2 px-0 list-unstyled">
-              <li class="text-bold-800">
-                <h2>ZonKer</h2>
-              </li>
-              <li style="width: 200px;">4025 Oak Avenue,Melbourne,Florida 32940,USA</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+<div class="d-flex flex-column justify-content-center align-items-center" id="order-heading">
+    
+    <div class="h4">Đơn Hàng Chi Tiết</div>
+    <div style="text-align: center;" class="text-uppercase">
+        <p>Ngày đặt hàng :<?= $list[0]['updated_at'] ?></p>
+        <p>Trạng thái đơn hàng :<?= $list[0]['id_ttdh'] ?></p>
     </div>
-    <div class="col-sm-6 col-12 text-center text-sm-right">
-      <h2>Hóa Đơn</h2>
-      <p class="pb-sm-3">Mã Hóa Đơn :# <?= $list[0]['id'] ?> </p> 
-      <ul class="px-0 list-unstyled">
-        <li>Tổng Tiền</li>
-        <li class="lead text-bold-800"><?= $list[0]['total_price'] ?>vnđ</li>
-      </ul>
+    <div class="pt-1">
+        <p>Đơn hàng  :<?= $list[0]['id'] ?> <b class="text-dark"></b></p>
     </div>
-  </div>
-  <!-- Invoice Company Details -->
-
-  <!-- Invoice Customer Details -->
-  <div id="invoice-customer-details" class="row pt-2">
-    <div class="col-12 text-center text-sm-left">
-      <p style="font-size:35px;" class="text-muted">Gửi tới</p>
-    </div>
-    <div class="col-sm-6 col-12 text-center text-sm-left">
-      <ul class="px-0 list-unstyled">
-        <li style="font-size:25px;" class="text-bold-800">Họ và tên:&nbsp;<?= $list[0]['customer_name'] ?></li>
-        <li style="width: 200px;">Địa chỉ:&nbsp;<?= $list[0]['customer_address'] ?></li>
-        <li style="width: 200px;">Số điện thoại:&nbsp;<?= $list[0]['customer_phone_number'] ?></li>
-
-      </ul>
-    </div>
-    <div class="col-sm-6 col-12 text-center text-sm-right">
-      <p><span class="text-muted">Ngày mua hàng :</span><?= $list[0]['created_at'] ?></p>
-      <p><span name="status" class="text-muted">Trạng thái :</span><?= $list[0]['id_ttdh'] ?></p>
-      <p><span class="text-muted">Ngày sửa :</span> <?= $list[0]['updated_at'] ?></p>
-    </div>
-  </div>
-
-  <!-- Invoice Items Details -->
-  <div id="invoice-items-details" class="pt-2">
-    <div class="row">
-      <div class="table-responsive col-12">
-        <table class="table">
-
-          <thead>
-            <tr>
-              <th>STT</th>
-              <th class="text-center">Ảnh sản phẩm</th>
-              <th class="text-left">Tên sản phẩm</th>
-              <th class="text-right">Số lượng</th>
-              <th class="text-right">Giá tiền</th>
-            </tr>
-          </thead>
-          <?php foreach ($oder as $index => $item) : ?>
+    <a href="<?= BASE_URL . 'donhangdm'?>"><div class="btn close text-white"> &times;
+    </div></a>
+</div>
+<div class="wrapper bg-white">
+    <div style="height: 500px;" class="table-responsive">
+        <table class="table table-borderless">
+            <thead>
+                <tr class="text-uppercase text-muted">
+                    <th scope="col">Ảnh</th>
+                    <th scope="col">Tên Sản Phẩm</th>
+                    <th scope="col">Số lượng</th>
+                    <th scope="col" class="text-right">Thành tiền</th>
+                </tr>
+            </thead>
             <tbody>
-              <tr>
-                <th scope="row"><?= $index + 1 ?></th>
-                <td class="text-center"><img src="<?= IMAGE_URL . $item['thumbnail'] ?> " width="100px"></td>
-                <td>
-                  <p><?= $item['title']?></p>
-                </td>
-                <td class="text-right"><?= $item['quantity']?></td>
-                <td class="text-right"><?= number_format($item['price']) ?>vnđ</td>
-              </tr>
-            </tbody>
+          <?php foreach ($oder as $index => $item) : ?>
+                <tr>
+                    <td scope="col">
+                        <div class="mx-3"> <img src="<?= IMAGE_URL . $item['thumbnail'] ?> " width="100px"></div>
+                    </td>
+                    <td>
+                        <div><b><?= $item['title']?></b></div>
+                    </td>
+                    <td>
+                        <div><b><?= $item['quantity']?></b></div>
+                    </td>
+                    <td class="text-right"><b><?= number_format($item['price'])?>vnđ</b></td>
+                </tr>
+                <hr>
           <?php endforeach; ?>
+            </tbody>
         </table>
-        <hr>
-        <h3 style="color: red;">Tổng tiền: <?= number_format($list[0]['total_price']) ?> vnđ</h3>
-        <h3><span class="text-muted">Trạng thái :</span><?= $list[0]['id_ttdh'] ?></h3>
-      </div>
     </div>
-    <hr style="padding: 15px 0px;">
+    <hr>
+    <div class="d-flex justify-content-start align-items-center pl-3 py-3 mb-4 border-bottom">
+        <div style="color: red;font-size: 32px;"> Thành tiền </div>
+        <div style="color:red;" class="ml-auto h5"><?= number_format($list[0]['total_price']) ?> vnđ </div>
+    </div>
+    <div class="row border rounded p-1 my-3">
+        <div class="col-md-6 py-3">
+            <div class="d-flex flex-column align-items start"> <b style="font-size:24px;">Địa Chỉ Giao Hàng</b>
+              <br>
+                <p style="font-size:18px;" class="text-justify pt-2"><?= $list[0]['customer_address'] ?></p>
+            </div>
+        </div>
+    </div>
   </div>
-
   </div>
