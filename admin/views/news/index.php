@@ -27,9 +27,9 @@
                         <?php foreach ($cates as $item) : ?>
                             <tr>
                                 <td><?= $item['id'] ?></td>
-                                <td><?= $item['news_name'] ?></td>
+                                <td style="width: 250px;"><?= $item['news_name'] ?></td>
                                 <td><img src="<?= IMAGE_URL . $item['news_img'] ?>" with="150px" height="100px" alt=""></td>
-                                <td><textarea cols="100" rows="5"><?= $item['content'] ?></textarea></td>
+                                <td><textarea style="max-width: 300px;" cols="100" rows="5"><?= $item['content'] ?></textarea></td>
                                 <td>
                                     <a href="<?= ADMIN_URL . 'news/capnhat?id=' . $item['id'] ?>" class="btn btn-sm btn-info">
                                         <i class="fas fa-edit"></i>
