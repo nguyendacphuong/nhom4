@@ -5,22 +5,22 @@ function home()
     client_render('homepage/homepage.php');
 }
 function dangnhap()
-{   
+{
     if (isset($_POST) && isset($_POST['dangnhap'])) {
         $email = $_POST['email'];
         $password = $_POST['password'];
         $err = array();
         if (empty($_POST['email'])) {
             $err['email'] = "Xin mời điền đầy đủ thông tin email!";
-        }else{
+        } else {
             $email = $_POST['email'];
         }
         if (empty($_POST['password'])) {
             $err['password'] = "Xin mời điền đầy đủ thông tin password!";
-        }else{
+        } else {
             $password = $_POST['password'];
         }
-        if($email && $password != ''){
+        if ($email && $password != '') {
             $sql = "SELECT * FROM user WHERE email = '$email' and password = '$password'";
             $connect = get_connect();
             $stmt = $connect->prepare($sql);
@@ -32,11 +32,10 @@ function dangnhap()
                 $_SESSION['password'] = $_POST['password'];
                 $_SESSION['auth'] = $user;
                 header("Location: " . BASE_URL);
-            }else{
+            } else {
                 $loi = "tài khoản bạn nhập không tồn tại!";
                 client_render('homepage/dangnhap.php', compact('loi'));
             }
-               
         }
         client_render('homepage/dangnhap.php', compact('err'));
     }
@@ -44,7 +43,7 @@ function dangnhap()
     $list = select_page($sql);
     $sql = "SELECT * FROM brand";
     $thuonghieu = select_page($sql);
-    client_render('homepage/dangnhap.php', compact('list','thuonghieu'));
+    client_render('homepage/dangnhap.php', compact('list', 'thuonghieu'));
 }
 function logout()
 {
@@ -65,31 +64,31 @@ function lienhe()
         $err = [];
         if (empty($name)) {
             $err['name'] = "Hãy điền đầy đủ tên đăng nhập!";
-        }else{
+        } else {
             $name = $_POST['name'];
         }
 
         if (empty($email)) {
             $err['email'] = "Hãy điền đầy đủ email!";
-        }else{
+        } else {
             $email = $_POST['email'];
         }
 
         if (empty($phone_number)) {
             $err['phone_number'] = "Hãy điền đầy đủ số điện thoại!";
-        }else{
+        } else {
             $phone_number = $_POST['phone_number'];
         }
 
         if (empty($subject_name)) {
             $err['subject_name'] = "Hãy điền đầy đủ tiêu đề!";
-        }else{
+        } else {
             $subject_name = $_POST['subject_name'];
         }
 
         if (empty($note)) {
             $err['note'] = "Hãy nhập đầy đủ nội dung!";
-        }else{
+        } else {
             $note = $_POST['note'];
         }
         if (empty($err)) {
@@ -178,8 +177,9 @@ function paycart()
     $email = $_POST['email'];
     $address = $_POST['address'];
     $note = $_POST['note'];
+    $created_at = $updated_at = date('Y-m-d H:s:i');
     // insert dữ liệu để tạo hóa đơn mới, sau đó lấy id của hóa đơn
-    $createorderQuery = "insert into orders (customer_name, customer_phone_number, customer_email, customer_address, note) values ('$name', '$phone', '$email', '$address', '$note')";
+    $createorderQuery = "insert into orders (customer_name, customer_phone_number, customer_email, customer_address, note,created_at,updated_at) values ('$name', '$phone', '$email', '$address', '$note','$created_at','$updated_at')";
     $orderId = insertDataAndGetId($createorderQuery);
     $totalPrice = 0;
     // chạy vòng lặp qua các phần tử của giỏ hàng, sau đó insert dữ liệu vào bảng order_detail

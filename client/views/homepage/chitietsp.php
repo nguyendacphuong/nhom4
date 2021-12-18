@@ -91,12 +91,6 @@
                                                         <div class="product-comments-content">
                                                             <p><strong style="color:blue;"><?= $cmts['name'] ?></strong><br>
                                                                 <span><?= $cmts['created_at'] ?></span>
-                                                                <!-- <span class="pro-comments-rating">
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                            </span> -->
                                                             </p>
                                                             <div style="font-size: 15px;color:black;" class="desc">
                                                                 <?= $cmts['contents'] ?>

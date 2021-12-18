@@ -2,15 +2,16 @@
 require_once './dao/system_dao.php';
 function dashboard_index()
 {
-    $totalProduct = rand(100, 999);
-    $totalProfit = rand(1000, 500000);
-    $totalCustomer = rand(50, 20000);
-    admin_render(
-        'dashboard/index.php',
-        compact('totalProduct', 'totalProfit', 'totalCustomer')
-    );
+    $sql = "select count(id) from product";
+    $product = count_all($sql);
+    $sql = "select count(id) from contents";
+    $binh_luan = count_all($sql);
+    $sql = "select count(id) from favorite_products";
+    $favorite = count_all($sql);
+    $sql = "select count(id) from user";
+    $user = count_all($sql);
+    admin_render('dashboard/index.php', compact('product', 'user', 'favorite', 'binh_luan'));
 }
-
 function news_index()
 {
     $keyword = isset($_GET['keyword']) ? $_GET['keyword'] : "";

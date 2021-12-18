@@ -24,7 +24,7 @@
                         </th>
                     </thead>
                     <tbody>
-                        <?php foreach ($cates as $index => $item) : ?>
+                        <?php foreach ($cates as $item) : ?>
                             <tr>
                                 <td><?= $item['id'] ?></td>
                                 <td><?= $item['news_name'] ?></td>

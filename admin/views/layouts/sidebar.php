@@ -36,9 +36,9 @@
         <li class="nav-item ">
           <!-- menu-open -->
           <a href="<?= ADMIN_URL ?>" class="nav-link ">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <i class="fas fa-home"></i>
             <p>
-              Dashboard
+              Thông kê
             </p>
           </a>
         </li>
